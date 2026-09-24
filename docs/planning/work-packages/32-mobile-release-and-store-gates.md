@@ -131,7 +131,7 @@ Scheduling is task-level under [P2-018](../../decisions/phase-2-specification-de
 | [AND.16](../delivery/lanes/android.md#task-and-16) | [WP-32.00](32-mobile-release-and-store-gates.md#rule-wp-32.00) (full) | [AND.15](../delivery/lanes/android.md#task-and-15) (artifact) |
 | [AND.17](../delivery/lanes/android.md#task-and-17) | [WP-32.01](32-mobile-release-and-store-gates.md#rule-wp-32.01) (full) | none |
 | [AND.18](../delivery/lanes/android.md#task-and-18) | [WP-32.02](32-mobile-release-and-store-gates.md#rule-wp-32.02) (full) | none |
-| [AND.19](../delivery/lanes/android.md#task-and-19) | [WP-32.03](32-mobile-release-and-store-gates.md#rule-wp-32.03) (full) | [AND.15](../delivery/lanes/android.md#task-and-15) (artifact) |
+| [AND.19](../delivery/lanes/android.md#task-and-19) | [WP-32.03](32-mobile-release-and-store-gates.md#rule-wp-32.03) (full) | [AND.08](../delivery/lanes/android.md#task-and-08) (artifact), [AND.09](../delivery/lanes/android.md#task-and-09) (artifact), [AND.10](../delivery/lanes/android.md#task-and-10) (artifact), [AND.11](../delivery/lanes/android.md#task-and-11) (artifact), [AND.12](../delivery/lanes/android.md#task-and-12) (artifact) |
 | [AND.20](../delivery/lanes/android.md#task-and-20) | [WP-32.04](32-mobile-release-and-store-gates.md#rule-wp-32.04) (full) | [CON.16](../delivery/lanes/contracts.md#task-con-16) (contract) |
 | [AND.21](../delivery/lanes/android.md#task-and-21) | [WP-32.05](32-mobile-release-and-store-gates.md#rule-wp-32.05) (all work except the parts mapped to AND.26) | none |
 | [AND.22](../delivery/lanes/android.md#task-and-22) | [WP-32.06](32-mobile-release-and-store-gates.md#rule-wp-32.06) (full) | none |

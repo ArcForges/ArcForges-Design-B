@@ -17,14 +17,14 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | [AST.07](#task-ast-07) | Local history export and import (assistant-history.v1) | producer | M | [AST.01](#task-ast-01) (artifact), [CON.11](contracts.md#task-con-11) (contract) | not-started |
 | [AST.08](#task-ast-08) | Reference and package proof (AionUi evidence, clean-app package consumption) | producer | S | [AST.01](#task-ast-01) (artifact) | not-started |
 | [AST.09](#task-ast-09) | Owned-artifact receipt and UX acceptance | acceptance | M | [AST.01](#task-ast-01) (artifact), [AST.02](#task-ast-02) (artifact), [AST.03](#task-ast-03) (artifact), [AST.04](#task-ast-04) (artifact), [AST.05](#task-ast-05) (artifact), [AST.06](#task-ast-06) (artifact), [AST.07](#task-ast-07) (artifact), [AST.08](#task-ast-08) (artifact) | not-started |
-| [AST.10](#task-ast-10) | Complete assistant navigation shell | producer | L | [AST.09](#task-ast-09) (artifact), [EXE.01](execution.md#task-exe-01) (artifact) | not-started |
-| [AST.11](#task-ast-11) | Cloud client and device runtime (fixture turn endpoint boundary) | producer | L | [AST.09](#task-ast-09) (artifact), [CON.10](contracts.md#task-con-10) (contract), [PRF.05](runtime-proofs.md#task-prf-05) (artifact) | not-started |
+| [AST.10](#task-ast-10) | Complete assistant navigation shell | producer | L | [EXE.01](execution.md#task-exe-01) (artifact), [AST.01](#task-ast-01) (artifact), [AST.02](#task-ast-02) (artifact), [AST.04](#task-ast-04) (artifact), [AST.05](#task-ast-05) (artifact), [AST.06](#task-ast-06) (artifact), [AST.07](#task-ast-07) (artifact) | not-started |
+| [AST.11](#task-ast-11) | Cloud client and device runtime (fixture turn endpoint boundary) | producer | L | [CON.10](contracts.md#task-con-10) (contract), [PRF.05](runtime-proofs.md#task-prf-05) (artifact), [AST.01](#task-ast-01) (artifact) | not-started |
 | [AST.12](#task-ast-12) | Security and approval surface | producer | M | [AST.10](#task-ast-10) (artifact), [APP.05](app-composition.md#task-app-05) (artifact), [PLT.39](platform.md#task-plt-39) (artifact) | not-started |
 | [AST.13](#task-ast-13) | Task centre | producer | M | [AST.10](#task-ast-10) (artifact), [EXE.01](execution.md#task-exe-01) (artifact), [EXE.05](execution.md#task-exe-05) (artifact), [AST.11](#task-ast-11) (artifact) | not-started |
 | [AST.14](#task-ast-14) | Automation client (automation fixture state transitions) | producer | M | [AST.10](#task-ast-10) (artifact), [CON.10](contracts.md#task-con-10) (contract) | not-started |
 | [AST.15](#task-ast-15) | History and AI admission (local/cloud/temporary modes) | producer | M | [AST.10](#task-ast-10) (artifact), [AST.07](#task-ast-07) (artifact) | not-started |
 | [AST.16](#task-ast-16) | Preview and host context | producer | M | [AST.10](#task-ast-10) (artifact), [APP.06](app-composition.md#task-app-06) (artifact) | not-started |
-| [AST.17](#task-ast-17) | Complete package acceptance (Assistant.Avalonia/Core/Sqlite/Cloud) | acceptance | L | [AST.10](#task-ast-10) (artifact), [AST.11](#task-ast-11) (artifact), [AST.12](#task-ast-12) (artifact), [AST.13](#task-ast-13) (artifact), [AST.14](#task-ast-14) (artifact), [AST.15](#task-ast-15) (artifact), [AST.16](#task-ast-16) (artifact), [APP.08](app-composition.md#task-app-08) (artifact), [EXE.09](execution.md#task-exe-09) (artifact) | not-started |
+| [AST.17](#task-ast-17) | Complete package acceptance (Assistant.Avalonia/Core/Sqlite/Cloud) | acceptance | L | [AST.10](#task-ast-10) (artifact), [AST.11](#task-ast-11) (artifact), [AST.12](#task-ast-12) (artifact), [AST.13](#task-ast-13) (artifact), [AST.14](#task-ast-14) (artifact), [AST.15](#task-ast-15) (artifact), [AST.16](#task-ast-16) (artifact) | not-started |
 | [AST.18](#task-ast-18) | Owned-artifact receipt and real integration | acceptance | M | [AST.17](#task-ast-17) (artifact) | not-started |
 | [AST.19](#task-ast-19) | Real Cloud Harness turn loop replacing the fixture turn endpoint | integration | M | [AST.11](#task-ast-11) (artifact), [HAR.00](harness.md#task-har-00) (artifact), [HAR.03](harness.md#task-har-03) (artifact) | not-started |
 | [AST.20](#task-ast-20) | Real durable Cloud automation scheduler replacing the automation fixture | integration | M | [AST.14](#task-ast-14) (artifact), [HAR.06](harness.md#task-har-06) (artifact) | not-started |
@@ -46,9 +46,9 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-15.00](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.00) — full |
 | Provides | assistant-history-store; assistant-core-pkg |
 | Start prerequisites | **artifact** [APP.01](app-composition.md#task-app-01) — published Assistant.Abstractions product/profile identity. *Why:* one canonical store is scoped per application/profile using this real identity type<br>**contract** [CON.91](contracts.md#task-con-91) — published Foundation contract types (identity/error/revision). *Why:* typed payloads and transaction/revision handling are built on these records<br>**contract** [CON.11](contracts.md#task-con-11) — complete generated package/schema gate output. *Why:* SQLite schema and typed payloads mirror the generated Contracts schema definitions, not a private redefinition |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [AST.02](#task-ast-02), [AST.03](#task-ast-03), [AST.04](#task-ast-04), [AST.05](#task-ast-05), [AST.06](#task-ast-06), [AST.07](#task-ast-07), [AST.08](#task-ast-08), [AST.09](#task-ast-09), [AST.22](#task-ast-22) |
+| Unblocks | [AST.02](#task-ast-02), [AST.03](#task-ast-03), [AST.04](#task-ast-04), [AST.05](#task-ast-05), [AST.06](#task-ast-06), [AST.07](#task-ast-07), [AST.08](#task-ast-08), [AST.09](#task-ast-09), [AST.10](#task-ast-10), [AST.11](#task-ast-11), [AST.22](#task-ast-22) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Core/**`<br>`DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Persistence.Sqlite/**`<br>`DesktopPlatform:tests/AssistantCoreTests/**` |
 | Shared resources | [RES-assistant-store-schema](../shared-resources.md#res-assistant-store-schema) (append), [RES-desktopplatform-build-config](../shared-resources.md#res-desktopplatform-build-config) (append) |
 | Validation | Offline unit tests: DDL with foreign keys, migrations, disk-full, branch fork, concurrent-window stale revision, duplicate terminal frame, interrupted send; no live environment. |
@@ -69,9 +69,9 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-15.01](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.01) — full |
 | Provides | assistant-branch-service |
 | Start prerequisites | **artifact** [AST.01](#task-ast-01) — the real history store's branch/message tables. *Why:* branching operates on the real committed-message store, not a private cache |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [AST.09](#task-ast-09) |
+| Unblocks | [AST.09](#task-ast-09), [AST.10](#task-ast-10) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Core/**` |
 | Shared resources | [RES-assistant-store-schema](../shared-resources.md#res-assistant-store-schema) (append) |
 | Validation | Offline unit tests: concurrent windows, draft preserved during another send, parent/child isolation. |
@@ -91,7 +91,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-15.02](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.02) — full |
 | Provides | assistant-attachment-service |
 | Start prerequisites | **artifact** [AST.01](#task-ast-01) — the real history store's attachment table. *Why:* attachment provenance persists into the real store<br>**artifact** [APP.06](app-composition.md#task-app-06) — the real [WP-14.05](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.05) context/artifact freeze and preview port. *Why:* attachment staging/preview must use the same frozen-resource mechanism, not a private duplicate |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.09](#task-ast-09) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Core/**` |
@@ -113,9 +113,9 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-15.03](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.03) — full |
 | Provides | assistant-project-profile-service |
 | Start prerequisites | **artifact** [AST.01](#task-ast-01) — the real history store's project/profile tables. *Why:* CRUD and snapshotting operate on the real store |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [AST.09](#task-ast-09) |
+| Unblocks | [AST.09](#task-ast-09), [AST.10](#task-ast-10) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Core/**` |
 | Shared resources | [RES-assistant-store-schema](../shared-resources.md#res-assistant-store-schema) (append) |
 | Validation | Offline unit tests: conflict/revision, active-execution immutability. |
@@ -135,9 +135,9 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-15.04](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.04) — full |
 | Provides | assistant-skill-service |
 | Start prerequisites | **artifact** [AST.01](#task-ast-01) — the real history store's skill table. *Why:* skill metadata persists into the real store<br>**artifact** [PLT.42](platform.md#task-plt-42) — published instruction provenance mechanism. *Why:* skill content must be tracked as untrusted instruction provenance, not granted authority |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [AST.09](#task-ast-09) |
+| Unblocks | [AST.09](#task-ast-09), [AST.10](#task-ast-10) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Core/**` |
 | Shared resources | [RES-assistant-store-schema](../shared-resources.md#res-assistant-store-schema) (append) |
 | Validation | Offline unit tests: untrusted-instruction and cross-app-source-denied cases. |
@@ -157,9 +157,9 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-15.05](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.05) — full |
 | Provides | assistant-local-search |
 | Start prerequisites | **artifact** [AST.01](#task-ast-01) — the real committed-message store to index. *Why:* search must index the real committed content, not a fixture, to prove no temporary/other-app leak |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [AST.09](#task-ast-09) |
+| Unblocks | [AST.09](#task-ast-09), [AST.10](#task-ast-10) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Core/**` |
 | Validation | Offline unit tests: delete/rebuild, partial index, isolation leak checks. |
 | Completion evidence | Rebuild and isolation-leak test results. |
@@ -178,9 +178,9 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-15.06](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.06) — full |
 | Provides | assistant-history-export-format |
 | Start prerequisites | **artifact** [AST.01](#task-ast-01) — the real committed history store to export from. *Why:* offline round-trip must exercise the real store's branch graph<br>**contract** [CON.11](contracts.md#task-con-11) — published assistant-history.v1 format definition. *Why:* export/import implements the published format, not a private one |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [AST.09](#task-ast-09), [AST.15](#task-ast-15), [AST.21](#task-ast-21) |
+| Unblocks | [AST.09](#task-ast-09), [AST.10](#task-ast-10), [AST.15](#task-ast-15), [AST.21](#task-ast-21) |
 | Permitted substitutes | [SUB-assistant-history-fixture](../substitutes.md#sub-assistant-history-fixture) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Core/**` |
 | Shared resources | [RES-assistant-store-schema](../shared-resources.md#res-assistant-store-schema) (append) |
@@ -202,7 +202,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-15.07](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.07) — full |
 | Provides | assistant-core-sqlite-package-proof |
 | Start prerequisites | **artifact** [AST.01](#task-ast-01) — published Assistant.Core/Assistant.Persistence.Sqlite candidate packages. *Why:* this substep proves package-only consumption of the actual candidate, distinct from in-repo testing |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.09](#task-ast-09) |
 | Write scope | `DesktopPlatform:tests/AssistantCoreTests/**` |
@@ -220,12 +220,13 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / M |
+| Package acceptance | Records the [WP-15](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-15.90](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.90) — full |
 | Provides | wp15-accepted-artifact |
 | Start prerequisites | **artifact** [AST.01](#task-ast-01) — completed [WP-15.00](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.00). *Why:* aggregation<br>**artifact** [AST.02](#task-ast-02) — completed [WP-15.01](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.01). *Why:* aggregation<br>**artifact** [AST.03](#task-ast-03) — completed [WP-15.02](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.02). *Why:* aggregation<br>**artifact** [AST.04](#task-ast-04) — completed [WP-15.03](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.03). *Why:* aggregation<br>**artifact** [AST.05](#task-ast-05) — completed [WP-15.04](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.04). *Why:* aggregation<br>**artifact** [AST.06](#task-ast-06) — completed [WP-15.05](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.05). *Why:* aggregation<br>**artifact** [AST.07](#task-ast-07) — completed [WP-15.06](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.06). *Why:* aggregation<br>**artifact** [AST.08](#task-ast-08) — completed [WP-15.07](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.07). *Why:* aggregation |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [AST.10](#task-ast-10), [AST.11](#task-ast-11) |
+| Unblocks | none |
 | Write scope | `DesktopPlatform:artifacts/evidence/**` |
 | Shared resources | [RES-desktopplatform-policy-data](../shared-resources.md#res-desktopplatform-policy-data) (append) |
 | Validation | Build/pack once; UX-C history ledger rows recorded; [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017) scope only. |
@@ -244,8 +245,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Kind / size | producer / L |
 | Obligations | [WP-17.00](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.00) — full |
 | Provides | assistant-host-shell; assistanthost-api |
-| Start prerequisites | **artifact** [AST.09](#task-ast-09) — the accepted WP15 conversation/branch/project/profile/skill/search/export core to host. *Why:* the navigation shell composes real WP15 content, not placeholders<br>**artifact** [EXE.01](execution.md#task-exe-01) — the real execution chain to surface job state in navigation. *Why:* AS05/AS10-linked navigation elements read real ProductJob state |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Start prerequisites | **artifact** [EXE.01](execution.md#task-exe-01) — the real execution chain to surface job state in navigation. *Why:* AS05/AS10-linked navigation elements read real ProductJob state<br>**artifact** [AST.01](#task-ast-01) — the real application history store the shell hosts. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [AST.02](#task-ast-02) — real branches and window drafts to navigate. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [AST.04](#task-ast-04) — real projects and profiles to navigate. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [AST.05](#task-ast-05) — real skills to navigate. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [AST.06](#task-ast-06) — real local search to surface. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [AST.07](#task-ast-07) — real local history export and import to surface. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.12](#task-ast-12), [AST.13](#task-ast-13), [AST.14](#task-ast-14), [AST.15](#task-ast-15), [AST.16](#task-ast-16), [AST.17](#task-ast-17) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Avalonia/**`<br>`DesktopPlatform:samples/AssistantHost/**` |
@@ -267,8 +268,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Kind / size | producer / L |
 | Obligations | [WP-17.01](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.01) — full |
 | Provides | cloud-client-sdk; device-runtime-client-adapter |
-| Start prerequisites | **artifact** [AST.09](#task-ast-09) — assistant_turn/assistant_outbox records to attach Cloud TaskRef/turn output to. *Why:* Cloud client session/output handling writes into the real conversation history store, not a private cache<br>**contract** [CON.10](contracts.md#task-con-10) — published generated C#/TypeScript/Kotlin gRPC-Web client stubs and numbered wire registry. *Why:* Cloud.Client's typed SDK wraps the generated stubs; nothing to wrap without the published package<br>**artifact** [PRF.05](runtime-proofs.md#task-prf-05) — proven generated gRPC-Web under Native AOT pattern. *Why:* Cloud.Client must be AOT-safe; reuse the already-proven pattern |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Start prerequisites | **contract** [CON.10](contracts.md#task-con-10) — published generated C#/TypeScript/Kotlin gRPC-Web client stubs and numbered wire registry. *Why:* Cloud.Client's typed SDK wraps the generated stubs; nothing to wrap without the published package<br>**artifact** [PRF.05](runtime-proofs.md#task-prf-05) — proven generated gRPC-Web under Native AOT pattern. *Why:* Cloud.Client must be AOT-safe; reuse the already-proven pattern<br>**artifact** [AST.01](#task-ast-01) — the history store assistant_turn and assistant_outbox records the Cloud client writes into. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.13](#task-ast-13), [AST.17](#task-ast-17), [AST.19](#task-ast-19), [DEV.03](device-bridge.md#task-dev-03), [DEV.14](device-bridge.md#task-dev-14), [HAR.05](harness.md#task-har-05) |
 | Permitted substitutes | [SUB-device-runtime-loopback](../substitutes.md#sub-device-runtime-loopback), [SUB-fixture-turn-endpoint](../substitutes.md#sub-fixture-turn-endpoint) |
@@ -292,7 +293,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-17.02](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.02) — full |
 | Provides | assistant-security-surface |
 | Start prerequisites | **artifact** [AST.10](#task-ast-10) — the navigation shell to compose this surface into. *Why:* AS06/11/12 are surfaces within the shell<br>**artifact** [APP.05](app-composition.md#task-app-05) — the exact [WP-14.04](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.04) owner approval enforcement point. *Why:* this surface renders and escalates the same owner approval, never a separate UI-only mock<br>**artifact** [PLT.39](platform.md#task-plt-39) — published approval/steering/step-up mechanism. *Why:* local-presence escalation reuses the real security step-up primitive |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.17](#task-ast-17), [SCOPE.20](arcscope.md#task-scope-20) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Avalonia/**` |
@@ -313,7 +314,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-17.03](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.03) — full |
 | Provides | assistant-task-centre |
 | Start prerequisites | **artifact** [AST.10](#task-ast-10) — the navigation shell to compose this surface into. *Why:* task centre is a surface within the shell<br>**artifact** [EXE.01](execution.md#task-exe-01) — the real execution chain (ProductJobRecord/JobAttempt) to link to. *Why:* 17.03 explicitly links to ProductJob with effect certainty; a mock task list would not exercise real cancellation/steering<br>**artifact** [EXE.05](execution.md#task-exe-05) — real checkpoint/compensation state for display. *Why:* task centre must distinguish canceled/interrupted/unknown/complete using real EffectCertainty, not a placeholder enum<br>**artifact** [AST.11](#task-ast-11) — the Cloud client's TaskRef/output stream for the Cloud Agent Task side of the timeline. *Why:* the timeline shows both native ProductJob and Cloud Agent Task entries distinctly |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.17](#task-ast-17) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Avalonia/**` |
@@ -334,7 +335,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-17.04](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.04) — full |
 | Provides | assistant-automation-client |
 | Start prerequisites | **artifact** [AST.10](#task-ast-10) — the navigation shell to compose this surface into. *Why:* automation client is a surface within the shell<br>**contract** [CON.10](contracts.md#task-con-10) — published Cloud-owned rule/occurrence record shapes. *Why:* this client only renders Cloud-owned records, it does not define its own scheduling model |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.17](#task-ast-17), [AST.20](#task-ast-20) |
 | Permitted substitutes | [SUB-automation-fixture](../substitutes.md#sub-automation-fixture) |
@@ -357,7 +358,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-17.05](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.05) — full |
 | Provides | assistant-history-admission-ui |
 | Start prerequisites | **artifact** [AST.10](#task-ast-10) — the navigation shell to compose this surface into. *Why:* history/admission is a surface within the shell<br>**artifact** [AST.07](#task-ast-07) — the real assistant-history.v1 local export/import surface. *Why:* Cloud promotion/copy UI operates on the real local export, not a separate format |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.08](ai-routing.md#task-air-08), [AST.17](#task-ast-17), [AST.22](#task-ast-22), [HAR.03](harness.md#task-har-03), [SCOPE.21](arcscope.md#task-scope-21) |
 | Permitted substitutes | [SUB-history-admission-fixture](../substitutes.md#sub-history-admission-fixture), [SUB-stubbed-provider-path](../substitutes.md#sub-stubbed-provider-path) |
@@ -380,7 +381,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-17.06](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.06) — full |
 | Provides | assistant-preview-surface |
 | Start prerequisites | **artifact** [AST.10](#task-ast-10) — the navigation shell to compose this surface into. *Why:* preview is a surface within the shell<br>**artifact** [APP.06](app-composition.md#task-app-06) — the exact frozen [WP-14.05](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.05) context/artifact preview port. *Why:* 17.06 explicitly requires using the frozen host ports, not a duplicate preview mechanism |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.17](#task-ast-17) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Avalonia/**` |
@@ -400,9 +401,9 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Kind / size | acceptance / L |
 | Obligations | [WP-17.07](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.07) — full |
 | Provides | assistant-full-package-set |
-| Start prerequisites | **artifact** [AST.10](#task-ast-10) — completed [WP-17.00](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.00). *Why:* aggregation<br>**artifact** [AST.11](#task-ast-11) — completed [WP-17.01](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.01). *Why:* aggregation<br>**artifact** [AST.12](#task-ast-12) — completed [WP-17.02](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.02). *Why:* aggregation<br>**artifact** [AST.13](#task-ast-13) — completed [WP-17.03](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.03). *Why:* aggregation<br>**artifact** [AST.14](#task-ast-14) — completed [WP-17.04](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.04). *Why:* aggregation<br>**artifact** [AST.15](#task-ast-15) — completed [WP-17.05](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.05). *Why:* aggregation<br>**artifact** [AST.16](#task-ast-16) — completed [WP-17.06](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.06). *Why:* aggregation<br>**artifact** [APP.08](app-composition.md#task-app-08) — completed WP14 acceptance. *Why:* WP17 upstream includes WP14's accepted artifact<br>**artifact** [EXE.09](execution.md#task-exe-09) — completed WP16 acceptance. *Why:* WP17 upstream includes WP16's accepted artifact |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
-| Completion prerequisites | none |
+| Start prerequisites | **artifact** [AST.10](#task-ast-10) — completed [WP-17.00](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.00). *Why:* aggregation<br>**artifact** [AST.11](#task-ast-11) — completed [WP-17.01](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.01). *Why:* aggregation<br>**artifact** [AST.12](#task-ast-12) — completed [WP-17.02](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.02). *Why:* aggregation<br>**artifact** [AST.13](#task-ast-13) — completed [WP-17.03](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.03). *Why:* aggregation<br>**artifact** [AST.14](#task-ast-14) — completed [WP-17.04](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.04). *Why:* aggregation<br>**artifact** [AST.15](#task-ast-15) — completed [WP-17.05](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.05). *Why:* aggregation<br>**artifact** [AST.16](#task-ast-16) — completed [WP-17.06](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.06). *Why:* aggregation |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Completion prerequisites | **integration** [APP.08](app-composition.md#task-app-08) — [WP-14](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14) acceptance complete. *Why:* the [WP-17](../../work-packages/17-arcchat-independent-core.md#rule-wp-17) package acceptance includes the accepted [WP-14](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14) artifact; its verification can be prepared before that closes<br>**integration** [EXE.09](execution.md#task-exe-09) — [WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) acceptance complete. *Why:* the [WP-17](../../work-packages/17-arcchat-independent-core.md#rule-wp-17) package acceptance includes the accepted [WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) artifact; its verification can be prepared before that closes |
 | Unblocks | [AST.18](#task-ast-18) |
 | Write scope | `DesktopPlatform:samples/AssistantHost/**`<br>`DesktopPlatform:artifacts/evidence/**` |
 | Shared resources | [RES-desktopplatform-build-config](../shared-resources.md#res-desktopplatform-build-config) (append), [RES-desktopplatform-policy-data](../shared-resources.md#res-desktopplatform-policy-data) (append) |
@@ -420,10 +421,11 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / M |
+| Package acceptance | Records the [WP-17](../../work-packages/17-arcchat-independent-core.md#rule-wp-17) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-17.90](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.90) — full |
 | Provides | wp17-accepted-artifact |
 | Start prerequisites | **artifact** [AST.17](#task-ast-17) — completed [WP-17.07](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.07) package acceptance. *Why:* the final receipt aggregates the completed package acceptance |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | none |
 | Write scope | `DesktopPlatform:artifacts/evidence/**` |
@@ -445,7 +447,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Kind / size | integration / M |
 | Obligations | [WP-52.05](../../work-packages/52-cloud-harness.md#rule-wp-52.05) — all work except the parts mapped to DEV.13, HAR.05 |
 | Start prerequisites | **artifact** [AST.11](#task-ast-11) — real, delivered outcome of AST.11 (Cloud client and device runtime (fixture turn endpoint boundary)). *Why:* this integration exercises the real cloud client and device runtime (fixture turn endpoint boundary) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.00](harness.md#task-har-00) — real Harness turn loop. *Why:* the assistant switches from the fixture turn endpoint to the real Workflow loop<br>**artifact** [HAR.03](harness.md#task-har-03) — real generated streaming and durable output. *Why:* the assistant reads real output streams |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [DEV.13](device-bridge.md#task-dev-13), [HAR.05](harness.md#task-har-05) |
 | Write scope |  |
@@ -465,7 +467,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Kind / size | integration / M |
 | Obligations | [WP-52.06](../../work-packages/52-cloud-harness.md#rule-wp-52.06) — all work except the parts mapped to HAR.06, HAR.91 |
 | Start prerequisites | **artifact** [AST.14](#task-ast-14) — real, delivered outcome of AST.14 (Automation client (automation fixture state transitions)). *Why:* this integration exercises the real automation client (automation fixture state transitions) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.06](harness.md#task-har-06) — real, delivered outcome of HAR.06 (Durable Cloud automation, scheduling and automation-fixture removal). *Why:* this integration exercises the real durable Cloud automation, scheduling and automation-fixture removal instead of a substitute, so it cannot start before that outcome exists |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [HAR.06](harness.md#task-har-06) |
 | Write scope |  |
@@ -485,7 +487,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Kind / size | integration / M |
 | Obligations | [WP-25.08](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.08) — all work except the parts mapped to CLOUD.45, CLOUD.58, NOTES.33 |
 | Start prerequisites | **artifact** [AST.07](#task-ast-07) — real, delivered outcome of AST.07 (Local history export and import (assistant-history.v1)). *Why:* this integration exercises the real local history export and import (assistant-history.v1) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.45](cloud.md#task-cloud-45) — real, delivered outcome of CLOUD.45 (Real Cloud Notes and Chat export producers). *Why:* this integration exercises the real real Cloud Notes and Chat export producers instead of a substitute, so it cannot start before that outcome exists |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.47](cloud.md#task-cloud-47), [CLOUD.58](cloud.md#task-cloud-58) |
 | Write scope |  |
@@ -505,7 +507,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Kind / size | integration / M |
 | Obligations | [WP-25.09](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.09) — full; consumer-side real integration |
 | Start prerequisites | **artifact** [AST.15](#task-ast-15) — real, delivered outcome of AST.15 (History and AI admission (local/cloud/temporary modes)). *Why:* this integration exercises the real history and AI admission (local/cloud/temporary modes) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.46](cloud.md#task-cloud-46) — real, delivered outcome of CLOUD.46 (Application Cloud history and restartable import). *Why:* this integration exercises the real application Cloud history and restartable import instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AST.01](#task-ast-01) — real, delivered outcome of AST.01 (Single application history store (model 05 schema)). *Why:* this integration exercises the real single application history store (model 05 schema) instead of a substitute, so it cannot start before that outcome exists |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.assistant](adoption.md#task-adopt-02-assistant) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.47](cloud.md#task-cloud-47) |
 | Write scope |  |

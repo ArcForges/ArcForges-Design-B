@@ -31,8 +31,8 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 | Kind / size | producer / M |
 | Obligations | [WP-14.00](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.00) — full |
 | Provides | assistant-abstractions-pkg; host-ports-v1; application-scope-identity |
-| Start prerequisites | **contract** [CON.02](contracts.md#task-con-02) — published capability/resource contract records (descriptor/risk/context shapes). *Why:* host port signatures (IHostResources/IHostActions) are typed against these Contracts records; noted reported-complete-unverified<br>**artifact** [PLT.17](platform.md#task-plt-17) — real ArcForges.Application.Abstractions (application identity and in-process composition), not the current placeholder assembly. *Why:* Assistant.Abstractions composes on top of Application.Abstractions per architecture 27; DesktopPlatform repo currently has only AssemblyPlaceholder.cs for that project<br>**artifact** [FND.01](foundation.md#task-fnd-01) — real ArcForges.Foundation identity/error/version primitives, not the current placeholder assembly. *Why:* host port identity/lifetime types build on Foundation primitives; currently only a placeholder assembly exists |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Start prerequisites | **contract** [CON.02](contracts.md#task-con-02) — published capability/resource contract records (descriptor/risk/context shapes). *Why:* host port signatures (IHostResources/IHostActions) are typed against these Contracts records<br>**artifact** [PLT.17](platform.md#task-plt-17) — real ArcForges.Application.Abstractions (application identity and in-process composition), not the current placeholder assembly. *Why:* Assistant.Abstractions composes on top of Application.Abstractions per architecture 27; DesktopPlatform repo currently has only AssemblyPlaceholder.cs for that project<br>**artifact** [FND.01](foundation.md#task-fnd-01) — real ArcForges.Foundation identity/error/version primitives, not the current placeholder assembly. *Why:* host port identity/lifetime types build on Foundation primitives; currently only a placeholder assembly exists |
+| Entry condition | [ADOPT.02.app-composition](adoption.md#task-adopt-02-app-composition) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.02](#task-app-02), [APP.03](#task-app-03), [APP.05](#task-app-05), [APP.06](#task-app-06), [APP.07](#task-app-07), [APP.08](#task-app-08), [AST.01](assistant.md#task-ast-01), [EXE.01](execution.md#task-exe-01), [NOTES.03](arcnotes.md#task-notes-03), [PLT.57](platform.md#task-plt-57) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Abstractions/**`<br>`DesktopPlatform:tests/AssistantAbstractionsTests/**` |
@@ -55,7 +55,7 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 | Obligations | [WP-14.01](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.01) — full |
 | Provides | arcnotes-minimal-services; arcnotes-write-path |
 | Start prerequisites | **artifact** [APP.01](#task-app-01) — published Assistant.Abstractions host ports and product identity. *Why:* ArcNotes application handlers register through the real host ports, not a private stand-in<br>**artifact** [PLT.24](platform.md#task-plt-24) — real ICapabilityProvider.InvokeAsync invocation pipeline (owner-side decode/validate). *Why:* the one write path for UI and own-app capability must go through the real pipeline; WP14.01 testing explicitly requires descriptor/risk/context validation on a real path<br>**artifact** [PLT.38](platform.md#task-plt-38) — published security decision pipeline enforcement point. *Why:* the write path must enforce real risk/permission decisions, not a bypass |
-| Entry condition | [ADOPT.04](adoption.md#task-adopt-04) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.04.app-composition](adoption.md#task-adopt-04-app-composition) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.03](#task-app-03), [APP.04](#task-app-04), [APP.08](#task-app-08) |
 | Write scope | `ArcNotes:src/ArcForges.ArcNotes.Application/**`<br>`ArcNotes:src/ArcForges.ArcNotes.Infrastructure/**`<br>`ArcNotes:tests/**` |
@@ -77,9 +77,9 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 | Obligations | [WP-14.02](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.02) — full |
 | Provides | arcnotes-aot-consumer-proof |
 | Start prerequisites | **artifact** [APP.01](#task-app-01) — published Assistant.Abstractions package (not project reference). *Why:* the consumer must restore this as a package, not a source/project reference, per the substep's own rule<br>**artifact** [APP.02](#task-app-02) — published ArcNotes application-services package surface. *Why:* same package-only consumption rule applies to the product's own services<br>**artifact** [PRF.04](runtime-proofs.md#task-prf-04) — proven Local RPC under Native AOT pattern. *Why:* reuse the already-proven AOT-safe local RPC approach rather than re-deriving one<br>**artifact** [NAT.01](native.md#task-nat-01) — confirmed Native AOT device-tool/capability-invocation feasibility from the high-risk probe. *Why:* this task is the first real product proof built on that probe; it should not re-litigate AOT feasibility |
-| Entry condition | [ADOPT.04](adoption.md#task-adopt-04) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.04.app-composition](adoption.md#task-adopt-04-app-composition) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [APP.08](#task-app-08) |
+| Unblocks | [APP.08](#task-app-08), [HAR.05](harness.md#task-har-05) |
 | Write scope | `ArcNotes:src/ArcForges.ArcNotes/**`<br>`ArcNotes:packaging/**` |
 | Validation | Native AOT publish/run in CI (package-only restore), offline command/cancel/result tests; no installed-package or public-release install/upgrade CI per [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017). |
 | Completion evidence | AOT publish log, package hash manifest, command/cancel/result and owner-refusal test results. |
@@ -99,7 +99,7 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 | Obligations | [WP-14.03](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.03) — full |
 | Provides | host-idempotency-proof |
 | Start prerequisites | **artifact** [APP.02](#task-app-02) — real local persistence write path to kill/duplicate against. *Why:* a fixture store would hide the recovery defects this substep tests<br>**artifact** [FND.02](foundation.md#task-fnd-02) — published execution identity and idempotency records (command identity). *Why:* duplicate-command detection needs the real command-identity shape<br>**artifact** [FND.03](foundation.md#task-fnd-03) — published revision and sequence records. *Why:* stale-revision detection needs the real revision/sequence contract |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.app-composition](adoption.md#task-adopt-02-app-composition) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.08](#task-app-08) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Abstractions/**`<br>`DesktopPlatform:tests/AssistantAbstractionsTests/**` |
@@ -121,7 +121,7 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 | Obligations | [WP-14.04](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.04) — full |
 | Provides | owner-approval-enforcement |
 | Start prerequisites | **artifact** [APP.01](#task-app-01) — published host ports to render the approval surface through. *Why:* approval UI composes into the same host-port model as the rest of the app<br>**artifact** [PLT.39](platform.md#task-plt-39) — published approval/steering/step-up mechanism. *Why:* owner enforcement re-checks using the real security pipeline's approval primitive, not a private one |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.app-composition](adoption.md#task-adopt-02-app-composition) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.08](#task-app-08), [AST.12](assistant.md#task-ast-12), [DEV.03](device-bridge.md#task-dev-03) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Abstractions/**`<br>`DesktopPlatform:tests/AssistantAbstractionsTests/**` |
@@ -143,7 +143,7 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 | Obligations | [WP-14.05](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.05) — full |
 | Provides | host-context-freeze; host-artifact-preview-port |
 | Start prerequisites | **artifact** [APP.01](#task-app-01) — published IContextProvider/IArtifactHandler/IResourceAccess host port shapes. *Why:* context/artifact integration implements these exact [WP-14.00](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.00) port interfaces<br>**artifact** [PLT.21](platform.md#task-plt-21) — real context providers and freezing implementation. *Why:* own-app resource freezing must use the real context-provider freeze mechanism<br>**artifact** [PLT.22](platform.md#task-plt-22) — real resources-and-artifacts implementation. *Why:* artifact preview/bounding builds on the real resource/artifact primitives<br>**artifact** [PLT.41](platform.md#task-plt-41) — published egress control mechanism. *Why:* denied export must be enforced by the real egress control, separate from context freezing itself |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.app-composition](adoption.md#task-adopt-02-app-composition) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.08](#task-app-08), [AST.03](assistant.md#task-ast-03), [AST.16](assistant.md#task-ast-16) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Abstractions/**`<br>`DesktopPlatform:tests/AssistantAbstractionsTests/**` |
@@ -165,7 +165,7 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 | Obligations | [WP-14.06](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.06) — full |
 | Provides | host-independent-lifecycle |
 | Start prerequisites | **artifact** [APP.01](#task-app-01) — published IHostLifecycle port. *Why:* independent lifecycle implements this exact [WP-14.00](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.00) port<br>**artifact** [PLT.32](platform.md#task-plt-32) — published lifecycle/menus/shutdown shell pattern. *Why:* professional app shutdown handling reuses the platform shell's lifecycle pattern rather than inventing a second one |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.app-composition](adoption.md#task-adopt-02-app-composition) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.08](#task-app-08) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Assistant.Abstractions/**`<br>`DesktopPlatform:tests/AssistantAbstractionsTests/**` |
@@ -183,10 +183,11 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / M |
+| Package acceptance | Records the [WP-14](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-14.90](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.90) — full |
 | Provides | wp14-accepted-artifact |
 | Start prerequisites | **artifact** [APP.01](#task-app-01) — completed [WP-14.00](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.00). *Why:* aggregation requires every WP14 substep complete<br>**artifact** [APP.02](#task-app-02) — completed [WP-14.01](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.01). *Why:* aggregation<br>**artifact** [APP.03](#task-app-03) — completed [WP-14.02](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.02). *Why:* aggregation<br>**artifact** [APP.04](#task-app-04) — completed [WP-14.03](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.03). *Why:* aggregation<br>**artifact** [APP.05](#task-app-05) — completed [WP-14.04](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.04). *Why:* aggregation<br>**artifact** [APP.06](#task-app-06) — completed [WP-14.05](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.05). *Why:* aggregation<br>**artifact** [APP.07](#task-app-07) — completed [WP-14.06](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.06). *Why:* aggregation |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.app-composition](adoption.md#task-adopt-02-app-composition) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.17](assistant.md#task-ast-17) |
 | Write scope | `DesktopPlatform:artifacts/evidence/**` |

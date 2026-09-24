@@ -39,7 +39,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.00](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.00) — full |
 | Provides | provider-adapter-boundary; provider-capability-description |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.03](#task-com-03), [COM.04](#task-com-04) |
 | Permitted substitutes | [SUB-provider-adapter-fixture](../substitutes.md#sub-provider-adapter-fixture) |
@@ -61,7 +61,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.01](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.01) — full |
 | Provides | catalogue-offer-price-policy-version |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.03](#task-com-03) |
 | Permitted substitutes | [SUB-commercial-figure-proposal](../substitutes.md#sub-commercial-figure-proposal) |
@@ -83,7 +83,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.02](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.02) — full |
 | Provides | purchase-intent; checkout-attempt; order-confirming-state |
 | Start prerequisites | **artifact** [COM.01](#task-com-01) — provider adapter's hosted-checkout port and capability description. *Why:* checkout attempts must call the provider only through the adapter boundary; without it the pipeline would embed provider shapes directly, violating [BR-13](../../work-packages/22-identity-workspace-and-device.md#rule-br-13)<br>**artifact** [COM.02](#task-com-02) — Offer/Price/PriceVersion read model. *Why:* a purchase intent must reference a priced offer at a specific policy version to be idempotent and non-retroactive<br>**artifact** [CLOUD.24](cloud.md#task-cloud-24) — public API idempotency-key/rate-limiting primitive. *Why:* purchase intent double-submission handling is expected to reuse the platform's general idempotency mechanism rather than reinvent one per endpoint; exact API shape not yet observed since [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) is not yet built |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.04](#task-com-04), [COM.09](#task-com-09), [COM.11](#task-com-11), [COM.14](#task-com-14) |
 | Permitted substitutes | [SUB-hosted-checkout-sandbox](../substitutes.md#sub-hosted-checkout-sandbox) |
@@ -106,7 +106,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.03](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.03) — full |
 | Provides | provider-event-inbox; event-verification-chain |
 | Start prerequisites | **artifact** [COM.01](#task-com-01) — adapter signature-verification capability and typed event shape. *Why:* the inbox must verify signatures and interpret event types only through the adapter ([BR-13](../../work-packages/22-identity-workspace-and-device.md#rule-br-13)); it cannot parse provider payloads itself<br>**artifact** [COM.03](#task-com-03) — CheckoutAttempt/Order identifiers to correlate events against. *Why:* out-of-order handling and idempotency by event type+identifier require the purchase-side identifiers the event correlates to |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.09](#task-com-09), [COM.11](#task-com-11), [COM.14](#task-com-14) |
 | Permitted substitutes | [SUB-provider-event-fixtures](../substitutes.md#sub-provider-event-fixtures) |
@@ -130,7 +130,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.04](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.04) — full |
 | Provides | entitlement-grant-revocation-model; entitlement-snapshot-resolver |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.06](#task-com-06), [COM.07](#task-com-07), [COM.08](#task-com-08), [COM.10](#task-com-10), [COM.11](#task-com-11), [COM.13](#task-com-13), [COM.14](#task-com-14), [HAR.06](harness.md#task-har-06), [POL.04](policy.md#task-pol-04), [SIM.07](simulator.md#task-sim-07) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Entitlement/**/Resolver/**` |
@@ -153,7 +153,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.05](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.05) — full |
 | Provides | entitlement-distribution-endpoint; server-side-enforcement-port |
 | Start prerequisites | **artifact** [COM.05](#task-com-05) — EntitlementSnapshot + EntitlementVersion. *Why:* there is nothing to distribute or enforce against before the resolver produces a versioned snapshot<br>**artifact** [CLOUD.23](cloud.md#task-cloud-23) — typed-query/revision-precondition pattern. *Why:* distributing a versioned snapshot to clients is expected to reuse the public API's revision-precondition idiom rather than invent a parallel versioning scheme; [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) not yet built so exact shape unconfirmed |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.15](#task-com-15) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Entitlement/**/Distribution/**`<br>`Cloud:src/Cloud/ArcForges.Cloud.Modules.Entitlement/**/Enforcement/**` |
@@ -175,7 +175,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.06](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.06) — full |
 | Provides | quota-usage-storage-accounting |
 | Start prerequisites | **artifact** [CLOUD.07](cloud.md#task-cloud-07) — the published capacity/quota kernel (Capacity and Container/D1 integration producer). *Why:* [WP-42.06](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.06) text explicitly requires consuming the [WP-21.06](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.06) quota kernel rather than reimplementing gauge/reservation admission<br>**artifact** [COM.05](#task-com-05) — versioned entitlement grants. *Why:* quota resolution must apply new versioned grants without resetting gauges or outstanding reservations, which requires the resolver's version field |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.15](#task-com-15), [SIM.04](simulator.md#task-sim-04), [SIM.07](simulator.md#task-sim-07) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Entitlement/**/Quota/**` |
@@ -197,7 +197,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.07](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.07) — full |
 | Provides | credit-lot-model; credit-reservation-settle-release |
 | Start prerequisites | **artifact** [COM.05](#task-com-05) — entitlement kind determination (which grant authorises which credit class). *Why:* a credit lot is issued against an entitlement grant/purchase and compensation lots need an entitlement-linked expiry policy |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.02](ai-routing.md#task-air-02), [COM.12](#task-com-12), [COM.13](#task-com-13) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Entitlement/**/Credits/**` |
@@ -219,7 +219,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.08](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.08) — full<br>[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure; three ledgers with unresolved holds through their existing deadline — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure; three ledgers with unresolved holds through their existing deadline<br>[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure — package-level obligation contribution |
 | Provides | three-ledgers; reconciliation-subsystem |
 | Start prerequisites | **artifact** [COM.03](#task-com-03) — Order/Payment records. *Why:* the ledgers post from confirmed purchase-pipeline outcomes<br>**artifact** [COM.04](#task-com-04) — verified ProviderEvent stream. *Why:* two-way reconciliation compares ledger state against the provider's own event history, which only the inbox holds |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.63](cloud.md#task-cloud-63), [COM.10](#task-com-10), [COM.14](#task-com-14) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Billing/**/Ledgers/**`<br>`Cloud:src/Cloud/ArcForges.Cloud.Modules.Billing/**/Reconciliation/**` |
@@ -241,7 +241,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.09](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.09) — full |
 | Provides | refund-rollback; dispute-record; commercial-evidence-export |
 | Start prerequisites | **artifact** [COM.05](#task-com-05) — entitlement rollback path. *Why:* a refund must verifiably reverse the grant(s) it funded<br>**artifact** [COM.09](#task-com-09) — ledger entries to export. *Why:* the evidence export is built from ledger + event + entitlement history, which only exist once COM.09 posts them |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.66](cloud.md#task-cloud-66), [COM.13](#task-com-13), [COM.14](#task-com-14) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Billing/**/Refunds/**` |
@@ -263,7 +263,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.11](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.11) — service_term interval model keyed on (kind, period_ref); the three separated identities (subscription_ref stable / period_ref per paid interval / provider-event dedup in commerce.provider_event); union-of-overlap effective term; plan-change supersede. Capacity bucket/refill/reservation half split to COM.12. |
 | Provides | service-term-interval-model |
 | Start prerequisites | **artifact** [COM.03](#task-com-03) — paid period identifiers (checkout/order confirmation producing a period_ref-worthy paid interval). *Why:* a service term's period_ref is the paid period's own identity, which only the purchase pipeline mints<br>**artifact** [COM.05](#task-com-05) — offer assignment and entitlement kind. *Why:* service term sourcing includes the currently assigned offer; the resolver is where offer assignment is decided<br>**artifact** [COM.04](#task-com-04) — deduplicated ProviderEvent stream. *Why:* [TM-02](../../../architecture/data-model/01-cloud-data-model.md#rule-tm-02) requires provider-event dedup to live in commerce.provider_event so a replayed event cannot extend a term twice; the inbox is the only place that dedup exists |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.12](#task-com-12) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Entitlement/**/ServiceTerm/**` |
@@ -285,9 +285,9 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.11](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.11) — entitlement.capacity_bucket refill algorithm (§7.2), capacity_policy_period history, capacity_reservation with three funding sources, idempotent once-per-contiguous-run initialisation, and atomic admission with the service-term check first |
 | Provides | capacity-bucket-refill; capacity-reservation-three-source; admission-unit-of-work |
 | Start prerequisites | **artifact** [COM.11](#task-com-11) — service_term interval and (kind,period_ref) rows. *Why:* capacity_policy_period parameters are read from term history; admission checks the service term first in the same unit of work<br>**artifact** [COM.08](#task-com-08) — CreditReservation reserve/settle/release primitive. *Why:* capacity_reservation is explicitly a reservation spanning capacity plus the two credit pools; it extends rather than forks COM.08's reservation mechanics |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [COM.14](#task-com-14), [HAR.02](harness.md#task-har-02), [SIM.07](simulator.md#task-sim-07) |
+| Unblocks | [AIR.02](ai-routing.md#task-air-02), [COM.14](#task-com-14), [HAR.02](harness.md#task-har-02), [SIM.07](simulator.md#task-sim-07) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Entitlement/**/Capacity/**` |
 | Shared resources | [RES-cloud-host-composition](../shared-resources.md#res-cloud-host-composition) (append) |
 | Validation | Offline deterministic tests only (no wall-clock sleep): full-hold-then-consume-then-read fixture, fractional saturation, changed plan, overlap, genuine gap, unchanged renewal, grandfathered above-ceiling balance, the [CT-13](../../../architecture/16-billing-and-commerce-architecture.md#rule-ct-13) refill fixture (identical result whether refill runs once or a thousand times over an interval containing a ceiling raise, reduction and rate change, asserting 11 at t=11), clock rollback/restart/reconnect/second-device/racing-replica watermark tests, ceiling-reduction-preserves-held-funding test, ledger-unit-separation test (customerCredit carries micro-credits with no currency; the other two carry money with currency; no query sums them). |
@@ -308,7 +308,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) Operator contract closure — financial owners (grant/revokeGrant/issueCredit/adjustCredit/refund) — operator contract closure; financial-owner RPC implementations: grant, revokeGrant, issueCredit, adjustCredit, refund |
 | Provides | operator-financial-owner-rpcs |
 | Start prerequisites | **contract** [CON.14](contracts.md#task-con-14) — the OperatorService full RPC surface (ProposeAction/ApproveAction/execute, grant/revokeGrant/issueCredit/adjustCredit/refund message shapes, eight authorization fields, negative vectors) per registry04 §9. *Why:* only a single placeholder message (OperatorCallContext, a context shape with no RPCs) exists at Contracts HEAD e6c4a77f; no operator service or per-domain RPC message is generated yet<br>**artifact** [CLOUD.21](cloud.md#task-cloud-21) — real identity/dispatch conformance for operator calls. *Why:* the operator paragraph explicitly assigns 'real identity/dispatch conformance' to [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23); operator RPCs need that routing/auth layer to refuse public customer/PAT/agent callers<br>**artifact** [COM.05](#task-com-05) — grant/revocation model. *Why:* grant/revokeGrant operate directly on COM.05's EntitlementGrant/EntitlementRevocation<br>**artifact** [COM.08](#task-com-08) — credit lot issue/adjust primitives. *Why:* issueCredit/adjustCredit operate on COM.08's CreditLot model<br>**artifact** [COM.10](#task-com-10) — refund/rollback path. *Why:* the refund RPC drives COM.10's refund-with-rollback mechanism |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [OPS.13](operations.md#task-ops-13) — the operator console UI actually calling these RPCs end-to-end. *Why:* [WP-45.04](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.04) is named as 'the real console join'; this task's RPCs are not exercised by a real operator until the console wires them in |
 | Unblocks | [CLOUD.64](cloud.md#task-cloud-64), [OPS.05](operations.md#task-ops-05), [OPS.13](operations.md#task-ops-13) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Billing/**/Operator/**`<br>`Cloud:src/Cloud/ArcForges.Cloud.Modules.Entitlement/**/Operator/**` |
@@ -330,7 +330,7 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 | Obligations | [WP-42.10](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.10) — full<br>[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure — package-level obligation contribution |
 | Provides | technical-commerce-closure; activation-checklist |
 | Start prerequisites | **artifact** [COM.12](#task-com-12) — passing durable term/capacity/refill state ([WP-42.11](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.11) evidence). *Why:* the design's own 'Frozen semantics' ordering states [WP-42.11](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.11) must pass before [WP-42.10](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.10) despite the suffix order; [PG-13](../../../assurance/open-gates-register.md#rule-pg-13)/[PG-16](../../../assurance/open-gates-register.md#rule-pg-16) evidence is produced at 42.11 and consumed here<br>**artifact** [COM.03](#task-com-03) — purchase pipeline end to end. *Why:* sandbox lifecycle vectors exercise purchase/checkout as their entry point<br>**artifact** [COM.04](#task-com-04) — event inbox end to end. *Why:* vectors explicitly include event duplication/loss scenarios<br>**artifact** [COM.05](#task-com-05) — entitlement resolver end to end. *Why:* SubscriptionState must exactly match requirements-04, which the resolver computes<br>**artifact** [COM.09](#task-com-09) — ledgers and reconciliation end to end. *Why:* ledger integrity is an explicit technical-receipt item<br>**artifact** [COM.10](#task-com-10) — refund path end to end. *Why:* test-mode charge/refund/webhook-replay vectors are explicit |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.15](#task-com-15), [WEB.14](web.md#task-web-14), [WEB.29](web.md#task-web-29) |
 | Write scope | `Cloud:tests/CloudIntegrationTests/Commerce/**`<br>`Cloud:src/Cloud/ArcForges.Cloud.Modules.Billing/**` |
@@ -350,10 +350,11 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 |---|---|
 | Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
 | Kind / size | service / S |
+| Package acceptance | Records the [WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-42.90](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.90) — full<br>[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure; active Pass/subscription mutual exclusion, no immediate proration, exact renewal/reset periods — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure; active Pass/subscription mutual exclusion, no immediate proration, exact renewal/reset periods<br>[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure — package-level obligation contribution |
 | Provides | wp42-closure-receipt |
 | Start prerequisites | **artifact** [COM.14](#task-com-14) — technical commerce closure results to attach to the receipt. *Why:* [WP-42.90](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.90) explicitly must keep [WP-42.11](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.11) evidence and its order before [WP-42.10](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.10), and the receipt aggregates every amended §5 producer/consumer result; COM.14 is the last domain producer to close<br>**artifact** [COM.06](#task-com-06) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [COM.07](#task-com-07) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.commerce](adoption.md#task-adopt-07-commerce) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.06](release.md#task-rel-06), [REL.08](release.md#task-rel-08) |
 | Write scope | `Cloud:eng/provenance/records/**` |

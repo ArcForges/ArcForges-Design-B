@@ -34,7 +34,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Obligations | [WP-06.00](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.00) — ArcNotes host only<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | arcnotes-desktop-aot-host |
 | Start prerequisites | **contract** [CON.91](contracts.md#task-con-91) — ArcForges.Contracts.Foundation/LocalRpc.Notes published package. *Why:* the host's typed local port and error surface compile against these generated records; WP03.01 is already accepted<br>**artifact** [FND.01](foundation.md#task-fnd-01) — Foundation/Application.Abstractions identity/error primitives. *Why:* the host and its Core reference these primitive types; only the primitives, not all of WP04's substeps |
-| Entry condition | [ADOPT.04](adoption.md#task-adopt-04) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.04.runtime-proofs](adoption.md#task-adopt-04-runtime-proofs) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NAT.04](native.md#task-nat-04), [NAT.29](native.md#task-nat-29), [PLT.26](platform.md#task-plt-26), [PLT.34](platform.md#task-plt-34), [UPD.08](updater.md#task-upd-08) |
 | Write scope | `ArcNotes:src/ArcForges.ArcNotes/**`<br>`ArcNotes:ArcNotes.slnx` |
@@ -57,7 +57,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Obligations | [WP-06.00](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.00) — ArcScope host only<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | arcscope-desktop-aot-host |
 | Start prerequisites | **contract** [CON.91](contracts.md#task-con-91) — ArcForges.Contracts.Foundation/LocalRpc.Scope published package. *Why:* host typed local port compiles against these generated records<br>**artifact** [FND.01](foundation.md#task-fnd-01) — Foundation/Application.Abstractions identity/error primitives. *Why:* same as PRF.01 |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.runtime-proofs](adoption.md#task-adopt-05-runtime-proofs) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NAT.29](native.md#task-nat-29) |
 | Write scope | `ArcScope:src/ArcForges.ArcScope/**`<br>`ArcScope:ArcScope.slnx` |
@@ -80,7 +80,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Obligations | [WP-06.00](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.00) — ArcSlate host only<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | arcslate-desktop-aot-host |
 | Start prerequisites | **contract** [CON.91](contracts.md#task-con-91) — ArcForges.Contracts.Foundation/LocalRpc.Slate published package. *Why:* host typed local port compiles against these generated records<br>**artifact** [FND.01](foundation.md#task-fnd-01) — Foundation/Application.Abstractions identity/error primitives. *Why:* same as PRF.01 |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.runtime-proofs](adoption.md#task-adopt-06-runtime-proofs) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NAT.29](native.md#task-nat-29) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate/**`<br>`ArcSlate:ArcSlate.slnx` |
@@ -103,7 +103,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Obligations | [WP-06.01](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.01) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | local-rpc-aot-proof |
 | Start prerequisites | **contract** [CON.05](contracts.md#task-con-05) — local RPC generated server/client codegen (LocalBootstrap, ConnectCallback surface). *Why:* the probe processes invoke generated services over the local transport; this exact codegen is [VG-04](../../../assurance/open-gates-register.md#rule-vg-04)'s own scheduled-in producer |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.runtime-proofs](adoption.md#task-adopt-02-runtime-proofs) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.03](app-composition.md#task-app-03), [NAT.01](native.md#task-nat-01), [NAT.29](native.md#task-nat-29), [PLT.09](platform.md#task-plt-09) |
 | Write scope | `DesktopPlatform:tests/LocalRpcAotTests/**`<br>`DesktopPlatform:eng/verification/**` |
@@ -126,7 +126,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Obligations | [WP-06.02](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.02) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | desktop-grpc-web-aot-proof |
 | Start prerequisites | **contract** [CON.92](contracts.md#task-con-92) — ArcForges.Sdk.Client / generated gRPC-Web client, AOT-clean per accepted WP03.02 evidence. *Why:* [F-026](../../../assurance/open-gates-register.md#rule-f-026) requires the published-artifact call, and WP03.02 already produced the AOT-clean generated client that this substep must exercise for real, not merely compile<br>**artifact** [PRF.07](#task-prf-07) — a deployed Worker/Container ingress endpoint (from [WP-06.04](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.04)). *Why:* 06.02 explicitly calls 'actual Worker/Container ingress' — no fixture substitute closes [F-026](../../../assurance/open-gates-register.md#rule-f-026) |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.runtime-proofs](adoption.md#task-adopt-02-runtime-proofs) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.11](assistant.md#task-ast-11), [NAT.29](native.md#task-nat-29) |
 | Write scope | `DesktopPlatform:tests/ReleaseArtifactTests/**`<br>`DesktopPlatform:eng/verification/**` |
@@ -148,7 +148,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Obligations | [WP-06.03](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.03) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | desktop-realtime-aot-proof |
 | Start prerequisites | **artifact** [PRF.07](#task-prf-07) — deployed Worker/Container/DO providing EventService.Watch. *Why:* 06.03 requires the actual deployed provider boundary; no fixture closes real integration per WP06 SS5 text |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.runtime-proofs](adoption.md#task-adopt-02-runtime-proofs) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NAT.29](native.md#task-nat-29) |
 | Write scope | `DesktopPlatform:tests/ReleaseArtifactTests/**`<br>`DesktopPlatform:eng/verification/**` |
@@ -170,7 +170,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Obligations | [WP-06.04](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.04) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | cloud-aot-foundation |
 | Start prerequisites | **contract** [CON.92](contracts.md#task-con-92) — ArcForges.Contracts.CloudInternal, native auth exception/catalog/index/revocation/realm schemas and independent signed vectors (fixture keys per WP02/06). *Why:* WP06 itself is a permitted producer of the signing-key fixture, not solely a consumer |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.runtime-proofs](adoption.md#task-adopt-07-runtime-proofs) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.25](cloud.md#task-cloud-25), [NAT.29](native.md#task-nat-29), [PRF.05](#task-prf-05), [PRF.06](#task-prf-06), [PRF.08](#task-prf-08), [PRF.10](#task-prf-10) |
 | Permitted substitutes | [SUB-signed-format-fixture-keys](../substitutes.md#sub-signed-format-fixture-keys) |
@@ -194,7 +194,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Obligations | [WP-06.05](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.05) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | web-production-aot-proof |
 | Start prerequisites | **contract** [CON.92](contracts.md#task-con-92) — @arcforges/api-client generated TS gRPC-Web client, AOT-irrelevant but descriptor/compat-checked. *Why:* the production build calls the actual generated SDK, not a handwritten DTO<br>**artifact** [PRF.07](#task-prf-07) — a deployed Cloud AOT probe reachable same-origin through CF. *Why:* 06.05 explicitly requires calling 'the actual AOT probe' with CF authenticated presentation; no dev-server or handwritten DTO substitute is acceptable |
-| Entry condition | [ADOPT.09](adoption.md#task-adopt-09) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.09.runtime-proofs](adoption.md#task-adopt-09-runtime-proofs) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NAT.29](native.md#task-nat-29), [WEB.30](web.md#task-web-30) |
 | Permitted substitutes | [SUB-web-msw-fixtures](../substitutes.md#sub-web-msw-fixtures) |
@@ -217,7 +217,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Obligations | [WP-06.06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.06) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | third-party-control-admission-process |
 | Start prerequisites | **design** [PLT.34](platform.md#task-plt-34) — a candidate third-party control the desktop shell actually intends to use. *Why:* the process needs one real candidate to exercise; if WP10 has not yet named a candidate control this substep can only stand up the process and defer the first exercise |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.runtime-proofs](adoption.md#task-adopt-02-runtime-proofs) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NAT.29](native.md#task-nat-29) |
 | Write scope | `DesktopPlatform:eng/verification/probe-evidence/**` |
@@ -239,7 +239,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Obligations | [WP-06.07](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.07) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | android-grpc-web-cf-proof |
 | Start prerequisites | **contract** [CON.90](contracts.md#task-con-90) — io.github.arcforges:contracts-connect-client Maven artifact (public schema only, Connect Kotlin generated client). *Why:* the release build calls this exact generated client, selecting binary gRPC-Web explicitly<br>**artifact** [PRF.07](#task-prf-07) — deployed Worker/Container/D1/DO/R2 foundation. *Why:* 06.07 requires the real deployed provider boundary, matching the pattern of 06.02/06.03 |
-| Entry condition | [ADOPT.10](adoption.md#task-adopt-10) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.10.runtime-proofs](adoption.md#task-adopt-10-runtime-proofs) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AND.01](android.md#task-and-01), [CLOUD.26](cloud.md#task-cloud-26), [NAT.29](native.md#task-nat-29) |
 | Write scope | `Mobile:app/**`<br>`Mobile:gradle/**` |

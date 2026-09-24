@@ -16,7 +16,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | [POL.06](#task-pol-06) | Scoped resolution and explainability (server side) | service | M | [POL.02](#task-pol-02) (artifact) | not-started |
 | [POL.07](#task-pol-07) | Compatibility policy | service | M | [POL.02](#task-pol-02) (artifact) | not-started |
 | [POL.08](#task-pol-08) | Publication, staleness and last-known-good (server side) | service | M | [POL.02](#task-pol-02) (artifact) | not-started |
-| [POL.09](#task-pol-09) | Client-side policy resolution library (native/AOT) | service | L | [POL.04](#task-pol-04) (artifact), [POL.08](#task-pol-08) (artifact), [CON.12](contracts.md#task-con-12) (contract), [CON.22](contracts.md#task-con-22) (contract) | not-started |
+| [POL.09](#task-pol-09) | Client-side policy resolution library (native/AOT) | service | L | [POL.04](#task-pol-04) (artifact), [CON.12](contracts.md#task-con-12) (contract), [CON.22](contracts.md#task-con-22) (contract) | not-started |
 | [POL.10](#task-pol-10) | Owned-artifact receipt | service | S | [POL.09](#task-pol-09) (artifact), [POL.03](#task-pol-03) (artifact), [POL.05](#task-pol-05) (artifact), [POL.06](#task-pol-06) (artifact), [POL.07](#task-pol-07) (artifact) | not-started |
 | [POL.11](#task-pol-11) | First real publish-then-resolve round trip from Cloud Policy authority to the DesktopPlatform client library | integration | M | [POL.08](#task-pol-08) (artifact), [POL.09](#task-pol-09) (artifact) | not-started |
 
@@ -35,7 +35,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Obligations | [WP-44.00](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.00) — full |
 | Provides | policy-boundary-markers; boundary-architecture-test |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.policy](adoption.md#task-adopt-07-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [POL.02](#task-pol-02), [POL.04](#task-pol-04) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Policy/**/Boundaries/**` |
@@ -57,7 +57,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Obligations | [WP-44.01](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.01) — full<br>[WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) Operator contract closure — configuration/policy owners — operator contract closure; configuration/policy owner: dry-run proposal/dual-approval/activation CAS as the typed proposal protocol |
 | Provides | configuration-schema-validation; activation-cas-pipeline |
 | Start prerequisites | **contract** [CON.12](contracts.md#task-con-12) — policy.body.v1 and configuration.v1 published message schemas per architecture/contracts/08 §4/§6. *Why:* only tooling-level 'policy' files (dependency/licence policy) exist in Contracts at HEAD e6c4a77f; no PolicyBody or Configuration wire message was found, so there is nothing generated to validate against yet<br>**artifact** [POL.01](#task-pol-01) — boundary markers. *Why:* schema validation must reject a body that reaches into entitlement/settings/health/data-plane territory, which POL.01 defines |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.policy](adoption.md#task-adopt-07-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.01](ai-routing.md#task-air-01), [POL.03](#task-pol-03), [POL.04](#task-pol-04), [POL.05](#task-pol-05), [POL.06](#task-pol-06), [POL.07](#task-pol-07), [POL.08](#task-pol-08), [SRCH.90](search.md#task-srch-90), [WEB.14](web.md#task-web-14) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Configuration/**` |
@@ -79,7 +79,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Obligations | [WP-44.02](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.02) — full |
 | Provides | compiled-hard-limits |
 | Start prerequisites | **artifact** [POL.02](#task-pol-02) — the activation validation pipeline. *Why:* loosening-rejection is enforced as part of bundle activation validation |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.policy](adoption.md#task-adopt-07-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [POL.10](#task-pol-10), [SIM.07](simulator.md#task-sim-07) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Policy/**/HardLimits/**` |
@@ -102,7 +102,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Obligations | [WP-44.03](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.03) — server-side flag/rollout definition, publication and byte/hash/bucket algorithm; on-device execution split to POL.09 |
 | Provides | rollout-hashing-algorithm; flag-lifecycle |
 | Start prerequisites | **artifact** [POL.01](#task-pol-01) — boundary enforcement. *Why:* rollout must not be able to grant commercial/security authority, which is exactly a boundary POL.01 defines<br>**artifact** [POL.02](#task-pol-02) — schema/activation pipeline. *Why:* flag/rollout definitions are published and activated as configuration bundles through POL.02's pipeline<br>**artifact** [COM.05](commerce.md#task-com-05) — explicit-setting/entitlement priority ordering. *Why:* annex 08 §5 requires explicit-setting and entitlement to take priority over rollout bucketing; the resolver is where entitlement is decided (same area, [WP-42.04](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.04)) |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.policy](adoption.md#task-adopt-07-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [POL.09](#task-pol-09) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Policy/**/Rollout/**` |
@@ -124,7 +124,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Obligations | [WP-44.04](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.04) — full<br>[WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) operator contract closure; the 'kill' typed operator RPC — operator contract closure; the 'kill' typed operator RPC<br>[WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) Operator contract closure — configuration/policy owners — package-level obligation contribution |
 | Provides | kill-switch-modes |
 | Start prerequisites | **artifact** [POL.02](#task-pol-02) — activation CAS pipeline. *Why:* kill-switch activation reuses the same schema/activation mechanism as any other policy bundle<br>**contract** [CON.14](contracts.md#task-con-14) — the 'kill' operator RPC shape per registry04 §9.2. *Why:* same gap as COM.13 — only OperatorCallContext exists at Contracts HEAD e6c4a77f, no per-domain operator RPC including kill is generated yet |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.policy](adoption.md#task-adopt-07-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.64](cloud.md#task-cloud-64), [OPS.05](operations.md#task-ops-05), [OPS.13](operations.md#task-ops-13), [POL.10](#task-pol-10) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Policy/**/KillSwitch/**` |
@@ -146,7 +146,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Obligations | [WP-44.05](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.05) — server-side resolution across application/workspace/device/installation scopes with fixed order, and the explainability endpoint/data; client-side consumption split to POL.09 |
 | Provides | scoped-resolution-server; explainability-data |
 | Start prerequisites | **artifact** [POL.02](#task-pol-02) — published, validated bundles to resolve over. *Why:* resolution operates over activated configuration bundles |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.policy](adoption.md#task-adopt-07-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [POL.10](#task-pol-10) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Policy/**/Resolution/**` |
@@ -167,7 +167,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Obligations | [WP-44.06](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.06) — full |
 | Provides | compatibility-policy-rules |
 | Start prerequisites | **artifact** [POL.02](#task-pol-02) — schema/activation pipeline. *Why:* compatibility rules are published and activated as a policy bundle type |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.policy](adoption.md#task-adopt-07-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [UPD.08](updater.md#task-upd-08) — the update feed actually stopping an offer for a blocked version. *Why:* [WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44)'s own downstream list names 53 as a consumer; a compatibility rule is only proven real once the update feed enforces it, which POL.07 does not own |
 | Unblocks | [POL.10](#task-pol-10) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Policy/**/Compatibility/**` |
@@ -188,7 +188,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Obligations | [WP-44.07](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.07) — bundle publication with versioning and audit; server-side staleness signalling; the application-timing contract clients must honour. Client caching/fallback/mid-operation behaviour split to POL.09 |
 | Provides | bundle-publication; staleness-signal-contract |
 | Start prerequisites | **artifact** [POL.02](#task-pol-02) — validated bundle to publish. *Why:* publication follows validation/activation |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.policy](adoption.md#task-adopt-07-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.00](ai-routing.md#task-air-00), [POL.09](#task-pol-09), [POL.11](#task-pol-11), [SRCH.06](search.md#task-srch-06), [WEB.29](web.md#task-web-29) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Policy/**/Publication/**` |
@@ -208,9 +208,9 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Kind / size | service / L |
 | Obligations | [WP-44.05](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.05) — client-side consumption of scoped resolution/explainability<br>[WP-44.07](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.07) — client caching, staleness threshold, fallback to last-known-good then compiled defaults, staleness visible, mid-operation application timing<br>[WP-44.03](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.03) — client execution of the deterministic rollout hash so the same subject/version selects the same result on-device |
 | Provides | client-policy-resolution-library |
-| Start prerequisites | **artifact** [POL.04](#task-pol-04) — the deterministic rollout hashing algorithm specification. *Why:* the client must reproduce the exact same hash/bucket result as the server for the same subject/version<br>**artifact** [POL.08](#task-pol-08) — the published bundle wire format and staleness signal. *Why:* the client cache consumes exactly what POL.08 publishes<br>**contract** [CON.12](contracts.md#task-con-12) — policy.body.v1/configuration.v1 generated client-side (C#) types. *Why:* same schema gap as POL.02 — the client needs the generated DTOs to deserialize into<br>**contract** [CON.22](contracts.md#task-con-22) — published policy.getBundle. *Why:* the client resolution library fetches the generated policy bundle |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
-| Completion prerequisites | **integration** [POL.11](#task-pol-11) — a genuinely published bundle fetched and cached by this library, with staleness fallback proven against the deployed Cloud policy service. *Why:* this task's own tests can only prove the fallback chain mechanics in isolation; real staleness/LKG behavior needs a real publish-then-resolve round trip |
+| Start prerequisites | **artifact** [POL.04](#task-pol-04) — the deterministic rollout hashing algorithm specification. *Why:* the client must reproduce the exact same hash/bucket result as the server for the same subject/version<br>**contract** [CON.12](contracts.md#task-con-12) — policy.body.v1/configuration.v1 generated client-side (C#) types. *Why:* same schema gap as POL.02 — the client needs the generated DTOs to deserialize into<br>**contract** [CON.22](contracts.md#task-con-22) — published policy.getBundle. *Why:* the client resolution library fetches the generated policy bundle |
+| Entry condition | [ADOPT.02.policy](adoption.md#task-adopt-02-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Completion prerequisites | **integration** [POL.11](#task-pol-11) — a genuinely published bundle fetched and cached by this library, with staleness fallback proven against the deployed Cloud policy service. *Why:* this task's own tests can only prove the fallback chain mechanics in isolation; real staleness/LKG behavior needs a real publish-then-resolve round trip<br>**integration** [POL.08](#task-pol-08) — real server-side publication and staleness signal complete. *Why:* the client library starts from the published policy contract and the compiled last-known-good seed; its acceptance still resolves the real publication |
 | Unblocks | [POL.10](#task-pol-10), [POL.11](#task-pol-11), [UPD.05](updater.md#task-upd-05), [UPD.08](updater.md#task-upd-08) |
 | Permitted substitutes | [SUB-lkg-compiled-defaults-seed](../substitutes.md#sub-lkg-compiled-defaults-seed) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Policy/**` |
@@ -230,10 +230,11 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 |---|---|
 | Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
 | Kind / size | service / S |
+| Package acceptance | Records the [WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-44.90](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.90) — full |
 | Provides | wp44-closure-receipt |
 | Start prerequisites | **artifact** [POL.09](#task-pol-09) — client resolution evidence to attach. *Why:* the receipt must show the client never treats stale/local policy as authoritative, which only POL.09's fallback tests demonstrate<br>**artifact** [POL.03](#task-pol-03) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [POL.05](#task-pol-05) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [POL.06](#task-pol-06) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [POL.07](#task-pol-07) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.policy](adoption.md#task-adopt-07-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.06](release.md#task-rel-06), [REL.08](release.md#task-rel-08) |
 | Write scope | `Cloud:eng/provenance/records/**` |
@@ -253,7 +254,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Kind / size | integration / M |
 | Obligations | [WP-44.07](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.07) — real fallback chain against a deployed publication endpoint |
 | Start prerequisites | **artifact** [POL.08](#task-pol-08) — real, delivered outcome of POL.08 (Publication, staleness and last-known-good (server side)). *Why:* this integration exercises the real publication, staleness and last-known-good (server side) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [POL.09](#task-pol-09) — real, delivered outcome of POL.09 (Client-side policy resolution library (native/AOT)). *Why:* this integration exercises the real client-side policy resolution library (native/AOT) instead of a substitute, so it cannot start before that outcome exists |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.policy](adoption.md#task-adopt-07-policy) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [POL.09](#task-pol-09) |
 | Write scope |  |
