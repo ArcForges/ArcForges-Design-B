@@ -252,7 +252,7 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
 | Kind / size | integration / M |
 | Obligations | [WP-44.07](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.07) — real fallback chain against a deployed publication endpoint |
-| Start prerequisites | **artifact** [POL.08](#task-pol-08) — real POL.08 available. *Why:* integration scenario needs the real producer and consumer<br>**artifact** [POL.09](#task-pol-09) — real POL.09 available. *Why:* integration scenario needs the real producer and consumer |
+| Start prerequisites | **artifact** [POL.08](#task-pol-08) — real, delivered outcome of POL.08 (Publication, staleness and last-known-good (server side)). *Why:* this integration exercises the real publication, staleness and last-known-good (server side) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [POL.09](#task-pol-09) — real, delivered outcome of POL.09 (Client-side policy resolution library (native/AOT)). *Why:* this integration exercises the real client-side policy resolution library (native/AOT) instead of a substitute, so it cannot start before that outcome exists |
 | Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [POL.09](#task-pol-09) |

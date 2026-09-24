@@ -431,7 +431,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Validation | [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017) scope only; no macOS/E2E/live-service CI. |
 | Completion evidence | Source commit, artifact versions/hashes, environment, UX ledger rows, named-fixture list for [WP-26](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26)/41/52. |
 | Baseline (unreviewed unless accepted) | not-started |
-| Notes | Two orphaned substep anchors (rule-wp-17.08, rule-wp-17.09) exist in the WP17 doc with no substep content and no entry in substeps.json -- see report §9; not modeled as tasks. |
+| Notes | Two orphaned substep anchors (rule-wp-17.08, rule-wp-17.09) exist in the WP17 doc with no substep content and no entry in substeps.json --; not modeled as tasks. |
 
 <a id="task-ast-19"></a>
 
@@ -444,7 +444,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | integration / M |
 | Obligations | [WP-52.05](../../work-packages/52-cloud-harness.md#rule-wp-52.05) — all work except the parts mapped to DEV.13, HAR.05 |
-| Start prerequisites | **artifact** [AST.11](#task-ast-11) — real AST.11 available. *Why:* integration scenario needs the real producer and consumer<br>**artifact** [HAR.00](harness.md#task-har-00) — real Harness turn loop. *Why:* the assistant switches from the fixture turn endpoint to the real Workflow loop<br>**artifact** [HAR.03](harness.md#task-har-03) — real generated streaming and durable output. *Why:* the assistant reads real output streams |
+| Start prerequisites | **artifact** [AST.11](#task-ast-11) — real, delivered outcome of AST.11 (Cloud client and device runtime (fixture turn endpoint boundary)). *Why:* this integration exercises the real cloud client and device runtime (fixture turn endpoint boundary) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.00](harness.md#task-har-00) — real Harness turn loop. *Why:* the assistant switches from the fixture turn endpoint to the real Workflow loop<br>**artifact** [HAR.03](harness.md#task-har-03) — real generated streaming and durable output. *Why:* the assistant reads real output streams |
 | Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [DEV.13](device-bridge.md#task-dev-13), [HAR.05](harness.md#task-har-05) |
@@ -464,7 +464,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | integration / M |
 | Obligations | [WP-52.06](../../work-packages/52-cloud-harness.md#rule-wp-52.06) — all work except the parts mapped to HAR.06, HAR.91 |
-| Start prerequisites | **artifact** [AST.14](#task-ast-14) — real AST.14 available. *Why:* integration scenario needs the real producer and consumer<br>**artifact** [HAR.06](harness.md#task-har-06) — real [WP-52.06](../../work-packages/52-cloud-harness.md#rule-wp-52.06) available. *Why:* integration scenario needs the real producer and consumer |
+| Start prerequisites | **artifact** [AST.14](#task-ast-14) — real, delivered outcome of AST.14 (Automation client (automation fixture state transitions)). *Why:* this integration exercises the real automation client (automation fixture state transitions) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.06](harness.md#task-har-06) — real, delivered outcome of HAR.06 (Durable Cloud automation, scheduling and automation-fixture removal). *Why:* this integration exercises the real durable Cloud automation, scheduling and automation-fixture removal instead of a substitute, so it cannot start before that outcome exists |
 | Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [HAR.06](harness.md#task-har-06) |
@@ -484,7 +484,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner; also touches Cloud |
 | Kind / size | integration / M |
 | Obligations | [WP-25.08](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.08) — all work except the parts mapped to CLOUD.45, CLOUD.58, NOTES.33 |
-| Start prerequisites | **artifact** [AST.07](#task-ast-07) — real AST.07 available. *Why:* integration scenario needs the real producer and consumer<br>**artifact** [CLOUD.45](cloud.md#task-cloud-45) — real [WP-25.08](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.08) available. *Why:* integration scenario needs the real producer and consumer |
+| Start prerequisites | **artifact** [AST.07](#task-ast-07) — real, delivered outcome of AST.07 (Local history export and import (assistant-history.v1)). *Why:* this integration exercises the real local history export and import (assistant-history.v1) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.45](cloud.md#task-cloud-45) — real, delivered outcome of CLOUD.45 (Real Cloud Notes and Chat export producers). *Why:* this integration exercises the real real Cloud Notes and Chat export producers instead of a substitute, so it cannot start before that outcome exists |
 | Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.47](cloud.md#task-cloud-47), [CLOUD.58](cloud.md#task-cloud-58) |
@@ -504,7 +504,7 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner; also touches Cloud |
 | Kind / size | integration / M |
 | Obligations | [WP-25.09](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.09) — full; consumer-side real integration |
-| Start prerequisites | **artifact** [AST.15](#task-ast-15) — real AST.15 available. *Why:* integration scenario needs the real producer and consumer<br>**artifact** [CLOUD.46](cloud.md#task-cloud-46) — real CLOUD.46 available. *Why:* integration scenario needs the real producer and consumer<br>**artifact** [AST.01](#task-ast-01) — real [WP-15](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15) available. *Why:* integration scenario needs the real producer and consumer |
+| Start prerequisites | **artifact** [AST.15](#task-ast-15) — real, delivered outcome of AST.15 (History and AI admission (local/cloud/temporary modes)). *Why:* this integration exercises the real history and AI admission (local/cloud/temporary modes) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.46](cloud.md#task-cloud-46) — real, delivered outcome of CLOUD.46 (Application Cloud history and restartable import). *Why:* this integration exercises the real application Cloud history and restartable import instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AST.01](#task-ast-01) — real, delivered outcome of AST.01 (Single application history store (model 05 schema)). *Why:* this integration exercises the real single application history store (model 05 schema) instead of a substitute, so it cannot start before that outcome exists |
 | Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.47](cloud.md#task-cloud-47) |

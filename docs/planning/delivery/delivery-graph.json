@@ -1046,7 +1046,7 @@
    "baseline": {
     "state": "not-started"
    },
-   "notes": "WP05's own §8 completion-gate text states this substep 'makes VG-04's policy-test half enforceable' - a second VG-04 contributor not listed in the README's deferred-gate table (which names only 03.04/06.01); see report.md §9 and the gates array.",
+   "notes": "WP05's own §8 completion-gate text states this substep 'makes VG-04's policy-test half enforceable' - a second VG-04 contributor not listed in the README's deferred-gate table (which names only 03.04/06.01).",
    "complete": []
   },
   {
@@ -2012,12 +2012,8 @@
      "part": "the 'Product interfaces use generated records and static in-process adapters' half — full method surface for the four product-port packages plus ICapabilityProvider/IContextProvider/IArtifactHandler/IResourceAccess/IProductLifecycle/IDeepLinkTarget"
     },
     {
-     "ref": "WP-03:p2-010-required-behavior-source-knowledg",
-     "part": "P2-010 required behavior: source KnowledgePolicy/Patch/View and typed one-use overrides (source.getPolicy/setPolicy/clearPolicy, source.createConsent/revokeConsent) fall inside IChatOperations/context-provider scope; stable Notes run/atom/table-cell positions (NotesTextPosition already exists in content.proto from WP03.01 — this task only needs to verify no gap remains for table-cell addressing)"
-    },
-    {
      "ref": "WP-03:p2-010-required-behavior-and-closure-sou",
-     "part": "package-level obligation contribution"
+     "part": "P2-010 required behavior: source KnowledgePolicy/Patch/View and typed one-use overrides (source.getPolicy/setPolicy/clearPolicy, source.createConsent/revokeConsent) fall inside IChatOperations/context-provider scope; stable Notes run/atom/table-cell positions (NotesTextPosition already exists in content.proto from WP03.01 — this task only needs to verify no gap remains for table-cell addressing); package-level obligation contribution"
     }
    ],
    "outcome": "Every method in manifest11's 'in-process' scope class (ICapabilityProvider, IContextProvider, IArtifactHandler, IResourceAccess, IProductLifecycle, IDeepLinkTarget, INotesOperations [26 methods], IScopeOperations [13], ISlateOperations [19], IChatOperations [8]) is generated as a typed request/result pair per registry04 §6, with product-port packages containing only in-process records (no listener/gRPC registration) and a policy test proving that.",
@@ -2436,11 +2432,7 @@
     },
     {
      "ref": "WP-03:operator-contract-closure-package-level",
-     "part": "'Operator contract closure' package-level obligation — schema and negative vectors only; WP-23 owns real identity/dispatch, WP-42 financial owners, WP-44 config/policy owners, WP-45 the console join"
-    },
-    {
-     "ref": "WP-03:operator-contract-closure-registry04-9-s",
-     "part": "package-level obligation contribution"
+     "part": "'Operator contract closure' package-level obligation — schema and negative vectors only; WP-23 owns real identity/dispatch, WP-42 financial owners, WP-44 config/policy owners, WP-45 the console join; package-level obligation contribution"
     }
    ],
    "outcome": "internal/proto/arcforges/operator/v1/operator.proto generated with all 29 OperatorService methods (ListCases through catalog.review/catalog.revoke), OperatorCallContext(tag100)/OperatorProposalRef(tag101) appended per method, and the typed propose/approve/execute protocol (§9.2) with its 9 mutation-variant table rows (grant/revokeGrant/issueCredit/adjustCredit/refund/catalogReview/catalogRevoke/appeal/kill); independent negative vectors cover distinct-approver violation, stale hash/revision/configuration, role revocation, expiry, concurrent consumption and lost receipt; no direct SQL or public-SDK import of operator schema.",
@@ -2654,12 +2646,8 @@
    "size": "S",
    "obligations": [
     {
-     "ref": "WP-03:7-evidence-requirement-generate-an-opera",
-     "part": "§7 evidence requirement: 'Generate an operation-by-actor reachability matrix for every public/local/operator/CF/exception binding under catalogue 00 AZ-04, with all seven effective authorization fields and source profile. Fail unclassified/ambiguous fields...'"
-    },
-    {
      "ref": "WP-03:7-evidence-operation-by-actor-reachabili",
-     "part": "package-level obligation contribution"
+     "part": "§7 evidence requirement: 'Generate an operation-by-actor reachability matrix for every public/local/operator/CF/exception binding under catalogue 00 AZ-04, with all seven effective authorization fields and source profile. Fail unclassified/ambiguous fields...'; package-level obligation contribution"
     }
    ],
    "outcome": "A generator/policy-test tool reads manifest11's ~380-row scope-class table as its oracle, cross-references every currently-registered service method's exported eight authorization fields (capability/risk/approval/stepUp/localPresence/egress/patEligible/actorKinds), and fails the build on any unclassified, ambiguous, or nonexistent-idempotency-example method, or any tool reachability of a human-only approval/credential/commerce/policy method.",
@@ -2707,12 +2695,8 @@
      "part": "all work except the parts mapped to CON.15"
     },
     {
-     "ref": "WP-03:8-completion-gate-items-1-6-and-the-p2-0",
-     "part": "§8 completion gate items 1-6 and the P2-009/VG-04/F-026 gate contributions"
-    },
-    {
      "ref": "WP-03:8-completion-gate-6-items-p2-009-vg-04-f",
-     "part": "package-level obligation contribution"
+     "part": "§8 completion gate items 1-6 and the P2-009/VG-04/F-026 gate contributions; package-level obligation contribution"
     }
    ],
    "outcome": "Deterministic generation, compatibility/reserved-field checks (CON.17's harness), Apache closure, and independent precise-value/error/profile vectors all pass across the complete CON.02-CON.18 closure; all three generated client ecosystems (NuGet, npm, Maven/Kotlin) restore the actual published candidate artifacts in isolated consumer tests; the WP-03.90 completion receipt records exact artifact identities and real-vs-fixture status per obligation.",
@@ -3154,7 +3138,7 @@
     "evidence": "Verified: this is exactly current Contracts HEAD. git log --all and gh pr list --state all (up to PR#37) both stop here; no PR38+ exists anywhere, local or remote."
    },
    "earlyRiskProof": true,
-   "notes": "This is Contracts' current HEAD. Every task below starts from this baseline. Both the Contracts repo's own docs/wp03-02-serialization.md and Design's evidence doc independently state '03.03 is next and has not started' — and no artifact anywhere (git log --all, all.worktree dirs, gh pr list --state all, fixtures/ directory contents, proto message/service inventory) contradicts that. See report.md §Q1 for the full evidence chain.",
+   "notes": "This is Contracts' current HEAD. Every task below starts from this baseline. Both the Contracts repo's own docs/wp03-02-serialization.md and Design's evidence doc independently state '03.03 is next and has not started' — and no artifact anywhere (git log --all, all.worktree dirs, gh pr list --state all, fixtures/ directory contents, proto message/service inventory) contradicts that..",
    "start": [],
    "complete": [],
    "shared": [
@@ -3480,8 +3464,8 @@
     {
      "type": "artifact",
      "task": "CON.91",
-     "need": "real CON.91 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CON.91 (WP03.01 — foundation contract types (accepted, historical))",
+     "why": "this integration exercises the real wP03.01 — foundation contract types (accepted, historical) instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "writes": [
@@ -5959,7 +5943,7 @@
    "evidence": "Secret structural prohibitions and platform round-trip results.",
    "baseline": {
     "state": "not-started",
-    "notes": "Observed scaffold, unreviewed: ArcForges.Security.Secrets does not exist as a separate project yet; the WP11 architecture doc names it as a new project distinct from the single 'ArcForges.Security' package registry row - see report section 9 for this naming inconsistency."
+    "notes": "Observed scaffold, unreviewed: ArcForges.Security.Secrets does not exist as a separate project yet; the WP11 architecture doc names it as a new project distinct from the single 'ArcForges.Security' package registry row -."
    }
   },
   {
@@ -6652,14 +6636,14 @@
     {
      "type": "artifact",
      "task": "PLT.45",
-     "need": "real PLT.45 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PLT.45 (Content helper and OS-enforced isolation (ContentSandbox host))",
+     "why": "this integration exercises the real content helper and OS-enforced isolation (ContentSandbox host) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.14",
-     "need": "real WP-13.13 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.14 (Pdf family: PDFium and production parser containment in the WP11 helper (NEW library))",
+     "why": "this integration exercises the real pdf family: PDFium and production parser containment in the WP11 helper (NEW library) instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -6688,26 +6672,26 @@
     {
      "type": "artifact",
      "task": "PLT.35",
-     "need": "real PLT.35 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PLT.35 (Publish DesignSystem/Shell packages and verify real integration)",
+     "why": "this integration exercises the real publish DesignSystem/Shell packages and verify real integration instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NOTES.03",
-     "need": "real WP-18.00 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NOTES.03 (Editor interaction: caret, selection, IME composition, markdown-friendly input)",
+     "why": "this integration exercises the real editor interaction: caret, selection, IME composition, markdown-friendly input instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "SCOPE.09",
-     "need": "real WP-33.00 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SCOPE.09 (Long-running capture in the shell)",
+     "why": "this integration exercises the real long-running capture in the shell instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "SLATE.22",
-     "need": "real WP-36.00 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SLATE.22 (Viewer: source and sequence, professional transport)",
+     "why": "this integration exercises the real viewer: source and sequence, professional transport instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -6740,20 +6724,20 @@
     {
      "type": "artifact",
      "task": "PLT.24",
-     "need": "real PLT.24 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PLT.24 (Invocation pipeline)",
+     "why": "this integration exercises the real invocation pipeline instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "PLT.38",
-     "need": "real PLT.38 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PLT.38 (Decision pipeline and the four enforcement points)",
+     "why": "this integration exercises the real decision pipeline and the four enforcement points instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "APP.01",
-     "need": "real WP-14.00 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of APP.01 (Assistant.Abstractions host ports and application identity)",
+     "why": "this integration exercises the real assistant.Abstractions host ports and application identity instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -6891,7 +6875,7 @@
     "notes": "Observed none, unreviewed: no benchmarks/probes/acquisition scaffolding found."
    },
    "earlyRiskProof": true,
-   "notes": "No hard start-dependency on any other WP -- can begin immediately using a real TCP/UDP loopback or serial-over-USB pair; exotic hardware is not required for the first real-transport configuration (see report SS4 on PG-08 phasing). Parallel with NAT.01/02/04.",
+   "notes": "No hard start-dependency on any other WP -- can begin immediately using a real TCP/UDP loopback or serial-over-USB pair; exotic hardware is not required for the first real-transport configuration. Parallel with NAT.01/02/04.",
    "start": [],
    "complete": []
   },
@@ -7458,7 +7442,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: no arcinstruments-abi directory and no ArcForges.Native.Instruments managed project exist yet; this is the first fully-new native library of the seven. libusb is already declared as a required dependency in native/CMakeLists.txt's runtime-shared profile even though nothing consumes it yet."
    },
-   "notes": "Degradation-path code (enumeration, driver-absence reporting) does not require the PG-08 lab to exist; the physical hot-unplug/permission-denial matrix against a named USB device does. See report SS4 for the full PG-08 phasing answer.",
+   "notes": "Degradation-path code (enumeration, driver-absence reporting) does not require the PG-08 lab to exist; the physical hot-unplug/permission-denial matrix against a named USB device does..",
    "complete": []
   },
   {
@@ -8119,62 +8103,62 @@
     {
      "type": "artifact",
      "task": "PRF.01",
-     "need": "real PRF.01 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PRF.01 (ArcNotes desktop Native AOT package proof)",
+     "why": "this integration exercises the real arcNotes desktop Native AOT package proof instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "PRF.02",
-     "need": "real PRF.02 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PRF.02 (ArcScope desktop Native AOT package proof)",
+     "why": "this integration exercises the real arcScope desktop Native AOT package proof instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "PRF.03",
-     "need": "real PRF.03 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PRF.03 (ArcSlate desktop Native AOT package proof)",
+     "why": "this integration exercises the real arcSlate desktop Native AOT package proof instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "PRF.04",
-     "need": "real PRF.04 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PRF.04 (Local RPC under AOT: bidirectional named-pipe/UDS probe processes)",
+     "why": "this integration exercises the real local RPC under AOT: bidirectional named-pipe/UDS probe processes instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "PRF.05",
-     "need": "real PRF.05 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PRF.05 (Generated gRPC-Web under AOT against deployed Worker/Container ingress)",
+     "why": "this integration exercises the real generated gRPC-Web under AOT against deployed Worker/Container ingress instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "PRF.06",
-     "need": "real PRF.06 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PRF.06 (Realtime (EventService.Watch/Poll) under AOT)",
+     "why": "this integration exercises the real realtime (EventService.Watch/Poll) under AOT instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "PRF.07",
-     "need": "real PRF.07 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PRF.07 (Cloudflare Native AOT host + D1 + DO/Queue/R2 foundation proof)",
+     "why": "this integration exercises the real cloudflare Native AOT host + D1 + DO/Queue/R2 foundation proof instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "PRF.08",
-     "need": "real PRF.08 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PRF.08 (React production build and generated TS SDK proof)",
+     "why": "this integration exercises the real react production build and generated TS SDK proof instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "PRF.09",
-     "need": "real PRF.09 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PRF.09 (Third-party control AOT admission gate and first candidate)",
+     "why": "this integration exercises the real third-party control AOT admission gate and first candidate instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "PRF.10",
-     "need": "real PRF.10 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PRF.10 (Android Kotlin/Jetpack Compose gRPC-Web and CF proof)",
+     "why": "this integration exercises the real android Kotlin/Jetpack Compose gRPC-Web and CF proof instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -8203,110 +8187,110 @@
     {
      "type": "artifact",
      "task": "NAT.06",
-     "need": "real NAT.06 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.06 (Common native ABI: preambles, pack8 records, ownership, cancellation, bounded buffers)",
+     "why": "this integration exercises the real common native ABI: preambles, pack8 records, ownership, cancellation, bounded buffers instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.07",
-     "need": "real NAT.07 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.07 (Media family: reader, probe, frame and seek (arc_media_reader_*))",
+     "why": "this integration exercises the real media family: reader, probe, frame and seek (arc_media_reader_*) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.08",
-     "need": "real NAT.08 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.08 (Media family: convert, resample and media writer)",
+     "why": "this integration exercises the real media family: convert, resample and media writer instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.09",
-     "need": "real NAT.09 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.09 (Media family: audio devices (miniaudio))",
+     "why": "this integration exercises the real media family: audio devices (miniaudio) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.10",
-     "need": "real NAT.10 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.10 (Colour family: OCIO transforms)",
+     "why": "this integration exercises the real colour family: OCIO transforms instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.11",
-     "need": "real NAT.11 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.11 (Image family: still-image codecs (PNG/TIFF/EXR))",
+     "why": "this integration exercises the real image family: still-image codecs (PNG/TIFF/EXR) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.12",
-     "need": "real NAT.12 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.12 (Otio family: OTIO0.18.1 interchange)",
+     "why": "this integration exercises the real otio family: OTIO0.18.1 interchange instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.13",
-     "need": "real NAT.13 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.13 (Instruments family: serial and USB devices (NEW library))",
+     "why": "this integration exercises the real instruments family: serial and USB devices (NEW library) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.14",
-     "need": "real NAT.14 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.14 (Pdf family: PDFium and production parser containment in the WP11 helper (NEW library))",
+     "why": "this integration exercises the real pdf family: PDFium and production parser containment in the WP11 helper (NEW library) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.15",
-     "need": "real NAT.15 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.15 (Graphics family: portable CPU surface and optional OS backends (NEW library))",
+     "why": "this integration exercises the real graphics family: portable CPU surface and optional OS backends (NEW library) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.20",
-     "need": "real NAT.20 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.20 (Media package production: all 6 RIDs)",
+     "why": "this integration exercises the real media package production: all 6 RIDs instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.21",
-     "need": "real NAT.21 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.21 (Colour package production: all 6 RIDs)",
+     "why": "this integration exercises the real colour package production: all 6 RIDs instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.22",
-     "need": "real NAT.22 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.22 (Image package production: all 6 RIDs)",
+     "why": "this integration exercises the real image package production: all 6 RIDs instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.23",
-     "need": "real NAT.23 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.23 (Otio package production: all 6 RIDs)",
+     "why": "this integration exercises the real otio package production: all 6 RIDs instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.24",
-     "need": "real NAT.24 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.24 (Instruments package production: all 6 RIDs)",
+     "why": "this integration exercises the real instruments package production: all 6 RIDs instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.25",
-     "need": "real NAT.25 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.25 (Pdf package production: all 6 RIDs + ContentSandbox Runtime.<rid> composition)",
+     "why": "this integration exercises the real pdf package production: all 6 RIDs + ContentSandbox Runtime.<rid> composition instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.26",
-     "need": "real NAT.26 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.26 (Graphics package production: all 6 RIDs)",
+     "why": "this integration exercises the real graphics package production: all 6 RIDs instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.28",
-     "need": "real NAT.28 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.28 (Dependency adoption receipts and hardware-lab closure)",
+     "why": "this integration exercises the real dependency adoption receipts and hardware-lab closure instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
@@ -8377,7 +8361,7 @@
      "type": "contract",
      "task": "CON.02",
      "need": "published capability/resource contract records (descriptor/risk/context shapes)",
-     "why": "host port signatures (IHostResources/IHostActions) are typed against these Contracts records; noted reported-complete-unverified, see report §9"
+     "why": "host port signatures (IHostResources/IHostActions) are typed against these Contracts records; noted reported-complete-unverified"
     },
     {
      "type": "artifact",
@@ -9712,7 +9696,7 @@
    "baseline": {
     "state": "not-started"
    },
-   "notes": "Two orphaned substep anchors (rule-wp-17.08, rule-wp-17.09) exist in the WP17 doc with no substep content and no entry in substeps.json -- see report §9; not modeled as tasks.",
+   "notes": "Two orphaned substep anchors (rule-wp-17.08, rule-wp-17.09) exist in the WP17 doc with no substep content and no entry in substeps.json --; not modeled as tasks.",
    "complete": []
   },
   {
@@ -9733,8 +9717,8 @@
     {
      "type": "artifact",
      "task": "AST.11",
-     "need": "real AST.11 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AST.11 (Cloud client and device runtime (fixture turn endpoint boundary))",
+     "why": "this integration exercises the real cloud client and device runtime (fixture turn endpoint boundary) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
@@ -9775,14 +9759,14 @@
     {
      "type": "artifact",
      "task": "AST.14",
-     "need": "real AST.14 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AST.14 (Automation client (automation fixture state transitions))",
+     "why": "this integration exercises the real automation client (automation fixture state transitions) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "HAR.06",
-     "need": "real WP-52.06 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of HAR.06 (Durable Cloud automation, scheduling and automation-fixture removal)",
+     "why": "this integration exercises the real durable Cloud automation, scheduling and automation-fixture removal instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -9814,14 +9798,14 @@
     {
      "type": "artifact",
      "task": "AST.07",
-     "need": "real AST.07 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AST.07 (Local history export and import (assistant-history.v1))",
+     "why": "this integration exercises the real local history export and import (assistant-history.v1) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.45",
-     "need": "real WP-25.08 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.45 (Real Cloud Notes and Chat export producers)",
+     "why": "this integration exercises the real real Cloud Notes and Chat export producers instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -9853,20 +9837,20 @@
     {
      "type": "artifact",
      "task": "AST.15",
-     "need": "real AST.15 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AST.15 (History and AI admission (local/cloud/temporary modes))",
+     "why": "this integration exercises the real history and AI admission (local/cloud/temporary modes) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.46",
-     "need": "real CLOUD.46 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.46 (Application Cloud history and restartable import)",
+     "why": "this integration exercises the real application Cloud history and restartable import instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "AST.01",
-     "need": "real WP-15 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AST.01 (Single application history store (model 05 schema))",
+     "why": "this integration exercises the real single application history store (model 05 schema) instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -10815,14 +10799,14 @@
     {
      "type": "artifact",
      "task": "DEV.04",
-     "need": "real DEV.04 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of DEV.04 (Execution and result deduplication -- Cloud D1 attempt/result store)",
+     "why": "this integration exercises the real execution and result deduplication -- Cloud D1 attempt/result store instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "DEV.05",
-     "need": "real DEV.05 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of DEV.05 (Execution and result deduplication -- Desktop command_log agreement)",
+     "why": "this integration exercises the real execution and result deduplication -- Desktop command_log agreement instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -10851,14 +10835,14 @@
     {
      "type": "artifact",
      "task": "DEV.09",
-     "need": "real DEV.09 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of DEV.09 (Owned-artifact receipt and real integration)",
+     "why": "this integration exercises the real owned-artifact receipt and real integration instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "AST.19",
-     "need": "real WP-52.05 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AST.19 (Real Cloud Harness turn loop replacing the fixture turn endpoint)",
+     "why": "this integration exercises the real real Cloud Harness turn loop replacing the fixture turn endpoint instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
@@ -10896,38 +10880,38 @@
     {
      "type": "artifact",
      "task": "CLOUD.29",
-     "need": "real CLOUD.29 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.29 (Stream connection and authentication (EventService.Watch/ExecutionService.WatchOutput shells))",
+     "why": "this integration exercises the real stream connection and authentication (EventService.Watch/ExecutionService.WatchOutput shells) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.30",
-     "need": "real CLOUD.30 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.30 (Scoped subscription (owner/product/filter/recovery-generation binding))",
+     "why": "this integration exercises the real scoped subscription (owner/product/filter/recovery-generation binding) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.31",
-     "need": "real CLOUD.31 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.31 (Cursor and gap handling (DO projection backed by D1 outbox))",
+     "why": "this integration exercises the real cursor and gap handling (DO projection backed by D1 outbox) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.33",
-     "need": "real CLOUD.33 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.33 (Publication and wake (D1 outbox to bounded DO feed via Queues))",
+     "why": "this integration exercises the real publication and wake (D1 outbox to bounded DO feed via Queues) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.34",
-     "need": "real CLOUD.34 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.34 (Bounded stream lifecycle)",
+     "why": "this integration exercises the real bounded stream lifecycle instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "DEV.09",
-     "need": "real WP-26 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of DEV.09 (Owned-artifact receipt and real integration)",
+     "why": "this integration exercises the real owned-artifact receipt and real integration instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
@@ -12820,20 +12804,20 @@
     {
      "type": "artifact",
      "task": "NOTES.20",
-     "need": "real NOTES.20 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NOTES.20 (Cloud Notes export client and its named fixture endpoint)",
+     "why": "this integration exercises the real cloud Notes export client and its named fixture endpoint instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NOTES.30",
-     "need": "real NOTES.30 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NOTES.30 (Cloud export fidelity for property/view metadata)",
+     "why": "this integration exercises the real cloud export fidelity for property/view metadata instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.45",
-     "need": "real WP-25.08 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.45 (Real Cloud Notes and Chat export producers)",
+     "why": "this integration exercises the real real Cloud Notes and Chat export producers instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -12869,14 +12853,14 @@
     {
      "type": "artifact",
      "task": "NOTES.24",
-     "need": "real NOTES.24 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NOTES.24 (Query model: local evaluator and notes.scalar.v1 conformance fixtures)",
+     "why": "this integration exercises the real query model: local evaluator and notes.scalar.v1 conformance fixtures instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.37",
-     "need": "real WP-25.00 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.37 (Cloud Notes authority and sync scopes)",
+     "why": "this integration exercises the real cloud Notes authority and sync scopes instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -12908,62 +12892,62 @@
     {
      "type": "artifact",
      "task": "NOTES.01",
-     "need": "real NOTES.01 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NOTES.01 (Notebook/folder hierarchy, document placement and structural commands)",
+     "why": "this integration exercises the real notebook/folder hierarchy, document placement and structural commands instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NOTES.02",
-     "need": "real NOTES.02 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NOTES.02 (Block/inline content model, EditTransaction engine, kind conversions and clipboard)",
+     "why": "this integration exercises the real block/inline content model, EditTransaction engine, kind conversions and clipboard instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NOTES.10",
-     "need": "real NOTES.10 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NOTES.10 (Undo, history, checkpoint and trash as four distinct mechanisms)",
+     "why": "this integration exercises the real undo, history, checkpoint and trash as four distinct mechanisms instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.44",
-     "need": "real WP-25.07 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.44 (Multi-device convergence harness)",
+     "why": "this integration exercises the real multi-device convergence harness instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.37",
-     "need": "real CLOUD.37 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.37 (Cloud Notes authority and sync scopes)",
+     "why": "this integration exercises the real cloud Notes authority and sync scopes instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.38",
-     "need": "real CLOUD.38 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.38 (Client outbox and conflict lineage (desktop data model))",
+     "why": "this integration exercises the real client outbox and conflict lineage (desktop data model) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.39",
-     "need": "real CLOUD.39 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.39 (Guarded publication and convergent bootstrap)",
+     "why": "this integration exercises the real guarded publication and convergent bootstrap instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.40",
-     "need": "real CLOUD.40 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.40 (Conflict detection and five resolution policies)",
+     "why": "this integration exercises the real conflict detection and five resolution policies instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.41",
-     "need": "real CLOUD.41 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.41 (Deletion and tombstones)",
+     "why": "this integration exercises the real deletion and tombstones instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.42",
-     "need": "real CLOUD.42 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.42 (Blob lifecycle (real R2 staged/verified/committed))",
+     "why": "this integration exercises the real blob lifecycle (real R2 staged/verified/committed) instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -12996,26 +12980,26 @@
     {
      "type": "artifact",
      "task": "PLT.45",
-     "need": "real PLT.45 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of PLT.45 (Content helper and OS-enforced isolation (ContentSandbox host))",
+     "why": "this integration exercises the real content helper and OS-enforced isolation (ContentSandbox host) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.14",
-     "need": "real WP-13.13 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.14 (Pdf family: PDFium and production parser containment in the WP11 helper (NEW library))",
+     "why": "this integration exercises the real pdf family: PDFium and production parser containment in the WP11 helper (NEW library) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NOTES.09",
-     "need": "real NOTES.09 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NOTES.09 (PDF in-product viewer, page anchors and native parser isolation)",
+     "why": "this integration exercises the real pDF in-product viewer, page anchors and native parser isolation instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NAT.25",
-     "need": "real WP-13 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NAT.25 (Pdf package production: all 6 RIDs + ContentSandbox Runtime.<rid> composition)",
+     "why": "this integration exercises the real pdf package production: all 6 RIDs + ContentSandbox Runtime.<rid> composition instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -13442,7 +13426,7 @@
    "baseline": {
     "state": "not-started"
    },
-   "notes": "The old upstream edge WP-33<-26 (remote action/tool bridge) does not apply here or anywhere else in WP33: WP-26 is about remote-triggered tool execution on a running instance (durable target queue, owner reauth, remote approval), and none of WP-33.00-33.07's substep bodies mention it. See report 'inconsistent dependencies' section.",
+   "notes": "The old upstream edge WP-33<-26 (remote action/tool bridge) does not apply here or anywhere else in WP33: WP-26 is about remote-triggered tool execution on a running instance (durable target queue, owner reauth, remote approval), and none of WP-33.00-33.07's substep bodies mention it..",
    "complete": []
   },
   {
@@ -13682,19 +13666,11 @@
     },
     {
      "ref": "WP-34:orphaned-6-7-body-text-pearson-independe",
-     "part": "orphaned §6/§7 body text: 'Pearson independent vectors: x=[1,2,3], y=[2,4,6] gives r=1; y=[3,2,1] gives r=-1. Constant input is unavailable; preserve the declared lag and overlap rules' — a concrete correlation-family acceptance vector with no substep id of its own"
+     "part": "orphaned §6/§7 body text: 'Pearson independent vectors: x=[1,2,3], y=[2,4,6] gives r=1; y=[3,2,1] gives r=-1. Constant input is unavailable; preserve the declared lag and overlap rules' — a concrete correlation-family acceptance vector with no substep id of its own; package-level obligation contribution"
     },
     {
      "ref": "WP-34:8-additional-completion-requirement-ever",
-     "part": "§8 additional completion requirement: every basic family has its formula/status oracle; reproduction uses the defined tolerance rather than an undefined byte-equality claim"
-    },
-    {
-     "ref": "WP-34:orphaned-pearson-correlation-independent",
-     "part": "package-level obligation contribution"
-    },
-    {
-     "ref": "WP-34:8-additional-completion-requirements-for",
-     "part": "package-level obligation contribution"
+     "part": "§8 additional completion requirement: every basic family has its formula/status oracle; reproduction uses the defined tolerance rather than an undefined byte-equality claim; package-level obligation contribution"
     }
    ],
    "outcome": "Every measurement family in scope.measurement.v1 reproduces under its recorded profile/configuration within the declared numerical tolerance, with units and precision stated; independent reference values (including the Pearson r=1/r=-1 vectors and constant-input-unavailable case) pass.",
@@ -13862,7 +13838,7 @@
      "part": "full, including both required-design-implementation paragraphs: report/UI/offline-recomputation comparison with rendering/rounding never changing the stored numeric result; report-section origin plus enclosing union; deterministic measurement beside AI narrative never relabelled"
     },
     {
-     "ref": "WP-34:8-additional-completion-requirements-for",
+     "ref": "WP-34:8-additional-completion-requirement-ever",
      "part": "package-level obligation contribution"
     }
    ],
@@ -14525,11 +14501,7 @@
     },
     {
      "ref": "WP-51:slice-recovery-acceptance-body-text-betw",
-     "part": "'Slice recovery acceptance' body text (between §5 and §6, no substep id): kill the real Container before D1 publication, after the guarded segment/checkpoint/outbox batch, and before/after alarm scheduling; race a duplicate alarm with Cron rescue; assert one committed segment per run/range, deterministic continuation, no lost next-due intent, rejection of stale fences; alarm delivery itself may repeat; use the bounded mechanism in architecture 23 §1.2, never interactive BEGIN/COMMIT or an in-memory continuation loop"
-    },
-    {
-     "ref": "WP-51:slice-recovery-acceptance-paragraph-betw",
-     "part": "package-level obligation contribution"
+     "part": "'Slice recovery acceptance' body text (between §5 and §6, no substep id): kill the real Container before D1 publication, after the guarded segment/checkpoint/outbox batch, and before/after alarm scheduling; race a duplicate alarm with Cron rescue; assert one committed segment per run/range, deterministic continuation, no lost next-due intent, rejection of stale fences; alarm delivery itself may repeat; use the bounded mechanism in architecture 23 §1.2, never interactive BEGIN/COMMIT or an in-memory continuation loop; package-level obligation contribution"
     }
    ],
    "outcome": "Deterministic committed samples and restart recovery pass under real DO alarm delivery, Container execution and D1 checkpoint/fence; the proposed 5s latency is measured and recorded, never claimed as hard real time; every SimulationPacer state-diagram race (duplicate alarm, exhausted retry, sleeping Container, pause/cancel race, duplicate segment, delayed catch-up, accelerated mode) passes.",
@@ -14957,32 +14929,32 @@
     {
      "type": "artifact",
      "task": "SIM.05",
-     "need": "real SIM.05 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SIM.05 (Cloud-side simulation.* operations, manifest listing and segment fetch)",
+     "why": "this integration exercises the real cloud-side simulation.* operations, manifest listing and segment fetch instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "SIM.06",
-     "need": "real SIM.06 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SIM.06 (ArcScope-side simulated DataSource and native ingestion)",
+     "why": "this integration exercises the real arcScope-side simulated DataSource and native ingestion instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "SCOPE.14",
-     "need": "real SCOPE.14 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SCOPE.14 (Measurements: scope.measurement.v1)",
+     "why": "this integration exercises the real measurements: scope.measurement.v1 instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "SCOPE.18",
-     "need": "real SCOPE.18 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SCOPE.18 (Reports and reproducibility)",
+     "why": "this integration exercises the real reports and reproducibility instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "SCOPE.24",
-     "need": "real SCOPE.24 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SCOPE.24 (Import, export and format fixtures)",
+     "why": "this integration exercises the real import, export and format fixtures instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -15011,14 +14983,14 @@
     {
      "type": "artifact",
      "task": "CLOUD.07",
-     "need": "real CLOUD.07 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.07 (Capacity, Container/D1 integration producer and harness)",
+     "why": "this integration exercises the real capacity, Container/D1 integration producer and harness instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "SIM.01",
-     "need": "real WP-51 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SIM.01 (Simulation definitions, immutable scenario versions and bounded AST evaluator)",
+     "why": "this integration exercises the real simulation definitions, immutable scenario versions and bounded AST evaluator instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -15436,12 +15408,8 @@
    "size": "M",
    "obligations": [
     {
-     "ref": "WP-36:package-level-6-impacts-row-database-the",
-     "part": "package-level: §6 Impacts row \"Database: the ArcSlate project store and its V1 migration baseline\"; §4 ArcSlate.Infrastructure project store/media index/migration set"
-    },
-    {
      "ref": "WP-36:database-impact-arcslate-project-store-a",
-     "part": "package-level obligation contribution"
+     "part": "package-level: §6 Impacts row \"Database: the ArcSlate project store and its V1 migration baseline\"; §4 ArcSlate.Infrastructure project store/media index/migration set; package-level obligation contribution"
     }
    ],
    "outcome": "ArcSlate.Infrastructure persists Project/Sequence/Timeline/MediaLibrary through the platform's single write path; fixtures/formats/arcslate/v1/ exists as the V1 project fixture; the storage schema version equals the highest applied migration.",
@@ -15560,12 +15528,8 @@
    "size": "L",
    "obligations": [
     {
-     "ref": "WP-36:the-unlabelled-final-review-closure-para",
-     "part": "the unlabelled final-review closure paragraph: \"Implement the complete slate.project.v1/graph.v1 model: bins, exact sequence video/audio/colour config, track roles, generators/nesting/adjustment/title/subtitle, graph definition/instance identity and keyframe time scope. Metadata-only cross-device round-trip preserves every edit with Offline Media. Reject graph/nesting cycles and preserve unknown imported effects inert.\""
-    },
-    {
      "ref": "WP-36:unlabelled-final-review-closure-complete",
-     "part": "package-level obligation contribution"
+     "part": "the unlabelled final-review closure paragraph: \"Implement the complete slate.project.v1/graph.v1 model: bins, exact sequence video/audio/colour config, track roles, generators/nesting/adjustment/title/subtitle, graph definition/instance identity and keyframe time scope. Metadata-only cross-device round-trip preserves every edit with Offline Media. Reject graph/nesting cycles and preserve unknown imported effects inert.\"; package-level obligation contribution"
     }
    ],
    "outcome": "The full slate.project.v1/graph.v1 wire projection round-trips metadata-only (no media bytes) with every edit and Offline Media preserved; nested-sequence and graph cycles are rejected; an unknown imported effect definition is retained and stays inert rather than silently activated.",
@@ -16167,12 +16131,8 @@
      "part": "full"
     },
     {
-     "ref": "WP-37:the-unlabelled-final-review-closure-para",
-     "part": "the unlabelled final-review closure paragraph: consume actual Platform media packages, test portable baseline render codecs/graph-source semantics/audio-grid mixing together, confirm unsupported native capabilities cannot be advertised, and that font/colour/source identity affects the render snapshot (the last clause is jointly satisfied here and at SLATE.26)"
-    },
-    {
      "ref": "WP-37:unlabelled-final-review-closure-consume",
-     "part": "package-level obligation contribution"
+     "part": "the unlabelled final-review closure paragraph: consume actual Platform media packages, test portable baseline render codecs/graph-source semantics/audio-grid mixing together, confirm unsupported native capabilities cannot be advertised, and that font/colour/source identity affects the render snapshot (the last clause is jointly satisfied here and at SLATE.26); package-level obligation contribution"
     }
    ],
    "outcome": "A clean AOT package consumer plus representative decode, synchronisation, cancellation, damaged-input and native dependency loading pass on every supported RID; the receipt records exact artifacts and real-versus-fixture status per field.",
@@ -17201,12 +17161,8 @@
      "part": "full"
     },
     {
-     "ref": "WP-39:the-unlabelled-final-review-closure-para",
-     "part": "the unlabelled final-review closure paragraph: Cloud data-model round-trip of complete Slate metadata/archive with originals absent, explicit managed asset uploads, exact grids, graph scopes, titles/subtitles/fonts/colour and ASR source/artifact references; an older DTO cannot truncate the native project before sync"
-    },
-    {
      "ref": "WP-39:unlabelled-final-review-closure-cloud-da",
-     "part": "package-level obligation contribution"
+     "part": "the unlabelled final-review closure paragraph: Cloud data-model round-trip of complete Slate metadata/archive with originals absent, explicit managed asset uploads, exact grids, graph scopes, titles/subtitles/fonts/colour and ASR source/artifact references; an older DTO cannot truncate the native project before sync; package-level obligation contribution"
     }
    ],
    "outcome": "OTIO round-trip/projection and relocation fixtures, the package boundary, explicit R2 upload and missing-external-reference behaviour are all recorded with real artifacts and provider identity; the receipt confirms no DTO version-skew can truncate a native project before sync.",
@@ -17281,32 +17237,32 @@
     {
      "type": "artifact",
      "task": "SLATE.37",
-     "need": "real SLATE.37 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SLATE.37 (Cloud sync scope declaration)",
+     "why": "this integration exercises the real cloud sync scope declaration instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.39",
-     "need": "real WP-25.02 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.39 (Guarded publication and convergent bootstrap)",
+     "why": "this integration exercises the real guarded publication and convergent bootstrap instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.44",
-     "need": "real WP-25.07 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.44 (Multi-device convergence harness)",
+     "why": "this integration exercises the real multi-device convergence harness instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "SLATE.12",
-     "need": "real SLATE.12 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SLATE.12 (Slate.project.v1/graph.v1 wire projection: bins, generators, nesting, adjustment, title/subtitle, cycle rejection)",
+     "why": "this integration exercises the real slate.project.v1/graph.v1 wire projection: bins, generators, nesting, adjustment, title/subtitle, cycle rejection instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "SLATE.35",
-     "need": "real SLATE.35 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SLATE.35 (Collect, consolidate and the portable project package)",
+     "why": "this integration exercises the real collect, consolidate and the portable project package instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -17504,7 +17460,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: no receipt/outbox/inbox code exists"
    },
-   "notes": "This generic outbox mechanism is distinct from (a) WP-24.04's DO wake/live-feed publisher and (b) WP-25.02's sync.change publish_seq bootstrap publisher; both consume this task's committed outbox rows but each adds its own D1-batch publication logic. See report shared-resources section for the three-publisher distinction.",
+   "notes": "This generic outbox mechanism is distinct from (a) WP-24.04's DO wake/live-feed publisher and (b) WP-25.02's sync.change publish_seq bootstrap publisher; both consume this task's committed outbox rows but each adds its own D1-batch publication logic..",
    "complete": []
   },
   {
@@ -17586,7 +17542,7 @@
      "type": "integration",
      "task": "CLOUD.63",
      "need": "at least two real module family participants exercising the engine under contention (e.g. Identity's auth/enrollment family and Notes/Sync's synced-content-mutation family)",
-     "why": "WP-21.05's own completion gate requires evidence of 'two Containers contend, stale holder cannot finalize, exact credits and sync cursor safety' -- 'exact credits' is Commerce (a09) and 'sync cursor safety' is this area's own WP-25; the generic engine alone cannot demonstrate this, see report inconsistency notes"
+     "why": "WP-21.05's own completion gate requires evidence of 'two Containers contend, stale holder cannot finalize, exact credits and sync cursor safety' -- 'exact credits' is Commerce (a09) and 'sync cursor safety' is this area's own WP-25; the generic engine alone cannot demonstrate this"
     }
    ],
    "writes": [
@@ -18331,14 +18287,14 @@
     {
      "type": "artifact",
      "task": "CON.07",
-     "need": "real CON.07 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CON.07 (Identity/session/device operation registry + native-auth and browser HTTP exceptions)",
+     "why": "this integration exercises the real identity/session/device operation registry + native-auth and browser HTTP exceptions instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.11",
-     "need": "real WP-22.00 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.11 (Core identity model (realm, user, authIdentity, single-owner workspace))",
+     "why": "this integration exercises the real core identity model (realm, user, authIdentity, single-owner workspace) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
@@ -19241,20 +19197,20 @@
     {
      "type": "artifact",
      "task": "CON.03",
-     "need": "real CON.03 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CON.03 (Resource/Sync owner-body admission: closed Sync mutation allowlist + cross-owner/wrong-revision/opaque-object/forbidden-path negatives)",
+     "why": "this integration exercises the real resource/Sync owner-body admission: closed Sync mutation allowlist + cross-owner/wrong-revision/opaque-object/forbidden-path negatives instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CON.09",
-     "need": "real CON.09 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CON.09 (Sync/resource-transfer/objects operation registry + realm-transfer.v1)",
+     "why": "this integration exercises the real sync/resource-transfer/objects operation registry + realm-transfer.v1 instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.01",
-     "need": "real WP-21.00 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.01 (Ingress and host pipeline)",
+     "why": "this integration exercises the real ingress and host pipeline instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "writes": [
@@ -20244,14 +20200,14 @@
     {
      "type": "artifact",
      "task": "CLOUD.45",
-     "need": "real CLOUD.45 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.45 (Real Cloud Notes and Chat export producers)",
+     "why": "this integration exercises the real real Cloud Notes and Chat export producers instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "NOTES.33",
-     "need": "real WP-19.05 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of NOTES.33 (Real Cloud Notes export join replaces the / fixture endpoint)",
+     "why": "this integration exercises the real real Cloud Notes export join replaces the / fixture endpoint instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
@@ -20286,20 +20242,20 @@
     {
      "type": "artifact",
      "task": "CLOUD.06",
-     "need": "real CLOUD.06 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.06 (Shared atomic family guarded-batch engine)",
+     "why": "this integration exercises the real shared atomic family guarded-batch engine instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.16",
-     "need": "real CLOUD.16 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.16 (PAT and actor authorization)",
+     "why": "this integration exercises the real pAT and actor authorization instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "COM.09",
-     "need": "real WP-42 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of COM.09 (Ledgers and reconciliation)",
+     "why": "this integration exercises the real ledgers and reconciliation instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -20328,26 +20284,26 @@
     {
      "type": "artifact",
      "task": "CLOUD.28",
-     "need": "real CLOUD.28 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.28 (Owned-artifact closure and real integration)",
+     "why": "this integration exercises the real owned-artifact closure and real integration instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "COM.13",
-     "need": "real WP-42 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of COM.13 (Operator financial-owner proposal/approval operations)",
+     "why": "this integration exercises the real operator financial-owner proposal/approval operations instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "POL.05",
-     "need": "real WP-44 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of POL.05 (Kill switches)",
+     "why": "this integration exercises the real kill switches instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "OPS.05",
-     "need": "real WP-45 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of OPS.05 (Operator console and support access)",
+     "why": "this integration exercises the real operator console and support access instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -20376,20 +20332,20 @@
     {
      "type": "artifact",
      "task": "CLOUD.15",
-     "need": "real CLOUD.15 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.15 (Step-up challenges for sensitive operations)",
+     "why": "this integration exercises the real step-up challenges for sensitive operations instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "COM.10",
-     "need": "real WP-42 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of COM.10 (Refunds, disputes and evidence)",
+     "why": "this integration exercises the real refunds, disputes and evidence instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "AND.07",
-     "need": "real WP-23 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AND.07 (Foundation integration evidence: real candidate against deployed 22/23/24/25)",
+     "why": "this integration exercises the real foundation integration evidence: real candidate against deployed 22/23/24/25 instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -20418,14 +20374,14 @@
     {
      "type": "artifact",
      "task": "CLOUD.51",
-     "need": "real CLOUD.51 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.51 (Disaster-recovery drill programme)",
+     "why": "this integration exercises the real disaster-recovery drill programme instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "HAR.05",
-     "need": "real WP-52 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of HAR.05 (Own-application execution proof and fixture turn-endpoint removal)",
+     "why": "this integration exercises the real own-application execution proof and fixture turn-endpoint removal instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -21724,14 +21680,14 @@
     {
      "type": "artifact",
      "task": "POL.08",
-     "need": "real POL.08 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of POL.08 (Publication, staleness and last-known-good (server side))",
+     "why": "this integration exercises the real publication, staleness and last-known-good (server side) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "POL.09",
-     "need": "real POL.09 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of POL.09 (Client-side policy resolution library (native/AOT))",
+     "why": "this integration exercises the real client-side policy resolution library (native/AOT) instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -22135,12 +22091,8 @@
      "part": "full"
     },
     {
-     "ref": "WP-45:producer-prerequisites-consuming-wp-22-r",
-     "part": "producer prerequisites; consuming WP-22 real mail artifacts without deferring WP-22's own gate"
-    },
-    {
      "ref": "WP-45:producer-prerequisites-wp45-08-must-cons",
-     "part": "package-level obligation contribution"
+     "part": "producer prerequisites; consuming WP-22 real mail artifacts without deferring WP-22's own gate; package-level obligation contribution"
     }
    ],
    "outcome": "Transactional/broadcast email use the real WP-22 Postmark/SES adapters with separated streams; outage and reconciliation drills are rehearsed under a prepared secondary path; and the private security-advisory intake-through-publication process is complete with in-product containment/revocation attention.",
@@ -22406,32 +22358,32 @@
     {
      "type": "artifact",
      "task": "COM.13",
-     "need": "real COM.13 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of COM.13 (Operator financial-owner proposal/approval operations)",
+     "why": "this integration exercises the real operator financial-owner proposal/approval operations instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "POL.05",
-     "need": "real POL.05 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of POL.05 (Kill switches)",
+     "why": "this integration exercises the real kill switches instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "OPS.05",
-     "need": "real OPS.05 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of OPS.05 (Operator console and support access)",
+     "why": "this integration exercises the real operator console and support access instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CON.14",
-     "need": "real CON.14 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CON.14 (Operator control service (OperatorService, full §9/9.1/9.2 protocol))",
+     "why": "this integration exercises the real operator control service (OperatorService, full §9/9.1/9.2 protocol) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "OPS.11",
-     "need": "real WP-45.10 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of OPS.11 (Package review and revocation console)",
+     "why": "this integration exercises the real package review and revocation console instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -24591,26 +24543,26 @@
     {
      "type": "artifact",
      "task": "HAR.06",
-     "need": "real HAR.06 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of HAR.06 (Durable Cloud automation, scheduling and automation-fixture removal)",
+     "why": "this integration exercises the real durable Cloud automation, scheduling and automation-fixture removal instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "AIR.09",
-     "need": "real AIR.09 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AIR.09 (ASR/Whisper capability closure and inference-late-outcome reconciliation)",
+     "why": "this integration exercises the real aSR/Whisper capability closure and inference-late-outcome reconciliation instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "SLATE.30",
-     "need": "real WP-39 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of SLATE.30 (Local transcription extraction ProductJob and TranscriptRecord adoption)",
+     "why": "this integration exercises the real local transcription extraction ProductJob and TranscriptRecord adoption instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "AIR.08",
-     "need": "real WP-43.07 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AIR.08 (Real-provider metering evidence and stubbed-path removal)",
+     "why": "this integration exercises the real real-provider metering evidence and stubbed-path removal instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -24823,8 +24775,8 @@
     {
      "type": "artifact",
      "task": "AND.01",
-     "need": "real WP-30.00 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AND.01 (Android production identity and stable toolchain reconciliation)",
+     "why": "this integration exercises the real android production identity and stable toolchain reconciliation instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "complete": [
@@ -25004,26 +24956,26 @@
     {
      "type": "artifact",
      "task": "CLOUD.18",
-     "need": "real CLOUD.18 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.18 (Independent native session integration (Platform client primitives))",
+     "why": "this integration exercises the real independent native session integration (Platform client primitives) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.19",
-     "need": "real CLOUD.19 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.19 (Browser cookie-session adapter and full account-surface closure)",
+     "why": "this integration exercises the real browser cookie-session adapter and full account-surface closure instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.26",
-     "need": "real CLOUD.26 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.26 (Generated C#/TypeScript/Kotlin clients against Identity/Workspace/Device)",
+     "why": "this integration exercises the real generated C#/TypeScript/Kotlin clients against Identity/Workspace/Device instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.29",
-     "need": "real CLOUD.29 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.29 (Stream connection and authentication (EventService.Watch/ExecutionService.WatchOutput shells))",
+     "why": "this integration exercises the real stream connection and authentication (EventService.Watch/ExecutionService.WatchOutput shells) instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "writes": [
@@ -25840,20 +25792,20 @@
     {
      "type": "artifact",
      "task": "AND.09",
-     "need": "real AND.09 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AND.09 (Conversations and context (AN07-AN10/15/16))",
+     "why": "this integration exercises the real conversations and context (AN07-AN10/15/16) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "AND.10",
-     "need": "real AND.10 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AND.10 (Tasks, approvals and automation (AN11-AN13/19/25))",
+     "why": "this integration exercises the real tasks, approvals and automation (AN11-AN13/19/25) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "HAR.00",
-     "need": "real WP-52 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of HAR.00 (Turn loop, tool batching and bounds (RunWorkflow core))",
+     "why": "this integration exercises the real turn loop, tool batching and bounds (RunWorkflow core) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
@@ -25892,20 +25844,20 @@
     {
      "type": "artifact",
      "task": "AND.10",
-     "need": "real AND.10 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AND.10 (Tasks, approvals and automation (AN11-AN13/19/25))",
+     "why": "this integration exercises the real tasks, approvals and automation (AN11-AN13/19/25) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "AND.13",
-     "need": "real AND.13 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AND.13 (Native interaction and recovery: full experience-02 device matrix)",
+     "why": "this integration exercises the real native interaction and recovery: full experience-02 device matrix instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "DEV.09",
-     "need": "real WP-26 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of DEV.09 (Owned-artifact receipt and real integration)",
+     "why": "this integration exercises the real owned-artifact receipt and real integration instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -25929,7 +25881,7 @@
      "part": "physical receipt closure"
     },
     {
-     "ref": "WP-32:pg-24-closure",
+     "ref": "WP-32:pg-24-completion-gate-paragraph-recheck",
      "part": "PG-24 closure"
     },
     {
@@ -25946,26 +25898,26 @@
     {
      "type": "artifact",
      "task": "AND.12",
-     "need": "real AND.12 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AND.12 (Presence, push, links and settings (AN20-AN24))",
+     "why": "this integration exercises the real presence, push, links and settings (AN20-AN24) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "AND.23",
-     "need": "real AND.23 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AND.23 (Distribution acceptance)",
+     "why": "this integration exercises the real distribution acceptance instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "OPS.10",
-     "need": "real OPS.10 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of OPS.10 (Customer push delivery and registration lifecycle)",
+     "why": "this integration exercises the real customer push delivery and registration lifecycle instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "AND.21",
-     "need": "real WP-32.05 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of AND.21 (Physical device and recovery gates)",
+     "why": "this integration exercises the real physical device and recovery gates instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -27274,20 +27226,20 @@
     {
      "type": "artifact",
      "task": "WEB.20",
-     "need": "real WEB.20 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.20 (Conversation and generated output streams)",
+     "why": "this integration exercises the real conversation and generated output streams instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "WEB.21",
-     "need": "real WEB.21 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.21 (Tasks, approval and steering)",
+     "why": "this integration exercises the real tasks, approval and steering instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "HAR.00",
-     "need": "real WP-52 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of HAR.00 (Turn loop, tool batching and bounds (RunWorkflow core))",
+     "why": "this integration exercises the real turn loop, tool batching and bounds (RunWorkflow core) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
@@ -27326,20 +27278,20 @@
     {
      "type": "artifact",
      "task": "WEB.21",
-     "need": "real WEB.21 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.21 (Tasks, approval and steering)",
+     "why": "this integration exercises the real tasks, approval and steering instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "WEB.23",
-     "need": "real WEB.23 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.23 (One-application remote control)",
+     "why": "this integration exercises the real one-application remote control instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "DEV.09",
-     "need": "real WP-26 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of DEV.09 (Owned-artifact receipt and real integration)",
+     "why": "this integration exercises the real owned-artifact receipt and real integration instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -27368,20 +27320,20 @@
     {
      "type": "artifact",
      "task": "WEB.14",
-     "need": "real WEB.14 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.14 (Subscription, capacity, credits and hosted checkout)",
+     "why": "this integration exercises the real subscription, capacity, credits and hosted checkout instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "COM.14",
-     "need": "real WP-42 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of COM.14 (Technical commerce closure and live-gate staging)",
+     "why": "this integration exercises the real technical commerce closure and live-gate staging instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "POL.08",
-     "need": "real WP-44 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of POL.08 (Publication, staleness and last-known-good (server side))",
+     "why": "this integration exercises the real publication, staleness and last-known-good (server side) instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -27413,38 +27365,38 @@
     {
      "type": "artifact",
      "task": "CLOUD.19",
-     "need": "real CLOUD.19 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.19 (Browser cookie-session adapter and full account-surface closure)",
+     "why": "this integration exercises the real browser cookie-session adapter and full account-surface closure instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.26",
-     "need": "real CLOUD.26 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.26 (Generated C#/TypeScript/Kotlin clients against Identity/Workspace/Device)",
+     "why": "this integration exercises the real generated C#/TypeScript/Kotlin clients against Identity/Workspace/Device instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "CLOUD.29",
-     "need": "real CLOUD.29 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.29 (Stream connection and authentication (EventService.Watch/ExecutionService.WatchOutput shells))",
+     "why": "this integration exercises the real stream connection and authentication (EventService.Watch/ExecutionService.WatchOutput shells) instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "WEB.07",
-     "need": "real WP-47 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.07 (Independence and atomic deployment)",
+     "why": "this integration exercises the real independence and atomic deployment instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "WEB.14",
-     "need": "real WP-48 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.14 (Subscription, capacity, credits and hosted checkout)",
+     "why": "this integration exercises the real subscription, capacity, credits and hosted checkout instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "WEB.19",
-     "need": "real WP-49 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.19 (Chat shell: route composition and design-system integration)",
+     "why": "this integration exercises the real chat shell: route composition and design-system integration instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
@@ -27482,32 +27434,32 @@
     {
      "type": "artifact",
      "task": "CLOUD.28",
-     "need": "real CLOUD.28 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of CLOUD.28 (Owned-artifact closure and real integration)",
+     "why": "this integration exercises the real owned-artifact closure and real integration instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "OPS.05",
-     "need": "real WP-45 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of OPS.05 (Operator console and support access)",
+     "why": "this integration exercises the real operator console and support access instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "WEB.07",
-     "need": "real WP-47 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.07 (Independence and atomic deployment)",
+     "why": "this integration exercises the real independence and atomic deployment instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "WEB.14",
-     "need": "real WP-48 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.14 (Subscription, capacity, credits and hosted checkout)",
+     "why": "this integration exercises the real subscription, capacity, credits and hosted checkout instead of a substitute, so it cannot start before that outcome exists"
     },
     {
      "type": "artifact",
      "task": "WEB.19",
-     "need": "real WP-49 available",
-     "why": "integration scenario needs the real producer and consumer"
+     "need": "real, delivered outcome of WEB.19 (Chat shell: route composition and design-system integration)",
+     "why": "this integration exercises the real chat shell: route composition and design-system integration instead of a substitute, so it cannot start before that outcome exists"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -29479,21 +29431,9 @@
    "section": ""
   },
   {
-   "id": "WP-03:7-evidence-requirement-generate-an-opera",
-   "wp": "03",
-   "title": "§7 evidence requirement: 'Generate an operation-by-actor reachability matrix for every public/local/operator/CF/exception binding under catalogue 00 AZ-04, with all seven effective authorization fields and source profile. Fail unclassified/ambiguous fields...'",
-   "section": ""
-  },
-  {
    "id": "WP-03:8-completion-gate-6-items-p2-009-vg-04-f",
    "wp": "03",
    "title": "§8 completion gate (6 items) + P2-009/VG-04/F-026 scoped gate contributions",
-   "section": ""
-  },
-  {
-   "id": "WP-03:8-completion-gate-items-1-6-and-the-p2-0",
-   "wp": "03",
-   "title": "§8 completion gate items 1-6 and the P2-009/VG-04/F-026 gate contributions",
    "section": ""
   },
   {
@@ -29509,21 +29449,9 @@
    "section": ""
   },
   {
-   "id": "WP-03:operator-contract-closure-registry04-9-s",
-   "wp": "03",
-   "title": "Operator contract closure (registry04 §9 — schema/negative-vector scope only; WP-23/42/44/45 own real integration)",
-   "section": ""
-  },
-  {
    "id": "WP-03:p2-010-required-behavior-and-closure-sou",
    "wp": "03",
    "title": "P2-010 required behavior and closure (source KnowledgePolicy/Patch/View, typed one-use overrides, Notes run/atom/table-cell positions, complete initial owner/profile records)",
-   "section": ""
-  },
-  {
-   "id": "WP-03:p2-010-required-behavior-source-knowledg",
-   "wp": "03",
-   "title": "P2-010 required behavior: source KnowledgePolicy/Patch/View and typed one-use overrides (source.getPolicy/setPolicy/clearPolicy, source.createConsent/revokeConsent) fall inside IChatOperations/context-provider scope; stable Notes run/atom/table-cell positions (NotesTextPosition already exists in content.proto from WP03.01 — this task only needs to verify no gap remains for table-cell addressing)",
    "section": ""
   },
   {
@@ -29749,12 +29677,6 @@
    "section": ""
   },
   {
-   "id": "WP-32:pg-24-closure",
-   "wp": "32",
-   "title": "PG-24 closure",
-   "section": ""
-  },
-  {
    "id": "WP-32:pg-24-completion-gate-paragraph-recheck",
    "wp": "32",
    "title": "PG-24 completion-gate paragraph (recheck on distributed artifact)",
@@ -29779,21 +29701,9 @@
    "section": ""
   },
   {
-   "id": "WP-34:8-additional-completion-requirements-for",
-   "wp": "34",
-   "title": "§8 additional completion requirements (formula/status oracle per family; content-origin carrier vectors)",
-   "section": ""
-  },
-  {
    "id": "WP-34:orphaned-6-7-body-text-pearson-independe",
    "wp": "34",
    "title": "orphaned §6/§7 body text: 'Pearson independent vectors: x=[1,2,3], y=[2,4,6] gives r=1; y=[3,2,1] gives r=-1. Constant input is unavailable; preserve the declared lag and overlap rules' — a concrete correlation-family acceptance vector with no substep id of its own",
-   "section": ""
-  },
-  {
-   "id": "WP-34:orphaned-pearson-correlation-independent",
-   "wp": "34",
-   "title": "orphaned Pearson correlation independent-vector text between §6 and §7 (x=[1,2,3],y=[2,4,6]->r=1; y=[3,2,1]->r=-1; constant input unavailable)",
    "section": ""
   },
   {
@@ -29827,18 +29737,6 @@
    "section": ""
   },
   {
-   "id": "WP-36:package-level-6-impacts-row-database-the",
-   "wp": "36",
-   "title": "package-level: §6 Impacts row \"Database: the ArcSlate project store and its V1 migration baseline\"; §4 ArcSlate.Infrastructure project store/media index/migration set",
-   "section": ""
-  },
-  {
-   "id": "WP-36:the-unlabelled-final-review-closure-para",
-   "wp": "36",
-   "title": "the unlabelled final-review closure paragraph: \"Implement the complete slate.project.v1/graph.v1 model: bins, exact sequence video/audio/colour config, track roles, generators/nesting/adjustment/title/subtitle, graph definition/instance identity and keyframe time scope. Metadata-only cross-device round-trip preserves every edit with Offline Media. Reject graph/nesting cycles and preserve unknown imported effects inert.\"",
-   "section": ""
-  },
-  {
    "id": "WP-36:unlabelled-final-review-closure-complete",
    "wp": "36",
    "title": "Unlabelled final-review closure: complete slate.project.v1/graph.v1 model, generators/nesting/adjustment/title/subtitle, cycle rejection, unknown-effect inert",
@@ -29848,12 +29746,6 @@
    "id": "WP-37:final-review-closure-clause-font-colour",
    "wp": "37",
    "title": "final-review closure clause: font/colour/source identity affects the render snapshot (the snapshot-binding half; the native-package-consumption half is SLATE.23)",
-   "section": ""
-  },
-  {
-   "id": "WP-37:the-unlabelled-final-review-closure-para",
-   "wp": "37",
-   "title": "the unlabelled final-review closure paragraph: consume actual Platform media packages, test portable baseline render codecs/graph-source semantics/audio-grid mixing together, confirm unsupported native capabilities cannot be advertised, and that font/colour/source identity affects the render snapshot (the last clause is jointly satisfied here and at SLATE.26)",
    "section": ""
   },
   {
@@ -29890,12 +29782,6 @@
    "id": "WP-39:security-impact-media-path-handling-no-p",
    "wp": "39",
    "title": "Security impact: media path handling, no path leakage through references (§6)",
-   "section": ""
-  },
-  {
-   "id": "WP-39:the-unlabelled-final-review-closure-para",
-   "wp": "39",
-   "title": "the unlabelled final-review closure paragraph: Cloud data-model round-trip of complete Slate metadata/archive with originals absent, explicit managed asset uploads, exact grids, graph scopes, titles/subtitles/fonts/colour and ASR source/artifact references; an older DTO cannot truncate the native project before sync",
    "section": ""
   },
   {
@@ -30001,12 +29887,6 @@
    "section": ""
   },
   {
-   "id": "WP-45:producer-prerequisites-consuming-wp-22-r",
-   "wp": "45",
-   "title": "producer prerequisites; consuming WP-22 real mail artifacts without deferring WP-22's own gate",
-   "section": ""
-  },
-  {
    "id": "WP-45:producer-prerequisites-wp45-08-must-cons",
    "wp": "45",
    "title": "Producer prerequisites (WP45.08 must consume real WP22 mail, no fixture)",
@@ -30064,12 +29944,6 @@
    "id": "WP-51:slice-recovery-acceptance-body-text-betw",
    "wp": "51",
    "title": "'Slice recovery acceptance' body text (between §5 and §6, no substep id): kill the real Container before D1 publication, after the guarded segment/checkpoint/outbox batch, and before/after alarm scheduling; race a duplicate alarm with Cron rescue; assert one committed segment per run/range, deterministic continuation, no lost next-due intent, rejection of stale fences; alarm delivery itself may repeat; use the bounded mechanism in architecture 23 §1.2, never interactive BEGIN/COMMIT or an in-memory continuation loop",
-   "section": ""
-  },
-  {
-   "id": "WP-51:slice-recovery-acceptance-paragraph-betw",
-   "wp": "51",
-   "title": "'Slice recovery acceptance' paragraph between §5 and §6 (Container-kill matrix, duplicate-alarm/Cron-rescue race)",
    "section": ""
   },
   {
@@ -30477,7 +30351,7 @@
   },
   {
    "gate": "VG-04",
-   "contribution": "Generated-shape policy test for every real local/in-process RPC interface (combines with WP06's published-host RPC proof) Local gRPC over real Named Pipes/UDS, full generated service set and callback listeners - this is where VG-04 is actually implemented end to end, even though open-gates-register.md schedules it only to WP-03.04(a01)/WP-06.01(a03); see report section 9 for this apparent scheduling gap. 06.01 proves bidirectional local RPC over real named-pipe/UDS between two published AOT binaries with the full generated service set Desktop host AOT proof with the real contract set: README lists 03.04/06.01 (a01/a03) as producer. WP05's own section 8 completion-gate text additionally states that WP-05.03 (GOV.05) 'makes VG-04's policy-test half enforceable' - a second contributing substep not listed in the README's deferred-gate table; see report.md section 9.",
+   "contribution": "Generated-shape policy test for every real local/in-process RPC interface (combines with WP06's published-host RPC proof) Local gRPC over real Named Pipes/UDS, full generated service set and callback listeners - this is where VG-04 is actually implemented end to end, even though open-gates-register.md schedules it only to WP-03.04(a01)/WP-06.01(a03). 06.01 proves bidirectional local RPC over real named-pipe/UDS between two published AOT binaries with the full generated service set Desktop host AOT proof with the real contract set: README lists 03.04/06.01 (a01/a03) as producer. WP05's own section 8 completion-gate text additionally states that WP-05.03 (GOV.05) 'makes VG-04's policy-test half enforceable' - a second contributing substep not listed in the README's deferred-gate table.",
    "tasks": [
     "CON.04",
     "CON.05",

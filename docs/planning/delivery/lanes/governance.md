@@ -136,7 +136,7 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 | Validation | Offline unit tests, negative fixtures per assertion, PR CI; no live-service runtime per [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017). |
 | Completion evidence | Contract/serialization policy results with negative fixtures per assertion; Contracts' own layering/licence/banned-API results. |
 | Baseline (unreviewed unless accepted) | not-started |
-| Notes | WP05's own §8 completion-gate text states this substep 'makes [VG-04](../../../assurance/open-gates-register.md#rule-vg-04)'s policy-test half enforceable' - a second [VG-04](../../../assurance/open-gates-register.md#rule-vg-04) contributor not listed in the README's deferred-gate table (which names only 03.04/06.01); see report.md §9 and the gates array. |
+| Notes | WP05's own §8 completion-gate text states this substep 'makes [VG-04](../../../assurance/open-gates-register.md#rule-vg-04)'s policy-test half enforceable' - a second [VG-04](../../../assurance/open-gates-register.md#rule-vg-04) contributor not listed in the README's deferred-gate table (which names only 03.04/06.01). |
 
 <a id="task-gov-06"></a>
 

@@ -179,7 +179,7 @@ Every gate in [`../../assurance/open-gates-register.md`](../../assurance/open-ga
 | **[PG-23](../../assurance/open-gates-register.md#rule-pg-23)** — commercial Web | 06.05, 22.08, 23.05, 24.06, 47, 48, 49, 50.06; combine all applicable producer evidence |
 | **[PG-24](../../assurance/open-gates-register.md#rule-pg-24)** — real Android push | 45.09 live sender;32 physical receipt and fallback |
 
-The contributing delivery tasks for each gate are listed in [gate traceability](../delivery/traceability.md#gates). A gate closes only when every contributing task has recorded its evidence.
+The contributing delivery tasks for each gate are listed in [gate traceability](../delivery/traceability.md#gates), which is the authoritative gate-to-task mapping. It also covers gates this table predates — [PG-25](../../assurance/open-gates-register.md#rule-pg-25), [PG-26](../../assurance/open-gates-register.md#rule-pg-26), [L-16](../../assurance/release-gates.md#rule-l-16) and [L-30](../../assurance/release-gates.md#rule-l-30) — the experience acceptance rows UX-A to UX-H, and the second [VG-04](../../assurance/open-gates-register.md#rule-vg-04) contribution from the Contracts policy tests ([WP-05.03](05-architecture-and-repository-policy-tests.md#rule-wp-05.03)). A gate closes only when every contributing task has recorded its evidence.
 
 ---
 
