@@ -11,10 +11,10 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | [CON.01](#task-con-01) | Shard contended eng inventory/constraint files by domain; fix one-owner merge protocol | governance | S | none | not-started |
 | [CON.02](#task-con-02) | Capability/action/context/version/health descriptor records + immutable oversized-body reference (EncodedBodyRef) | contract | M | [CON.91](#task-con-91) (contract) | not-started |
 | [CON.03](#task-con-03) | Resource/Sync owner-body admission: closed Sync mutation allowlist + cross-owner/wrong-revision/opaque-object/forbidden-path negatives | contract | M | [CON.02](#task-con-02) (contract) | not-started |
-| [CON.04](#task-con-04) | ContentSandbox service schema (24 methods: session/slot/media/image/PDF/OTIO) | contract | L | [CON.05](#task-con-05) (design) | not-started |
+| [CON.04](#task-con-04) | ContentSandbox service schema (24 methods: session/slot/media/image/PDF/OTIO) | contract | L | none | not-started |
 | [CON.05](#task-con-05) | Extension/Connector/LocalBootstrap service schema (annex09 helper closure minus ContentSandbox) | contract | M | none | not-started |
 | [CON.06](#task-con-06) | Product in-process port completion: INotesOperations/IScopeOperations/ISlateOperations/IChatOperations + infra ports | contract | L | [CON.02](#task-con-02) (contract) | not-started |
-| [CON.07](#task-con-07) | Identity/session/device operation registry + native-auth and browser HTTP exceptions | contract | L | [CON.02](#task-con-02) (contract) | not-started |
+| [CON.07](#task-con-07) | Identity/session/device operation registry + native-auth and browser HTTP exceptions | contract | L | none | not-started |
 | [CON.08](#task-con-08) | Entitlement/commerce operation registry | contract | M | none | not-started |
 | [CON.09](#task-con-09) | Sync/resource-transfer/objects operation registry + realm-transfer.v1 | contract | L | [CON.03](#task-con-03) (contract) | not-started |
 | [CON.10](#task-con-10) | Task/approval/bridge/chat/agent/automation/search operation registry + ai-internal package | contract | L | [CON.02](#task-con-02) (contract) | not-started |
@@ -49,7 +49,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — contention reduction that lets Contracts closures be authored concurrently |
 | Provides | sharded-constraint-files; contracts-merge-protocol |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CON.19](#task-con-19) |
 | Write scope | `Contracts:eng/contracts.py`<br>`Contracts:public/proto/constraints/**`<br>`Contracts:internal/proto/constraints/**`<br>`Contracts:CONTRIBUTING.md` |
@@ -72,9 +72,9 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.03) — capability/action/context/version/health descriptor records only, plus EncodedBodyRef (the immutable oversized-body reference form); excludes the Sync mutation allowlist and cross-owner/wrong-revision/opaque-object/forbidden-path negative vectors, which are CON.03 |
 | Provides | capability-action-context-descriptors; encoded-body-ref |
 | Start prerequisites | **contract** [CON.91](#task-con-91) — published Foundation ResourceRef/ResourceVersionRef/ArtifactRef (already generated) as the base EncodedBodyRef.resource field type. *Why:* EncodedBodyRef's resource field is a ResourceVersionRef; without the already-published Foundation closure this can't compile. |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [APP.01](app-composition.md#task-app-01), [CON.03](#task-con-03), [CON.06](#task-con-06), [CON.07](#task-con-07), [CON.10](#task-con-10), [CON.19](#task-con-19), [CON.20](#task-con-20), [CON.21](#task-con-21), [CON.22](#task-con-22), [SCOPE.20](arcscope.md#task-scope-20) |
+| Unblocks | [APP.01](app-composition.md#task-app-01), [CON.03](#task-con-03), [CON.06](#task-con-06), [CON.10](#task-con-10), [CON.19](#task-con-19), [CON.20](#task-con-20), [CON.21](#task-con-21), [CON.22](#task-con-22), [SCOPE.20](arcscope.md#task-scope-20) |
 | Write scope | `Contracts:public/proto/arcforges/foundation/v1/foundation.proto`<br>`Contracts:public/proto/constraints/foundation-descriptors.json`<br>`Contracts:fixtures/public/con-02-descriptors.json` |
 | Shared resources | [RES-contracts-generated-baseline](../shared-resources.md#res-contracts-generated-baseline) (regenerate), [RES-contracts-publication](../shared-resources.md#res-contracts-publication) (append), [RES-contracts-schema-sources](../shared-resources.md#res-contracts-schema-sources) (append) |
 | Validation | offline unit tests for descriptor round-trip (C#/TS), decode-limit fixtures (exact 64MiB boundary and 64MiB+1 refusal) reusing WP03.02's WireLimits constants, deterministic regeneration, generated-header/import checks; no macOS/device/live-service CI per [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017). |
@@ -95,7 +95,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.03) — the Sync mutation allowlist and oversized-body admission negative-vector half; ResourceRef/ResourceVersionRef/BlobRef schema itself is already done (CON.91/[WP-03.01](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.01)) |
 | Provides | sync-mutation-allowlist; owner-body-admission-negatives |
 | Start prerequisites | **contract** [CON.02](#task-con-02) — EncodedBodyRef record. *Why:* the 'immutable oversized-body reference form' [WP-03.03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.03) asks for is EncodedBodyRef; the admission validator must recognize it as the alternative to an inline AggregateBody. |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.37](cloud.md#task-cloud-37), [CON.09](#task-con-09), [CON.19](#task-con-19), [NOTES.02](arcnotes.md#task-notes-02) |
 | Write scope | `Contracts:public/proto/arcforges/publicapi/v1/content.proto`<br>`Contracts:fixtures/public/con-03-sync-allowlist.json` |
@@ -117,8 +117,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Kind / size | contract / L |
 | Obligations | [WP-03.04](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.04) — ContentSandboxService only, from annex 09 §§2-6 (OpenSession/RenewSession/GrantSlot/AckBuffer/ProbeMedia/OpenMediaReader/ReadMediaFrame/SeekMedia/CopyVideoFrame/CopyAudioFrame/CloseFrame/CloseReader/OpenImage/GetImageInfo/ReadImageTile/CloseImage/OpenPdf/GetPdfPage/ExtractPdfText/RenderPdfTile/ClosePdf/ReadOtio/WriteOtio/OtioReadChunk/CancelSession/CloseSession = 24 methods)<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) §7 evidence: Local gRPC closure — complete.LocalRpc.Platform/.Sandbox typed parser/connector/hint/bootstrap methods before consumers — package-level obligation contribution |
 | Provides | content-sandbox-schema |
-| Start prerequisites | **design** [CON.05](#task-con-05) — none — annex09 is a frozen design input. *Why:* n/a; listed only because the substep header names annex09 as the authority; nothing here is undecided |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Start prerequisites | none |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CON.19](#task-con-19), [PLT.09](platform.md#task-plt-09), [PLT.15](platform.md#task-plt-15), [PLT.45](platform.md#task-plt-45) |
 | Write scope | `Contracts:internal/proto/arcforges/local/sandbox/v1/sandbox.proto`<br>`Contracts:src/internal/dotnet/ArcForges.Contracts.LocalRpc.Sandbox/**`<br>`Contracts:fixtures/internal/con-04-content-sandbox.json` |
@@ -141,9 +141,9 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.04](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.04) — ExtensionHostService (remaining Handshake/Invoke/Stop; RenewLease already done), ILocalBootstrap (Challenge/Confirm/Renew), IConnectorBroker (ListDefinitions/ListConnections/BeginConnection/CompleteConnection/GetConnection/RevokeConnection); reserve removed Hub/SSO/transfer names (IHubRegistry/IHubRouting/DeviceSsoBrokerService) without registering them<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) §7 evidence: Local gRPC closure — complete.LocalRpc.Platform/.Sandbox typed parser/connector/hint/bootstrap methods before consumers — package-level obligation contribution |
 | Provides | extension-connector-bootstrap-schema |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [CON.04](#task-con-04), [CON.19](#task-con-19), [EXT.02](extensions.md#task-ext-02), [PRF.04](runtime-proofs.md#task-prf-04) |
+| Unblocks | [CON.19](#task-con-19), [EXT.02](extensions.md#task-ext-02), [PRF.04](runtime-proofs.md#task-prf-04) |
 | Write scope | `Contracts:public/proto/arcforges/extensions/v1/extensions.proto`<br>`Contracts:internal/proto/arcforges/local/platform/v1/platform.proto`<br>`Contracts:fixtures/internal/con-05-extension-connector-bootstrap.json` |
 | Shared resources | [RES-contracts-generated-baseline](../shared-resources.md#res-contracts-generated-baseline) (regenerate), [RES-contracts-publication](../shared-resources.md#res-contracts-publication) (append), [RES-contracts-schema-sources](../shared-resources.md#res-contracts-schema-sources) (append) |
 | Validation | offline: replayed/cross-connection confirm, expired nonce, wrong child direction/role negative fixtures (annex09 §2/§6); structural test asserting Hub/SSO registration absence; no live OS pipe/socket (that is [WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06)/[WP-08](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08)/[WP-09](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09)/[WP-11](../../work-packages/11-security-foundation.md#rule-wp-11)). |
@@ -164,7 +164,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.04](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.04) — the 'Product interfaces use generated records and static in-process adapters' half — full method surface for the four product-port packages plus ICapabilityProvider/IContextProvider/IArtifactHandler/IResourceAccess/IProductLifecycle/IDeepLinkTarget<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure (source KnowledgePolicy/Patch/View, typed one-use overrides, Notes run/atom/table-cell positions, complete initial owner/profile records) — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior: source KnowledgePolicy/Patch/View and typed one-use overrides (source.getPolicy/setPolicy/clearPolicy, source.createConsent/revokeConsent) fall inside IChatOperations/context-provider scope; stable Notes run/atom/table-cell positions (NotesTextPosition already exists in content.proto from WP03.01 — this task only needs to verify no gap remains for table-cell addressing); package-level obligation contribution |
 | Provides | product-in-process-ports |
 | Start prerequisites | **contract** [CON.02](#task-con-02) — CapabilityDescriptor/ContextDescriptor shapes. *Why:* ICapabilityProvider.Describe returns CapabilityDescriptor[] and IContextProvider.ProvideContext returns a ContextContribution keyed on those descriptor shapes; without CON.02 this can't be typed. |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CON.19](#task-con-19), [SLATE.12](arcslate.md#task-slate-12) |
 | Write scope | `Contracts:internal/proto/arcforges/local/chat/v1/chat.proto`<br>`Contracts:internal/proto/arcforges/local/notes/v1/notes.proto`<br>`Contracts:internal/proto/arcforges/local/scope/v1/scope.proto`<br>`Contracts:internal/proto/arcforges/local/slate/v1/slate.proto`<br>`Contracts:fixtures/internal/con-06-product-ports.json` |
@@ -186,8 +186,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Kind / size | contract / L |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — IdentityService (29 ops)/WorkspaceService (4)/DeviceService (6) from registry04 §5, plus contracts07 §1 native PKCE token endpoint and the four /session/v1 browser routes as declared JSON exceptions |
 | Provides | identity-session-device-ops; native-browser-auth-exceptions |
-| Start prerequisites | **contract** [CON.02](#task-con-02) — none blocking — this domain does not depend on descriptors. *Why:* listed for completeness; identity ops use only Foundation (done) and their own new records (AuthChallenge, NativeSession, SessionView, etc. — all already scaffolded as Foundation-adjacent, need verification during implementation) |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Start prerequisites | none |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AND.04](android.md#task-and-04), [CLOUD.20](cloud.md#task-cloud-20), [CON.19](#task-con-19), [WEB.10](web.md#task-web-10) |
 | Write scope | `Contracts:public/proto/arcforges/publicapi/v1/identity.proto`<br>`Contracts:public/http/v1/schema.json`<br>`Contracts:fixtures/public/con-07-identity.json` |
@@ -210,7 +210,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — EntitlementService (6 ops) + CommerceService (~14 ops) from registry04 §5, all declared 'frozen' compatibility class per catalogue00 [CC-04](../../../architecture/04-desktop-application-architecture.md#rule-cc-04) |
 | Provides | entitlement-commerce-ops |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CON.19](#task-con-19), [WEB.14](web.md#task-web-14) |
 | Write scope | `Contracts:public/proto/arcforges/publicapi/v1/commerce.proto`<br>`Contracts:fixtures/public/con-08-entitlement-commerce.json` |
@@ -233,7 +233,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — SyncService (~10 ops incl. listScopes/pullChanges/pushChange/pushBatch/getAggregate/listConflicts/resolveConflict/requestFullResync/getBootstrapPage), ResourceService transfer ops (beginUpload/completeUpload/getDownloadTicket/getMetadata/release/getUploadStatus/renewUploadTicket), TransferService (realm-transfer.v1: requestExport/previewImport/commitImport/get/list/cancel) from registry04 §5 and contracts07 §5 |
 | Provides | sync-resource-transfer-ops; realm-transfer-v1 |
 | Start prerequisites | **contract** [CON.03](#task-con-03) — the closed Sync mutation allowlist validator. *Why:* SyncService.pushChange/pushBatch cannot be schema-complete without the admission rule that rejects non-allowlisted AggregateBody variants — generating the RPC methods without it would let a consumer invent Sync semantics, which [WP-03.03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.03)'s own completion gate explicitly forbids. |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.37](cloud.md#task-cloud-37), [CON.19](#task-con-19), [SLATE.37](arcslate.md#task-slate-37) |
 | Write scope | `Contracts:public/proto/arcforges/publicapi/v1/sync.proto`<br>`Contracts:public/proto/arcforges/publicapi/v1/transfer.proto`<br>`Contracts:fixtures/public/con-09-sync-transfer.json` |
@@ -256,7 +256,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — TaskService(~9)/ApprovalService(2)/BridgeService(3)/public ChatOperationsService(~25)/AgentService(3)/AutomationService(9)/search.query from registry04 §5, plus internal/ai-http/v1 schema.json (ai-internal npm/CloudInternal package) for the C#<->AI-Worker internal HTTP ports in contracts05 §3<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure (source KnowledgePolicy/Patch/View, typed one-use overrides, Notes run/atom/table-cell positions, complete initial owner/profile records) — package-level obligation contribution |
 | Provides | task-chat-agent-automation-ops; ai-internal-package |
 | Start prerequisites | **contract** [CON.02](#task-con-02) — CapabilityDescriptor. *Why:* registry04 tail section 'Initial capability binding' requires one CapabilityDescriptor per tool-eligible method on I*Operations plus each declared Cloud tool — this task's ToolRequest/ToolProposal wiring needs that shape to exist. |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.00](ai-routing.md#task-air-00), [AST.11](assistant.md#task-ast-11), [AST.14](assistant.md#task-ast-14), [CON.11](#task-con-11), [CON.19](#task-con-19), [DEV.02](device-bridge.md#task-dev-02), [DEV.04](device-bridge.md#task-dev-04), [HAR.00](harness.md#task-har-00), [HAR.02](harness.md#task-har-02), [SRCH.00](search.md#task-srch-00), [SRCH.01](search.md#task-srch-01) |
 | Write scope | `Contracts:public/proto/arcforges/publicapi/v1/chat.proto`<br>`Contracts:internal/ai-http/v1/schema.json`<br>`Contracts:fixtures/public/con-10-chat-task-agent.json`<br>`Contracts:fixtures/internal/con-10-ai-internal.json` |
@@ -279,7 +279,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — the annex10 13 new operations (ApplicationService.List/Heartbeat/Disconnect, HistoryService.BeginImport/FinalizeImport/GetImport/CancelImport, ExecutionService.StartTransientTurn/ReadOutput/WatchOutput/AcknowledgeOutput/PurgeTransient, EventService.Watch) plus EventService.Poll's 17 hint payloads ([CA-12](../../../architecture/02-contracts-and-protocols.md#rule-ca-12)) and StreamFrame/OutputChunk/StreamPosition/StreamReset server-streaming framing<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) Current application and stream contract completeness (annex10+manifest11, explicitly required before 03 completion) — 'Current application and stream contract completeness' package-level obligation — explicitly required before 03 completion, not a.90-deferred item |
 | Provides | application-history-execution-events-ops |
 | Start prerequisites | **contract** [CON.10](#task-con-10) — TaskSnapshot/ChatTurnProgress shapes for ExecutionProgress's oneof. *Why:* ExecutionProgress.task/turn oneof needs the real TaskSnapshot (already published, WP03.01) and ChatTurnProgress (new in CON.10); ExecutionOwner conceptually unifies Task and ChatTurn ownership so this task is easiest to review once CON.10's ChatTurn shapes exist. Not a hard compiler block since TaskSnapshot alone already exists — treat as a strong sequencing preference, not an absolute gate. |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AND.04](android.md#task-and-04), [AND.05](android.md#task-and-05), [AST.01](assistant.md#task-ast-01), [AST.07](assistant.md#task-ast-07), [CLOUD.29](cloud.md#task-cloud-29), [CON.15](#task-con-15), [CON.19](#task-con-19), [DEV.01](device-bridge.md#task-dev-01), [HAR.01](harness.md#task-har-01) |
 | Write scope | `Contracts:public/proto/arcforges/publicapi/v1/application.proto`<br>`Contracts:public/proto/arcforges/events/v1/events.proto`<br>`Contracts:fixtures/public/con-11-application-streams.json` |
@@ -302,7 +302,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — extension/policy schemas named in [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) §4's projects table ('Selected CF/auth/provider HTTP exceptions') and contracts08 in full:.arcpkg manifest.v1, workflow.v1 DAG, panel.v1 declarative UI, PolicyBundle body.v1, internal ConfigurationDocument (20 sections) |
 | Provides | extension-policy-schemas |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CON.19](#task-con-19), [POL.02](policy.md#task-pol-02), [POL.09](policy.md#task-pol-09) |
 | Write scope | `Contracts:public/http/v1/schema.json`<br>`Contracts:internal/ai-http/v1/schema.json`<br>`Contracts:fixtures/public/con-12-extension-policy.json` |
@@ -325,7 +325,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — the public CatalogService (search/getPackage/listVersions/registerPublisher/verifyPublisher/submitVersion/getSubmission, 7 ops) and PublisherView/CatalogPackageView/CatalogVersionView/CatalogSubmissionView/CatalogReviewDecision records from registry04 §4/§5 |
 | Provides | package-catalog-ops |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CON.14](#task-con-14), [CON.19](#task-con-19) |
 | Write scope | `Contracts:public/proto/arcforges/catalog/v1/catalog.proto`<br>`Contracts:fixtures/public/con-13-package-catalog.json` |
@@ -348,7 +348,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — OperatorService's ~29 methods with all eight authorization fields and the [OC-03](../../../architecture/contracts/00-operation-catalogue.md#rule-oc-03) role matrix<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) 'Operator contract closure' package-level obligation — schema and negative vectors only; [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) owns real identity/dispatch, [WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) financial owners, [WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) config/policy owners, [WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) the console join — 'Operator contract closure' package-level obligation — schema and negative vectors only; [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) owns real identity/dispatch, [WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) financial owners, [WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) config/policy owners, [WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) the console join; package-level obligation contribution |
 | Provides | operator-service-ops |
 | Start prerequisites | **contract** [CON.13](#task-con-13) — CatalogSubmissionView/CatalogVersionView. *Why:* operator.catalog.review and catalog.revoke request/result fields reference these exact record types; they must exist first. |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.13](commerce.md#task-com-13), [CON.19](#task-con-19), [OPS.05](operations.md#task-ops-05), [OPS.11](operations.md#task-ops-11), [OPS.13](operations.md#task-ops-13), [POL.05](policy.md#task-pol-05) |
 | Write scope | `Contracts:internal/proto/arcforges/operator/v1/operator.proto`<br>`Contracts:src/internal/dotnet/ArcForges.Contracts.CloudInternal/**`<br>`Contracts:src/internal/ts/operator-client/src/**`<br>`Contracts:fixtures/internal/con-14-operator.json` |
@@ -371,7 +371,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.90](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.90) — 'Private CF binding/event definitions' input — the remaining contracts05 ports not already covered by CON.10 (ai-internal): /internal/objects/v1/* (authorize/part-receipt/verification/job-grant/job-authorize), /internal/ai/v1/dispatch/control/delete (Worker-side), inference-job family (embedding/rerank), and CfDeletionTarget/CfDeletionReceipt/SessionBinding/BackupManifest records |
 | Provides | cf-internal-bindings |
 | Start prerequisites | **contract** [CON.11](#task-con-11) — ExecutionOwner/StreamPosition shapes. *Why:* several CF internal ports (claim/reconcile/finalize/stream-state) carry run identity and stream state that mirror annex10's ExecutionOwner/StreamPosition; authoring them before CON.11 exists would risk a duplicate, incompatible shape. |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CON.19](#task-con-19), [EXT.10](extensions.md#task-ext-10), [HAR.00](harness.md#task-har-00) |
 | Write scope | `Contracts:internal/ai-http/v1/schema.json`<br>`Contracts:fixtures/internal/con-15-cf-internal.json` |
@@ -394,7 +394,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.07](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.07) — full — publish catalog-index.v1, catalog-revocations.v1, android-update.v1 and realm.v1 schemas, canonical signing vectors and separate fixture trust roots; production keys are explicitly [WP-53](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53) output, not a [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) input |
 | Provides | signed-catalog-update-realm-formats |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AND.20](android.md#task-and-20), [CON.19](#task-con-19), [EXT.04](extensions.md#task-ext-04), [EXT.06](extensions.md#task-ext-06), [UPD.07](updater.md#task-upd-07) |
 | Permitted substitutes | [SUB-signed-format-fixture-keys](../substitutes.md#sub-signed-format-fixture-keys) |
@@ -418,7 +418,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.06](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.06) — full — wire bigint/decimal-coefficient-scale/oneof-presence/unknown-field/additive-response-evolution profile; canonical semantic hash distinct from wire byte hash; independent versioning of descriptors from applications; supported-window enforcement (previous-client/current-server and current-client/minimum-server matrices); deletion/tag-reuse/type-change failure tests |
 | Provides | compat-window-semantic-hash |
 | Start prerequisites | **contract** [CON.92](#task-con-92) — already-published Foundation/PublicApi as the 'previous stable' fixture. *Why:* the compatibility matrix needs an actual previously-published package version to compare against; the WP03.01/03.02 published releases (1.0.0-ci.89.1 / 1.0.0-ci.92.1) already serve as that baseline, so this can start immediately. |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [CON.18](#task-con-18) — full coverage of the compatibility matrix against every later-added service (CON.07-CON.16). *Why:* the harness and hash algorithm can be built and unit-tested now, but [WP-03.06](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.06)'s own completion gate ('all selected values retain meaning across clients') is only fully evidenced once the domain tasks it must protect actually exist — this is an integration-style completion dependency, not a start blocker. |
 | Unblocks | [CON.19](#task-con-19) |
 | Write scope | `Contracts:eng/check_compatibility.py`<br>`Contracts:tests/tooling/test_compatibility_matrix.py`<br>`Contracts:fixtures/public/con-17-compat-hash.json` |
@@ -441,7 +441,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) §7 evidence: operation-by-actor reachability matrix ([AZ-04](../../../architecture/08-security-architecture.md#rule-az-04)) for public/local/operator/CF/exception bindings — §7 evidence requirement: 'Generate an operation-by-actor reachability matrix for every public/local/operator/CF/exception binding under catalogue 00 [AZ-04](../../../architecture/08-security-architecture.md#rule-az-04), with all seven effective authorization fields and source profile. Fail unclassified/ambiguous fields...'; package-level obligation contribution |
 | Provides | operation-scope-manifest-tooling |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CON.17](#task-con-17), [CON.19](#task-con-19), [GOV.16](governance.md#task-gov-16) |
 | Write scope | `Contracts:eng/check_operation_scope.py`<br>`Contracts:eng/operation-scope-manifest.json` |
@@ -461,10 +461,11 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 |---|---|
 | Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
 | Kind / size | contract / M |
+| Package acceptance | Records the [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-03.90](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.90) — all work except the parts mapped to CON.15<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) §8 completion gate (6 items) + [P2-009](../../../decisions/phase-2-specification-decisions.md#rule-p2-009)/[VG-04](../../../assurance/open-gates-register.md#rule-vg-04)/[F-026](../../../assurance/open-gates-register.md#rule-f-026) scoped gate contributions — §8 completion gate items 1-6 and the [P2-009](../../../decisions/phase-2-specification-decisions.md#rule-p2-009)/[VG-04](../../../assurance/open-gates-register.md#rule-vg-04)/[F-026](../../../assurance/open-gates-register.md#rule-f-026) gate contributions; package-level obligation contribution |
 | Provides | wp03-complete-closure |
 | Start prerequisites | **contract** [CON.02](#task-con-02) — all CON.02-CON.18 tasks complete and published. *Why:* this is the aggregate closure gate; it cannot assert 'deterministic generation across the complete closure' until the closure is complete. (Listing CON.02 as representative; the real dependency is the full set CON.02-CON.18.)<br>**contract** [CON.18](#task-con-18) — full operation-scope manifest with zero pending rows. *Why:* §7's [OV-01](../../../architecture/23-simulator-and-interchange.md#rule-ov-01) requires every operation classified; this can't pass until every domain task has flipped its rows.<br>**artifact** [CON.03](#task-con-03) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.04](#task-con-04) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.05](#task-con-05) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.06](#task-con-06) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.07](#task-con-07) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.08](#task-con-08) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.09](#task-con-09) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.10](#task-con-10) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.11](#task-con-11) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.12](#task-con-12) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.13](#task-con-13) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.14](#task-con-14) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.15](#task-con-15) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.16](#task-con-16) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.17](#task-con-17) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.20](#task-con-20) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.21](#task-con-21) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.22](#task-con-22) — closure published. *Why:* the owned-artifact receipt verifies the complete generated package set; it never gates consumers of an individual closure<br>**artifact** [CON.01](#task-con-01) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | none |
 | Write scope | `Contracts:docs/wp03-90-verification.md`<br>`Contracts:artifacts/contracts/**` |
@@ -487,7 +488,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — notes.* operations (17), their records, eight authorization fields and vectors |
 | Provides | Notes public operation registry |
 | Start prerequisites | **contract** [CON.02](#task-con-02) — capability/action/context/resource descriptor and oversized-body reference records. *Why:* these operations carry resource references, descriptors and immutable body references defined by the shared descriptor closure |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.37](cloud.md#task-cloud-37), [CLOUD.45](cloud.md#task-cloud-45), [CON.19](#task-con-19), [NOTES.20](arcnotes.md#task-notes-20) |
 | Write scope | `Contracts:public/proto/arcforges/*/v1/**`<br>`Contracts:fixtures/public/con-{i}-*.json`<br>`Contracts:src/public/**/Generated/**` |
@@ -510,7 +511,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — simulation.* operations (12), their records, authorization fields and vectors |
 | Provides | Simulation operation registry |
 | Start prerequisites | **contract** [CON.02](#task-con-02) — capability/action/context/resource descriptor and oversized-body reference records. *Why:* these operations carry resource references, descriptors and immutable body references defined by the shared descriptor closure |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CON.19](#task-con-19), [SIM.01](simulator.md#task-sim-01), [SIM.05](simulator.md#task-sim-05), [SIM.06](simulator.md#task-sim-06) |
 | Write scope | `Contracts:public/proto/arcforges/*/v1/**`<br>`Contracts:fixtures/public/con-{i}-*.json`<br>`Contracts:src/public/**/Generated/**` |
@@ -533,7 +534,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — support.*, notification.*, data.*, preference.*, policy.getBundle and export.* operations (15), records and vectors |
 | Provides | Account support, notification, data, preference, policy-bundle and export-job operations |
 | Start prerequisites | **contract** [CON.02](#task-con-02) — capability/action/context/resource descriptor and oversized-body reference records. *Why:* these operations carry resource references, descriptors and immutable body references defined by the shared descriptor closure |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.contracts](adoption.md#task-adopt-03-contracts) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AND.12](android.md#task-and-12), [CLOUD.45](cloud.md#task-cloud-45), [CON.19](#task-con-19), [OPS.07](operations.md#task-ops-07), [OPS.10](operations.md#task-ops-10), [POL.09](policy.md#task-pol-09), [WEB.15](web.md#task-web-15) |
 | Write scope | `Contracts:public/proto/arcforges/*/v1/**`<br>`Contracts:fixtures/public/con-{i}-*.json`<br>`Contracts:src/public/**/Generated/**` |
@@ -562,7 +563,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Shared resources | [RES-contracts-generated-baseline](../shared-resources.md#res-contracts-generated-baseline) (regenerate), [RES-contracts-publication](../shared-resources.md#res-contracts-publication) (append), [RES-contracts-schema-sources](../shared-resources.md#res-contracts-schema-sources) (append) |
 | Validation | accepted; see docs/assurance/wp03-00-implementation-evidence.md |
 | Completion evidence | Contracts PR33/34/35 merged; accepted source 30ddcad2bcb3634e089abb5e29d6c9ce05d38386; published 1.0.0-ci.86.1 |
-| Baseline (unreviewed unless accepted) | accepted — Verified: Contracts git log --all shows PR33/34/35 merged; gh pr list confirms MERGED; matches Design evidence exactly. |
+| Baseline (unreviewed unless accepted) | accepted — Design receipts wp03-00-implementation-evidence.md/.json; the Contracts pull requests recorded there are merged. |
 | Notes | Historical record only, not new work. |
 
 <a id="task-con-91"></a>
@@ -584,7 +585,7 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Shared resources | [RES-contracts-generated-baseline](../shared-resources.md#res-contracts-generated-baseline) (regenerate), [RES-contracts-publication](../shared-resources.md#res-contracts-publication) (append), [RES-contracts-schema-sources](../shared-resources.md#res-contracts-schema-sources) (append) |
 | Validation | accepted; see docs/assurance/wp03-01-implementation-evidence.md |
 | Completion evidence | Contracts PR36 merged as 4b8134eaf8a4174922d6378da003ed390b85a94a; published 1.0.0-ci.89.1 |
-| Baseline (unreviewed unless accepted) | accepted — Verified in code: foundation.proto has exactly the 32 messages/3+1 enums listed in the evidence receipt (grep '^message /^enum ' confirms). content.proto has ~108 PublicApi messages including AggregateBody with all 16 branches. |
+| Baseline (unreviewed unless accepted) | accepted — Design receipts wp03-01-implementation-evidence.md/.json; the recorded foundation and content records are generated and published. |
 | Notes | Historical record. IMPORTANT: this substep's dependency-closure side effect already generated ResourceRef/ResourceVersionRef/BlobRef/ArtifactRef — WP03.03 does not need to invent these, only add capability/action/context/health descriptors, the Sync mutation allowlist validator, and EncodedBodyRef (still absent). |
 
 <a id="task-con-92"></a>
@@ -606,5 +607,5 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 | Shared resources | [RES-contracts-generated-baseline](../shared-resources.md#res-contracts-generated-baseline) (regenerate), [RES-contracts-publication](../shared-resources.md#res-contracts-publication) (append), [RES-contracts-schema-sources](../shared-resources.md#res-contracts-schema-sources) (append) |
 | Validation | accepted; see docs/assurance/wp03-02-implementation-evidence.md |
 | Completion evidence | Contracts PR37 merged as e6c4a77f3ba48d70de4bf524623985b29278c784 (= current HEAD); published 1.0.0-ci.92.1 |
-| Baseline (unreviewed unless accepted) | accepted — Verified: this is exactly current Contracts HEAD. git log --all and gh pr list --state all (up to PR#37) both stop here; no PR38+ exists anywhere, local or remote. |
+| Baseline (unreviewed unless accepted) | accepted — Design receipts wp03-02-implementation-evidence.md/.json; Contracts main e6c4a77 (pull request 37) is the last merge. [WP-03.03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.03) has not started. |
 | Notes | This is Contracts' current HEAD. Every task below starts from this baseline. Both the Contracts repo's own docs/wp03-02-serialization.md and Design's evidence doc independently state '03.03 is next and has not started' — and no artifact anywhere (git log --all, all.worktree dirs, gh pr list --state all, fixtures/ directory contents, proto message/service inventory) contradicts that.. |

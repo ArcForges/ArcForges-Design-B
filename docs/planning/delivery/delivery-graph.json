@@ -1,7 +1,7 @@
 {
  "schemaVersion": 1,
  "decision": "P2-018",
- "baselineDate": "2026-09-23",
+ "baselineDate": "2026-09-24",
  "paths": {
   "design": "C:\\MyFile\\Projects\\ArcForges-Design-B",
   "plan": "C:\\MyFile\\Projects\\Plan-B"
@@ -307,7 +307,7 @@
      "part": "adoption stage: baseline inputs"
     }
    ],
-   "outcome": "The Plan ledger records, for every repository, the main head, open pull requests and branches, the latest published candidate per registry, and the location of any reported but unmerged work (including the reported WP-03.03 completion), so every repository review starts from the same frozen inputs.",
+   "outcome": "The Plan ledger records, for every repository, the main head, open pull requests and branches and the latest published candidate per registry, so every adoption slice starts from the same frozen inputs. The baseline is complete through WP-03.02; WP-03.03 has not started.",
    "provides": [
     "adoption baseline record",
     "ledger skeleton"
@@ -317,7 +317,7 @@
     "Plan:ledger/README.md"
    ],
    "validation": "Read-only inspection of repositories, pull requests and registry receipts already recorded; no builds, downloads or runtime checks (P2-017).",
-   "evidence": "Baseline record with exact commit identities per repository, open pull request list, latest candidate identities and the reported-work locations; reviewed and merged in the Plan repository.",
+   "evidence": "Baseline record with exact commit identities per repository, open pull request list and latest candidate identities; reviewed and merged in the Plan repository.",
    "baseline": {
     "state": "not-started"
    },
@@ -330,31 +330,31 @@
    "lane": "adoption",
    "repo": "DesktopPlatform",
    "kind": "adoption",
-   "size": "M",
+   "size": "S",
    "obligations": [
     {
      "ref": "P2-018",
-     "part": "adoption stage: DesktopPlatform review"
+     "part": "adoption stage: DesktopPlatform repository record"
     }
    ],
-   "outcome": "Every delivery task owned by DesktopPlatform is classified inherited, inherited with adjustment, gap or conflicting against the recorded baseline, with ledger records for inherited tasks and a recorded adjustment list, including the replacement of the design-policy graph check that still validates the retired work-package graph.",
+   "outcome": "The repository-wide adoption facts for DesktopPlatform (main head, retained CI workflow inventory under P2-017, package identities and pins, shared roots and source inventory) are recorded once for its slices to cite, and the DesktopPlatform classification table is complete when every adoption slice of the repository is complete. The governance slice schedules the replacement of the design-policy graph check that still validates the retired work-package graph.",
    "provides": [
-    "DesktopPlatform adoption report"
+    "DesktopPlatform adoption record"
    ],
    "start": [
     {
      "type": "artifact",
      "task": "ADOPT.01",
      "need": "frozen baseline record",
-     "why": "classification must use the same frozen repository heads and receipts as every other repository review"
+     "why": "repository-wide facts are recorded against the same frozen heads and receipts as every slice"
     }
    ],
    "writes": [
     "Plan:ledger/adoption/DesktopPlatform.md",
-    "Plan:ledger/tasks/*.md"
+    "Plan:ledger/tasks/ADOPT.02.md"
    ],
-   "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks unless a task's evidence field requires a never-run local check (P2-017).",
-   "evidence": "Adoption report with one classification row per owned task, evidence references for inherited tasks, adjustment list and any conflicts raised under D-001.",
+   "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
+   "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
    "baseline": {
     "state": "not-started"
    },
@@ -362,35 +362,35 @@
   },
   {
    "id": "ADOPT.03",
-   "title": "Adopt Contracts and locate the reported capability and resource closure",
+   "title": "Adopt Contracts",
    "lane": "adoption",
    "repo": "Contracts",
    "kind": "adoption",
-   "size": "M",
+   "size": "S",
    "obligations": [
     {
      "ref": "P2-018",
-     "part": "adoption stage: Contracts review, including the reported WP-03.03 completion"
+     "part": "adoption stage: Contracts repository record"
     }
    ],
-   "outcome": "Every delivery task owned by Contracts is classified against the recorded baseline; the work the user reported as completing WP-03.03 is located and reviewed like any task completion, and is recorded as inherited only if its source, retained checks, publication receipt and vectors satisfy the task's evidence field.",
+   "outcome": "The repository-wide adoption facts for Contracts (main head, retained CI workflow inventory under P2-017, package identities and pins, shared roots and source inventory) are recorded once for its slices to cite, and the Contracts classification table is complete when every adoption slice of the repository is complete. The accepted WP-03.00 to WP-03.02 receipts are recorded as inherited by the contracts slice; every later Contracts task, starting with the WP-03.03 closures, is open.",
    "provides": [
-    "Contracts adoption report"
+    "Contracts adoption record"
    ],
    "start": [
     {
      "type": "artifact",
      "task": "ADOPT.01",
-     "need": "frozen baseline record including the reported-work location",
-     "why": "the reported completion was not present in any repository when the plan was written; its location must be recorded before it can be reviewed"
+     "need": "frozen baseline record",
+     "why": "repository-wide facts are recorded against the same frozen heads and receipts as every slice"
     }
    ],
    "writes": [
     "Plan:ledger/adoption/Contracts.md",
-    "Plan:ledger/tasks/*.md"
+    "Plan:ledger/tasks/ADOPT.03.md"
    ],
-   "validation": "Review of merged source, retained CI results and publication receipts only (P2-017).",
-   "evidence": "Adoption report with classification rows, the reviewed evidence for any inherited closure, and adjustments.",
+   "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
+   "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
    "baseline": {
     "state": "not-started"
    },
@@ -406,27 +406,27 @@
    "obligations": [
     {
      "ref": "P2-018",
-     "part": "adoption stage: ArcNotes review"
+     "part": "adoption stage: ArcNotes repository record"
     }
    ],
-   "outcome": "Every ArcNotes delivery task is classified; bootstrap scaffolding is recorded as scaffolding, never as product completion.",
+   "outcome": "The repository-wide adoption facts for ArcNotes (main head, retained CI workflow inventory under P2-017, package identities and pins, shared roots and source inventory) are recorded once for its slices to cite, and the ArcNotes classification table is complete when every adoption slice of the repository is complete.",
    "provides": [
-    "ArcNotes adoption report"
+    "ArcNotes adoption record"
    ],
    "start": [
     {
      "type": "artifact",
      "task": "ADOPT.01",
      "need": "frozen baseline record",
-     "why": "classification uses the frozen baseline"
+     "why": "repository-wide facts are recorded against the same frozen heads and receipts as every slice"
     }
    ],
    "writes": [
     "Plan:ledger/adoption/ArcNotes.md",
-    "Plan:ledger/tasks/*.md"
+    "Plan:ledger/tasks/ADOPT.04.md"
    ],
-   "validation": "Review only (P2-017).",
-   "evidence": "Adoption report with classification rows and adjustments.",
+   "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
+   "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
    "baseline": {
     "state": "not-started"
    },
@@ -442,27 +442,27 @@
    "obligations": [
     {
      "ref": "P2-018",
-     "part": "adoption stage: ArcScope review"
+     "part": "adoption stage: ArcScope repository record"
     }
    ],
-   "outcome": "Every ArcScope delivery task is classified; bootstrap scaffolding is recorded as scaffolding, never as product completion.",
+   "outcome": "The repository-wide adoption facts for ArcScope (main head, retained CI workflow inventory under P2-017, package identities and pins, shared roots and source inventory) are recorded once for its slices to cite, and the ArcScope classification table is complete when every adoption slice of the repository is complete.",
    "provides": [
-    "ArcScope adoption report"
+    "ArcScope adoption record"
    ],
    "start": [
     {
      "type": "artifact",
      "task": "ADOPT.01",
      "need": "frozen baseline record",
-     "why": "classification uses the frozen baseline"
+     "why": "repository-wide facts are recorded against the same frozen heads and receipts as every slice"
     }
    ],
    "writes": [
     "Plan:ledger/adoption/ArcScope.md",
-    "Plan:ledger/tasks/*.md"
+    "Plan:ledger/tasks/ADOPT.05.md"
    ],
-   "validation": "Review only (P2-017).",
-   "evidence": "Adoption report with classification rows and adjustments.",
+   "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
+   "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
    "baseline": {
     "state": "not-started"
    },
@@ -478,27 +478,27 @@
    "obligations": [
     {
      "ref": "P2-018",
-     "part": "adoption stage: ArcSlate review"
+     "part": "adoption stage: ArcSlate repository record"
     }
    ],
-   "outcome": "Every ArcSlate delivery task is classified; bootstrap scaffolding is recorded as scaffolding, never as product completion.",
+   "outcome": "The repository-wide adoption facts for ArcSlate (main head, retained CI workflow inventory under P2-017, package identities and pins, shared roots and source inventory) are recorded once for its slices to cite, and the ArcSlate classification table is complete when every adoption slice of the repository is complete.",
    "provides": [
-    "ArcSlate adoption report"
+    "ArcSlate adoption record"
    ],
    "start": [
     {
      "type": "artifact",
      "task": "ADOPT.01",
      "need": "frozen baseline record",
-     "why": "classification uses the frozen baseline"
+     "why": "repository-wide facts are recorded against the same frozen heads and receipts as every slice"
     }
    ],
    "writes": [
     "Plan:ledger/adoption/ArcSlate.md",
-    "Plan:ledger/tasks/*.md"
+    "Plan:ledger/tasks/ADOPT.06.md"
    ],
-   "validation": "Review only (P2-017).",
-   "evidence": "Adoption report with classification rows and adjustments.",
+   "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
+   "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
    "baseline": {
     "state": "not-started"
    },
@@ -510,31 +510,31 @@
    "lane": "adoption",
    "repo": "Cloud",
    "kind": "adoption",
-   "size": "M",
+   "size": "S",
    "obligations": [
     {
      "ref": "P2-018",
-     "part": "adoption stage: Cloud review"
+     "part": "adoption stage: Cloud repository record"
     }
    ],
-   "outcome": "Every delivery task owned by Cloud (core, commerce, policy, operations, simulator, search and catalog modules) is classified against the recorded baseline, distinguishing the bootstrap host and deployed probe from product modules.",
+   "outcome": "The repository-wide adoption facts for Cloud (main head, retained CI workflow inventory under P2-017, package identities and pins, shared roots and source inventory) are recorded once for its slices to cite, and the Cloud classification table is complete when every adoption slice of the repository is complete.",
    "provides": [
-    "Cloud adoption report"
+    "Cloud adoption record"
    ],
    "start": [
     {
      "type": "artifact",
      "task": "ADOPT.01",
      "need": "frozen baseline record",
-     "why": "classification uses the frozen baseline"
+     "why": "repository-wide facts are recorded against the same frozen heads and receipts as every slice"
     }
    ],
    "writes": [
     "Plan:ledger/adoption/Cloud.md",
-    "Plan:ledger/tasks/*.md"
+    "Plan:ledger/tasks/ADOPT.07.md"
    ],
-   "validation": "Review of merged source, retained CI and deployment receipts only (P2-017); a deployment receipt is not a live test.",
-   "evidence": "Adoption report with classification rows and adjustments.",
+   "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
+   "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
    "baseline": {
     "state": "not-started"
    },
@@ -550,27 +550,27 @@
    "obligations": [
     {
      "ref": "P2-018",
-     "part": "adoption stage: AI review"
+     "part": "adoption stage: AI repository record"
     }
    ],
-   "outcome": "Every delivery task owned by AI is classified; the bootstrap Worker and Workflow scaffolding is recorded as scaffolding, never as Harness completion.",
+   "outcome": "The repository-wide adoption facts for AI (main head, retained CI workflow inventory under P2-017, package identities and pins, shared roots and source inventory) are recorded once for its slices to cite, and the AI classification table is complete when every adoption slice of the repository is complete.",
    "provides": [
-    "AI adoption report"
+    "AI adoption record"
    ],
    "start": [
     {
      "type": "artifact",
      "task": "ADOPT.01",
      "need": "frozen baseline record",
-     "why": "classification uses the frozen baseline"
+     "why": "repository-wide facts are recorded against the same frozen heads and receipts as every slice"
     }
    ],
    "writes": [
     "Plan:ledger/adoption/AI.md",
-    "Plan:ledger/tasks/*.md"
+    "Plan:ledger/tasks/ADOPT.08.md"
    ],
-   "validation": "Review only (P2-017).",
-   "evidence": "Adoption report with classification rows and adjustments.",
+   "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
+   "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
    "baseline": {
     "state": "not-started"
    },
@@ -586,27 +586,27 @@
    "obligations": [
     {
      "ref": "P2-018",
-     "part": "adoption stage: Web review"
+     "part": "adoption stage: Web repository record"
     }
    ],
-   "outcome": "Every delivery task owned by Web is classified, including the existing static-site generator and canonical-host Worker.",
+   "outcome": "The repository-wide adoption facts for Web (main head, retained CI workflow inventory under P2-017, package identities and pins, shared roots and source inventory) are recorded once for its slices to cite, and the Web classification table is complete when every adoption slice of the repository is complete.",
    "provides": [
-    "Web adoption report"
+    "Web adoption record"
    ],
    "start": [
     {
      "type": "artifact",
      "task": "ADOPT.01",
      "need": "frozen baseline record",
-     "why": "classification uses the frozen baseline"
+     "why": "repository-wide facts are recorded against the same frozen heads and receipts as every slice"
     }
    ],
    "writes": [
     "Plan:ledger/adoption/Web.md",
-    "Plan:ledger/tasks/*.md"
+    "Plan:ledger/tasks/ADOPT.09.md"
    ],
-   "validation": "Review only (P2-017).",
-   "evidence": "Adoption report with classification rows and adjustments.",
+   "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
+   "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
    "baseline": {
     "state": "not-started"
    },
@@ -622,27 +622,27 @@
    "obligations": [
     {
      "ref": "P2-018",
-     "part": "adoption stage: Mobile review"
+     "part": "adoption stage: Mobile repository record"
     }
    ],
-   "outcome": "Every delivery task owned by Mobile is classified, including the development package identity and the preview-only shared module.",
+   "outcome": "The repository-wide adoption facts for Mobile (main head, retained CI workflow inventory under P2-017, package identities and pins, shared roots and source inventory) are recorded once for its slices to cite, and the Mobile classification table is complete when every adoption slice of the repository is complete.",
    "provides": [
-    "Mobile adoption report"
+    "Mobile adoption record"
    ],
    "start": [
     {
      "type": "artifact",
      "task": "ADOPT.01",
      "need": "frozen baseline record",
-     "why": "classification uses the frozen baseline"
+     "why": "repository-wide facts are recorded against the same frozen heads and receipts as every slice"
     }
    ],
    "writes": [
     "Plan:ledger/adoption/Mobile.md",
-    "Plan:ledger/tasks/*.md"
+    "Plan:ledger/tasks/ADOPT.10.md"
    ],
-   "validation": "Review only (P2-017).",
-   "evidence": "Adoption report with classification rows and adjustments.",
+   "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
+   "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
    "baseline": {
     "state": "not-started"
    },
@@ -664,7 +664,7 @@
      "part": "adoption stage: documentation reconciliation"
     }
    ],
-   "outcome": "Documentation findings that affect adoption decisions are resolved or scheduled (including the pre-existing corpus citation drift recorded in the adoption stage document), the generated views are confirmed current, and the ledger identifies the repositories whose adoption is complete.",
+   "outcome": "Documentation findings that affect adoption decisions are resolved or scheduled (including the pre-existing corpus citation drift recorded in the adoption stage document), the generated views are confirmed current, and the ledger shows which adoption slices are complete.",
    "provides": [
     "documentation reconciliation record"
    ],
@@ -751,7 +751,7 @@
    "evidence": "docs/assurance/wp00-03-implementation-evidence.md, wp00-04-implementation-evidence.md, wp00-05-implementation-evidence.md, wp00-stage-acceptance.md, wp00-stage-acceptance.json (file names only, via ls; bodies not read per assignment).",
    "baseline": {
     "state": "accepted",
-    "evidence": "00.03/00.04/00.05/00.90 carry explicit 'Recorded execution' blocks with the dedicated evidence docs listed above. 00.00/00.01/00.02 have no separate dedicated evidence doc in the docs/assurance file listing; presumed folded into wp00-stage-acceptance.md/json (the WP00.90 joining receipt) per predecessor's note - not independently confirmed since receipt bodies were intentionally not read."
+    "evidence": "Design receipts wp00-stage-acceptance.md/.json and the recorded executions in wp00-03, wp00-04 and wp00-05 implementation evidence."
    },
    "earlyRiskProof": true,
    "notes": "Executed across all nine implementation repositories plus Contracts' product-names.json; represented as one accepted task for the whole closed package rather than one task per substep, per the assignment's 'small number of GOV tasks' instruction.",
@@ -825,7 +825,7 @@
    "evidence": "docs/assurance/wp01-00-implementation-evidence.md/.json, wp01-00-inventory-policy.md, wp01-01-contract-access-policy.md, wp01-01-implementation-evidence.md/.json, wp01-02-foundation-review.md/.json, wp01-03-native-reconciliation-policy.md, wp01-03-native-reconciliation.md/.json, wp01-04-test-family-map.md/.json, wp01-05-bounded-reconciliation.md/.json, wp01-stage-acceptance.md/.json (file names only, via ls; bodies not read).",
    "baseline": {
     "state": "accepted",
-    "evidence": "All seven substeps carry 'Recorded execution (2026-09-20)' blocks with dedicated evidence docs listed above."
+    "evidence": "Design receipts wp01-stage-acceptance.md/.json and the recorded executions of substeps 01.00 to 01.05."
    },
    "notes": "Also closes the unlabeled 'Cloud module layout acceptance' package obligation (17 historical scaffold names -> 21 declared WP21 domain owners); see package_obligations.",
    "complete": []
@@ -907,7 +907,7 @@
    "evidence": "docs/assurance/wp02-00-implementation-evidence.md/.json, wp02-00-toolchain-profile.md, wp02-01-diagnostic-profile.md, wp02-01-implementation-evidence.md/.json, wp02-02-aot-sweep-evidence.md/.json, wp02-03-runtime-boundary-evidence.md/.json, wp02-03-runtime-boundary-profile.md, wp02-04-implementation-evidence.md/.json, wp02-04-version-identity-profile.md, wp02-05-dependency-policy-profile.md, wp02-05-implementation-evidence.md/.json, wp02-stage-acceptance.md/.json (file names only, via ls; bodies not read).",
    "baseline": {
     "state": "accepted",
-    "evidence": "All seven substeps have 'Completed execution'/'Completed stage' blocks. WP02.04's own text notes 'WP02.05 was not started' as of 02.04's closure; WP02.05 was closed separately afterward per its own recorded-execution block in the same file - not a contradiction, just execution order."
+    "evidence": "Design receipts wp02-stage-acceptance.md/.json and the recorded executions of substeps 02.00 to 02.05."
    },
    "earlyRiskProof": true,
    "notes": "VG-08 (framework upgrade re-verification) is explicitly recurring: WP02.05's evidence closes the first instance only; every future dependency/framework upgrade re-triggers VG-08 outside this task's own closure.",
@@ -1684,6 +1684,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-05",
    "notes": "Terminal task for WP05. WP06 and WP21 depend on this as their own external artifact prerequisite (README downstream index: 05 -> 06, 21).",
    "complete": []
   },
@@ -1913,14 +1914,6 @@
    "provides": [
     "content-sandbox-schema"
    ],
-   "start": [
-    {
-     "type": "design",
-     "task": "CON.05",
-     "need": "none — annex09 is a frozen design input",
-     "why": "n/a; listed only because the substep header names annex09 as the authority; nothing here is undecided"
-    }
-   ],
    "writes": [
     "Contracts:internal/proto/arcforges/local/sandbox/v1/sandbox.proto",
     "Contracts:src/internal/dotnet/ArcForges.Contracts.LocalRpc.Sandbox/**",
@@ -1947,6 +1940,7 @@
     "notes": "Observed scaffold, unreviewed: SandboxLimits (7-field record) already exists as a WP03.00 seed slice. No ContentSandboxService and none of its 24 methods exist (confirmed: grep '^service ' finds only HelloService and ExtensionHostService anywhere in the repo)."
    },
    "notes": "The single biggest service in the whole registry (24 methods). Independently implementable in parallel with CON.05/CON.06 — different proto file (sandbox/v1 vs platform/v1), different owning package (.LocalRpc.Sandbox vs.LocalRpc.Platform/.Chat/.Notes/.Scope/.Slate).",
+   "start": [],
    "complete": []
   },
   {
@@ -2076,14 +2070,6 @@
     "identity-session-device-ops",
     "native-browser-auth-exceptions"
    ],
-   "start": [
-    {
-     "type": "contract",
-     "task": "CON.02",
-     "need": "none blocking — this domain does not depend on descriptors",
-     "why": "listed for completeness; identity ops use only Foundation (done) and their own new records (AuthChallenge, NativeSession, SessionView, etc. — all already scaffolded as Foundation-adjacent, need verification during implementation)"
-    }
-   ],
    "writes": [
     "Contracts:public/proto/arcforges/publicapi/v1/identity.proto",
     "Contracts:public/http/v1/schema.json",
@@ -2110,6 +2096,7 @@
     "notes": "Observed none, unreviewed: No IdentityService/WorkspaceService/DeviceService and none of their ~39 operations exist (confirmed via service grep)."
    },
    "notes": "Largest single domain in the public registry by operation count. WP-22 (Identity/Workspace/Device, owned by the Cloud lane) is the direct downstream consumer and is the one WP explicitly still gated behind the OLD 'whole WP03' edge in implementation-sequence.md §9 (22 depends on 11,21; 21 depends on 03,05,12) — this task is what actually unblocks WP-22's real work, not WP-03.05 as a monolith.",
+   "start": [],
    "complete": []
   },
   {
@@ -2855,6 +2842,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: Cannot start meaningfully until the domain tasks exist; this entry exists now so the integration owner can see the terminal aggregation point and its exact evidence shape (modeled on the three existing wp03-0X-implementation-evidence.md receipts, which are unusually precise: exact PR numbers, merge SHAs, CI run URLs, publication versions)."
    },
+   "packageAcceptance": "WP-03",
    "notes": "This is WP03's own closure, NOT waiting for WP-04/05/06/09/21/23/30 to build real consumers — per producer-artifacts-and-integration.md's WP03 row, WP03's own acceptance is schema/fixture/candidate-restore evidence only ('Owner handlers are deliberately absent'). Real cross-repo integration is separate IM.* proposals below.",
    "complete": []
   },
@@ -3041,7 +3029,7 @@
    "evidence": "Contracts PR33/34/35 merged; accepted source 30ddcad2bcb3634e089abb5e29d6c9ce05d38386; published 1.0.0-ci.86.1",
    "baseline": {
     "state": "accepted",
-    "evidence": "Verified: Contracts git log --all shows PR33/34/35 merged; gh pr list confirms MERGED; matches Design evidence exactly."
+    "evidence": "Design receipts wp03-00-implementation-evidence.md/.json; the Contracts pull requests recorded there are merged."
    },
    "notes": "Historical record only, not new work.",
    "start": [],
@@ -3088,7 +3076,7 @@
    "evidence": "Contracts PR36 merged as 4b8134eaf8a4174922d6378da003ed390b85a94a; published 1.0.0-ci.89.1",
    "baseline": {
     "state": "accepted",
-    "evidence": "Verified in code: foundation.proto has exactly the 32 messages/3+1 enums listed in the evidence receipt (grep '^message |^enum ' confirms). content.proto has ~108 PublicApi messages including AggregateBody with all 16 branches."
+    "evidence": "Design receipts wp03-01-implementation-evidence.md/.json; the recorded foundation and content records are generated and published."
    },
    "notes": "Historical record. IMPORTANT: this substep's dependency-closure side effect already generated ResourceRef/ResourceVersionRef/BlobRef/ArtifactRef — WP03.03 does not need to invent these, only add capability/action/context/health descriptors, the Sync mutation allowlist validator, and EncodedBodyRef (still absent).",
    "start": [],
@@ -3135,7 +3123,7 @@
    "evidence": "Contracts PR37 merged as e6c4a77f3ba48d70de4bf524623985b29278c784 (= current HEAD); published 1.0.0-ci.92.1",
    "baseline": {
     "state": "accepted",
-    "evidence": "Verified: this is exactly current Contracts HEAD. git log --all and gh pr list --state all (up to PR#37) both stop here; no PR38+ exists anywhere, local or remote."
+    "evidence": "Design receipts wp03-02-implementation-evidence.md/.json; Contracts main e6c4a77 (pull request 37) is the last merge. WP-03.03 has not started."
    },
    "earlyRiskProof": true,
    "notes": "This is Contracts' current HEAD. Every task below starts from this baseline. Both the Contracts repo's own docs/wp03-02-serialization.md and Design's evidence doc independently state '03.03 is next and has not started' — and no artifact anywhere (git log --all, all.worktree dirs, gh pr list --state all, fixtures/ directory contents, proto message/service inventory) contradicts that..",
@@ -3488,6 +3476,7 @@
     "state": "not-started",
     "notes": "Observed scaffold, unreviewed: Neither package appears in eng/packaging/packages.json today (confirmed: only Build.Policy and five Native.* families are admitted)."
    },
+   "packageAcceptance": "WP-04",
    "notes": "Merged duplicate integration or closure task formerly proposed as CON.93.",
    "complete": []
   },
@@ -4431,6 +4420,7 @@
     "state": "not-started",
     "notes": "Observed scaffold, unreviewed: None of the three persistence packages are in eng/packaging/packages.json today."
    },
+   "packageAcceptance": "WP-07",
    "complete": []
   },
   {
@@ -4805,6 +4795,7 @@
     "state": "not-started",
     "notes": "Observed scaffold, unreviewed: LocalRpc not in packages.json."
    },
+   "packageAcceptance": "WP-08",
    "complete": []
   },
   {
@@ -5247,6 +5238,7 @@
     "state": "not-started",
     "notes": "Observed scaffold, unreviewed: Not in packages.json."
    },
+   "packageAcceptance": "WP-09",
    "complete": []
   },
   {
@@ -5715,7 +5707,8 @@
    "baseline": {
     "state": "not-started",
     "notes": "Observed scaffold, unreviewed: Not in packages.json."
-   }
+   },
+   "packageAcceptance": "WP-10"
   },
   {
    "id": "PLT.36",
@@ -6288,6 +6281,7 @@
     "state": "not-started",
     "notes": "Observed scaffold, unreviewed: None of the Security-family packages are in eng/packaging/packages.json today."
    },
+   "packageAcceptance": "WP-11",
    "complete": []
   },
   {
@@ -6612,6 +6606,7 @@
     "state": "not-started",
     "notes": "Observed scaffold, unreviewed: Not in packages.json."
    },
+   "packageAcceptance": "WP-12",
    "complete": []
   },
   {
@@ -8166,6 +8161,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-06",
    "complete": [],
    "writes": []
   },
@@ -8334,6 +8330,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-13",
    "complete": [],
    "writes": []
   },
@@ -8361,7 +8358,7 @@
      "type": "contract",
      "task": "CON.02",
      "need": "published capability/resource contract records (descriptor/risk/context shapes)",
-     "why": "host port signatures (IHostResources/IHostActions) are typed against these Contracts records; noted reported-complete-unverified"
+     "why": "host port signatures (IHostResources/IHostActions) are typed against these Contracts records"
     },
     {
      "type": "artifact",
@@ -8773,6 +8770,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-14",
    "complete": []
   },
   {
@@ -9217,6 +9215,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-15",
    "complete": []
   },
   {
@@ -9240,15 +9239,45 @@
    "start": [
     {
      "type": "artifact",
-     "task": "AST.09",
-     "need": "the accepted WP15 conversation/branch/project/profile/skill/search/export core to host",
-     "why": "the navigation shell composes real WP15 content, not placeholders"
-    },
-    {
-     "type": "artifact",
      "task": "EXE.01",
      "need": "the real execution chain to surface job state in navigation",
      "why": "AS05/AS10-linked navigation elements read real ProductJob state"
+    },
+    {
+     "type": "artifact",
+     "task": "AST.01",
+     "need": "the real application history store the shell hosts",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "AST.02",
+     "need": "real branches and window drafts to navigate",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "AST.04",
+     "need": "real projects and profiles to navigate",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "AST.05",
+     "need": "real skills to navigate",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "AST.06",
+     "need": "real local search to surface",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "AST.07",
+     "need": "real local history export and import to surface",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
     }
    ],
    "writes": [
@@ -9290,12 +9319,6 @@
    ],
    "start": [
     {
-     "type": "artifact",
-     "task": "AST.09",
-     "need": "assistant_turn/assistant_outbox records to attach Cloud TaskRef/turn output to",
-     "why": "Cloud client session/output handling writes into the real conversation history store, not a private cache"
-    },
-    {
      "type": "contract",
      "task": "CON.10",
      "need": "published generated C#/TypeScript/Kotlin gRPC-Web client stubs and numbered wire registry",
@@ -9306,6 +9329,12 @@
      "task": "PRF.05",
      "need": "proven generated gRPC-Web under Native AOT pattern",
      "why": "Cloud.Client must be AOT-safe; reuse the already-proven pattern"
+    },
+    {
+     "type": "artifact",
+     "task": "AST.01",
+     "need": "the history store assistant_turn and assistant_outbox records the Cloud client writes into",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
     }
    ],
    "substitutes": [
@@ -9622,18 +9651,20 @@
      "task": "AST.16",
      "need": "completed WP-17.06",
      "why": "aggregation"
-    },
+    }
+   ],
+   "complete": [
     {
-     "type": "artifact",
+     "type": "integration",
      "task": "APP.08",
-     "need": "completed WP14 acceptance",
-     "why": "WP17 upstream includes WP14's accepted artifact"
+     "need": "WP-14 acceptance complete",
+     "why": "the WP-17 package acceptance includes the accepted WP-14 artifact; its verification can be prepared before that closes"
     },
     {
-     "type": "artifact",
+     "type": "integration",
      "task": "EXE.09",
-     "need": "completed WP16 acceptance",
-     "why": "WP17 upstream includes WP16's accepted artifact"
+     "need": "WP-16 acceptance complete",
+     "why": "the WP-17 package acceptance includes the accepted WP-16 artifact; its verification can be prepared before that closes"
     }
    ],
    "writes": [
@@ -9654,8 +9685,7 @@
    "evidence": "Package set versions/hashes, clean-host run log, UX-A/B/C/H rows, consolidated named-fixture manifest.",
    "baseline": {
     "state": "not-started"
-   },
-   "complete": []
+   }
   },
   {
    "id": "AST.18",
@@ -9696,6 +9726,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-17",
    "notes": "Two orphaned substep anchors (rule-wp-17.08, rule-wp-17.09) exist in the WP17 doc with no substep content and no entry in substeps.json --; not modeled as tasks.",
    "complete": []
   },
@@ -10300,6 +10331,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-16",
    "notes": "Provides ProductJobRef, the surface WP-52's Cloud Task consumes in the OTHER direction (CT-01..07); WP16 does not depend on WP52, WP52 depends on this.",
    "complete": []
   },
@@ -10778,6 +10810,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-26",
    "notes": "Own capabilities are real here (device-tool-path mechanics are 'must be real early' per implementation-sequence §3); the CONTENT of tool requests (model-driven planning) stays fixture/scripted until WP-52 -- see IM.agent-driven-device-tool-use for that separate real-scenario proof.",
    "complete": []
   },
@@ -10834,12 +10867,6 @@
    "start": [
     {
      "type": "artifact",
-     "task": "DEV.09",
-     "need": "real, delivered outcome of DEV.09 (Owned-artifact receipt and real integration)",
-     "why": "this integration exercises the real owned-artifact receipt and real integration instead of a substitute, so it cannot start before that outcome exists"
-    },
-    {
-     "type": "artifact",
      "task": "AST.19",
      "need": "real, delivered outcome of AST.19 (Real Cloud Harness turn loop replacing the fixture turn endpoint)",
      "why": "this integration exercises the real real Cloud Harness turn loop replacing the fixture turn endpoint instead of a substitute, so it cannot start before that outcome exists"
@@ -10849,6 +10876,42 @@
      "task": "HAR.02",
      "need": "real Harness approval and tool-dispatch path",
      "why": "a Harness-planned tool request must originate from the real approval and dispatch loop"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.02",
+     "need": "the real durable target queue",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.03",
+     "need": "real owner reauthorization on the desktop",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.04",
+     "need": "real Cloud attempt and result deduplication",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.05",
+     "need": "real desktop command_log agreement",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.06",
+     "need": "real remote approval and steering",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.12",
+     "need": "the cross-repository (toolRequestId, attemptId, commandId) agreement",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -10909,15 +10972,45 @@
     },
     {
      "type": "artifact",
-     "task": "DEV.09",
-     "need": "real, delivered outcome of DEV.09 (Owned-artifact receipt and real integration)",
-     "why": "this integration exercises the real owned-artifact receipt and real integration instead of a substitute, so it cannot start before that outcome exists"
-    },
-    {
-     "type": "artifact",
      "task": "AST.11",
      "need": "assistant Cloud client and device runtime",
      "why": "the real bridge integration replaces the loopback used by the assistant device runtime"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.01",
+     "need": "real application presence",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.02",
+     "need": "the real durable target queue",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.03",
+     "need": "real owner reauthorization on the desktop",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.04",
+     "need": "real Cloud attempt and result deduplication",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.05",
+     "need": "real desktop command_log agreement",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.12",
+     "need": "the cross-repository (toolRequestId, attemptId, commandId) agreement",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -11188,6 +11281,12 @@
      "task": "PLT.26",
      "need": "same design-system/shell package as NOTES.03",
      "why": "layout engine renders inside the shared shell's control hosting"
+    },
+    {
+     "type": "artifact",
+     "task": "PLT.27",
+     "need": "the published windows, panels and layout package NOTES.03 also hosts on",
+     "why": "block layout renders inside the shared shell package, not a private host"
     }
    ],
    "writes": [
@@ -11567,6 +11666,18 @@
      "task": "PLT.02",
      "need": "the journal/recovery pipeline and StorageSchemaVersion migration apparatus",
      "why": "Notes-specific recovery/migration is built directly on the platform-owned journal replay and migration-ordering mechanics (06-data-persistence-and-formats.md S9)"
+    },
+    {
+     "type": "artifact",
+     "task": "PLT.03",
+     "need": "real snapshot and crash/corruption recovery",
+     "why": "crash recovery restores through the platform recovery pipeline"
+    },
+    {
+     "type": "artifact",
+     "task": "PLT.04",
+     "need": "the real migration runner and StorageSchemaVersion apparatus",
+     "why": "upgrade and downgrade migration run through the platform migration runner"
     }
    ],
    "writes": [
@@ -11778,14 +11889,6 @@
      "why": "the package acceptance receipt verifies every task mapped to the package (DLV-03)"
     }
    ],
-   "complete": [
-    {
-     "type": "integration",
-     "task": "NOTES.35",
-     "need": "downstream feed only - this gate does not wait on it, but its evidence later feeds PG-17 at WP-25.07",
-     "why": "recorded for traceability, not a blocking edge"
-    }
-   ],
    "writes": [
     "ArcNotes:docs/release-notes.md",
     "ArcNotes:tests/ArcForges.ArcNotes.Tests/Integration/Wp18/**"
@@ -11794,7 +11897,9 @@
    "evidence": "owned artifact and real-integration receipt: source commit, producer version, candidate hashes, actual runtime/OS/device/provider, scenario, result, limitations, real-vs-fixture status per WP-18.90",
    "baseline": {
     "state": "not-started"
-   }
+   },
+   "packageAcceptance": "WP-18",
+   "complete": []
   },
   {
    "id": "NOTES.15",
@@ -12256,6 +12361,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-19",
    "complete": []
   },
   {
@@ -12777,7 +12883,8 @@
    "evidence": "owned artifact and real-integration receipt per WP-28.90, including local/Cloud query vector parity and export fidelity",
    "baseline": {
     "state": "not-started"
-   }
+   },
+   "packageAcceptance": "WP-28"
   },
   {
    "id": "NOTES.33",
@@ -13565,6 +13672,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-33",
    "complete": []
   },
   {
@@ -13960,6 +14068,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-34",
    "notes": "Confirms the design's explicit non-edge: WP-34 does not wait on WP-51 (the Cloud simulator); reproducibility is verified via SCOPE.08 replay.",
    "complete": []
   },
@@ -14341,6 +14450,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-35",
    "complete": []
   },
   {
@@ -14905,6 +15015,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-51",
    "notes": "WP-51 executes in Phase J specifically because it needs WP-42/WP-44's real commercial admission, unlike the desktop-only WP33/34 (Phase H). This ordering is already correct in the source design; nothing to change here."
   },
   {
@@ -15665,6 +15776,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-36",
    "complete": []
   },
   {
@@ -16185,6 +16297,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-37",
    "complete": []
   },
   {
@@ -16736,6 +16849,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-38",
    "complete": []
   },
   {
@@ -17210,7 +17324,8 @@
    "evidence": "The consolidated receipt; DTO-version-skew-cannot-truncate-project proof.",
    "baseline": {
     "state": "not-started"
-   }
+   },
+   "packageAcceptance": "WP-39"
   },
   {
    "id": "SLATE.42",
@@ -17821,6 +17936,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: n/a -- closure task"
    },
+   "packageAcceptance": "WP-21",
    "notes": "Gate: PG-26. A localhost benchmark cannot close it per WP-21.90's own text."
   },
   {
@@ -18362,6 +18478,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: n/a -- closure task"
    },
+   "packageAcceptance": "WP-22",
    "notes": "Merged duplicate integration or closure task formerly proposed as CON.94."
   },
   {
@@ -18765,6 +18882,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: n/a -- closure task"
    },
+   "packageAcceptance": "WP-23",
    "notes": "Gate: PG-23 (joint with CLOUD.19/CLOUD.26)."
   },
   {
@@ -19146,7 +19264,8 @@
    "baseline": {
     "state": "not-started",
     "notes": "Observed none, unreviewed: n/a -- closure task"
-   }
+   },
+   "packageAcceptance": "WP-24"
   },
   {
    "id": "CLOUD.37",
@@ -19820,7 +19939,8 @@
    "baseline": {
     "state": "not-started",
     "notes": "Observed none, unreviewed: n/a -- closure task"
-   }
+   },
+   "packageAcceptance": "WP-25"
   },
   {
    "id": "CLOUD.48",
@@ -20180,6 +20300,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: n/a -- closure task"
    },
+   "packageAcceptance": "WP-46",
    "start": []
   },
   {
@@ -20283,12 +20404,6 @@
    "start": [
     {
      "type": "artifact",
-     "task": "CLOUD.28",
-     "need": "real, delivered outcome of CLOUD.28 (Owned-artifact closure and real integration)",
-     "why": "this integration exercises the real owned-artifact closure and real integration instead of a substitute, so it cannot start before that outcome exists"
-    },
-    {
-     "type": "artifact",
      "task": "COM.13",
      "need": "real, delivered outcome of COM.13 (Operator financial-owner proposal/approval operations)",
      "why": "this integration exercises the real operator financial-owner proposal/approval operations instead of a substitute, so it cannot start before that outcome exists"
@@ -20304,6 +20419,26 @@
      "task": "OPS.05",
      "need": "real, delivered outcome of OPS.05 (Operator console and support access)",
      "why": "this integration exercises the real operator console and support access instead of a substitute, so it cannot start before that outcome exists"
+    },
+    {
+     "type": "artifact",
+     "task": "CLOUD.21",
+     "need": "real public endpoint mapping for the operator operations",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "CLOUD.22",
+     "need": "real typed protocol and error mapping",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    }
+   ],
+   "complete": [
+    {
+     "type": "integration",
+     "task": "CLOUD.28",
+     "need": "the WP-23 operator contract closure accepted",
+     "why": "the full operator closure includes the public-API part that the WP-23 closure accepts"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -20311,7 +20446,6 @@
    "baseline": {
     "state": "not-started"
    },
-   "complete": [],
    "writes": []
   },
   {
@@ -20343,9 +20477,15 @@
     },
     {
      "type": "artifact",
-     "task": "AND.07",
-     "need": "real, delivered outcome of AND.07 (Foundation integration evidence: real candidate against deployed 22/23/24/25)",
-     "why": "this integration exercises the real foundation integration evidence: real candidate against deployed 22/23/24/25 instead of a substitute, so it cannot start before that outcome exists"
+     "task": "CLOUD.21",
+     "need": "real public endpoint mapping for the sensitive operations",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "CLOUD.22",
+     "need": "real typed protocol and error mapping that returns step-up challenges",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -20379,9 +20519,27 @@
     },
     {
      "type": "artifact",
-     "task": "HAR.05",
-     "need": "real, delivered outcome of HAR.05 (Own-application execution proof and fixture turn-endpoint removal)",
-     "why": "this integration exercises the real own-application execution proof and fixture turn-endpoint removal instead of a substitute, so it cannot start before that outcome exists"
+     "task": "HAR.00",
+     "need": "the real Harness turn loop to reopen",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "HAR.02",
+     "need": "real approval, cancellation and crash recovery",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "HAR.03",
+     "need": "real generated streaming and durable output",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "AIR.00",
+     "need": "real Workers AI provider adapters",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -21173,6 +21331,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-42",
    "complete": []
   },
   {
@@ -21557,12 +21716,6 @@
      "why": "the client must reproduce the exact same hash/bucket result as the server for the same subject/version"
     },
     {
-     "type": "artifact",
-     "task": "POL.08",
-     "need": "the published bundle wire format and staleness signal",
-     "why": "the client cache consumes exactly what POL.08 publishes"
-    },
-    {
      "type": "contract",
      "task": "CON.12",
      "need": "policy.body.v1/configuration.v1 generated client-side (C#) types",
@@ -21581,6 +21734,12 @@
      "task": "POL.11",
      "need": "a genuinely published bundle fetched and cached by this library, with staleness fallback proven against the deployed Cloud policy service",
      "why": "this task's own tests can only prove the fallback chain mechanics in isolation; real staleness/LKG behavior needs a real publish-then-resolve round trip"
+    },
+    {
+     "type": "integration",
+     "task": "POL.08",
+     "need": "real server-side publication and staleness signal complete",
+     "why": "the client library starts from the published policy contract and the compiled last-known-good seed; its acceptance still resolves the real publication"
     }
    ],
    "substitutes": [
@@ -21660,6 +21819,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-44",
    "complete": []
   },
   {
@@ -22334,6 +22494,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-45",
    "complete": []
   },
   {
@@ -22424,12 +22585,6 @@
      "task": "CLOUD.37",
      "need": "durable resource identity/revision for synced product content",
      "why": "admitted sources need a stable resource id and revision to key the derived index against; WP-25 owns the sync engine and blob lifecycle that assigns these"
-    },
-    {
-     "type": "artifact",
-     "task": "AIR.06",
-     "need": "operator-funded web-search dispatch capability (Brave), or its contract-bound fixture",
-     "why": "'authorized web sources' admission is dispatched through the AI Worker web-search port, funded/owned by WP-43.05; SRCH.00 can build against a fixture web-search response and defer the real call to SRCH.06"
     }
    ],
    "substitutes": [
@@ -22477,12 +22632,6 @@
      "task": "SRCH.00",
      "need": "admitted source registry entries to index",
      "why": "nothing to index before a source is admitted"
-    },
-    {
-     "type": "artifact",
-     "task": "AIR.00",
-     "need": "bge-m3 embedding vectors for chunk content (or its fixture substitute)",
-     "why": "Vectorize writes need an embedding; real vectors come from WP-43.00's InferenceWorkflow"
     },
     {
      "type": "contract",
@@ -22538,12 +22687,6 @@
      "task": "SRCH.01",
      "need": "scoped derived index to query against",
      "why": "fusion has nothing to rank without the index"
-    },
-    {
-     "type": "artifact",
-     "task": "AIR.00",
-     "need": "reranker (bge-reranker-base) call on the first 200 candidates, or its fixture substitute",
-     "why": "the retrieval.hybrid.v1 profile requires a CF rerank pass on the top candidates"
     }
    ],
    "substitutes": [
@@ -22731,6 +22874,12 @@
      "task": "SRCH.02",
      "need": "hybrid retrieval and budgets",
      "why": "the real query path replaces fixture reranking"
+    },
+    {
+     "type": "artifact",
+     "task": "AIR.06",
+     "need": "the real operator-funded web-search dispatch capability",
+     "why": "the real query path replaces the web-search fixture and runs against the real dispatch"
     }
    ],
    "complete": [
@@ -22828,6 +22977,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: Cloud repo is Hello-World stage (src/ArcForges.Cloud only: Program.cs/HelloEndpoint.cs/BuildIdentity.cs/HealthStatus.cs); no Modules.* tree exists."
    },
+   "packageAcceptance": "WP-40",
    "notes": "WP-40 Sec.9 names 50/52 as downstream consumers of this released artifact; not a completion blocker for SRCH.90 itself. Contributes to PG-26 (launch capacity envelope) as one of its producers."
   },
   {
@@ -23415,6 +23565,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: DesktopPlatform repo has no src/Extensions or src/Communication tree; only src/Build, src/BuildingBlocks, src/DesktopHelpers, src/Native exist."
    },
+   "packageAcceptance": "WP-41",
    "complete": []
   },
   {
@@ -23545,6 +23696,14 @@
      "why": "metering has nothing to reserve/settle against before a call kind exists"
     }
    ],
+   "complete": [
+    {
+     "type": "integration",
+     "task": "COM.12",
+     "need": "the real capacity admission participant",
+     "why": "metering starts from the credits participant; its settlement acceptance also runs against the real capacity admission participant"
+    }
+   ],
    "writes": [
     "Cloud:src/Cloud/ArcForges.Cloud.Modules.Agent/Metering/**"
    ],
@@ -23553,8 +23712,7 @@
    "baseline": {
     "state": "not-started",
     "notes": "Observed none, unreviewed: Cloud repo is Hello-World stage (src/ArcForges.Cloud only: Program.cs/HelloEndpoint.cs/BuildIdentity.cs/HealthStatus.cs); no Modules.* tree exists."
-   },
-   "complete": []
+   }
   },
   {
    "id": "AIR.03",
@@ -23952,6 +24110,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: Cloud repo is Hello-World stage (src/ArcForges.Cloud only: Program.cs/HelloEndpoint.cs/BuildIdentity.cs/HealthStatus.cs); no Modules.* tree exists."
    },
+   "packageAcceptance": "WP-43",
    "notes": "Also carries the P2-010 package closure text (real ExecutionOwner task/turn + operator-funded compaction/search support; durable receipts vs temporary bodies kept outside D1/SQLite history, backups and Workflow checkpoints).",
    "complete": []
   },
@@ -24327,12 +24486,6 @@
     },
     {
      "type": "artifact",
-     "task": "NOTES.01",
-     "need": "the real ArcNotes product (own selected document, local/cloud history)",
-     "why": "the embedded oracle's target product must be real, not a stand-in app"
-    },
-    {
-     "type": "artifact",
      "task": "AST.19",
      "need": "consumer switched from the fixture turn endpoint to the real Harness",
      "why": "the fixture endpoint is deleted only after every consumer runs against the real Harness, so the deletion can be asserted structurally"
@@ -24360,6 +24513,18 @@
      "task": "AIR.00",
      "need": "real Workers AI provider adapters",
      "why": "the execution proof runs against real provider responses"
+    },
+    {
+     "type": "artifact",
+     "task": "NOTES.12",
+     "need": "the real ArcNotes capability surface the approved Notes command invokes",
+     "why": "both oracles invoke a registered ArcNotes command on a real installation"
+    },
+    {
+     "type": "artifact",
+     "task": "APP.03",
+     "need": "ArcNotes composed as a clean Native AOT package consumer",
+     "why": "the embedded oracle runs the real ArcNotes host with its own assistant"
     }
    ],
    "writes": [
@@ -24511,6 +24676,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: n/a"
    },
+   "packageAcceptance": "WP-52",
    "notes": "Also carries the P2-010 package closure text (ordinary persistent/temporary ChatTurn and AgentTask through the same real RunWorkflow, pure-read vs promoted-effectful mode, transient source expiry/cleanup, platform-funded protected compaction).",
    "complete": []
   },
@@ -24986,6 +25152,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-30",
    "notes": "Merged duplicate integration or closure task formerly proposed as CLOUD.60.",
    "complete": []
   },
@@ -25009,9 +25176,35 @@
    "start": [
     {
      "type": "artifact",
+     "task": "AND.03",
+     "need": "the real Android foundation module AND.03 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.04",
+     "need": "the real Android foundation module AND.04 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.05",
+     "need": "the real Android foundation module AND.05 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.06",
+     "need": "the real Android foundation module AND.06 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
+    }
+   ],
+   "complete": [
+    {
+     "type": "integration",
      "task": "AND.07",
-     "need": "foundation candidate",
-     "why": "auth/home is built on the real foundation, not a fresh bootstrap"
+     "need": "foundation candidate proven against the deployed Cloud services",
+     "why": "the feature can be built on the foundation modules, but its acceptance runs against the deployed services AND.07 proves and requires any remaining Task/AI fixtures compiled out"
     }
    ],
    "writes": [
@@ -25023,8 +25216,7 @@
    "baseline": {
     "state": "not-started"
    },
-   "notes": "Does not need WP26 (remote bridge), WP45 (push sender) or WP52 (Harness) to start or complete — only WP30's own foundation and the already-deployed WP22/23. Demonstrates that not all Android features wait on the complete Harness.",
-   "complete": []
+   "notes": "Does not need WP26 (remote bridge), WP45 (push sender) or WP52 (Harness) to start or complete — only WP30's own foundation and the already-deployed WP22/23. Demonstrates that not all Android features wait on the complete Harness."
   },
   {
    "id": "AND.09",
@@ -25046,9 +25238,15 @@
    "start": [
     {
      "type": "artifact",
-     "task": "AND.07",
-     "need": "foundation candidate (real WP23/24 transport)",
-     "why": "streaming UI needs the real deployed event/stream transport"
+     "task": "AND.04",
+     "need": "the real Android foundation module AND.04 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.05",
+     "need": "the real Android foundation module AND.05 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
     }
    ],
    "complete": [
@@ -25057,6 +25255,12 @@
      "task": "AND.24",
      "need": "real CF Harness admission/generation/tool loop",
      "why": "the completion gate requires every conversation/project/retrieval row to work with actual WP52 outputs; the streaming/cursor/reconnect UI itself can be fully built and tested against the server-side contract-bound fixture turn endpoint (introduced WP17.01, deleted WP52.05) that already runs in the real deployed Cloud host"
+    },
+    {
+     "type": "integration",
+     "task": "AND.07",
+     "need": "foundation candidate proven against the deployed Cloud services",
+     "why": "the feature can be built on the foundation modules, but its acceptance runs against the deployed services AND.07 proves and requires any remaining Task/AI fixtures compiled out"
     }
    ],
    "substitutes": [
@@ -25091,9 +25295,15 @@
    "start": [
     {
      "type": "artifact",
-     "task": "AND.07",
-     "need": "foundation candidate",
-     "why": "needs real deployed task API"
+     "task": "AND.04",
+     "need": "the real Android foundation module AND.04 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.05",
+     "need": "the real Android foundation module AND.05 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
     }
    ],
    "complete": [
@@ -25108,6 +25318,12 @@
      "task": "AND.24",
      "need": "real Harness planning/tool-proposal loop",
      "why": "approval content must reflect real proposed effects, not scripted ones, to close the gate"
+    },
+    {
+     "type": "integration",
+     "task": "AND.07",
+     "need": "foundation candidate proven against the deployed Cloud services",
+     "why": "the feature can be built on the foundation modules, but its acceptance runs against the deployed services AND.07 proves and requires any remaining Task/AI fixtures compiled out"
     }
    ],
    "substitutes": [
@@ -25142,9 +25358,23 @@
    "start": [
     {
      "type": "artifact",
+     "task": "AND.04",
+     "need": "the real Android foundation module AND.04 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.05",
+     "need": "the real Android foundation module AND.05 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
+    }
+   ],
+   "complete": [
+    {
+     "type": "integration",
      "task": "AND.07",
-     "need": "foundation candidate (real WP25 R2 access)",
-     "why": "resource preview/transfer needs the real deployed object store, already available via WP30's own foundation"
+     "need": "foundation candidate proven against the deployed Cloud services",
+     "why": "the feature can be built on the foundation modules, but its acceptance runs against the deployed services AND.07 proves and requires any remaining Task/AI fixtures compiled out"
     }
    ],
    "writes": [
@@ -25155,8 +25385,7 @@
    "baseline": {
     "state": "not-started"
    },
-   "notes": "Independent of WP26/WP45/WP52 — can complete in parallel with AND.09/AND.10 once the foundation (AND.07) lands.",
-   "complete": []
+   "notes": "Independent of WP26/WP45/WP52 — can complete in parallel with AND.09/AND.10 once the foundation (AND.07) lands."
   },
   {
    "id": "AND.12",
@@ -25181,16 +25410,28 @@
    ],
    "start": [
     {
-     "type": "artifact",
-     "task": "AND.07",
-     "need": "foundation candidate",
-     "why": "settings/presence needs real identity/device APIs"
-    },
-    {
      "type": "contract",
      "task": "CON.22",
      "need": "published notification.registerPush and unregisterPush",
      "why": "Android push registration uses the generated operations"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.03",
+     "need": "the real Android foundation module AND.03 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.04",
+     "need": "the real Android foundation module AND.04 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.06",
+     "need": "the real Android foundation module AND.06 this feature is built on",
+     "why": "the feature uses the real foundation modules, not a fresh bootstrap"
     }
    ],
    "complete": [
@@ -25199,6 +25440,12 @@
      "task": "AND.26",
      "need": "live FCM sender adapter with a project-bound credential",
      "why": "PG-24 requires physical arm64 receipt of an actually-sent push; Android only owns registration/receipt, not the sending path, which is WP45's named scaffolding replacement (recorded FCM sender responses -> WP45.09 proves live sending, this task and WP32 prove real device receipt)"
+    },
+    {
+     "type": "integration",
+     "task": "AND.07",
+     "need": "foundation candidate proven against the deployed Cloud services",
+     "why": "the feature can be built on the foundation modules, but its acceptance runs against the deployed services AND.07 proves and requires any remaining Task/AI fixtures compiled out"
     }
    ],
    "writes": [
@@ -25421,6 +25668,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-31",
    "complete": []
   },
   {
@@ -25565,9 +25813,33 @@
    "start": [
     {
      "type": "artifact",
-     "task": "AND.15",
-     "need": "companion acceptance complete",
-     "why": "every screen must exist to audit"
+     "task": "AND.08",
+     "need": "every authentication and Home state to audit",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.09",
+     "need": "every conversation state to audit",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.10",
+     "need": "every task, approval and automation state to audit",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.11",
+     "need": "every library and resource state to audit",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "AND.12",
+     "need": "every presence, push, link and settings state to audit",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
     }
    ],
    "writes": [
@@ -25768,7 +26040,8 @@
    "evidence": "Distribution complete only with real receipts; VG-13 store-submission confirmation",
    "baseline": {
     "state": "not-started"
-   }
+   },
+   "packageAcceptance": "WP-32"
   },
   {
    "id": "AND.24",
@@ -25855,9 +26128,33 @@
     },
     {
      "type": "artifact",
-     "task": "DEV.09",
-     "need": "real, delivered outcome of DEV.09 (Owned-artifact receipt and real integration)",
-     "why": "this integration exercises the real owned-artifact receipt and real integration instead of a substitute, so it cannot start before that outcome exists"
+     "task": "DEV.02",
+     "need": "the real durable target queue",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.03",
+     "need": "real owner reauthorization on the desktop",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.06",
+     "need": "real remote approval and steering",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.07",
+     "need": "real offline expiry and unknown-effect recovery",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.12",
+     "need": "the cross-repository (toolRequestId, attemptId, commandId) agreement",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -26324,6 +26621,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-47",
    "notes": "Provides the tooling WP45's operations console needs (\"47 tooling must precede 45\" per producer-artifacts-and-integration.md); the commerce, policy and operations lanes should reference this task's 'web-static-generator'/'web-design-system' tokens as its own start need rather than waiting on all of WP47's numeral position in the old serial plan.",
    "complete": []
   },
@@ -26803,6 +27101,7 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-48",
    "complete": []
   },
   {
@@ -27202,7 +27501,8 @@
    "evidence": "Owned-artifact-and-real-integration receipt; contributes its scoped evidence toward PG-23 (closed later at WP50)",
    "baseline": {
     "state": "not-started"
-   }
+   },
+   "packageAcceptance": "WP-49"
   },
   {
    "id": "WEB.27",
@@ -27289,9 +27589,33 @@
     },
     {
      "type": "artifact",
-     "task": "DEV.09",
-     "need": "real, delivered outcome of DEV.09 (Owned-artifact receipt and real integration)",
-     "why": "this integration exercises the real owned-artifact receipt and real integration instead of a substitute, so it cannot start before that outcome exists"
+     "task": "DEV.02",
+     "need": "the real durable target queue",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.03",
+     "need": "real owner reauthorization on the desktop",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.06",
+     "need": "real remote approval and steering",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.07",
+     "need": "real offline expiry and unknown-effect recovery",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    },
+    {
+     "type": "artifact",
+     "task": "DEV.12",
+     "need": "the cross-repository (toolRequestId, attemptId, commandId) agreement",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -27433,12 +27757,6 @@
    "start": [
     {
      "type": "artifact",
-     "task": "CLOUD.28",
-     "need": "real, delivered outcome of CLOUD.28 (Owned-artifact closure and real integration)",
-     "why": "this integration exercises the real owned-artifact closure and real integration instead of a substitute, so it cannot start before that outcome exists"
-    },
-    {
-     "type": "artifact",
      "task": "OPS.05",
      "need": "real, delivered outcome of OPS.05 (Operator console and support access)",
      "why": "this integration exercises the real operator console and support access instead of a substitute, so it cannot start before that outcome exists"
@@ -27460,6 +27778,20 @@
      "task": "WEB.19",
      "need": "real, delivered outcome of WEB.19 (Chat shell: route composition and design-system integration)",
      "why": "this integration exercises the real chat shell: route composition and design-system integration instead of a substitute, so it cannot start before that outcome exists"
+    },
+    {
+     "type": "artifact",
+     "task": "WEB.30",
+     "need": "the real React Web client against the deployed browser session",
+     "why": "the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier"
+    }
+   ],
+   "complete": [
+    {
+     "type": "integration",
+     "task": "CLOUD.28",
+     "need": "the WP-23 browser-matrix Cloud part accepted",
+     "why": "the full browser matrix includes the Cloud part that the WP-23 closure accepts"
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
@@ -27467,7 +27799,6 @@
    "baseline": {
     "state": "not-started"
    },
-   "complete": [],
    "writes": []
   },
   {
@@ -27883,7 +28214,8 @@
    "baseline": {
     "state": "not-started",
     "notes": "Observed scaffold, unreviewed: Not in packages.json; no product anywhere in the family is yet installable/updatable to test against."
-   }
+   },
+   "packageAcceptance": "WP-53"
   },
   {
    "id": "REL.01",
@@ -28692,8 +29024,417 @@
    "baseline": {
     "state": "not-started"
    },
+   "packageAcceptance": "WP-50",
    "notes": "Terminal task for the entire 51-package sequence (WP50 has no downstream). BR-01/BR-02/BR-03/BR-04 (build once, no partial pass, no waiving integrity/security/licence/regulatory gates, nothing incomplete presented as complete) all bind here directly.",
    "complete": []
+  }
+ ],
+ "adoptionSlices": [
+  {
+   "id": "ADOPT.08.ai-routing",
+   "repo": "AI",
+   "lane": "ai-routing",
+   "adoptionTask": "ADOPT.08",
+   "title": "Adopt AI: Workers AI routing and metering"
+  },
+  {
+   "id": "ADOPT.08.extensions",
+   "repo": "AI",
+   "lane": "extensions",
+   "adoptionTask": "ADOPT.08",
+   "title": "Adopt AI: Extension platform and integrations"
+  },
+  {
+   "id": "ADOPT.08.governance",
+   "repo": "AI",
+   "lane": "governance",
+   "adoptionTask": "ADOPT.08",
+   "title": "Adopt AI: Family governance and policy tests"
+  },
+  {
+   "id": "ADOPT.08.harness",
+   "repo": "AI",
+   "lane": "harness",
+   "adoptionTask": "ADOPT.08",
+   "title": "Adopt AI: Cloud Harness"
+  },
+  {
+   "id": "ADOPT.04.app-composition",
+   "repo": "ArcNotes",
+   "lane": "app-composition",
+   "adoptionTask": "ADOPT.04",
+   "title": "Adopt ArcNotes: Application composition"
+  },
+  {
+   "id": "ADOPT.04.arcnotes",
+   "repo": "ArcNotes",
+   "lane": "arcnotes",
+   "adoptionTask": "ADOPT.04",
+   "title": "Adopt ArcNotes: ArcNotes"
+  },
+  {
+   "id": "ADOPT.04.governance",
+   "repo": "ArcNotes",
+   "lane": "governance",
+   "adoptionTask": "ADOPT.04",
+   "title": "Adopt ArcNotes: Family governance and policy tests"
+  },
+  {
+   "id": "ADOPT.04.release",
+   "repo": "ArcNotes",
+   "lane": "release",
+   "adoptionTask": "ADOPT.04",
+   "title": "Adopt ArcNotes: Release readiness and family release"
+  },
+  {
+   "id": "ADOPT.04.runtime-proofs",
+   "repo": "ArcNotes",
+   "lane": "runtime-proofs",
+   "adoptionTask": "ADOPT.04",
+   "title": "Adopt ArcNotes: Runtime proofs"
+  },
+  {
+   "id": "ADOPT.05.arcscope",
+   "repo": "ArcScope",
+   "lane": "arcscope",
+   "adoptionTask": "ADOPT.05",
+   "title": "Adopt ArcScope: ArcScope"
+  },
+  {
+   "id": "ADOPT.05.governance",
+   "repo": "ArcScope",
+   "lane": "governance",
+   "adoptionTask": "ADOPT.05",
+   "title": "Adopt ArcScope: Family governance and policy tests"
+  },
+  {
+   "id": "ADOPT.05.release",
+   "repo": "ArcScope",
+   "lane": "release",
+   "adoptionTask": "ADOPT.05",
+   "title": "Adopt ArcScope: Release readiness and family release"
+  },
+  {
+   "id": "ADOPT.05.runtime-proofs",
+   "repo": "ArcScope",
+   "lane": "runtime-proofs",
+   "adoptionTask": "ADOPT.05",
+   "title": "Adopt ArcScope: Runtime proofs"
+  },
+  {
+   "id": "ADOPT.05.simulator",
+   "repo": "ArcScope",
+   "lane": "simulator",
+   "adoptionTask": "ADOPT.05",
+   "title": "Adopt ArcScope: ArcScope Cloud simulator"
+  },
+  {
+   "id": "ADOPT.06.arcslate",
+   "repo": "ArcSlate",
+   "lane": "arcslate",
+   "adoptionTask": "ADOPT.06",
+   "title": "Adopt ArcSlate: ArcSlate"
+  },
+  {
+   "id": "ADOPT.06.governance",
+   "repo": "ArcSlate",
+   "lane": "governance",
+   "adoptionTask": "ADOPT.06",
+   "title": "Adopt ArcSlate: Family governance and policy tests"
+  },
+  {
+   "id": "ADOPT.06.release",
+   "repo": "ArcSlate",
+   "lane": "release",
+   "adoptionTask": "ADOPT.06",
+   "title": "Adopt ArcSlate: Release readiness and family release"
+  },
+  {
+   "id": "ADOPT.06.runtime-proofs",
+   "repo": "ArcSlate",
+   "lane": "runtime-proofs",
+   "adoptionTask": "ADOPT.06",
+   "title": "Adopt ArcSlate: Runtime proofs"
+  },
+  {
+   "id": "ADOPT.07.ai-routing",
+   "repo": "Cloud",
+   "lane": "ai-routing",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Workers AI routing and metering"
+  },
+  {
+   "id": "ADOPT.07.cloud",
+   "repo": "Cloud",
+   "lane": "cloud",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Cloud core"
+  },
+  {
+   "id": "ADOPT.07.commerce",
+   "repo": "Cloud",
+   "lane": "commerce",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Commerce, entitlement and credits"
+  },
+  {
+   "id": "ADOPT.07.device-bridge",
+   "repo": "Cloud",
+   "lane": "device-bridge",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Application presence and tool bridge"
+  },
+  {
+   "id": "ADOPT.07.extensions",
+   "repo": "Cloud",
+   "lane": "extensions",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Extension platform and integrations"
+  },
+  {
+   "id": "ADOPT.07.governance",
+   "repo": "Cloud",
+   "lane": "governance",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Family governance and policy tests"
+  },
+  {
+   "id": "ADOPT.07.harness",
+   "repo": "Cloud",
+   "lane": "harness",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Cloud Harness"
+  },
+  {
+   "id": "ADOPT.07.operations",
+   "repo": "Cloud",
+   "lane": "operations",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Operations, support and trust and safety"
+  },
+  {
+   "id": "ADOPT.07.policy",
+   "repo": "Cloud",
+   "lane": "policy",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Dynamic policy and configuration"
+  },
+  {
+   "id": "ADOPT.07.release",
+   "repo": "Cloud",
+   "lane": "release",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Release readiness and family release"
+  },
+  {
+   "id": "ADOPT.07.runtime-proofs",
+   "repo": "Cloud",
+   "lane": "runtime-proofs",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Runtime proofs"
+  },
+  {
+   "id": "ADOPT.07.search",
+   "repo": "Cloud",
+   "lane": "search",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: Knowledge search and retrieval"
+  },
+  {
+   "id": "ADOPT.07.simulator",
+   "repo": "Cloud",
+   "lane": "simulator",
+   "adoptionTask": "ADOPT.07",
+   "title": "Adopt Cloud: ArcScope Cloud simulator"
+  },
+  {
+   "id": "ADOPT.03.contracts",
+   "repo": "Contracts",
+   "lane": "contracts",
+   "adoptionTask": "ADOPT.03",
+   "title": "Adopt Contracts: Contracts schema closures"
+  },
+  {
+   "id": "ADOPT.03.extensions",
+   "repo": "Contracts",
+   "lane": "extensions",
+   "adoptionTask": "ADOPT.03",
+   "title": "Adopt Contracts: Extension platform and integrations"
+  },
+  {
+   "id": "ADOPT.03.governance",
+   "repo": "Contracts",
+   "lane": "governance",
+   "adoptionTask": "ADOPT.03",
+   "title": "Adopt Contracts: Family governance and policy tests"
+  },
+  {
+   "id": "ADOPT.03.release",
+   "repo": "Contracts",
+   "lane": "release",
+   "adoptionTask": "ADOPT.03",
+   "title": "Adopt Contracts: Release readiness and family release"
+  },
+  {
+   "id": "ADOPT.02.app-composition",
+   "repo": "DesktopPlatform",
+   "lane": "app-composition",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Application composition"
+  },
+  {
+   "id": "ADOPT.02.assistant",
+   "repo": "DesktopPlatform",
+   "lane": "assistant",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Embedded assistant"
+  },
+  {
+   "id": "ADOPT.02.cloud",
+   "repo": "DesktopPlatform",
+   "lane": "cloud",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Cloud core"
+  },
+  {
+   "id": "ADOPT.02.device-bridge",
+   "repo": "DesktopPlatform",
+   "lane": "device-bridge",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Application presence and tool bridge"
+  },
+  {
+   "id": "ADOPT.02.execution",
+   "repo": "DesktopPlatform",
+   "lane": "execution",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Execution engine"
+  },
+  {
+   "id": "ADOPT.02.extensions",
+   "repo": "DesktopPlatform",
+   "lane": "extensions",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Extension platform and integrations"
+  },
+  {
+   "id": "ADOPT.02.foundation",
+   "repo": "DesktopPlatform",
+   "lane": "foundation",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Foundation values"
+  },
+  {
+   "id": "ADOPT.02.governance",
+   "repo": "DesktopPlatform",
+   "lane": "governance",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Family governance and policy tests"
+  },
+  {
+   "id": "ADOPT.02.native",
+   "repo": "DesktopPlatform",
+   "lane": "native",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Native producers and probes"
+  },
+  {
+   "id": "ADOPT.02.platform",
+   "repo": "DesktopPlatform",
+   "lane": "platform",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Desktop platform mechanisms"
+  },
+  {
+   "id": "ADOPT.02.policy",
+   "repo": "DesktopPlatform",
+   "lane": "policy",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Dynamic policy and configuration"
+  },
+  {
+   "id": "ADOPT.02.release",
+   "repo": "DesktopPlatform",
+   "lane": "release",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Release readiness and family release"
+  },
+  {
+   "id": "ADOPT.02.runtime-proofs",
+   "repo": "DesktopPlatform",
+   "lane": "runtime-proofs",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Runtime proofs"
+  },
+  {
+   "id": "ADOPT.02.updater",
+   "repo": "DesktopPlatform",
+   "lane": "updater",
+   "adoptionTask": "ADOPT.02",
+   "title": "Adopt DesktopPlatform: Desktop distribution and update"
+  },
+  {
+   "id": "ADOPT.10.android",
+   "repo": "Mobile",
+   "lane": "android",
+   "adoptionTask": "ADOPT.10",
+   "title": "Adopt Mobile: Android companion"
+  },
+  {
+   "id": "ADOPT.10.governance",
+   "repo": "Mobile",
+   "lane": "governance",
+   "adoptionTask": "ADOPT.10",
+   "title": "Adopt Mobile: Family governance and policy tests"
+  },
+  {
+   "id": "ADOPT.10.release",
+   "repo": "Mobile",
+   "lane": "release",
+   "adoptionTask": "ADOPT.10",
+   "title": "Adopt Mobile: Release readiness and family release"
+  },
+  {
+   "id": "ADOPT.10.runtime-proofs",
+   "repo": "Mobile",
+   "lane": "runtime-proofs",
+   "adoptionTask": "ADOPT.10",
+   "title": "Adopt Mobile: Runtime proofs"
+  },
+  {
+   "id": "ADOPT.09.governance",
+   "repo": "Web",
+   "lane": "governance",
+   "adoptionTask": "ADOPT.09",
+   "title": "Adopt Web: Family governance and policy tests"
+  },
+  {
+   "id": "ADOPT.09.operations",
+   "repo": "Web",
+   "lane": "operations",
+   "adoptionTask": "ADOPT.09",
+   "title": "Adopt Web: Operations, support and trust and safety"
+  },
+  {
+   "id": "ADOPT.09.release",
+   "repo": "Web",
+   "lane": "release",
+   "adoptionTask": "ADOPT.09",
+   "title": "Adopt Web: Release readiness and family release"
+  },
+  {
+   "id": "ADOPT.09.runtime-proofs",
+   "repo": "Web",
+   "lane": "runtime-proofs",
+   "adoptionTask": "ADOPT.09",
+   "title": "Adopt Web: Runtime proofs"
+  },
+  {
+   "id": "ADOPT.09.web",
+   "repo": "Web",
+   "lane": "web",
+   "adoptionTask": "ADOPT.09",
+   "title": "Adopt Web: Web"
   }
  ],
  "substitutes": [
@@ -28707,7 +29448,8 @@
    ],
    "replacedBy": "AST.21",
    "realEvidence": "real Cloud Notes/Chat export producer accepts and round-trips the same archive against a deployed environment",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-automation-fixture",
@@ -28719,7 +29461,8 @@
    ],
    "replacedBy": "HAR.06",
    "realEvidence": "a live scheduled occurrence executes and cascades with storm protection, observed from this client",
-   "origin": "Named scaffolding introduced by WP-17.04; HAR.06 completes only after the desktop and Android consumers switch (AST.20, AND.24)."
+   "origin": "Named scaffolding introduced by WP-17.04; HAR.06 completes only after the desktop and Android consumers switch (AST.20, AND.24).",
+   "class": "behavior"
   },
   {
    "id": "SUB-commercial-figure-proposal",
@@ -28731,7 +29474,8 @@
    ],
    "replacedBy": "REL.08",
    "realEvidence": "approved commercial-figure-status sign-off per docs/assurance/commercial-figure-status.md; none of the 7 proposal figures is a production default yet",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-desktop-candidate-feed",
@@ -28743,7 +29487,8 @@
    ],
    "replacedBy": "REL.10",
    "realEvidence": "the same update-matrix results re-observed once REL.10 points the production feed/signing keys at the proven candidate; per BR-01 (build once, promote the same artifact) this does not require a fresh test run against new bits, only confirmation that the production pointer now serves the exact already-proven candidate",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-device-runtime-loopback",
@@ -28756,7 +29501,8 @@
    ],
    "replacedBy": "DEV.14",
    "realEvidence": "RV-05 'no cloud-initiated connection to device' structural test plus a live queued tool request surviving a restart",
-   "origin": ""
+   "origin": "",
+   "class": "behavior"
   },
   {
    "id": "SUB-embedding-rerank-fixture",
@@ -28768,7 +29514,8 @@
    ],
    "replacedBy": "SRCH.06",
    "realEvidence": "real compatible client/owner/index versions confirmed against the deployed Vectorize/D1 in SRCH.06/90",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-fcm-recorded-responses",
@@ -28780,7 +29527,8 @@
    ],
    "replacedBy": "AND.26",
    "realEvidence": "Live FCM sending with a project-bound credential and physical Android receipt, fallback and permission evidence (PG-24).",
-   "origin": "Named scaffolding: recorded FCM sender responses introduced by WP-45.09."
+   "origin": "Named scaffolding: recorded FCM sender responses introduced by WP-45.09.",
+   "class": "value"
   },
   {
    "id": "SUB-fixture-turn-endpoint",
@@ -28794,7 +29542,8 @@
    ],
    "replacedBy": "HAR.05",
    "realEvidence": "HV-09 structural test 'no client runs a model loop' plus a live turn against the deployed Harness",
-   "origin": "Named scaffolding introduced by WP-17.01; consumers switch in AST.19, AND.24 and WEB.27; WP-52.05 deletes it structurally."
+   "origin": "Named scaffolding introduced by WP-17.01; consumers switch in AST.19, AND.24 and WEB.27; WP-52.05 deletes it structurally.",
+   "class": "behavior"
   },
   {
    "id": "SUB-guarded-batch-capacity-fixtures",
@@ -28807,7 +29556,8 @@
    ],
    "replacedBy": "REL.06",
    "realEvidence": "WP-50 load evidence with real modules",
-   "origin": ""
+   "origin": "",
+   "class": "behavior"
   },
   {
    "id": "SUB-history-admission-fixture",
@@ -28819,7 +29569,8 @@
    ],
    "replacedBy": "AST.22",
    "realEvidence": "a real promoted history survives a restartable import against deployed Cloud, including lost-finalize-ack and account-switch cases",
-   "origin": ""
+   "origin": "",
+   "class": "behavior"
   },
   {
    "id": "SUB-hosted-checkout-sandbox",
@@ -28831,7 +29582,8 @@
    ],
    "replacedBy": "REL.08",
    "realEvidence": "Paddle sandbox checkout session evidence",
-   "origin": ""
+   "origin": "",
+   "class": "behavior"
   },
   {
    "id": "SUB-hostile-test-parser",
@@ -28843,7 +29595,8 @@
    ],
    "replacedBy": "PLT.54",
    "realEvidence": "packaged RID containment matrix re-run against the real parser libraries plus product-level malformed-input/crash tests in WP-18.04/WP-37.01",
-   "origin": "Named scaffolding introduced by WP-11.09; WP-13.13 replaces production fixture registration; the malicious regression fixture stays test-only."
+   "origin": "Named scaffolding introduced by WP-11.09; WP-13.13 replaces production fixture registration; the malicious regression fixture stays test-only.",
+   "class": "behavior"
   },
   {
    "id": "SUB-lkg-compiled-defaults-seed",
@@ -28855,7 +29608,8 @@
    ],
    "replacedBy": "POL.11",
    "realEvidence": "a genuinely stale client falling back through a real prior bundle, observed against the deployed Cloud policy service",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-media-probe-fixture",
@@ -28867,7 +29621,8 @@
    ],
    "replacedBy": "SLATE.15",
    "realEvidence": "Real file probe against packaged ArcForges.Native.Media on every admitted RID, including malformed/oversized/fuzzed input and a forced child-crash recovery run",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-no-op-media-adapter",
@@ -28880,7 +29635,8 @@
    ],
    "replacedBy": "SLATE.23",
    "realEvidence": "SLATE.16's decode results and SLATE.31's golden-corpus results",
-   "origin": ""
+   "origin": "",
+   "class": "behavior"
   },
   {
    "id": "SUB-notes-cloud-export",
@@ -28892,7 +29648,8 @@
    ],
    "replacedBy": "NOTES.33",
    "realEvidence": "real host/database/object-store export across concurrent edits, notebook moves, deleted attachments, quota, expiry, restart, cancellation, paid-term end, per WP-25.08 testing requirements",
-   "origin": ""
+   "origin": "",
+   "class": "behavior"
   },
   {
    "id": "SUB-notes-pdf-fixture-parser",
@@ -28904,7 +29661,8 @@
    ],
    "replacedBy": "NOTES.37",
    "realEvidence": "real packaged PDFium build, licence inventory and hostile-input containment evidence per PG-12/PG-22",
-   "origin": ""
+   "origin": "",
+   "class": "behavior"
   },
   {
    "id": "SUB-postmark-ses-test-recordings",
@@ -28916,7 +29674,8 @@
    ],
    "replacedBy": "CLOUD.12",
    "realEvidence": "live send to a controlled recipient inbox through the real Postmark account plus a prepared SES secondary before this task's completion gate closes",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-provider-adapter-fixture",
@@ -28928,7 +29687,8 @@
    ],
    "replacedBy": "COM.14",
    "realEvidence": "Paddle/Payoneer sandbox environment calls recorded at WP-42.10; production evidence only at WP50/L-30",
-   "origin": ""
+   "origin": "",
+   "class": "behavior"
   },
   {
    "id": "SUB-provider-event-fixtures",
@@ -28940,7 +29700,8 @@
    ],
    "replacedBy": "COM.14",
    "realEvidence": "sandbox webhook delivery and reconciliation logs; production evidence only at WP50",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-provider-response-fixture",
@@ -28952,7 +29713,8 @@
    ],
    "replacedBy": "HAR.05",
    "realEvidence": "the two HAR.05 end-to-end oracles running against the real deployed provider",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-resource-transport-schema-fixtures",
@@ -28964,7 +29726,8 @@
    ],
    "replacedBy": "CLOUD.42",
    "realEvidence": "interrupted-upload resumption, verification-failure, orphan-cleanup, accounting-vs-committed-storage against real R2 (CLOUD.42/CLOUD.47)",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-same-app-fixture-tool",
@@ -28976,7 +29739,8 @@
    ],
    "replacedBy": "HAR.05",
    "realEvidence": "the two HAR.05 oracles exercising the real device tool path in an AOT release binary",
-   "origin": ""
+   "origin": "",
+   "class": "behavior"
   },
   {
    "id": "SUB-scope-instruments-fixture",
@@ -28989,7 +29753,8 @@
    ],
    "replacedBy": "SCOPE.11",
    "realEvidence": "per-RID real device connect/transfer/disconnect run against the maintained lab inventory",
-   "origin": ""
+   "origin": "",
+   "class": "behavior"
   },
   {
    "id": "SUB-scope-sync-fixture",
@@ -29001,7 +29766,8 @@
    ],
    "replacedBy": "SCOPE.27",
    "realEvidence": "multi-device convergence against deployed Cloud with zero raw-capture bytes transferred",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-signed-format-fixture-keys",
@@ -29013,7 +29779,8 @@
    ],
    "replacedBy": "REL.11",
    "realEvidence": "production-signed manifest verified against the real distribution trust root, checked at release",
-   "origin": "Fixture trust roots from WP-03.07 and the WP-02/WP-06 test identities; production keys come from WP-53 and replace fixture roots in release configuration at REL.10; the family release audit asserts no fixture root remains in any release configuration."
+   "origin": "Fixture trust roots from WP-03.07 and the WP-02/WP-06 test identities; production keys come from WP-53 and replace fixture roots in release configuration at REL.10; the family release audit asserts no fixture root remains in any release configuration.",
+   "class": "value"
   },
   {
    "id": "SUB-slate-asr-fixture",
@@ -29025,7 +29792,8 @@
    ],
    "replacedBy": "HAR.91",
    "realEvidence": "A real paid transcription dispatch reconciled through WP-42/43's real metering path, end to end through WP-52's Harness",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-stubbed-provider-path",
@@ -29037,7 +29805,8 @@
    ],
    "replacedBy": "AIR.08",
    "realEvidence": "a controlled real-provider run plus PG-13's exact worked-fixture evidence",
-   "origin": "Named scaffolding introduced by WP-17.05 in the assistant admission path; replaced by WP-43.00 and WP-43.07."
+   "origin": "Named scaffolding introduced by WP-17.05 in the assistant admission path; replaced by WP-43.00 and WP-43.07.",
+   "class": "behavior"
   },
   {
    "id": "SUB-test-signed-update-feed",
@@ -29049,7 +29818,8 @@
    ],
    "replacedBy": "REL.10",
    "realEvidence": "WP-50's full release matrix against production-signed feeds",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-updater-policy-fixture",
@@ -29061,7 +29831,8 @@
    ],
    "replacedBy": "UPD.08",
    "realEvidence": "expedited security-update rehearsal against a real WP-45 advisory and a real WP-44 policy push",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-web-msw-fixtures",
@@ -29074,7 +29845,8 @@
    ],
    "replacedBy": "WEB.30",
    "realEvidence": "WP-23 real API/session conformance; MSW handlers remain test-only forever, never a release-gate substitute",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   },
   {
    "id": "SUB-web-search-fixture",
@@ -29086,7 +29858,8 @@
    ],
    "replacedBy": "SRCH.06",
    "realEvidence": "a real authorized web source admitted and indexed through the funded Brave dispatch with consent/egress recorded",
-   "origin": ""
+   "origin": "",
+   "class": "value"
   }
  ],
  "sharedResources": [
@@ -30429,12 +31202,12 @@
   }
  ],
  "analysisPreamble": "All values below are computed by Plan tools/delivery.py from the current graph. Structural facts (task counts, edge types, chain length, level widths, critical path) are properties of the documented dependencies. Makespans are unmeasured estimates that depend on the stated assumptions. The retired model advanced the same obligations one numbered substep at a time from a single Current task, so its schedule equals the one-worker row; its package-level graph also made each package wait for every upstream package and each substep wait for the previous one.",
- "simulationAssumptions": "Assumptions: task effort is its relative size (S=1, M=2, L=4, XL=8 units, never measured); every worker can execute any task; review, CI, merge-queue and publication latency are not modelled; tasks accepted before this plan count as complete; the adoption tasks run first; a task starts when its start prerequisites and its repository's adoption are complete and finishes no earlier than its completion prerequisites; ready tasks are scheduled longest-remaining-path first. The retired model executed the same work one substep at a time, so its makespan equals the one-worker row. Real throughput will be lower where review capacity, merge queues, shared environments, hardware and provider access, or the single heavy local build slot per workstation become the constraint.",
- "readySetNote": "Tasks whose start prerequisites are satisfied once the adoption stage has confirmed the accepted baseline, assuming no other existing work is inherited. The actual first ready set is established by the adoption stage and grows as reviewed existing work is recorded as inherited.",
+ "simulationAssumptions": "Assumptions: task effort is its relative size (S=1, M=2, L=4, XL=8 units, never measured); every worker can execute any task; review, CI, merge-queue and publication latency are not modelled; tasks accepted before this plan count as complete; the baseline freeze runs first and every adoption slice is one unit; a task starts when its start prerequisites and the adoption slice of its repository and lane are complete, and finishes no earlier than its completion prerequisites; ready tasks are scheduled longest-remaining-path first. The retired model executed the same work one substep at a time, so its makespan equals the one-worker row. Real throughput will be lower where review capacity, merge queues, shared environments, hardware and provider access, or the single heavy local build slot per workstation become the constraint.",
+ "readySetNote": "Tasks whose start prerequisites are satisfied once their adoption slices have confirmed the accepted baseline, assuming no other existing work is inherited. The actual first ready set is established slice by slice during adoption and grows as reviewed existing work is recorded as inherited.",
  "bottlenecks": [
   {
    "title": "Adoption stage",
-   "text": "A one-time entry condition: each repository opens when its own adoption review is complete. It adds one review step per repository, run in parallel, and is on every chain once."
+   "text": "A one-time entry condition per repository and lane: each adoption slice opens its own tasks as soon as it is recorded, independently of other slices and repositories. It adds one short review step in front of each lane, and slices run in parallel."
   },
   {
    "title": "Contracts merge queue",
@@ -30446,11 +31219,15 @@
   },
   {
    "title": "Assistant and device-bridge chain",
-   "text": "Local helper gRPC and the security decision pipeline precede the assistant Cloud client, the device bridge and the Harness execution proof. The current critical path runs through this chain into the Harness proof and the release tail."
+   "text": "Local helper gRPC and the security decision pipeline precede the assistant Cloud client, the device bridge and the Harness execution proof. Each assistant surface starts from the specific history, context and bridge components it uses, not from package acceptance."
   },
   {
    "title": "Harness fixture removal",
    "text": "The fixture turn endpoint is deleted only after the desktop assistant, Android and Web consumers each switch to the real Harness, so the Harness proof waits for the slowest consumer switch-over."
+  },
+  {
+   "title": "Android distribution and real push",
+   "text": "The Android companion release chain (foundation, companion acceptance, signed artifacts, physical-device gates and distribution) ends in the real push proof on the distributed artifact (PG-24). The Operations package acceptance includes that proof and Cloud and AI production readiness include the Operations acceptance, so this chain joins Android distribution to the Cloud release tail. Android features themselves start from the foundation modules and need the deployed-service evidence only to complete."
   },
   {
    "title": "Release tail",

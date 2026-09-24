@@ -65,7 +65,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.01](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.01) — full |
 | Provides | slate.time.ticks; slate.time.rational; slate.time.range |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.02](#task-slate-02), [SLATE.03](#task-slate-03), [SLATE.06](#task-slate-06), [SLATE.14](#task-slate-14), [SLATE.17](#task-slate-17), [SLATE.20](#task-slate-20), [SLATE.29](#task-slate-29), [SLATE.38](#task-slate-38) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Domain/Time/**`<br>`ArcSlate:tests/ArcForges.ArcSlate.Tests.Unit/Time/**` |
@@ -87,7 +87,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.00](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.00) — full |
 | Provides | slate.domain.project; slate.domain.sequence |
 | Start prerequisites | **artifact** [SLATE.01](#task-slate-01) — RationalRate/TimeRange types for SequenceSettings video/audio output grids. *Why:* a sequence's output grid must be validated as exactly representable in ticks ([SG-02](../../../architecture/02-contracts-and-protocols.md#rule-sg-02)) before the sequence type can be constructed at all |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.05](#task-slate-05), [SLATE.06](#task-slate-06), [SLATE.10](#task-slate-10) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Domain/Project/**`<br>`ArcSlate:src/ArcForges.ArcSlate.Domain/Sequence/**` |
@@ -109,7 +109,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.02](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.02) — domain types (MediaAsset/MediaStream/MediaMetadata/MediaAvailability) and the relink-by-content-hash algorithm; excludes the real native read/probe adapter |
 | Provides | slate.domain.mediaasset; slate.domain.relink-algorithm |
 | Start prerequisites | **artifact** [SLATE.01](#task-slate-01) — source-stream time base rational types for MediaMetadata.rate/duration. *Why:* metadata must record the source's own rational time base ([SM-01](../../../architecture/06-data-persistence-and-formats.md#rule-sm-01)), which reuses the canonical rational type |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.04](#task-slate-04), [SLATE.05](#task-slate-05), [SLATE.06](#task-slate-06), [SLATE.21](#task-slate-21), [SLATE.24](#task-slate-24), [SLATE.36](#task-slate-36) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Domain/Media/**` |
@@ -131,7 +131,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.02](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.02) — the real metadata/read adapter using the approved owned ABI and ContentSandbox, and the content-origin carrier/propagation/failure vectors recorded in this substep's evidence row<br>[WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) Content-origin carrier/propagation/failure vectors ([WP-36.02](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.02) required evidence addition; §8 additional completion requirement) — package-level obligation contribution |
 | Provides | slate.media.probe-adapter |
 | Start prerequisites | **artifact** [NAT.07](native.md#task-nat-07) — published arc_media_probe / arc_media_reader_stream export in the ArcForges.Native.Media package (managed MediaProbe wrapper). *Why:* populating real MediaMetadata on import requires the actual probe function; only the three version/build/error probe exports exist in DesktopPlatform today (ArcForges.Native.Media/MediaAbi.cs is 33 lines: GetAbiVersion/GetBuildInfo/GetLastError only)<br>**artifact** [SLATE.03](#task-slate-03) — MediaAsset/MediaMetadata domain types to populate. *Why:* the adapter's output type is owned by SLATE.03 |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [NAT.14](native.md#task-nat-14) — production ContentSandbox.Runtime.<rid> parser composition (hostile-media containment). *Why:* [WP-36.02](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.02)'s testing requirement is that malformed metadata and a child crash preserve the native project; that containment only exists once [WP-13.13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.13) composes the real parser into the signed helper, not from [WP-11](../../work-packages/11-security-foundation.md#rule-wp-11)'s earlier hostile-test-parser fixture |
 | Unblocks | [SLATE.05](#task-slate-05), [SLATE.14](#task-slate-14), [SLATE.15](#task-slate-15), [SLATE.35](#task-slate-35), [SLATE.36](#task-slate-36) |
 | Permitted substitutes | [SUB-media-probe-fixture](../substitutes.md#sub-media-probe-fixture) |
@@ -153,7 +153,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.03](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.03) — full |
 | Provides | slate.domain.medialibrary |
 | Start prerequisites | **artifact** [SLATE.02](#task-slate-02) — Project/MediaLibrary container. *Why:* bins organise the project's media library, not the disk<br>**artifact** [SLATE.03](#task-slate-03) — MediaAsset identity. *Why:* a bin holds asset references |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [SLATE.04](#task-slate-04) — real probe-populated metadata for a fully real import, as opposed to import against the SUB-media-probe-fixture. *Why:* import functionally completes against the fixture, but real evidence that a failed real probe still yields a usable asset is only available once SLATE.04 lands |
 | Unblocks | [SLATE.14](#task-slate-14), [SLATE.35](#task-slate-35), [SLATE.36](#task-slate-36) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Domain/Media/Bin/**`<br>`ArcSlate:src/ArcForges.ArcSlate.Application/Import/**` |
@@ -174,7 +174,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.04](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.04) — full |
 | Provides | slate.domain.timeline |
 | Start prerequisites | **artifact** [SLATE.02](#task-slate-02) — Sequence to hold tracks. *Why:* tracks belong to a sequence's timeline<br>**artifact** [SLATE.03](#task-slate-03) — MediaAsset reference type. *Why:* a clip references an asset by stable identity, never a path<br>**artifact** [SLATE.01](#task-slate-01) — TimeRange for clip in/out and timeline placement. *Why:* clip source range and timeline range are separate typed ranges over the canonical tick domain |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.07](#task-slate-07), [SLATE.10](#task-slate-10), [SLATE.12](#task-slate-12), [SLATE.18](#task-slate-18), [SLATE.26](#task-slate-26), [SLATE.29](#task-slate-29), [SLATE.34](#task-slate-34), [SLATE.38](#task-slate-38) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Domain/Timeline/**` |
@@ -196,7 +196,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.05](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.05) — the shared validate->expand-affected-set->one-transaction command pipeline, plus Insert/Overwrite/Move/Trim(in/out)/Split/Delete/Lift/RippleDelete/Extract/Duplicate exactly per slate.edit.v1 (26-product-behavior-profiles.md §4) |
 | Provides | slate.edit.pipeline; slate.edit.core-ops |
 | Start prerequisites | **artifact** [SLATE.06](#task-slate-06) — Track/TimelineItem/Clip model to operate on. *Why:* every edit command mutates the timeline structural model |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.08](#task-slate-08), [SLATE.09](#task-slate-09), [SLATE.33](#task-slate-33) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Timeline/**`<br>`ArcSlate:src/ArcForges.ArcSlate.Application/Editing/**` |
@@ -219,7 +219,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.05](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.05) — RippleTrim/Roll/Slip/Slide/Group-Ungroup/Link-Unlink/Enable-Disable/ReorderTracks/Transition(create-delete)/Snap/Retime+RetimeCurve/ripple-marker-scope exactly per slate.edit.v1 |
 | Provides | slate.edit.advanced-ops |
 | Start prerequisites | **artifact** [SLATE.07](#task-slate-07) — the shared command pipeline (validate/affected-set/transaction) and the placement operations these compose with (e.g. Roll needs two adjacent clips already placed). *Why:* these operations extend, and in several cases (Roll/Slide/Transition) directly interact with, the placement operations' handle and collision logic rather than duplicating it |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.12](#task-slate-12), [SLATE.33](#task-slate-33) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Timeline/**` |
@@ -241,7 +241,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.06](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.06) — undo/redo as a distinct mechanism from checkpoint/recovery: composite operation grouping, explicit commit-boundary (a transient drag/preview is never a committed command) |
 | Provides | slate.undo |
 | Start prerequisites | **artifact** [SLATE.07](#task-slate-07) — the command pipeline's one-transaction-per-command contract. *Why:* undo records the inverse of exactly what the pipeline committed; it cannot be designed independently of that commit boundary |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.11](#task-slate-11), [SLATE.26](#task-slate-26) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Application/Undo/**` |
@@ -262,7 +262,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) Database impact: ArcSlate project store and its V1 migration baseline (§6) — package-level: §6 Impacts row "Database: the ArcSlate project store and its V1 migration baseline"; §4 ArcSlate.Infrastructure project store/media index/migration set; package-level obligation contribution |
 | Provides | slate.persistence.store |
 | Start prerequisites | **artifact** [PLT.01](platform.md#task-plt-01) — published store abstraction with the single transactional write path (validate->authorize->begin->apply->journal->advance revision->commit->notify). *Why:* the project store must use the one real write path; a bespoke ArcSlate-local persistence path would violate [WP-07.00](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.00)'s policy-tested single-write-path rule and hide recovery defects<br>**artifact** [PLT.04](platform.md#task-plt-04) — published migration runner (numbered, transactional-per-step, idempotent, resumable). *Why:* the V1 migration baseline is the first entry in this runner's numbered sequence; ArcSlate cannot invent its own migration mechanism<br>**artifact** [SLATE.02](#task-slate-02) — Project/Sequence domain types to persist. *Why:* the store maps domain aggregates to storage<br>**artifact** [SLATE.06](#task-slate-06) — Timeline/Track/Clip domain types to persist. *Why:* the store maps the full domain graph, not just the project header |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.11](#task-slate-11), [SLATE.26](#task-slate-26), [SLATE.37](#task-slate-37) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Infrastructure/Store/**`<br>`ArcSlate:fixtures/formats/arcslate/v1/**` |
@@ -284,7 +284,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.06](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.06) — project checkpoints as an explicit user mechanism distinct from undo; crash recovery to the last committed boundary with explicit loss reporting; migration from prior project versions with semantic preservation |
 | Provides | slate.checkpoint; slate.recovery |
 | Start prerequisites | **artifact** [PLT.02](platform.md#task-plt-02) — published append-only journal with durable-before-acknowledged commits. *Why:* checkpoint/recovery cannot be built as a second, ArcSlate-private recovery story; it must ride the one real journal<br>**artifact** [PLT.03](platform.md#task-plt-03) — published snapshot/recovery mechanism with typed outcomes (clean / recovered-with-loss / unrecoverable-with-evidence). *Why:* honest loss reporting requires the platform's typed recovery outcome, not an ArcSlate-invented one<br>**artifact** [SLATE.09](#task-slate-09) — the undo mechanism this task must remain distinct from. *Why:* the completion gate requires demonstrating undo, checkpoint and recovery are three different mechanisms, which presupposes undo exists<br>**artifact** [SLATE.10](#task-slate-10) — the project store to checkpoint/recover. *Why:* checkpoints are snapshots of the persisted project |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.14](#task-slate-14) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Application/Recovery/**` |
@@ -306,7 +306,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) Unlabelled final-review closure: complete slate.project.v1/graph.v1 model, generators/nesting/adjustment/title/subtitle, cycle rejection, unknown-effect inert — the unlabelled final-review closure paragraph: "Implement the complete slate.project.v1/graph.v1 model: bins, exact sequence video/audio/colour config, track roles, generators/nesting/adjustment/title/subtitle, graph definition/instance identity and keyframe time scope. Metadata-only cross-device round-trip preserves every edit with Offline Media. Reject graph/nesting cycles and preserve unknown imported effects inert."; package-level obligation contribution |
 | Provides | slate.wire.projection |
 | Start prerequisites | **artifact** [SLATE.06](#task-slate-06) — Timeline/Track/TimelineItem structural model to project. *Why:* the wire form mirrors the domain model<br>**artifact** [SLATE.08](#task-slate-08) — nested-sequence and adjustment-layer semantics from the edit operation set. *Why:* nesting/cycle rejection is a property of how sequences can reference each other, defined alongside the edit operations<br>**contract** [CON.06](contracts.md#task-con-06) — published slate.project.v1 / slate.graph.v1 generated records in ArcForges.Contracts.LocalRpc.Slate (wire keys per 26-product-behavior-profiles.md §4: transform/crop/opacity/colourAdjustment/audioGain/pan/composite/audioMix, generated-source keys colour/gradient/counter/testPattern/title). *Why:* this task implements the frozen wire shape, not a new one; without the published Contracts package there is no record to project into |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.14](#task-slate-14), [SLATE.42](#task-slate-42) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Infrastructure/Wire/**` |
@@ -328,7 +328,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-36.07](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.07) — full |
 | Provides | slate.drift-report |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.14](#task-slate-14) |
 | Write scope | `Design:docs/assurance/reference-coverage/arcslate-arcvideo.md` |
@@ -347,10 +347,11 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 |---|---|
 | Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
 | Kind / size | acceptance / S |
+| Package acceptance | Records the [WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-36.90](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.90) — full |
 | Provides | slate.wp36.closure |
 | Start prerequisites | **artifact** [SLATE.01](#task-slate-01) — all [WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) tasks complete. *Why:* this is a consolidated regression/evidence pass, not new functionality<br>**artifact** [SLATE.11](#task-slate-11) — all [WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) tasks complete. *Why:* same<br>**artifact** [SLATE.12](#task-slate-12) — all [WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) tasks complete. *Why:* same<br>**artifact** [SLATE.13](#task-slate-13) — drift report exists. *Why:* the completion gate requires the drift check to have run<br>**artifact** [SLATE.04](#task-slate-04) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [SLATE.05](#task-slate-05) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.03](release.md#task-rel-03) |
 | Write scope | `ArcSlate:docs/evidence/wp36-90-receipt.md` |
@@ -371,7 +372,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-37.00](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.00) — full |
 | Provides | slate.media.abi-boundary |
 | Start prerequisites | **artifact** [NAT.06](native.md#task-nat-06) — the compiled common ABI/preamble/pack-8 record layer all family wrappers build on. *Why:* every family-specific export (media/colour/image/otio/graphics) is declared against this common layer; nothing else can compile without it<br>**artifact** [NAT.07](native.md#task-nat-07) — published functional arc_media_reader_*/probe exports in ArcForges.Native.Media (beyond the current 3-function version/build/error probe). *Why:* the boundary-consumption task must exercise a real function, not only the probe triad; DesktopPlatform's MediaAbi.cs today is exactly 33 lines covering only GetAbiVersion/GetBuildInfo/GetLastError<br>**artifact** [NAT.08](native.md#task-nat-08) — published arc_media_writer_*/convert/resample exports. *Why:* domain-purity and handle-lifetime tests must cover the writer path too, not only decode<br>**artifact** [SLATE.04](#task-slate-04) — native media metadata and probe adapter. *Why:* the native boundary consumption replaces the probe fixture used by the adapter |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.16](#task-slate-16), [SLATE.19](#task-slate-19), [SLATE.23](#task-slate-23) |
 | Permitted substitutes | [SUB-no-op-media-adapter](../substitutes.md#sub-no-op-media-adapter) |
@@ -395,7 +396,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-37.01](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.01) — full |
 | Provides | slate.media.decode |
 | Start prerequisites | **artifact** [SLATE.15](#task-slate-15) — the ABI boundary/wrapper this decode path calls through. *Why:* decode is the first real workload over that boundary |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [NAT.14](native.md#task-nat-14) — production ContentSandbox.Runtime.<rid> parser composition. *Why:* [WP-37.01](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.01) is the named [PG-22](../../../assurance/open-gates-register.md#rule-pg-22) evidence anchor: 'real packaged hostile media parsing containment and no unrestricted fallback' cannot be satisfied by the earlier [WP-11](../../work-packages/11-security-foundation.md#rule-wp-11) test-parser fixture |
 | Unblocks | [SLATE.17](#task-slate-17), [SLATE.20](#task-slate-20), [SLATE.21](#task-slate-21), [SLATE.30](#task-slate-30) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Media/Decode/**` |
@@ -418,7 +419,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-37.02](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.02) — full |
 | Provides | slate.playback.engine |
 | Start prerequisites | **artifact** [SLATE.16](#task-slate-16) — decoded frames/audio buffers to schedule. *Why:* the clock schedules already-decoded content<br>**artifact** [SLATE.01](#task-slate-01) — the exact tick/grid time model. *Why:* [TV-04](../../../architecture/13-observability-and-operations.md#rule-tv-04)/[TV-05](../../../architecture/13-observability-and-operations.md#rule-tv-05) require the audio clock projected from canonical ticks with zero drift over a long sequence; this cannot be retrofitted onto an approximate clock |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.22](#task-slate-22) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Playback/**` |
@@ -440,7 +441,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-37.03](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.03) — graph topology/ports/EffectDefinition-vs-Instance/keyframe-scope/curve-evaluation engine, including the built-in definitions and formulas of 26-product-behavior-profiles.md §5 (transform/crop/opacity/colourAdjustment/audioGain/pan, hold/linear/bezier keyframe evaluation, RetimeCurve); excludes execution of any node that requires a native pixel/sample operation |
 | Provides | slate.processing.graph-engine |
 | Start prerequisites | **artifact** [SLATE.06](#task-slate-06) — TimelineItem/Clip/Track to attach graphs and adjustment layers to. *Why:* an adjustment clip is a generated/special timeline clip plus a processing graph ([PG-12](../../../assurance/open-gates-register.md#rule-pg-12)), so the graph engine composes with the timeline model |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.19](#task-slate-19), [SLATE.20](#task-slate-20), [SLATE.23](#task-slate-23), [SLATE.24](#task-slate-24) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Processing/**` |
@@ -462,7 +463,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-37.03](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.03) — execution of graph nodes that require a real pixel/sample operation (video convert/scale/transform), and generated media (colour/gradient/counter/test-pattern/title per 26§5) |
 | Provides | slate.processing.native-nodes |
 | Start prerequisites | **artifact** [SLATE.18](#task-slate-18) — the graph/port/keyframe engine these nodes plug into. *Why:* a native node is one ProcessingNode implementation inside that engine<br>**artifact** [SLATE.15](#task-slate-15) — the ABI boundary. *Why:* these nodes call arc_media_video_convert<br>**artifact** [NAT.08](native.md#task-nat-08) — published arc_media_video_convert export. *Why:* scale/format-convert nodes need the real convert function<br>**artifact** [NAT.15](native.md#task-nat-15) — published ArcGraphicsNative CPU surface. *Why:* generated-source/title rendering needs the portable CPU raster surface |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.23](#task-slate-23), [SLATE.25](#task-slate-25), [SLATE.28](#task-slate-28) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Processing/NativeNodes/**` |
@@ -484,7 +485,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-37.04](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.04) — full |
 | Provides | slate.audio.mixing |
 | Start prerequisites | **artifact** [SLATE.01](#task-slate-01) — the sample grid and half-open range algebra this mixing rule is defined over. *Why:* [BO-01](../../../architecture/10-web-architecture.md#rule-bo-01)..[BO-05](../../../architecture/10-web-architecture.md#rule-bo-05) is a time-model rule, not an audio-DSP convention; it cannot be implemented independently of the canonical tick/sample projection<br>**artifact** [SLATE.18](#task-slate-18) — the processing graph's audio-buffer port type and node composition. *Why:* audio clip/track effects run through the same processing graph as audio nodes ([AU-03](../../../architecture/02-contracts-and-protocols.md#rule-au-03))<br>**artifact** [SLATE.16](#task-slate-16) — decoded audio buffers to mix. *Why:* mixing operates on real decoded samples<br>**artifact** [NAT.08](native.md#task-nat-08) — published resampler push/drain exports with retained delay. *Why:* sample-accurate mixing requires the pinned resampler's exact delay/drain accounting; an approximate resampler would reintroduce the exact defect [BO-03](../../../architecture/10-web-architecture.md#rule-bo-03)/[BO-04](../../../architecture/10-web-architecture.md#rule-bo-04) exist to prevent |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.23](#task-slate-23), [SLATE.28](#task-slate-28) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Audio/**` |
@@ -507,7 +508,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-37.05](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.05) — full |
 | Provides | slate.proxy-cache |
 | Start prerequisites | **artifact** [SLATE.03](#task-slate-03) — MediaAsset identity for cache keys. *Why:* cache keys are keyed by asset + canonical tick range, never by file path<br>**artifact** [SLATE.16](#task-slate-16) — decode to generate proxy/thumbnail source frames. *Why:* a proxy is a cheaper decode of the same source<br>**artifact** [NAT.08](native.md#task-nat-08) — published media writer to encode proxy media. *Why:* proxy generation writes a real portable-profile file<br>**artifact** [NAT.11](native.md#task-nat-11) — published still-image codec export (PNG) for thumbnails. *Why:* thumbnail cache entries are images, not video files<br>**artifact** [PLT.07](platform.md#task-plt-07) — published derived-store abstraction with rebuild semantics and storage-pressure eviction. *Why:* proxy/render/thumbnail/waveform caches must be modelled as the platform's one derived-store kind, not four ArcSlate-private ad hoc eviction policies, or [PX-08](../../../requirements/products/arcslate.md#rule-px-08) (deleting every cache leaves the project intact) becomes four separate things to get right |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.23](#task-slate-23) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Infrastructure/DerivedCaches/**` |
@@ -529,7 +530,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-37.06](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.06) — full |
 | Provides | slate.viewer |
 | Start prerequisites | **artifact** [SLATE.17](#task-slate-17) — the playback engine/clock/quality-state this viewer displays and controls. *Why:* the viewer is a UI over the playback engine, not an independent implementation<br>**artifact** [NAT.15](native.md#task-nat-15) — published ArcGraphicsNative presentable-surface exports. *Why:* the viewer presents decoded frames via a presentable surface/bitmap, never a raw GPU handle<br>**artifact** [PLT.27](platform.md#task-plt-27) — published windows/panels/layout foundation. *Why:* the viewer is hosted as a panel inside the shared dock/panel shell, not a bespoke window system<br>**artifact** [PLT.28](platform.md#task-plt-28) — published command system. *Why:* keyboard-first transport controls are commands routed through the shared command system, not ad hoc key handlers |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.56](platform.md#task-plt-56), [SLATE.23](#task-slate-23) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Presentation/Viewer/**`<br>`ArcSlate:src/ArcForges.ArcSlate.Desktop/Viewer/**` |
@@ -547,10 +548,11 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 |---|---|
 | Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
 | Kind / size | acceptance / S |
+| Package acceptance | Records the [WP-37](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-37.90](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.90) — full<br>[WP-37](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37) Unlabelled final-review closure: consume actual Platform media packages, portable baseline codec/graph/audio-grid verification, unsupported-capability-cannot-be-advertised, font/colour/source identity affects render snapshot — the unlabelled final-review closure paragraph: consume actual Platform media packages, test portable baseline render codecs/graph-source semantics/audio-grid mixing together, confirm unsupported native capabilities cannot be advertised, and that font/colour/source identity affects the render snapshot (the last clause is jointly satisfied here and at SLATE.26); package-level obligation contribution |
 | Provides | slate.wp37.closure |
 | Start prerequisites | **artifact** [SLATE.15](#task-slate-15) — all [WP-37](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37) tasks complete. *Why:* consolidated evidence pass<br>**artifact** [SLATE.22](#task-slate-22) — all [WP-37](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37) tasks complete. *Why:* same<br>**artifact** [SLATE.18](#task-slate-18) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [SLATE.19](#task-slate-19) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [SLATE.20](#task-slate-20) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [SLATE.21](#task-slate-21) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.03](release.md#task-rel-03) |
 | Write scope | `ArcSlate:docs/evidence/wp37-90-receipt.md` |
@@ -571,7 +573,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-38.00](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.00) — full |
 | Provides | slate.colour.management |
 | Start prerequisites | **artifact** [SLATE.18](#task-slate-18) — the processing graph's colour-data port type. *Why:* colour transforms are graph data, per [PG-04](../../../assurance/open-gates-register.md#rule-pg-04)<br>**artifact** [SLATE.03](#task-slate-03) — MediaAsset input colour metadata. *Why:* colour interpretation starts from the asset's own recorded colour metadata<br>**artifact** [NAT.10](native.md#task-nat-10) — published arc_color_config_open/arc_color_processor_create/arc_color_apply exports (immutable OCIO config/processor). *Why:* real colour management needs the actual pinned OCIO asset bundle and processor, not a placeholder transform |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.27](#task-slate-27), [SLATE.32](#task-slate-32) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Color/**` |
@@ -593,7 +595,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-38.01](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.01) — full |
 | Provides | slate.scopes |
 | Start prerequisites | **artifact** [SLATE.19](#task-slate-19) — processed frame buffers to measure. *Why:* a scope reads the pipeline's actual output at a declared point<br>**artifact** [NAT.15](native.md#task-nat-15) — published graphics CPU surface. *Why:* scope rendering is itself a raster surface<br>**artifact** [PLT.27](platform.md#task-plt-27) — published panel foundation. *Why:* scopes are their own dockable panel, distinct from the ArcScope product panel vocabulary |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.32](#task-slate-32) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Visualization/**` |
@@ -614,7 +616,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-38.02](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.02) — full<br>[WP-37](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37) final-review closure clause: font/colour/source identity affects the render snapshot (the snapshot-binding half; the native-package-consumption half is SLATE.23) — final-review closure clause: font/colour/source identity affects the render snapshot (the snapshot-binding half; the native-package-consumption half is SLATE.23)<br>[WP-37](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37) Unlabelled final-review closure: consume actual Platform media packages, portable baseline codec/graph/audio-grid verification, unsupported-capability-cannot-be-advertised, font/colour/source identity affects render snapshot — package-level obligation contribution |
 | Provides | slate.render.plan |
 | Start prerequisites | **artifact** [SLATE.06](#task-slate-06) — the timeline structure to snapshot. *Why:* a render plan is a frozen copy of the timeline<br>**artifact** [SLATE.09](#task-slate-09) — the undo/revision concept this snapshot binds to. *Why:* [RN-04](../../../architecture/18-editing-and-rich-content.md#rule-rn-04) requires binding a project/sequence revision, reusing the same revision notion as undo/checkpoint<br>**artifact** [SLATE.10](#task-slate-10) — the project store, to read a committed revision. *Why:* the snapshot must be read from durable committed state, never live editor memory |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.28](#task-slate-28), [SLATE.39](#task-slate-39) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Rendering/Planning/**`<br>`ArcSlate:src/ArcForges.ArcSlate.Domain/Render/**` |
@@ -635,7 +637,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-38.04](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.04) — full |
 | Provides | slate.export.presets |
 | Start prerequisites | **artifact** [SLATE.24](#task-slate-24) — colour-output configuration the preset references. *Why:* a preset names a colour output target, which the colour-management task owns<br>**artifact** [NAT.08](native.md#task-nat-08) — the exact three writer profile identities (matroska-ffv1-pcm/wav-pcm/mp4-mpeg4-aac). *Why:* validation checks against the profiles the real writer actually supports; a preset that validates against an imagined profile the writer cannot produce is a defect the whole point of pre-validation exists to prevent |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.28](#task-slate-28), [SLATE.31](#task-slate-31) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Domain/Render/ExportPreset.cs`<br>`ArcSlate:src/ArcForges.ArcSlate.Rendering/Encoding/**` |
@@ -657,7 +659,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-38.03](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.03) — full<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Security impact: output paths validated, no arbitrary write location (§6) — package-level obligation contribution<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Additional completion requirement: content-origin vectors on render/subtitle output paths, including unknown input and failed publication (§8) — package-level obligation contribution |
 | Provides | slate.render.execution |
 | Start prerequisites | **artifact** [SLATE.26](#task-slate-26) — the render plan/snapshot this executes. *Why:* execution consumes an already-bound immutable plan<br>**artifact** [SLATE.27](#task-slate-27) — the validated export preset. *Why:* execution never starts against an unvalidated preset<br>**artifact** [SLATE.19](#task-slate-19) — the native-backed graph evaluator to produce pixels. *Why:* render evaluates the same processing graph as preview, per [MP-03](../../../architecture/12-native-interop-and-media.md#rule-mp-03)/[BR-01](../../../architecture/14-build-packaging-and-release.md#rule-br-01)<br>**artifact** [SLATE.20](#task-slate-20) — sample-accurate mixing for the rendered audio track. *Why:* render output audio must follow the same [BO-01](../../../architecture/10-web-architecture.md#rule-bo-01)..[BO-05](../../../architecture/10-web-architecture.md#rule-bo-05) ownership rules as preview<br>**artifact** [NAT.08](native.md#task-nat-08) — published writer open/write/finish/abort with commit-only-after-complete semantics. *Why:* atomic export is only as atomic as the underlying writer's finish/abort contract<br>**artifact** [EXE.01](execution.md#task-exe-01) — the published native ProductJob engine (ProductJobId/ProductJobRecord/JobStep/JobAttempt/ExecutionState/Checkpoint/CompensationAction/ApprovalGate/ResourcePermit/ProgressReport/ExecutionOutcome/ExecutionTrace). *Why:* [WP-38.03](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.03)'s own text says render 'shares the Product Job lifecycle of [WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16)'; render cannot invent a second, ArcSlate-private job-lifecycle model without duplicating exactly the recovery/checkpoint/compensation machinery [WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) exists to give every product once |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.31](#task-slate-31), [SLATE.33](#task-slate-33) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Rendering/Execution/**` |
@@ -680,7 +682,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-38.05](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.05) — authored subtitles and SRT/WebVTT import/export: exact canonical ticks, declared nearest-ms bounded loss on export (<=0.5ms), explicit collapsed-interval handling, retained sidecar/origin<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Additional completion requirement: content-origin vectors on render/subtitle output paths, including unknown input and failed publication (§8) — package-level obligation contribution<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Unlabelled final-review closure: SRT/WebVTT preview/import/export plus local extraction ProductJob/TranscriptRecord adoption — package-level obligation contribution |
 | Provides | slate.subtitles |
 | Start prerequisites | **artifact** [SLATE.06](#task-slate-06) — the track-role model subtitle tracks are a role of. *Why:* [SB-01](../../../architecture/12-native-interop-and-media.md#rule-sb-01): subtitle is an independent track role, part of the same timeline structural model<br>**artifact** [SLATE.01](#task-slate-01) — the tick<->millisecond conversion boundary. *Why:* subtitle millisecond interchange is one of the five enumerated rounding sites ([RP-02](../../../architecture/01-solution-and-project-layout.md#rule-rp-02)) |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.30](#task-slate-30), [SLATE.32](#task-slate-32) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Subtitles/**` |
@@ -702,7 +704,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-38.05](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.05) — the final-review closure clause: local extraction ProductJob and TranscriptRecord review/adoption under expectedNative/undo/origin (slate.transcribe.v1)<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Additional completion requirement: content-origin vectors on render/subtitle output paths, including unknown input and failed publication (§8) — package-level obligation contribution<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Unlabelled final-review closure: SRT/WebVTT preview/import/export plus local extraction ProductJob/TranscriptRecord adoption — package-level obligation contribution |
 | Provides | slate.transcription.extraction |
 | Start prerequisites | **artifact** [SLATE.29](#task-slate-29) — the SubtitleTrack/Cue model adoption writes into. *Why:* adoption commits ordinary subtitle-track edits<br>**artifact** [SLATE.16](#task-slate-16) — decode to extract PCM audio. *Why:* extraction reads real decoded audio<br>**artifact** [EXE.01](execution.md#task-exe-01) — the native ProductJob engine (local isolated job). *Why:* this extraction is explicitly a local ProductJob, sharing the same lifecycle machinery as render (SLATE.28) |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [HAR.91](harness.md#task-har-91) — real Cloud Workers AI whisper-large-v3-turbo output reconciled end to end. *Why:* this task's own scope explicitly uses published ASR-output fixtures; [WP-43](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43) supplies the real model output and [WP-52](../../work-packages/52-cloud-harness.md#rule-wp-52) closes the paid end-to-end path, so the extraction/adoption logic here is complete against a fixture but the product capability is not commercially real until that integration lands |
 | Unblocks | [HAR.91](harness.md#task-har-91), [SLATE.32](#task-slate-32) |
 | Permitted substitutes | [SUB-slate-asr-fixture](../substitutes.md#sub-slate-asr-fixture) |
@@ -725,7 +727,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-38.06](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.06) — full |
 | Provides | slate.golden-corpus |
 | Start prerequisites | **artifact** [SLATE.28](#task-slate-28) — real render execution to produce the corpus outputs. *Why:* the corpus is generated by actually rendering, not synthesised<br>**artifact** [SLATE.27](#task-slate-27) — every supported preset to cover. *Why:* the completeness requirement is 'covers every supported preset' |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.32](#task-slate-32) |
 | Write scope | `ArcSlate:fixtures/media/golden/**` |
@@ -745,10 +747,11 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 |---|---|
 | Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
 | Kind / size | acceptance / S |
+| Package acceptance | Records the [WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-38.90](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.90) — full |
 | Provides | slate.wp38.closure |
 | Start prerequisites | **artifact** [SLATE.24](#task-slate-24) — all [WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) tasks complete. *Why:* consolidated evidence pass<br>**artifact** [SLATE.31](#task-slate-31) — all [WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) tasks complete. *Why:* same<br>**artifact** [HAR.91](harness.md#task-har-91) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [SLATE.25](#task-slate-25) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [SLATE.29](#task-slate-29) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [SLATE.30](#task-slate-30) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.03](release.md#task-rel-03) |
 | Write scope | `ArcSlate:docs/evidence/wp38-90-receipt.md` |
@@ -769,7 +772,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-39.00](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.00) — full |
 | Provides | slate.capabilities |
 | Start prerequisites | **artifact** [SLATE.07](#task-slate-07) — the stable semantic edit-command set to expose. *Why:* [BR-01](../../../architecture/14-build-packaging-and-release.md#rule-br-01)/the stability gate explicitly requires timeline/command/undo semantics to be stable before capabilities are frozen<br>**artifact** [SLATE.08](#task-slate-08) — the remaining edit-command set. *Why:* same<br>**artifact** [SLATE.28](#task-slate-28) — render execution to expose as a capability returning a ProductJobHandle. *Why:* the render capability wraps real render execution |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [DEV.03](device-bridge.md#task-dev-03) — published owner reauthorization (Device.Runtime invoking typed in-process product handlers after grant/resource/revision/egress checks). *Why:* capability execution goes through this exact reauthorization path, per [WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39)'s own binding rule that capabilities never bypass owner-side validation |
 | Unblocks | [SLATE.40](#task-slate-40) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.AssistantIntegration/**` |
@@ -792,7 +795,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-39.01](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.01) — full |
 | Provides | slate.ai-context |
 | Start prerequisites | **artifact** [SLATE.06](#task-slate-06) — the timeline structure to project into context. *Why:* context is a read-only structural projection of the timeline model |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.40](#task-slate-40) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.AssistantIntegration/Context/**` |
@@ -814,7 +817,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-39.02](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.02) — full<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) Security impact: media path handling, no path leakage through references (§6) — package-level obligation contribution |
 | Provides | slate.portable-package |
 | Start prerequisites | **artifact** [SLATE.04](#task-slate-04) — the real relink/asset-resolution adapter. *Why:* collect must resolve each asset's current location before copying it<br>**artifact** [SLATE.05](#task-slate-05) — the media library to enumerate. *Why:* collect walks the project's bins/assets<br>**artifact** [PLT.06](platform.md#task-plt-06) — published chunked verifiable large-append store. *Why:* copying large media into a managed portable form is exactly the large-data-copy case that store exists for, with honest truncation semantics on failure |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.42](#task-slate-42) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.ImportExport/CollectConsolidate/**` |
@@ -835,7 +838,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-39.03](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.03) — full<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) Security impact: media path handling, no path leakage through references (§6) — package-level obligation contribution |
 | Provides | slate.relink |
 | Start prerequisites | **artifact** [SLATE.03](#task-slate-03) — the content-based relink algorithm. *Why:* this task is the workflow/UI wrapper around SLATE.03's verification algorithm, per-device<br>**artifact** [SLATE.04](#task-slate-04) — the real read adapter to re-verify content hash on relink. *Why:* relink verifies bytes before reusing an origin hash, which requires the real probe<br>**artifact** [SLATE.05](#task-slate-05) — the media library. *Why:* relink operates over the library's assets |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.40](#task-slate-40) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Application/Relink/**` |
@@ -857,7 +860,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-39.04](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.04) — all work except the parts mapped to SLATE.42 |
 | Provides | slate.sync-scope |
 | Start prerequisites | **artifact** [SLATE.10](#task-slate-10) — the project store to declare a sync scope over. *Why:* sync scope is a policy over what the store already persists<br>**contract** [CON.09](contracts.md#task-con-09) — published SyncService/ResourceService records for project-metadata sync scopes. *Why:* the sync scope declaration uses the generated sync records; real convergence is proven by the integration task |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [SLATE.42](#task-slate-42) — real multi-device project convergence against the deployed Cloud sync engine. *Why:* this task's own scope is the ArcSlate-side scope declaration and exclusion rules; 'projects converge across devices' can only be proven against the real [WP-25](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25) Cloud store, not a fixture |
 | Unblocks | [SLATE.42](#task-slate-42) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.CloudClient/**` |
@@ -879,7 +882,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-39.05](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.05) — import direction: [OB-01](../../../architecture/07-sync-conflict-and-backup.md#rule-ob-01)..[OB-05](../../../architecture/07-sync-conflict-and-backup.md#rule-ob-05) numeric boundary, staged-before-commit import creating ArcSlate-owned canonical objects with provenance, item-level retained/approximated/omitted dispositions, media relink for Offline Media<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) Completion gate item 6: every claimed interchange version has a fixture and states fidelity before writing -- satisfies [PG-07](../../../assurance/open-gates-register.md#rule-pg-07) for ArcSlate (§8) — package-level obligation contribution |
 | Provides | slate.otio.import |
 | Start prerequisites | **artifact** [SLATE.06](#task-slate-06) — the timeline structural model import populates. *Why:* import creates ArcSlate-owned canonical objects in this model<br>**artifact** [SLATE.01](#task-slate-01) — the canonical tick domain the [OB-01](../../../architecture/07-sync-conflict-and-backup.md#rule-ob-01)..05 numeric boundary converts into. *Why:* the entire point of the OTIO numeric boundary is converting external doubles into the same canonical ticks everything else in the product already uses<br>**artifact** [NAT.06](native.md#task-nat-06) — the common ABI layer. *Why:* arc_otio_read is declared against it<br>**artifact** [NAT.12](native.md#task-nat-12) — published arc_otio_read export (official OTIO0.18.1 read/upgrade under the schema allowlist). *Why:* real OTIO parsing needs the actual pinned-library wrapper; DesktopPlatform's OtioAbi.cs today is the same 33-line version/build/error probe triad as Media/Colour |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.39](#task-slate-39) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.ImportExport/Otio/Import/**` |
@@ -902,7 +905,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Obligations | [WP-39.05](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.05) — export direction: binds a committed sequence revision, writes a temporary destination and publishes atomically, item-level dispositions for everything outside the supported subset<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) Completion gate item 6: every claimed interchange version has a fixture and states fidelity before writing -- satisfies [PG-07](../../../assurance/open-gates-register.md#rule-pg-07) for ArcSlate (§8) — package-level obligation contribution |
 | Provides | slate.otio.export |
 | Start prerequisites | **artifact** [SLATE.38](#task-slate-38) — the shared [OB-01](../../../architecture/07-sync-conflict-and-backup.md#rule-ob-01)..05 numeric adapter and FidelityEntry plumbing. *Why:* export reuses the same numeric boundary and fidelity-report machinery import already built, rather than a second implementation<br>**artifact** [SLATE.26](#task-slate-26) — the committed-revision-snapshot pattern. *Why:* [OA-02](../../../architecture/13-observability-and-operations.md#rule-oa-02)/[OT-04](../../../requirements/products/arcslate.md#rule-ot-04) require export to bind a committed sequence revision the same way render does<br>**artifact** [NAT.12](native.md#task-nat-12) — published arc_otio_write export. *Why:* real OTIO writing needs the actual pinned-library wrapper |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.40](#task-slate-40) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.ImportExport/Otio/Export/**` |
@@ -921,10 +924,11 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 |---|---|
 | Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
 | Kind / size | acceptance / S |
+| Package acceptance | Records the [WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-39.90](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.90) — full<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) Unlabelled final-review closure: Cloud data-model round-trip of complete Slate metadata/archive, managed asset uploads, exact grids, graph scopes, fonts/colour, ASR references, anti-truncation — the unlabelled final-review closure paragraph: Cloud data-model round-trip of complete Slate metadata/archive with originals absent, explicit managed asset uploads, exact grids, graph scopes, titles/subtitles/fonts/colour and ASR source/artifact references; an older DTO cannot truncate the native project before sync; package-level obligation contribution |
 | Provides | slate.wp39.closure |
 | Start prerequisites | **artifact** [SLATE.33](#task-slate-33) — all [WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) tasks complete. *Why:* consolidated evidence pass<br>**artifact** [SLATE.39](#task-slate-39) — all [WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) tasks complete. *Why:* same<br>**artifact** [SLATE.34](#task-slate-34) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [SLATE.36](#task-slate-36) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [SLATE.42](#task-slate-42) — real Cloud replica round-trip of complete Slate project metadata/archive against [WP-25](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25)'s deployed store. *Why:* the final-review closure text requires this proven against the real Cloud data model, not a fixture |
 | Unblocks | [REL.03](release.md#task-rel-03) |
 | Write scope | `ArcSlate:docs/evidence/wp39-90-receipt.md` |
@@ -944,7 +948,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Kind / size | integration / M |
 | Obligations | [WP-39.04](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.04) — testing requirement: 'multi-device project convergence'<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) unlabelled final-review closure paragraph (01-cloud-data-model.md structural-move-and-complete-media-replica-constraints) — unlabelled final-review closure paragraph (01-cloud-data-model.md structural-move-and-complete-media-replica-constraints) |
 | Start prerequisites | **artifact** [SLATE.37](#task-slate-37) — real, delivered outcome of SLATE.37 (Cloud sync scope declaration). *Why:* this integration exercises the real cloud sync scope declaration instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.39](cloud.md#task-cloud-39) — real, delivered outcome of CLOUD.39 (Guarded publication and convergent bootstrap). *Why:* this integration exercises the real guarded publication and convergent bootstrap instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.44](cloud.md#task-cloud-44) — real, delivered outcome of CLOUD.44 (Multi-device convergence harness). *Why:* this integration exercises the real multi-device convergence harness instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SLATE.12](#task-slate-12) — real, delivered outcome of SLATE.12 (Slate.project.v1/graph.v1 wire projection: bins, generators, nesting, adjustment, title/subtitle, cycle rejection). *Why:* this integration exercises the real slate.project.v1/graph.v1 wire projection: bins, generators, nesting, adjustment, title/subtitle, cycle rejection instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SLATE.35](#task-slate-35) — real, delivered outcome of SLATE.35 (Collect, consolidate and the portable project package). *Why:* this integration exercises the real collect, consolidate and the portable project package instead of a substitute, so it cannot start before that outcome exists |
-| Entry condition | [ADOPT.06](adoption.md#task-adopt-06) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.06.arcslate](adoption.md#task-adopt-06-arcslate) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SLATE.37](#task-slate-37), [SLATE.40](#task-slate-40) |
 | Write scope |  |

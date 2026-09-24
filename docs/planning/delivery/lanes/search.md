@@ -8,13 +8,13 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 
 | Task | Title | Kind | Size | Start prerequisites | Baseline |
 |---|---|---|---|---|---|
-| [SRCH.00](#task-srch-00) | Source admission and registration for search | service | M | [CON.10](contracts.md#task-con-10) (contract), [CLOUD.37](cloud.md#task-cloud-37) (artifact), [AIR.06](ai-routing.md#task-air-06) (artifact) | not-started |
-| [SRCH.01](#task-srch-01) | Scoped derived index production (D1 FTS + Vectorize) | service | L | [SRCH.00](#task-srch-00) (artifact), [AIR.00](ai-routing.md#task-air-00) (artifact), [CON.10](contracts.md#task-con-10) (contract) | not-started |
-| [SRCH.02](#task-srch-02) | Hybrid retrieval, RRF fusion and budgets | service | L | [SRCH.01](#task-srch-01) (artifact), [AIR.00](ai-routing.md#task-air-00) (artifact) | not-started |
+| [SRCH.00](#task-srch-00) | Source admission and registration for search | service | M | [CON.10](contracts.md#task-con-10) (contract), [CLOUD.37](cloud.md#task-cloud-37) (artifact) | not-started |
+| [SRCH.01](#task-srch-01) | Scoped derived index production (D1 FTS + Vectorize) | service | L | [SRCH.00](#task-srch-00) (artifact), [CON.10](contracts.md#task-con-10) (contract) | not-started |
+| [SRCH.02](#task-srch-02) | Hybrid retrieval, RRF fusion and budgets | service | L | [SRCH.01](#task-srch-01) (artifact) | not-started |
 | [SRCH.03](#task-srch-03) | Current permission recheck at query time | service | S | [SRCH.02](#task-srch-02) (artifact), [CLOUD.11](cloud.md#task-cloud-11) (artifact) | not-started |
 | [SRCH.04](#task-srch-04) | Evidence and citations | service | M | [SRCH.03](#task-srch-03) (artifact) | not-started |
 | [SRCH.05](#task-srch-05) | Privacy partitioning and cache isolation | service | M | [SRCH.01](#task-srch-01) (artifact) | not-started |
-| [SRCH.06](#task-srch-06) | Real Cloud query path (fixture-to-real swap) | integration | M | [AIR.00](ai-routing.md#task-air-00) (artifact), [POL.08](policy.md#task-pol-08) (artifact), [SRCH.01](#task-srch-01) (artifact), [SRCH.02](#task-srch-02) (artifact) | not-started |
+| [SRCH.06](#task-srch-06) | Real Cloud query path (fixture-to-real swap) | integration | M | [AIR.00](ai-routing.md#task-air-00) (artifact), [POL.08](policy.md#task-pol-08) (artifact), [SRCH.01](#task-srch-01) (artifact), [SRCH.02](#task-srch-02) (artifact), [AIR.06](ai-routing.md#task-air-06) (artifact) | not-started |
 | [SRCH.90](#task-srch-90) | Owned artifacts, real integration and index capacity acceptance | service | M | [SRCH.06](#task-srch-06) (artifact), [SRCH.03](#task-srch-03) (artifact), [SRCH.04](#task-srch-04) (artifact), [SRCH.05](#task-srch-05) (artifact) | not-started |
 
 ## Tasks
@@ -31,8 +31,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 | Kind / size | service / M |
 | Obligations | [WP-40.00](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.00) — full |
 | Provides | search-source-registry |
-| Start prerequisites | **contract** [CON.10](contracts.md#task-con-10) — published SourceRecord/ContentOrigin typed record (origin, consent, egress) in Contracts public schema. *Why:* admission must persist a typed, versioned origin/consent record before any content is queued for indexing; the exact CON substep that publishes this record was not determined from this area's WP files<br>**artifact** [CLOUD.37](cloud.md#task-cloud-37) — durable resource identity/revision for synced product content. *Why:* admitted sources need a stable resource id and revision to key the derived index against; [WP-25](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25) owns the sync engine and blob lifecycle that assigns these<br>**artifact** [AIR.06](ai-routing.md#task-air-06) — operator-funded web-search dispatch capability (Brave), or its contract-bound fixture. *Why:* 'authorized web sources' admission is dispatched through the AI Worker web-search port, funded/owned by [WP-43.05](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.05); SRCH.00 can build against a fixture web-search response and defer the real call to SRCH.06 |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Start prerequisites | **contract** [CON.10](contracts.md#task-con-10) — published SourceRecord/ContentOrigin typed record (origin, consent, egress) in Contracts public schema. *Why:* admission must persist a typed, versioned origin/consent record before any content is queued for indexing; the exact CON substep that publishes this record was not determined from this area's WP files<br>**artifact** [CLOUD.37](cloud.md#task-cloud-37) — durable resource identity/revision for synced product content. *Why:* admitted sources need a stable resource id and revision to key the derived index against; [WP-25](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25) owns the sync engine and blob lifecycle that assigns these |
+| Entry condition | [ADOPT.07.search](adoption.md#task-adopt-07-search) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [HAR.01](harness.md#task-har-01), [SRCH.01](#task-srch-01) |
 | Permitted substitutes | [SUB-web-search-fixture](../substitutes.md#sub-web-search-fixture) |
@@ -55,8 +55,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 | Kind / size | service / L |
 | Obligations | [WP-40.01](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.01) — full |
 | Provides | scoped-derived-index |
-| Start prerequisites | **artifact** [SRCH.00](#task-srch-00) — admitted source registry entries to index. *Why:* nothing to index before a source is admitted<br>**artifact** [AIR.00](ai-routing.md#task-air-00) — bge-m3 embedding vectors for chunk content (or its fixture substitute). *Why:* Vectorize writes need an embedding; real vectors come from [WP-43.00](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.00)'s InferenceWorkflow<br>**contract** [CON.10](contracts.md#task-con-10) — the data-model retrieval_chunk projection key (sourceId, sourceRev, embeddingModelId, embeddingProfileVersion, chunkHash) as a published schema. *Why:* the index writer must key rows on the exact published projection, not an ad hoc shape |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Start prerequisites | **artifact** [SRCH.00](#task-srch-00) — admitted source registry entries to index. *Why:* nothing to index before a source is admitted<br>**contract** [CON.10](contracts.md#task-con-10) — the data-model retrieval_chunk projection key (sourceId, sourceRev, embeddingModelId, embeddingProfileVersion, chunkHash) as a published schema. *Why:* the index writer must key rows on the exact published projection, not an ad hoc shape |
+| Entry condition | [ADOPT.07.search](adoption.md#task-adopt-07-search) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SRCH.02](#task-srch-02), [SRCH.05](#task-srch-05), [SRCH.06](#task-srch-06) |
 | Permitted substitutes | [SUB-embedding-rerank-fixture](../substitutes.md#sub-embedding-rerank-fixture) |
@@ -78,8 +78,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 | Kind / size | service / L |
 | Obligations | [WP-40.02](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.02) — full |
 | Provides | hybrid-retrieval |
-| Start prerequisites | **artifact** [SRCH.01](#task-srch-01) — scoped derived index to query against. *Why:* fusion has nothing to rank without the index<br>**artifact** [AIR.00](ai-routing.md#task-air-00) — reranker (bge-reranker-base) call on the first 200 candidates, or its fixture substitute. *Why:* the retrieval.hybrid.v1 profile requires a CF rerank pass on the top candidates |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Start prerequisites | **artifact** [SRCH.01](#task-srch-01) — scoped derived index to query against. *Why:* fusion has nothing to rank without the index |
+| Entry condition | [ADOPT.07.search](adoption.md#task-adopt-07-search) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SRCH.03](#task-srch-03), [SRCH.06](#task-srch-06) |
 | Permitted substitutes | [SUB-embedding-rerank-fixture](../substitutes.md#sub-embedding-rerank-fixture) |
@@ -102,7 +102,7 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 | Obligations | [WP-40.03](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.03) — full |
 | Provides | retrieval-permission-recheck |
 | Start prerequisites | **artifact** [SRCH.02](#task-srch-02) — ranked candidate list to filter. *Why:* nothing to recheck before candidates exist<br>**artifact** [CLOUD.11](cloud.md#task-cloud-11) — live owner/grant permission check API. *Why:* the recheck must call the actual current-permission source of truth, not a cached copy; the Cloud lane [WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22) is presumed to own identity/grant checks (exact substep not read from this area) |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.search](adoption.md#task-adopt-07-search) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SRCH.04](#task-srch-04), [SRCH.90](#task-srch-90) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Retrieval/PermissionRecheck/**` |
@@ -123,7 +123,7 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 | Obligations | [WP-40.04](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.04) — full |
 | Provides | retrieval-citations |
 | Start prerequisites | **artifact** [SRCH.03](#task-srch-03) — permission-rechecked candidates. *Why:* citations are only built for content cleared to surface |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.search](adoption.md#task-adopt-07-search) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SRCH.90](#task-srch-90) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Retrieval/Citations/**` |
@@ -144,7 +144,7 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 | Obligations | [WP-40.05](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.05) — full |
 | Provides | retrieval-privacy-partitioning |
 | Start prerequisites | **artifact** [SRCH.01](#task-srch-01) — index/cache tables to partition. *Why:* partitioning is enforced at the same storage SRCH.01 creates |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.search](adoption.md#task-adopt-07-search) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SRCH.90](#task-srch-90) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Retrieval/Privacy/**` |
@@ -165,8 +165,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 | Kind / size | integration / M |
 | Obligations | [WP-40.06](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.06) — full |
 | Provides | real-cloud-retrieval |
-| Start prerequisites | **artifact** [AIR.00](ai-routing.md#task-air-00) — deployed Workers AI embed/rerank adapter (real, not fixture). *Why:* this task's entire purpose is proving the real provider path; a fixture cannot satisfy it<br>**artifact** [POL.08](policy.md#task-pol-08) — active policy/config snapshot naming the admitted embedding/rerank model generation. *Why:* [WP-40.01](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.01)'s mandatory model-generation filter must read the currently activated model identity from policy, not a hardcoded string<br>**artifact** [SRCH.01](#task-srch-01) — scoped derived index production. *Why:* the real query path replaces fixture embeddings in the index<br>**artifact** [SRCH.02](#task-srch-02) — hybrid retrieval and budgets. *Why:* the real query path replaces fixture reranking |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Start prerequisites | **artifact** [AIR.00](ai-routing.md#task-air-00) — deployed Workers AI embed/rerank adapter (real, not fixture). *Why:* this task's entire purpose is proving the real provider path; a fixture cannot satisfy it<br>**artifact** [POL.08](policy.md#task-pol-08) — active policy/config snapshot naming the admitted embedding/rerank model generation. *Why:* [WP-40.01](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.01)'s mandatory model-generation filter must read the currently activated model identity from policy, not a hardcoded string<br>**artifact** [SRCH.01](#task-srch-01) — scoped derived index production. *Why:* the real query path replaces fixture embeddings in the index<br>**artifact** [SRCH.02](#task-srch-02) — hybrid retrieval and budgets. *Why:* the real query path replaces fixture reranking<br>**artifact** [AIR.06](ai-routing.md#task-air-06) — the real operator-funded web-search dispatch capability. *Why:* the real query path replaces the web-search fixture and runs against the real dispatch |
+| Entry condition | [ADOPT.07.search](adoption.md#task-adopt-07-search) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [SRCH.90](#task-srch-90) — index capacity acceptance evidence. *Why:* this task's real-path evidence feeds the package-level acceptance in SRCH.90 |
 | Unblocks | [SRCH.90](#task-srch-90) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Retrieval/Indexing/**`<br>`Cloud:src/Cloud/ArcForges.Cloud.Modules.Retrieval/Ranking/**` |
@@ -185,10 +185,11 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 |---|---|
 | Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
 | Kind / size | service / M |
+| Package acceptance | Records the [WP-40](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-40.90](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.90) — full, including index capacity acceptance |
 | Provides | search-package-acceptance |
 | Start prerequisites | **artifact** [SRCH.06](#task-srch-06) — real query path evidence. *Why:* acceptance cannot close on fixture-only evidence<br>**artifact** [SRCH.03](#task-srch-03) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [SRCH.04](#task-srch-04) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [SRCH.05](#task-srch-05) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.search](adoption.md#task-adopt-07-search) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [POL.02](policy.md#task-pol-02) — launch-capacity.v1 signed configuration snapshot. *Why:* capacity/threshold-refusal tests need the real signed budget document, not an invented number |
 | Unblocks | [REL.06](release.md#task-rel-06), [SRCH.06](#task-srch-06) |
 | Write scope | `Cloud:tests/Cloud.Tests.Integration/Retrieval/**` |

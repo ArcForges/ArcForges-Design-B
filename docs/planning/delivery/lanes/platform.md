@@ -80,7 +80,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-07.00](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.00) — full<br>[WP-07](../../work-packages/07-local-persistence-foundation.md#rule-wp-07) Content-origin carrier projection committed atomically with payload in the same owner transaction/journal boundary (SS2 required design input) — package-level obligation contribution |
 | Provides | persistence-write-path; commit-unit-type |
 | Start prerequisites | **artifact** [FND.02](foundation.md#task-fnd-02) — CommandId/effect-certainty types. *Why:* the commit unit's idempotency slot and outbox entry are typed with [WP-04.01](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.01)'s execution identities; cannot write the transactional envelope without them.<br>**artifact** [FND.03](foundation.md#task-fnd-03) — Revision type. *Why:* the write path's 'advance revision exactly once' step is defined in terms of [WP-04.02](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.02)'s Revision type, not an ad hoc integer.<br>**artifact** [FND.05](foundation.md#task-fnd-05) — reason-code registry. *Why:* every refusal in the pipeline (validate/authorize failures) must return a registered code per [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06)/07 of WP04. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [CLOUD.38](cloud.md#task-cloud-38), [FND.02](foundation.md#task-fnd-02), [NAT.02](native.md#task-nat-02), [NOTES.01](arcnotes.md#task-notes-01), [NOTES.02](arcnotes.md#task-notes-02), [PLT.05](#task-plt-05), [PLT.07](#task-plt-07), [PLT.08](#task-plt-08), [PLT.39](#task-plt-39), [PLT.43](#task-plt-43), [PLT.44](#task-plt-44), [SCOPE.01](arcscope.md#task-scope-01), [SLATE.10](arcslate.md#task-slate-10) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Persistence.Sqlite/**` |
@@ -103,7 +103,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-07.01](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.01) — full |
 | Provides | persistence-journal |
 | Start prerequisites | **artifact** [FND.02](foundation.md#task-fnd-02) — CommandId type. *Why:* [JS-01](../../../architecture/06-data-persistence-and-formats.md#rule-js-01) requires the journal entry to carry CommandId, checksum, actor, correlation, causation, commit time - these are [WP-04](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04) types.<br>**artifact** [FND.03](foundation.md#task-fnd-03) — Revision/Sequence types. *Why:* [JS-01](../../../architecture/06-data-persistence-and-formats.md#rule-js-01) requires previous/new typed source version fields. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NOTES.11](arcnotes.md#task-notes-11), [PLT.03](#task-plt-03), [PLT.08](#task-plt-08), [SLATE.11](arcslate.md#task-slate-11) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Persistence.Sqlite/**` |
@@ -125,9 +125,9 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-07.02](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.02) — full |
 | Provides | persistence-snapshot-recovery; recovery-outcome-type |
 | Start prerequisites | **artifact** [PLT.02](#task-plt-02) — journal append/replay implementation. *Why:* recovery is defined as 'replay the journal forward from the most recent valid snapshot'; cannot be written or tested against a real journal until PLT.02's replay contract exists (may start against the IJournalReader interface from PLT.01 with a fake, but the real recovery matrix needs the real journal). |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [PLT.08](#task-plt-08), [SLATE.11](arcslate.md#task-slate-11) |
+| Unblocks | [NOTES.11](arcnotes.md#task-notes-11), [PLT.08](#task-plt-08), [SLATE.11](arcslate.md#task-slate-11) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Persistence.Sqlite/**` |
 | Shared resources | [RES-desktopplatform-policy-data](../shared-resources.md#res-desktopplatform-policy-data) (append) |
 | Validation | Offline tests: full recovery matrix (clean shutdown, hard kill, kill during snapshot, kill during migration, corrupted snapshot, corrupted journal tail, disk-full during write) using simulated fault injection; native-crash/safe-start scenarios beyond process-level simulation are local opt-in only. |
@@ -148,9 +148,9 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-07.03](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.03) — full |
 | Provides | persistence-migration-runner; storage-schema-version-axis-source |
 | Start prerequisites | **artifact** [FND.06](foundation.md#task-fnd-06) — StorageSchemaVersion axis type. *Why:* the runner's version bookkeeping is defined in terms of the typed axis, not a raw integer. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [PLT.08](#task-plt-08), [PLT.29](#task-plt-29), [SLATE.10](arcslate.md#task-slate-10), [UPD.04](updater.md#task-upd-04) |
+| Unblocks | [NOTES.11](arcnotes.md#task-notes-11), [PLT.08](#task-plt-08), [PLT.29](#task-plt-29), [SLATE.10](arcslate.md#task-slate-10), [UPD.04](updater.md#task-upd-04) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Persistence.Sqlite/**`<br>`DesktopPlatform:fixtures/formats/**` |
 | Shared resources | [RES-desktopplatform-fixtures](../shared-resources.md#res-desktopplatform-fixtures) (append) |
 | Validation | Offline tests: forward migration from every historical version fixture, interruption/resume, refusal test for unsupported downgrade, golden-fixture semantic comparison ([QI-07](../../../requirements/12-quality-and-compatibility-contract.md#rule-qi-07)). |
@@ -170,7 +170,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-07.04](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.04) — full |
 | Provides | persistence-resource-store; managed-resource-ref-type |
 | Start prerequisites | **artifact** [PLT.01](#task-plt-01) — store abstraction's write-path pattern. *Why:* the resource store follows the same single-writer discipline ([BR-11](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-br-11)) even though it is a separate table set; reuses the transactional idiom PLT.01 establishes rather than inventing a second one. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NOTES.08](arcnotes.md#task-notes-08), [PLT.08](#task-plt-08), [PLT.22](#task-plt-22) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Persistence.Resources/**` |
@@ -192,7 +192,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-07.05](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.05) — full |
 | Provides | persistence-append-store |
 | Start prerequisites | **artifact** [FND.02](foundation.md#task-fnd-02) — execution/effect-certainty types for loss records. *Why:* recorded loss counts/time ranges are typed data, not free text. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.08](#task-plt-08), [SCOPE.07](arcscope.md#task-scope-07), [SLATE.35](arcslate.md#task-slate-35) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Persistence.Resources/**` |
@@ -214,7 +214,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-07.06](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.06) — full |
 | Provides | persistence-derived-store-pressure; derived-store-abstraction |
 | Start prerequisites | **artifact** [PLT.01](#task-plt-01) — store abstraction boundary. *Why:* the derived-store contract is defined relative to canonical data owned by PLT.01's store abstraction ([DS-02](../../../architecture/06-data-persistence-and-formats.md#rule-ds-02): separate file/schema from canonical data). |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NOTES.15](arcnotes.md#task-notes-15), [PLT.08](#task-plt-08), [SLATE.21](arcslate.md#task-slate-21) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Persistence.Derived/**` |
@@ -233,10 +233,11 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / S |
+| Package acceptance | Records the [WP-07](../../work-packages/07-local-persistence-foundation.md#rule-wp-07) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-07.90](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.90) — full |
 | Provides | persistence-sqlite-package; persistence-resources-package; persistence-derived-package |
 | Start prerequisites | **artifact** [PLT.01](#task-plt-01) — write path. *Why:* cannot publish an incomplete store.<br>**artifact** [PLT.02](#task-plt-02) — journal. *Why:* same.<br>**artifact** [PLT.03](#task-plt-03) — snapshot/recovery. *Why:* same.<br>**artifact** [PLT.04](#task-plt-04) — migration runner. *Why:* same.<br>**artifact** [PLT.05](#task-plt-05) — resource store. *Why:* same.<br>**artifact** [PLT.06](#task-plt-06) — append store. *Why:* same.<br>**artifact** [PLT.07](#task-plt-07) — derived store/pressure. *Why:* same. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | none |
 | Write scope | `DesktopPlatform:eng/packaging/packages.json`<br>`DesktopPlatform:eng/version-sources.json` |
@@ -258,7 +259,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-08.00](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.00) — full<br>[WP-08](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08) No product listener/global discovery - structural constraint on every substep, most directly tested by transport/registration — package-level obligation contribution |
 | Provides | ipc-transport |
 | Start prerequisites | **artifact** [PRF.04](runtime-proofs.md#task-prf-04) — proven AOT gRPC-over-OS-stream pattern from the two real helper-probe processes. *Why:* architecture/03-local-ipc-and-process-model.md states explicitly 'WP06 proves two real AOT helper-probe processes over each exact OS transport; WP08 implements the parent-bound mechanics' - the Kestrel custom listener + ConnectCallback + no-TCP-listener discipline must be established as AOT-compatible before the full protocol is layered on it. A substitute in-process/TCP transport would not validate the AOT-sensitive OS-stream code path [WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) exists to de-risk. Owned by the native and runtime-proof lanes.<br>**contract** [CON.04](contracts.md#task-con-04) — ArcForges.Contracts.LocalRpc.Platform/.Sandbox generated proto services. *Why:* the transport carries these generated messages; per contracts/09-local-grpc-and-sandbox.md WP03 publishes all descriptors, methods, validation and fixtures before consumers. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NAT.01](native.md#task-nat-01), [PLT.10](#task-plt-10), [PLT.13](#task-plt-13), [PLT.14](#task-plt-14), [PLT.15](#task-plt-15), [PLT.16](#task-plt-16), [PLT.45](#task-plt-45) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.LocalRpc/**` |
@@ -281,7 +282,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-08.01](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.01) — full |
 | Provides | ipc-endpoint-identity |
 | Start prerequisites | **artifact** [PLT.09](#task-plt-09) — transport/framing. *Why:* endpoint identity is meaningless without a transport to bind it to; genuinely sequential within WP08. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.11](#task-plt-11), [PLT.16](#task-plt-16), [PLT.38](#task-plt-38) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.LocalRpc/**` |
@@ -302,7 +303,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-08.02](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.02) — full<br>[WP-08](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08) No product listener/global discovery - structural constraint on every substep, most directly tested by transport/registration — package-level obligation contribution |
 | Provides | ipc-registration |
 | Start prerequisites | **artifact** [PLT.10](#task-plt-10) — endpoint identity. *Why:* registration authenticates against the endpoint identity/nonce PLT.10 establishes. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.12](#task-plt-12), [PLT.16](#task-plt-16) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.LocalRpc/**` |
@@ -323,7 +324,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-08.03](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.03) — full |
 | Provides | ipc-routing |
 | Start prerequisites | **artifact** [PLT.11](#task-plt-11) — registration lifecycle. *Why:* routing operates over registered children. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.16](#task-plt-16) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.LocalRpc/**` |
@@ -344,7 +345,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-08.04](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.04) — full |
 | Provides | ipc-bounds |
 | Start prerequisites | **artifact** [PLT.09](#task-plt-09) — transport. *Why:* bounds/backpressure wrap the transport's call dispatch; can proceed in parallel with PLT.10-12 once the transport shape is fixed, not strictly serial after routing. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.16](#task-plt-16) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.LocalRpc/**` |
@@ -365,7 +366,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-08.05](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.05) — full |
 | Provides | ipc-cancel-retry |
 | Start prerequisites | **artifact** [PLT.09](#task-plt-09) — transport. *Why:* cancellation/retry wrap the transport call lifecycle.<br>**artifact** [FND.02](foundation.md#task-fnd-02) — effect-certainty/Outcome types. *Why:* unknown-effect classification is a [WP-04.01](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.01) type, not invented locally. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.16](#task-plt-16) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.LocalRpc/**` |
@@ -386,7 +387,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-08.06](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.06) — full |
 | Provides | ipc-brokered-data |
 | Start prerequisites | **artifact** [PLT.09](#task-plt-09) — transport. *Why:* brokered transfer is a call pattern over the same transport.<br>**contract** [CON.04](contracts.md#task-con-04) — ContentSandboxService/slot-grant wire shapes in contracts/09-local-grpc-and-sandbox.md. *Why:* the exact grant/seal/ack/cancel lifecycle is fixed by the published contract, not invented here. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [PLT.45](#task-plt-45) — the real ContentSandbox helper actually using these brokered buffers. *Why:* [WP-08.06](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.06) implements the generic broker mechanism; PLT.45 ([WP-11.09](../../work-packages/11-security-foundation.md#rule-wp-11.09)) is the first real consumer that proves it end to end with a hostile parser. |
 | Unblocks | [PLT.16](#task-plt-16), [PLT.24](#task-plt-24), [PLT.45](#task-plt-45) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.LocalRpc/**` |
@@ -404,10 +405,11 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / S |
+| Package acceptance | Records the [WP-08](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-08.90](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.90) — full |
 | Provides | localrpc-package |
 | Start prerequisites | **artifact** [PLT.09](#task-plt-09) — transport. *Why:* publish needs the complete substep set.<br>**artifact** [PLT.10](#task-plt-10) — endpoint identity. *Why:* same.<br>**artifact** [PLT.11](#task-plt-11) — registration. *Why:* same.<br>**artifact** [PLT.12](#task-plt-12) — routing. *Why:* same.<br>**artifact** [PLT.13](#task-plt-13) — bounds. *Why:* same.<br>**artifact** [PLT.14](#task-plt-14) — cancel/retry. *Why:* same.<br>**artifact** [PLT.15](#task-plt-15) — brokered data. *Why:* same. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | none |
 | Write scope | `DesktopPlatform:eng/packaging/packages.json` |
@@ -429,7 +431,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-09.00](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.00) — full |
 | Provides | app-identity-composition |
 | Start prerequisites | **contract** [CON.91](contracts.md#task-con-91) — descriptor contract types (App/Installation/Instance identity wire shapes). *Why:* [WP-09](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09)'s own header lists [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) output as the descriptor contract types this package needs.<br>**artifact** [FND.01](foundation.md#task-fnd-01) — identity primitive types. *Why:* these identities are built on [WP-04](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04)'s identity adapters. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.01](app-composition.md#task-app-01), [EXE.01](execution.md#task-exe-01), [PLT.18](#task-plt-18), [PLT.19](#task-plt-19), [PLT.21](#task-plt-21), [PLT.22](#task-plt-22), [PLT.25](#task-plt-25) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Capabilities/**` |
@@ -452,7 +454,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-09.01](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.01) — full<br>[WP-09](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09) Contribution/registration state durable across restarts (SS6 impacts) — package-level obligation contribution |
 | Provides | contribution-registration |
 | Start prerequisites | **artifact** [PLT.17](#task-plt-17) — application identity/composition root. *Why:* contributions register against a specific app's composition root. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NAT.01](native.md#task-nat-01), [NOTES.12](arcnotes.md#task-notes-12), [PLT.25](#task-plt-25) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Contributions/**` |
@@ -473,7 +475,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-09.02](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.02) — full |
 | Provides | capability-registry-selection; capability-descriptor-type |
 | Start prerequisites | **artifact** [PLT.17](#task-plt-17) — identity/composition. *Why:* the registry is scoped per application instance.<br>**contract** [CON.91](contracts.md#task-con-91) — CapabilityDescriptor/OperationBinding wire schema. *Why:* BR of WP09 says 'no implementer invents binding fields or capability behavior to join products' - the schema is Contracts-owned. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.00](extensions.md#task-ext-00), [PLT.20](#task-plt-20), [PLT.24](#task-plt-24), [PLT.25](#task-plt-25), [PLT.37](#task-plt-37) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Capabilities/**` |
@@ -494,7 +496,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-09.03](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.03) — full |
 | Provides | action-availability; availability-result-type |
 | Start prerequisites | **artifact** [PLT.19](#task-plt-19) — capability registry. *Why:* availability is computed from registered capabilities plus context. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.24](#task-plt-24), [PLT.25](#task-plt-25), [PLT.28](#task-plt-28) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Capabilities/**` |
@@ -515,7 +517,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-09.04](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.04) — full |
 | Provides | context-freezing; frozen-context-type |
 | Start prerequisites | **artifact** [PLT.17](#task-plt-17) — identity/composition. *Why:* context is scoped to the owning application instance. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.06](app-composition.md#task-app-06), [PLT.24](#task-plt-24), [PLT.25](#task-plt-25), [PLT.42](#task-plt-42) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Capabilities/**` |
@@ -536,7 +538,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-09.05](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.05) — full |
 | Provides | resource-artifact-resolution; resource-ref-type |
 | Start prerequisites | **artifact** [PLT.05](#task-plt-05) — managed resource store's identity-to-location resolution. *Why:* ResourceRef resolution at the capability layer is built on the persistence-level ManagedResourceRef PLT.05 defines; this is a real cross-lane (persistence->capabilities) dependency within the DesktopPlatform repository.<br>**artifact** [PLT.17](#task-plt-17) — identity/composition. *Why:* resource ownership is per-application. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.06](app-composition.md#task-app-06), [PLT.23](#task-plt-23), [PLT.25](#task-plt-25) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Capabilities/**` |
@@ -557,7 +559,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-09.06](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.06) — full |
 | Provides | own-navigation-health; health-dimension-type |
 | Start prerequisites | **artifact** [PLT.22](#task-plt-22) — resource/artifact resolution. *Why:* navigation opens resolved artifacts. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.25](#task-plt-25), [PLT.51](#task-plt-51) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Capabilities/**` |
@@ -578,7 +580,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-09.07](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.07) — all work except the parts mapped to PLT.57 |
 | Provides | invocation-pipeline |
 | Start prerequisites | **artifact** [PLT.19](#task-plt-19) — capability registry/selection. *Why:* resolve step needs the registry.<br>**artifact** [PLT.20](#task-plt-20) — availability. *Why:* check-availability step.<br>**artifact** [PLT.21](#task-plt-21) — context freezing. *Why:* freeze-context step. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [PLT.15](#task-plt-15) — real LocalRpc brokered routing for the subset of invocations that target an admitted helper/extension child. *Why:* the core in-process invocation path (most capabilities) never touches [WP-08](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08); only the child-routing branch does, and that branch's real proof is later (WP41 extension platform). |
 | Unblocks | [APP.02](app-composition.md#task-app-02), [PLT.25](#task-plt-25), [PLT.57](#task-plt-57) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Capabilities/**` |
@@ -597,10 +599,11 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / S |
+| Package acceptance | Records the [WP-09](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-09.90](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.90) — full |
 | Provides | capabilities-package |
 | Start prerequisites | **artifact** [PLT.17](#task-plt-17) — identity/composition. *Why:* publish needs the complete substep set.<br>**artifact** [PLT.18](#task-plt-18) — contribution registration. *Why:* same.<br>**artifact** [PLT.19](#task-plt-19) — registry/selection. *Why:* same.<br>**artifact** [PLT.20](#task-plt-20) — actions/availability. *Why:* same.<br>**artifact** [PLT.21](#task-plt-21) — context freezing. *Why:* same.<br>**artifact** [PLT.22](#task-plt-22) — resources/artifacts. *Why:* same.<br>**artifact** [PLT.23](#task-plt-23) — navigation/health. *Why:* same.<br>**artifact** [PLT.24](#task-plt-24) — invocation pipeline. *Why:* same.<br>**artifact** [PLT.57](#task-plt-57) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | none |
 | Write scope | `DesktopPlatform:eng/packaging/packages.json`<br>`DesktopPlatform:eng/version-sources.json` |
@@ -622,7 +625,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-10.00](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.00) — full<br>[WP-10](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10) Reconciliation of the five legacy src/BuildingBlocks/ArcForges.Desktop.{Experience,Graphics,Preview,RichContent,Text} scaffold projects per [WP-01.02](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.02) into DesignSystem/Shell — package-level obligation contribution |
 | Provides | design-tokens |
 | Start prerequisites | **artifact** [PRF.01](runtime-proofs.md#task-prf-01) — a proven Avalonia Native AOT publish with zero trim/AOT diagnostics. *Why:* WP10's own header lists [WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) output as 'the AOT proof and the control admission process'; every control this package introduces inherits [V-05a](../../../assurance/phase-1-official-verification.md#rule-v-05a). Owned by the native and runtime-proof lanes. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NOTES.03](arcnotes.md#task-notes-03), [NOTES.04](arcnotes.md#task-notes-04), [PLT.27](#task-plt-27), [PLT.29](#task-plt-29), [PLT.31](#task-plt-31), [PLT.35](#task-plt-35) |
 | Write scope | `DesktopPlatform:src/DesignSystem/ArcForges.DesignSystem/**` |
@@ -644,9 +647,9 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-10.01](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.01) — full<br>[WP-10](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10) Reconciliation of the five legacy src/BuildingBlocks/ArcForges.Desktop.{Experience,Graphics,Preview,RichContent,Text} scaffold projects per [WP-01.02](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.02) into DesignSystem/Shell — package-level obligation contribution |
 | Provides | window-panel-layout |
 | Start prerequisites | **artifact** [PLT.26](#task-plt-26) — token system. *Why:* layout chrome is built from the token set. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [NOTES.03](arcnotes.md#task-notes-03), [NOTES.05](arcnotes.md#task-notes-05), [PLT.28](#task-plt-28), [PLT.30](#task-plt-30), [PLT.33](#task-plt-33), [PLT.35](#task-plt-35), [SLATE.22](arcslate.md#task-slate-22), [SLATE.25](arcslate.md#task-slate-25) |
+| Unblocks | [NOTES.03](arcnotes.md#task-notes-03), [NOTES.04](arcnotes.md#task-notes-04), [NOTES.05](arcnotes.md#task-notes-05), [PLT.28](#task-plt-28), [PLT.30](#task-plt-30), [PLT.33](#task-plt-33), [PLT.35](#task-plt-35), [SLATE.22](arcslate.md#task-slate-22), [SLATE.25](arcslate.md#task-slate-25) |
 | Write scope | `DesktopPlatform:src/DesignSystem/ArcForges.Desktop.Shell/**` |
 | Shared resources | [RES-desktopplatform-build-config](../shared-resources.md#res-desktopplatform-build-config) (append) |
 | Validation | Offline tests: restore tests across missing panel, changed display arrangement, corrupted layout state; device-local assertion. |
@@ -666,7 +669,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-10.02](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.02) — full |
 | Provides | command-system |
 | Start prerequisites | **artifact** [PLT.27](#task-plt-27) — window/panel host. *Why:* commands attach to shell chrome (palette, menus).<br>**artifact** [PLT.20](#task-plt-20) — capability availability evaluation ([WP-09.03](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.03)). *Why:* explicit BR: command availability must reuse [WP-09.03](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.03)'s evaluation so the two never disagree; this is a real cross-lane (capabilities->shell) dependency within the DesktopPlatform repository, distinct from the rest of WP10 which does not need WP09 at all. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.32](#task-plt-32), [PLT.35](#task-plt-35), [SLATE.22](arcslate.md#task-slate-22) |
 | Write scope | `DesktopPlatform:src/DesignSystem/ArcForges.Desktop.Shell/**` |
@@ -688,7 +691,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-10.03](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.03) — full |
 | Provides | scoped-settings |
 | Start prerequisites | **artifact** [PLT.26](#task-plt-26) — token/theming groundwork. *Why:* loosely - settings UI reuses shell chrome; can largely proceed in parallel with PLT.27/28 once PLT.26 lands.<br>**artifact** [PLT.04](#task-plt-04) — migration runner pattern ([WP-07.03](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.03)). *Why:* settings schema migration reuses the same migration idiom persistence establishes, applied to a device-local settings store rather than product canonical data. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.35](#task-plt-35) |
 | Write scope | `DesktopPlatform:src/DesignSystem/ArcForges.Desktop.Shell/**` |
@@ -709,7 +712,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-10.04](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.04) — full |
 | Provides | attention-model |
 | Start prerequisites | **artifact** [PLT.27](#task-plt-27) — window/panel host. *Why:* attention surfaces render inside shell chrome. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.35](#task-plt-35) |
 | Write scope | `DesktopPlatform:src/DesignSystem/ArcForges.Desktop.Shell/**` |
@@ -730,7 +733,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-10.05](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.05) — full |
 | Provides | error-presentation |
 | Start prerequisites | **artifact** [PLT.26](#task-plt-26) — token system. *Why:* error surfaces are themed shell chrome.<br>**artifact** [FND.05](foundation.md#task-fnd-05) — reason-code registry. *Why:* every presented error is keyed off a registered reason code; this is a direct FND->Shell contract dependency. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.35](#task-plt-35), [PLT.52](#task-plt-52) |
 | Write scope | `DesktopPlatform:src/DesignSystem/ArcForges.Desktop.Shell/**` |
@@ -751,7 +754,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-10.06](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.06) — full |
 | Provides | lifecycle-shutdown |
 | Start prerequisites | **artifact** [PLT.28](#task-plt-28) — command registry. *Why:* menus contribute from the command registry. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.07](app-composition.md#task-app-07), [PLT.35](#task-plt-35), [SCOPE.09](arcscope.md#task-scope-09), [UPD.03](updater.md#task-upd-03) |
 | Write scope | `DesktopPlatform:src/DesignSystem/ArcForges.Desktop.Shell/**` |
@@ -772,7 +775,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-10.07](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.07) — full |
 | Provides | accessibility-l10n |
 | Start prerequisites | **artifact** [PLT.27](#task-plt-27) — window/panel/layout. *Why:* focus order and keyboard reachability are properties of the layout model. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.35](#task-plt-35) |
 | Write scope | `DesktopPlatform:src/DesignSystem/ArcForges.Desktop.Shell/**`<br>`DesktopPlatform:tests/DesktopUiTests/**` |
@@ -794,7 +797,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-10.08](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.08) — full |
 | Provides | third-party-control-admission |
 | Start prerequisites | **artifact** [PRF.01](runtime-proofs.md#task-prf-01) — the established AOT-publish-with-zero-diagnostics harness/process. *Why:* this substep applies the same proof methodology [WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) establishes to each additional control the shell adopts; it is ongoing (a standing admission process), not a one-time gate. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.35](#task-plt-35), [PRF.09](runtime-proofs.md#task-prf-09) |
 | Write scope | `DesktopPlatform:src/DesignSystem/**`<br>`DesktopPlatform:docs/**` |
@@ -812,10 +815,11 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / S |
+| Package acceptance | Records the [WP-10](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-10.90](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.90) — all work except the parts mapped to PLT.56 |
 | Provides | designsystem-shell-packages |
 | Start prerequisites | **artifact** [PLT.26](#task-plt-26) — tokens. *Why:* publish needs the complete substep set.<br>**artifact** [PLT.27](#task-plt-27) — windows/panels. *Why:* same.<br>**artifact** [PLT.28](#task-plt-28) — commands. *Why:* same.<br>**artifact** [PLT.29](#task-plt-29) — settings. *Why:* same.<br>**artifact** [PLT.30](#task-plt-30) — attention. *Why:* same.<br>**artifact** [PLT.31](#task-plt-31) — error presentation. *Why:* same.<br>**artifact** [PLT.32](#task-plt-32) — lifecycle/menus. *Why:* same.<br>**artifact** [PLT.33](#task-plt-33) — a11y/l10n. *Why:* same.<br>**artifact** [PLT.34](#task-plt-34) — control admission. *Why:* same. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [PLT.56](#task-plt-56) — ArcNotes actually composing the shell for its own product UI. *Why:* 'independent app restores only needed packages' is only truly proven once a real product consumes it; WP10's own gate accepts a clean package-only consumer diagnostic as sufficient for THIS package's completion, with full product UX acceptance remaining product-owned. |
 | Unblocks | [PLT.56](#task-plt-56) |
 | Write scope | `DesktopPlatform:eng/packaging/packages.json` |
@@ -837,7 +841,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-11.00](../../work-packages/11-security-foundation.md#rule-wp-11.00) — full |
 | Provides | actor-chain |
 | Start prerequisites | **artifact** [FND.01](foundation.md#task-fnd-01) — identity primitive types. *Why:* the actor chain is composed of [WP-04](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04) typed identifiers. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.38](#task-plt-38), [PLT.40](#task-plt-40), [PLT.44](#task-plt-44), [PLT.46](#task-plt-46) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Security/**` |
@@ -858,7 +862,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-11.01](../../work-packages/11-security-foundation.md#rule-wp-11.01) — full |
 | Provides | risk-model |
 | Start prerequisites | **artifact** [PLT.19](#task-plt-19) — CapabilityDescriptor carrying risk level/trust requirement/side-effect class ([WP-09.02](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.02)). *Why:* [WP-09](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09)'s own [BR-10](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-br-10) states 'a capability descriptor is richer than a tool description: it carries risk level, trust requirement, side-effect class, reversibility and approval posture' - the risk model classifies against fields the capability descriptor already declares. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.38](#task-plt-38), [PLT.39](#task-plt-39), [PLT.46](#task-plt-46) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Security/**` |
@@ -879,7 +883,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-11.02](../../work-packages/11-security-foundation.md#rule-wp-11.02) — all work except the parts mapped to PLT.57 |
 | Provides | decision-pipeline; security-decision-type |
 | Start prerequisites | **artifact** [PLT.36](#task-plt-36) — actor chain. *Why:* every pipeline step operates on the actor chain.<br>**artifact** [PLT.37](#task-plt-37) — risk model. *Why:* the pipeline classifies effective risk as one of its steps.<br>**artifact** [PLT.10](#task-plt-10) — LocalRpc session handshake ([WP-08.01](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.01)/08.02). *Why:* enforcement point 2 ('transport boundary') is literally the local IPC handshake per architecture/08-security-architecture.md SS2; the pipeline's transport-boundary step wraps this real mechanism, not a placeholder. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.02](app-composition.md#task-app-02), [GOV.16](governance.md#task-gov-16), [PLT.41](#task-plt-41), [PLT.43](#task-plt-43), [PLT.46](#task-plt-46), [PLT.57](#task-plt-57) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Security/**`<br>`DesktopPlatform:src/BuildingBlocks/ArcForges.Capabilities/**` |
@@ -901,7 +905,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-11.03](../../work-packages/11-security-foundation.md#rule-wp-11.03) — full |
 | Provides | approval-stepup; approval-request-type |
 | Start prerequisites | **artifact** [PLT.37](#task-plt-37) — risk model. *Why:* step-up/local-presence requirements are keyed off risk class.<br>**artifact** [PLT.01](#task-plt-01) — durable persistence for the approval object. *Why:* [AP-01](../../../architecture/05-cloud-architecture.md#rule-ap-01) requires an approval to survive an application restart and a device change - it must be a durable persisted object, not in-memory. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.05](app-composition.md#task-app-05), [AST.12](assistant.md#task-ast-12), [DEV.06](device-bridge.md#task-dev-06), [EXE.06](execution.md#task-exe-06), [PLT.46](#task-plt-46) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Security/**` |
@@ -922,7 +926,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-11.04](../../work-packages/11-security-foundation.md#rule-wp-11.04) — full<br>[WP-11](../../work-packages/11-security-foundation.md#rule-wp-11) Application credential boundary: shared security packages use the caller application/installation storage namespace; deny sibling credential reads; no device-SSO signing broker — package-level obligation contribution |
 | Provides | secret-broker; secret-ref-type |
 | Start prerequisites | **artifact** [PLT.36](#task-plt-36) — actor chain. *Why:* secret scoping is per realm/account/product/installation, which the actor chain carries. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [CLOUD.18](cloud.md#task-cloud-18) — real Cloud authentication. *Why:* [WP-11.04](../../work-packages/11-security-foundation.md#rule-wp-11.04)'s own gate explicitly says 'Cloud authentication arrives in WP22'; this task supplies OS secret-store adapters and isolation only. |
 | Unblocks | [CLOUD.18](cloud.md#task-cloud-18), [PLT.46](#task-plt-46), [PLT.49](#task-plt-49), [UPD.01](updater.md#task-upd-01) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Security.Secrets/**` |
@@ -944,7 +948,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-11.05](../../work-packages/11-security-foundation.md#rule-wp-11.05) — full |
 | Provides | egress-control |
 | Start prerequisites | **artifact** [PLT.38](#task-plt-38) — decision pipeline. *Why:* egress is evaluated as a distinct authorization within the same pipeline machinery. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.06](app-composition.md#task-app-06), [PLT.46](#task-plt-46) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Security/**` |
@@ -965,7 +969,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-11.06](../../work-packages/11-security-foundation.md#rule-wp-11.06) — full |
 | Provides | instruction-provenance |
 | Start prerequisites | **artifact** [PLT.21](#task-plt-21) — context freezing ([WP-09.04](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.04)). *Why:* provenance marking travels with the same context objects the capability model freezes at invocation. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.05](assistant.md#task-ast-05), [PLT.46](#task-plt-46) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Security/**` |
@@ -986,7 +990,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-11.07](../../work-packages/11-security-foundation.md#rule-wp-11.07) — full |
 | Provides | capability-leases |
 | Start prerequisites | **artifact** [PLT.38](#task-plt-38) — decision pipeline. *Why:* lease checks are a pipeline step.<br>**artifact** [PLT.01](#task-plt-01) — durable persistence for lease state. *Why:* leases must be revocable mid-operation and survive restart; needs a durable store. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [DEV.03](device-bridge.md#task-dev-03), [PLT.46](#task-plt-46) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Security/**` |
@@ -1007,7 +1011,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-11.08](../../work-packages/11-security-foundation.md#rule-wp-11.08) — full |
 | Provides | audit-subsystem; audit-event-type |
 | Start prerequisites | **artifact** [PLT.36](#task-plt-36) — actor chain. *Why:* every audit event records the full actor chain per architecture/08 SS11 [AD-04](../../../architecture/08-security-architecture.md#rule-ad-04).<br>**artifact** [PLT.01](#task-plt-01) — persistence write path. *Why:* audit is a durable append-only store built on the same persistence foundation, in its own local_audit table per the desktop data model (SS1.5), kept separate from ordinary product tables. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.46](#task-plt-46) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Security.Audit/**` |
@@ -1029,7 +1033,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-11.09](../../work-packages/11-security-foundation.md#rule-wp-11.09) — full; production ContentSandbox helper, real transport<br>[WP-11](../../work-packages/11-security-foundation.md#rule-wp-11) Local gRPC closure (SS7): own actual signed restricted gRPC helper, launch-secret/OS-descriptor allowlist, hostile-fixture containment, private-copy/digest validation, ConnectorBroker security boundary (real connector providers are WP41) — package-level obligation contribution |
 | Provides | content-helper-isolation; contentsandbox-host |
 | Start prerequisites | **artifact** [PLT.15](#task-plt-15) — LocalRpc brokered large-data mechanism ([WP-08.06](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.06)). *Why:* the sandbox's slot grant/seal/ack/cancel lifecycle rides on the generic broker [WP-08.06](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.06) defines; ContentSandbox is the first real consumer.<br>**artifact** [PLT.09](#task-plt-09) — LocalRpc transport/restricted launch identity ([WP-08.00](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.00)/08.01). *Why:* the parent-created duplex stream and one-use launch secret are [WP-08](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08) mechanisms this helper is launched through.<br>**contract** [CON.04](contracts.md#task-con-04) — ArcForges.Contracts.LocalRpc.Sandbox generated ContentSandboxService/session/grant schema. *Why:* contracts/09-local-grpc-and-sandbox.md SS6 fixes WP03 as publishing the complete schema before this stage; ContentSandbox.Contracts is only a facade over it. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [NAT.14](native.md#task-nat-14) — production PDF/image/media/OTIO parser composition rebuilt and signed on top of this same helper. *Why:* this task's own gate is explicit: 'WP13 later adds production parser composition to the same host and publishes a new immutable Runtime version; this stage has no reverse dependency on those parsers.' Full [PG-12](../../../assurance/open-gates-register.md#rule-pg-12)/[PG-22](../../../assurance/open-gates-register.md#rule-pg-22) closure additionally needs [WP-18.04](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.04) (Notes PDF viewer) and [WP-37.01](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.01)/41.00 real per-format/extension proofs. |
 | Unblocks | [EXT.00](extensions.md#task-ext-00), [NAT.11](native.md#task-nat-11), [NAT.14](native.md#task-nat-14), [NAT.25](native.md#task-nat-25), [NOTES.09](arcnotes.md#task-notes-09), [NOTES.37](arcnotes.md#task-notes-37), [PLT.15](#task-plt-15), [PLT.46](#task-plt-46), [PLT.54](#task-plt-54) |
 | Permitted substitutes | [SUB-hostile-test-parser](../substitutes.md#sub-hostile-test-parser) |
@@ -1050,10 +1054,11 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / M |
+| Package acceptance | Records the [WP-11](../../work-packages/11-security-foundation.md#rule-wp-11) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-11.90](../../work-packages/11-security-foundation.md#rule-wp-11.90) — full |
 | Provides | security-package |
 | Start prerequisites | **artifact** [PLT.36](#task-plt-36) — actor chain. *Why:* publish needs the complete substep set.<br>**artifact** [PLT.37](#task-plt-37) — risk model. *Why:* same.<br>**artifact** [PLT.38](#task-plt-38) — decision pipeline. *Why:* same.<br>**artifact** [PLT.39](#task-plt-39) — approval/step-up. *Why:* same.<br>**artifact** [PLT.40](#task-plt-40) — secrets/session isolation. *Why:* same.<br>**artifact** [PLT.41](#task-plt-41) — egress control. *Why:* same.<br>**artifact** [PLT.42](#task-plt-42) — instruction provenance. *Why:* same.<br>**artifact** [PLT.43](#task-plt-43) — leases/trust. *Why:* same.<br>**artifact** [PLT.44](#task-plt-44) — audit. *Why:* same.<br>**artifact** [PLT.45](#task-plt-45) — content helper isolation. *Why:* same.<br>**artifact** [PLT.54](#task-plt-54) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [PLT.57](#task-plt-57) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | none |
 | Write scope | `DesktopPlatform:eng/packaging/packages.json` |
@@ -1075,7 +1080,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-12.00](../../work-packages/12-observability-foundation.md#rule-wp-12.00) — full |
 | Provides | signal-emission |
 | Start prerequisites | **artifact** [FND.01](foundation.md#task-fnd-01) — identity primitive types (instance identity, build id). *Why:* required dimensions are typed [WP-04](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04) identifiers, not free strings. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.48](#task-plt-48), [PLT.53](#task-plt-53), [UPD.06](updater.md#task-upd-06) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Observability/**` |
@@ -1096,7 +1101,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-12.01](../../work-packages/12-observability-foundation.md#rule-wp-12.01) — full |
 | Provides | correlation-causation |
 | Start prerequisites | **artifact** [PLT.47](#task-plt-47) — emission surface. *Why:* correlation/causation are dimensions carried on every emitted signal. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [CLOUD.01](cloud.md#task-cloud-01) — a real Cloud hop to prove the full HTTP/queue/worker/realtime/provider chain. *Why:* the desktop side can only prove propagation up to its own local hops (RPC, in-process) until a real Cloud counterpart exists; the [WP-12.90](../../work-packages/12-observability-foundation.md#rule-wp-12.90) receipt records this as a named later real-integration item. |
 | Unblocks | [PLT.53](#task-plt-53) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Observability/**` |
@@ -1117,7 +1122,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-12.02](../../work-packages/12-observability-foundation.md#rule-wp-12.02) — full<br>[WP-12](../../work-packages/12-observability-foundation.md#rule-wp-12) eng/policy/telemetry-policy.json creation: dimension allowlist, metric label allowlist, sampling and retention configuration — package-level obligation contribution |
 | Provides | redaction |
 | Start prerequisites | **artifact** [PLT.40](#task-plt-40) — SecretRef type with no accessible string representation. *Why:* [RD-03](../../../architecture/01-solution-and-project-layout.md#rule-rd-03) requires SecretRef's formatting to emit only a reference; redaction structurally depends on Security's type design, not merely a logging convention.<br>**artifact** [FND.05](foundation.md#task-fnd-05) — reason-code registry. *Why:* [RD-07](../../../architecture/01-solution-and-project-layout.md#rule-rd-07) maps exception messages to reason codes before export. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.50](#task-plt-50), [PLT.52](#task-plt-52), [PLT.53](#task-plt-53) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Observability/**`<br>`DesktopPlatform:eng/policy/telemetry-policy.json` |
@@ -1138,7 +1143,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-12.03](../../work-packages/12-observability-foundation.md#rule-wp-12.03) — full<br>[WP-12](../../work-packages/12-observability-foundation.md#rule-wp-12) eng/policy/telemetry-policy.json creation: dimension allowlist, metric label allowlist, sampling and retention configuration — package-level obligation contribution |
 | Provides | cardinality-sampling |
 | Start prerequisites | **artifact** [PLT.49](#task-plt-49) — redaction processor. *Why:* sampling/cardinality policy is applied on top of the already-redacted signal shape. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.53](#task-plt-53) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Observability/**`<br>`DesktopPlatform:eng/policy/telemetry-policy.json` |
@@ -1159,7 +1164,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-12.04](../../work-packages/12-observability-foundation.md#rule-wp-12.04) — full |
 | Provides | health-probes; health-dimension-source |
 | Start prerequisites | **artifact** [PLT.23](#task-plt-23) — HealthDimension type ([WP-09.06](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.06)). *Why:* the same five-dimension vocabulary is defined once in the capability model and reused identically here. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.53](#task-plt-53) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Observability/**` |
@@ -1180,7 +1185,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Obligations | [WP-12.05](../../work-packages/12-observability-foundation.md#rule-wp-12.05) — full |
 | Provides | desktop-diagnostics-consent |
 | Start prerequisites | **artifact** [PLT.31](#task-plt-31) — error presentation shell surface ([WP-10.05](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.05)). *Why:* the diagnostic report/consent flow is presented through shell UI, and the verbose-session indicator is shell chrome.<br>**artifact** [PLT.49](#task-plt-49) — redaction. *Why:* a generated diagnostic report must already be redacted before it is shown to the user for approval. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.53](#task-plt-53) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Observability.Desktop/**` |
@@ -1199,10 +1204,11 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / S |
+| Package acceptance | Records the [WP-12](../../work-packages/12-observability-foundation.md#rule-wp-12) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-12.90](../../work-packages/12-observability-foundation.md#rule-wp-12.90) — full |
 | Provides | observability-package |
 | Start prerequisites | **artifact** [PLT.47](#task-plt-47) — emission/dimensions. *Why:* publish needs the complete substep set.<br>**artifact** [PLT.48](#task-plt-48) — correlation/causation. *Why:* same.<br>**artifact** [PLT.49](#task-plt-49) — redaction. *Why:* same.<br>**artifact** [PLT.50](#task-plt-50) — cardinality/sampling. *Why:* same.<br>**artifact** [PLT.51](#task-plt-51) — health probes. *Why:* same.<br>**artifact** [PLT.52](#task-plt-52) — diagnostics/consent. *Why:* same. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | none |
 | Write scope | `DesktopPlatform:eng/packaging/packages.json` |
@@ -1223,7 +1229,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Kind / size | integration / M |
 | Obligations | [WP-11.09](../../work-packages/11-security-foundation.md#rule-wp-11.09) — containment mechanics re-verified against the real parser closure<br>[WP-13.13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.13) — production parser composition and its own containment evidence |
 | Start prerequisites | **artifact** [PLT.45](#task-plt-45) — real, delivered outcome of PLT.45 (Content helper and OS-enforced isolation (ContentSandbox host)). *Why:* this integration exercises the real content helper and OS-enforced isolation (ContentSandbox host) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NAT.14](native.md#task-nat-14) — real, delivered outcome of NAT.14 (Pdf family: PDFium and production parser containment in the WP11 helper (NEW library)). *Why:* this integration exercises the real pdf family: PDFium and production parser containment in the WP11 helper (NEW library) instead of a substitute, so it cannot start before that outcome exists |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [NAT.30](native.md#task-nat-30), [PLT.46](#task-plt-46) |
 | Write scope |  |
@@ -1243,7 +1249,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Kind / size | integration / M |
 | Obligations | [WP-10.90](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.90) — the multi-product consumption evidence beyond a single clean package-only diagnostic |
 | Start prerequisites | **artifact** [PLT.35](#task-plt-35) — real, delivered outcome of PLT.35 (Publish DesignSystem/Shell packages and verify real integration). *Why:* this integration exercises the real publish DesignSystem/Shell packages and verify real integration instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NOTES.03](arcnotes.md#task-notes-03) — real, delivered outcome of NOTES.03 (Editor interaction: caret, selection, IME composition, markdown-friendly input). *Why:* this integration exercises the real editor interaction: caret, selection, IME composition, markdown-friendly input instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SCOPE.09](arcscope.md#task-scope-09) — real, delivered outcome of SCOPE.09 (Long-running capture in the shell). *Why:* this integration exercises the real long-running capture in the shell instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SLATE.22](arcslate.md#task-slate-22) — real, delivered outcome of SLATE.22 (Viewer: source and sequence, professional transport). *Why:* this integration exercises the real viewer: source and sequence, professional transport instead of a substitute, so it cannot start before that outcome exists |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.35](#task-plt-35) |
 | Write scope |  |
@@ -1263,7 +1269,7 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Kind / size | integration / M |
 | Obligations | [WP-09.07](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.07) — real authorize-step integration<br>[WP-11.02](../../work-packages/11-security-foundation.md#rule-wp-11.02) — real invocation-pipeline attachment |
 | Start prerequisites | **artifact** [PLT.24](#task-plt-24) — real, delivered outcome of PLT.24 (Invocation pipeline). *Why:* this integration exercises the real invocation pipeline instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [PLT.38](#task-plt-38) — real, delivered outcome of PLT.38 (Decision pipeline and the four enforcement points). *Why:* this integration exercises the real decision pipeline and the four enforcement points instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [APP.01](app-composition.md#task-app-01) — real, delivered outcome of APP.01 (Assistant.Abstractions host ports and application identity). *Why:* this integration exercises the real assistant.Abstractions host ports and application identity instead of a substitute, so it cannot start before that outcome exists |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.platform](adoption.md#task-adopt-02-platform) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.25](#task-plt-25), [PLT.46](#task-plt-46) |
 | Write scope |  |

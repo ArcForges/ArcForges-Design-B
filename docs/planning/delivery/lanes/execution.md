@@ -33,7 +33,7 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-16.00](../../work-packages/16-unified-execution-engine.md#rule-wp-16.00) — full<br>[WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) Tool-result acceptance paragraph (between §5 and §6): two distinct toolRequestIds in one attempt both persist and each replay returns its own original receipt; a changed result under the same (toolRequestId,attemptId,commandId) refuses with command.reused_identifier; lost acknowledgement never allocates a fresh command or drops the second result. Bound to the wire registry, [TK-05](../../../architecture/contracts/01-public-api-operations.md#rule-tk-05) and task.tool_result -- the same key [WP-26.03](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.03) uses. — package-level obligation contribution |
 | Provides | execution-chain-store; productjob-engine-pkg |
 | Start prerequisites | **artifact** [APP.01](app-composition.md#task-app-01) — published product/profile identity (ApplicationScope) from Assistant.Abstractions. *Why:* [BR-05](../../../architecture/14-build-packaging-and-release.md#rule-br-05) requires a task be owned by exactly one product; ownership binds to this real identity type<br>**artifact** [FND.02](foundation.md#task-fnd-02) — published execution identity and idempotency records. *Why:* JobAttempt retry allocates a new attempt but reuses the command identity from this contract<br>**artifact** [FND.03](foundation.md#task-fnd-03) — published revision and sequence records. *Why:* durable state transitions are ordered/versioned using this contract<br>**artifact** [PLT.17](platform.md#task-plt-17) — real application identity and in-process composition. *Why:* the engine composes into the host process using the real composition model |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.execution](adoption.md#task-adopt-02-execution) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.10](assistant.md#task-ast-10), [AST.13](assistant.md#task-ast-13), [DEV.05](device-bridge.md#task-dev-05), [EXE.02](#task-exe-02), [EXE.03](#task-exe-03), [EXE.04](#task-exe-04), [EXE.05](#task-exe-05), [EXE.06](#task-exe-06), [EXE.07](#task-exe-07), [EXE.08](#task-exe-08), [EXE.09](#task-exe-09), [SLATE.28](arcslate.md#task-slate-28), [SLATE.30](arcslate.md#task-slate-30) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Execution/**`<br>`DesktopPlatform:src/BuildingBlocks/ArcForges.Execution.Persistence/**`<br>`DesktopPlatform:tests/ExecutionEngineTests/**` |
@@ -56,7 +56,7 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-16.01](../../work-packages/16-unified-execution-engine.md#rule-wp-16.01) — full |
 | Provides | execution-reason-facets |
 | Start prerequisites | **artifact** [EXE.01](#task-exe-01) — the real state machine to attach reason facets to. *Why:* reason facets annotate the real transitions, not a mock enum |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.execution](adoption.md#task-adopt-02-execution) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXE.09](#task-exe-09) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Execution/**` |
@@ -77,7 +77,7 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-16.02](../../work-packages/16-unified-execution-engine.md#rule-wp-16.02) — full |
 | Provides | execution-failure-classification |
 | Start prerequisites | **artifact** [EXE.01](#task-exe-01) — the real state machine to classify failures against. *Why:* classification decisions drive real transitions |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.execution](adoption.md#task-adopt-02-execution) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXE.09](#task-exe-09) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Execution/**` |
@@ -99,7 +99,7 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-16.03](../../work-packages/16-unified-execution-engine.md#rule-wp-16.03) — full |
 | Provides | execution-child-task-tree |
 | Start prerequisites | **artifact** [EXE.01](#task-exe-01) — the real state machine and persistence to attach child relationships to. *Why:* child ownership/cancellation must be durable, not in-memory only |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.execution](adoption.md#task-adopt-02-execution) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXE.09](#task-exe-09) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Execution/**` |
@@ -121,7 +121,7 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-16.04](../../work-packages/16-unified-execution-engine.md#rule-wp-16.04) — full<br>[WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) Tool-result acceptance paragraph (between §5 and §6): two distinct toolRequestIds in one attempt both persist and each replay returns its own original receipt; a changed result under the same (toolRequestId,attemptId,commandId) refuses with command.reused_identifier; lost acknowledgement never allocates a fresh command or drops the second result. Bound to the wire registry, [TK-05](../../../architecture/contracts/01-public-api-operations.md#rule-tk-05) and task.tool_result -- the same key [WP-26.03](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.03) uses. — package-level obligation contribution |
 | Provides | execution-checkpoint-compensation |
 | Start prerequisites | **artifact** [EXE.01](#task-exe-01) — the real durable state machine to checkpoint. *Why:* resume-after-kill must exercise the real persistence |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.execution](adoption.md#task-adopt-02-execution) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.13](assistant.md#task-ast-13), [EXE.09](#task-exe-09) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Execution/**` |
@@ -144,7 +144,7 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-16.05](../../work-packages/16-unified-execution-engine.md#rule-wp-16.05) — full |
 | Provides | execution-approval-budget |
 | Start prerequisites | **artifact** [EXE.01](#task-exe-01) — the real durable state machine to pause/resume. *Why:* approval-pause-across-restart requires real durability<br>**artifact** [PLT.39](platform.md#task-plt-39) — published approval/steering/step-up mechanism. *Why:* [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06) requires approval be a discrete authorization from the real security pipeline, steering grants nothing |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.execution](adoption.md#task-adopt-02-execution) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXE.09](#task-exe-09) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Execution/**`<br>`DesktopPlatform:src/BuildingBlocks/ArcForges.Execution.Budget/**` |
@@ -167,7 +167,7 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-16.06](../../work-packages/16-unified-execution-engine.md#rule-wp-16.06) — full |
 | Provides | execution-progress-outcome-trace |
 | Start prerequisites | **artifact** [EXE.01](#task-exe-01) — the real durable state machine to record outcome against. *Why:* the conflation test requires a real outcome record independent of progress delivery |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.execution](adoption.md#task-adopt-02-execution) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXE.09](#task-exe-09) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Execution/**` |
@@ -189,7 +189,7 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-16.07](../../work-packages/16-unified-execution-engine.md#rule-wp-16.07) — full |
 | Provides | execution-concurrency-guard |
 | Start prerequisites | **artifact** [EXE.01](#task-exe-01) — the real state machine and job tree to bound. *Why:* loop/cascade detection operates on real step re-entry and real child trees (EXE.04) |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.execution](adoption.md#task-adopt-02-execution) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXE.09](#task-exe-09) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Execution/**` |
@@ -208,10 +208,11 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / M |
+| Package acceptance | Records the [WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-16.90](../../work-packages/16-unified-execution-engine.md#rule-wp-16.90) — full<br>[WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) §6 Impacts row 'Compatibility: Task contract versioning for later cloud and mobile surfaces' — package-level obligation contribution |
 | Provides | wp16-accepted-artifact; productjob-ref-surface |
 | Start prerequisites | **artifact** [EXE.01](#task-exe-01) — completed [WP-16.00](../../work-packages/16-unified-execution-engine.md#rule-wp-16.00). *Why:* aggregation<br>**artifact** [EXE.02](#task-exe-02) — completed [WP-16.01](../../work-packages/16-unified-execution-engine.md#rule-wp-16.01). *Why:* aggregation<br>**artifact** [EXE.03](#task-exe-03) — completed [WP-16.02](../../work-packages/16-unified-execution-engine.md#rule-wp-16.02). *Why:* aggregation<br>**artifact** [EXE.04](#task-exe-04) — completed [WP-16.03](../../work-packages/16-unified-execution-engine.md#rule-wp-16.03). *Why:* aggregation<br>**artifact** [EXE.05](#task-exe-05) — completed [WP-16.04](../../work-packages/16-unified-execution-engine.md#rule-wp-16.04). *Why:* aggregation<br>**artifact** [EXE.06](#task-exe-06) — completed [WP-16.05](../../work-packages/16-unified-execution-engine.md#rule-wp-16.05). *Why:* aggregation<br>**artifact** [EXE.07](#task-exe-07) — completed [WP-16.06](../../work-packages/16-unified-execution-engine.md#rule-wp-16.06). *Why:* aggregation<br>**artifact** [EXE.08](#task-exe-08) — completed [WP-16.07](../../work-packages/16-unified-execution-engine.md#rule-wp-16.07). *Why:* aggregation |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.execution](adoption.md#task-adopt-02-execution) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AST.17](assistant.md#task-ast-17) |
 | Write scope | `DesktopPlatform:artifacts/evidence/**` |

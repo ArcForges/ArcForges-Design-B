@@ -35,9 +35,9 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 | Obligations | [WP-43.00](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.00) — full |
 | Provides | workers-ai-adapter |
 | Start prerequisites | **contract** [CON.10](contracts.md#task-con-10) — published internal AI HTTP profile (model-intent/model-outcome/dispatch ports) from internal/ai-http/v1/schema.json. *Why:* the adapter is called through this fixed internal contract, already scaffolded in Contracts (a CommitReceipt shape observed there)<br>**artifact** [POL.08](policy.md#task-pol-08) — active model/route policy snapshot naming the admitted catalogue subset. *Why:* [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06) requires policy to gate which models are activatable; routing cannot hardcode the catalogue |
-| Entry condition | [ADOPT.08](adoption.md#task-adopt-08) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.08.ai-routing](adoption.md#task-adopt-08-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [AIR.02](#task-air-02), [AIR.03](#task-air-03), [AIR.05](#task-air-05), [AIR.07](#task-air-07), [AIR.08](#task-air-08), [AIR.09](#task-air-09), [HAR.00](harness.md#task-har-00), [HAR.05](harness.md#task-har-05), [SRCH.01](search.md#task-srch-01), [SRCH.02](search.md#task-srch-02), [SRCH.06](search.md#task-srch-06) |
+| Unblocks | [AIR.02](#task-air-02), [AIR.03](#task-air-03), [AIR.05](#task-air-05), [AIR.07](#task-air-07), [AIR.08](#task-air-08), [AIR.09](#task-air-09), [CLOUD.67](cloud.md#task-cloud-67), [HAR.00](harness.md#task-har-00), [HAR.05](harness.md#task-har-05), [SRCH.06](search.md#task-srch-06) |
 | Write scope | `AI:src/providers/workers-ai/**`<br>`AI:src/inference/**` |
 | Shared resources | [RES-ai-workflow-and-routes](../shared-resources.md#res-ai-workflow-and-routes) (exclusive), [RES-private-configuration](../shared-resources.md#res-private-configuration) (append) |
 | Validation | Actual selected model/capability-shape tests, withdrawn/unknown/unsupported request tests, request-size/output-bound tests, version-mismatch tests. Real CF calls only in the credentialed candidate gate, not ordinary CI ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017): no real AI inference in CI). |
@@ -58,7 +58,7 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 | Obligations | [WP-43.01](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.01) — full |
 | Provides | ai-tariffs |
 | Start prerequisites | **artifact** [POL.02](policy.md#task-pol-02) — the customerTariffs/supplierPrices keys in Private configuration.v1 and its signed activation mechanism. *Why:* tariffs are policy-owned configuration (contracts/08's Private configuration.v1 names customerTariffs/supplierPrices explicitly as a [WP-43](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43)/[WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) shared schema); AIR.01 consumes [WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44)'s activation rather than inventing its own config channel |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.ai-routing](adoption.md#task-adopt-07-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.90](#task-air-90) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Agent/Tariffs/**` |
@@ -80,8 +80,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 | Obligations | [WP-43.02](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.02) — full |
 | Provides | ai-metering-settlement |
 | Start prerequisites | **artifact** [COM.08](commerce.md#task-com-08) — real budget/credit/admission ports (reservation, settlement transaction participants). *Why:* [WP-43](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43)'s own input table names this explicitly: '[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) output -- Real budget/credit/admission ports; native ProductJobs do not provide AI economics'<br>**artifact** [AIR.00](#task-air-00) — a dispatchable provider call to meter. *Why:* metering has nothing to reserve/settle against before a call kind exists |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
-| Completion prerequisites | none |
+| Entry condition | [ADOPT.07.ai-routing](adoption.md#task-adopt-07-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Completion prerequisites | **integration** [COM.12](commerce.md#task-com-12) — the real capacity admission participant. *Why:* metering starts from the credits participant; its settlement acceptance also runs against the real capacity admission participant |
 | Unblocks | [AIR.04](#task-air-04), [AIR.06](#task-air-06), [AIR.08](#task-air-08) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Agent/Metering/**` |
 | Validation | Actual CF normal/interrupted/lost outcome with concurrent duplicates and replayed receipts; cancelled/unknown hold sweep; tariff-change and operator-job isolation tests. Real-CF cases only at the credentialed candidate gate. |
@@ -101,7 +101,7 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 | Obligations | [WP-43.03](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.03) — full |
 | Provides | ai-realm-routing |
 | Start prerequisites | **artifact** [AIR.00](#task-air-00) — the adapter's admitted-catalogue validation. *Why:* realm routing decides among the same catalogue AIR.00 validates |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.ai-routing](adoption.md#task-adopt-07-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.90](#task-air-90) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Agent/Routing/**` |
@@ -123,7 +123,7 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 | Obligations | [WP-43.04](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.04) — interaction record, redaction, and cost-transparency surfaces (Cloud side) |
 | Provides | ai-interaction-records |
 | Start prerequisites | **artifact** [AIR.02](#task-air-02) — metered attempts to record interactions against. *Why:* an interaction record without a metered attempt has nothing to redact/explain |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.ai-routing](adoption.md#task-adopt-07-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.90](#task-air-90) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Agent/InteractionRecords/**` |
@@ -144,7 +144,7 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 | Obligations | [WP-43.04](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.04) — transparency marking mechanism at the provider generation boundary; marking-coverage per artifact type |
 | Provides | ai-content-origin-marking |
 | Start prerequisites | **artifact** [AIR.00](#task-air-00) — generated model output to mark. *Why:* marking attaches to the adapter's own output boundary |
-| Entry condition | [ADOPT.08](adoption.md#task-adopt-08) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.08.ai-routing](adoption.md#task-adopt-08-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.90](#task-air-90), [HAR.03](harness.md#task-har-03) |
 | Write scope | `AI:src/providers/workers-ai/ContentOrigin/**` |
@@ -167,9 +167,9 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 | Obligations | [WP-43.05](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.05) — full |
 | Provides | ai-funding-uncertainty-proof |
 | Start prerequisites | **artifact** [AIR.02](#task-air-02) — the reservation/settlement engine to prove uncertainty handling against. *Why:* this substep proves AIR.02's ledgers under crash/uncertain scenarios, it doesn't build a new ledger |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.ai-routing](adoption.md#task-adopt-07-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
-| Unblocks | [AIR.90](#task-air-90), [HAR.04](harness.md#task-har-04), [SRCH.00](search.md#task-srch-00) |
+| Unblocks | [AIR.90](#task-air-90), [HAR.04](harness.md#task-har-04), [SRCH.06](search.md#task-srch-06) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Agent/Metering/UncertainOutcome/**` |
 | Shared resources | [RES-ai-workflow-and-routes](../shared-resources.md#res-ai-workflow-and-routes) (append) |
 | Validation | Search-without-customer-debit, model-debit-once, crash-before/after-dispatch, unknown-deadline, late-usage-after-closed, no-automatic-retry tests -- offline with real-CF-shaped fixtures; real dispatch only at AIR.08's gate. |
@@ -190,7 +190,7 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 | Obligations | [WP-43.06](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.06) — full |
 | Provides | ai-provider-test-env-coverage |
 | Start prerequisites | **artifact** [AIR.00](#task-air-00) — the adapter to exercise against the test environment. *Why:* nothing to record fixtures from before the adapter exists |
-| Entry condition | [ADOPT.08](adoption.md#task-adopt-08) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.08.ai-routing](adoption.md#task-adopt-08-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.90](#task-air-90) |
 | Write scope | `AI:tests/provider-fixtures/**` |
@@ -212,7 +212,7 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 | Obligations | [WP-43.07](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.07) — full |
 | Provides | ai-real-provider-evidence |
 | Start prerequisites | **artifact** [AIR.00](#task-air-00) — the real adapter to record responses from. *Why:* nothing to normalize without the real adapter<br>**artifact** [AIR.02](#task-air-02) — the real settlement engine to reconcile the recorded evidence through. *Why:* [PG-13](../../../assurance/open-gates-register.md#rule-pg-13) requires 'one real provider usage response + one real payment-provider event reconciled through same code as fixtures'<br>**artifact** [AST.15](assistant.md#task-ast-15) — assistant admission path that carried the stubbed provider. *Why:* the stubbed path is removed from the consumer that introduced it |
-| Entry condition | [ADOPT.08](adoption.md#task-adopt-08) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.08.ai-routing](adoption.md#task-adopt-08-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.90](#task-air-90), [HAR.91](harness.md#task-har-91) |
 | Permitted substitutes | [SUB-stubbed-provider-path](../substitutes.md#sub-stubbed-provider-path) |
@@ -236,7 +236,7 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 | Obligations | [WP-43.90](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.90) — the final-review closure paragraph: real Workers AI Whisper with typed audio manifests/service object grants, supplier metering against actual response/manifest with missing usage retained uncertain, inference-late-outcome evidence-only reconciliation, bounded Workflow limits, stale-result non-publication<br>[WP-43](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43) Final-review closure paragraph: real Whisper/typed audio manifests, inference-late-outcome reconciliation, bounded Workflow limits, stale-result non-publication — package-level obligation contribution |
 | Provides | ai-asr-capability-closure |
 | Start prerequisites | **artifact** [AIR.00](#task-air-00) — the slate.transcribe.v1 Whisper adapter and the separate lightweight InferenceWorkflow. *Why:* this task closes that specific capability, it does not build a new one |
-| Entry condition | [ADOPT.08](adoption.md#task-adopt-08) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.08.ai-routing](adoption.md#task-adopt-08-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [AIR.90](#task-air-90), [HAR.91](harness.md#task-har-91) |
 | Write scope | `AI:src/inference/Asr/**` |
@@ -256,10 +256,11 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 |---|---|
 | Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
 | Kind / size | service / M |
+| Package acceptance | Records the [WP-43](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-43.90](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.90) — remaining aggregation/receipt<br>[WP-43](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure: real ExecutionOwner task/turn + operator-funded compaction/search support, durable receipts vs temporary bodies outside D1/SQLite/backups/checkpoints — package-level obligation contribution |
 | Provides | ai-routing-package-acceptance |
 | Start prerequisites | **artifact** [AIR.08](#task-air-08) — real-provider evidence. *Why:* acceptance cannot close without [PG-13](../../../assurance/open-gates-register.md#rule-pg-13) evidence in hand<br>**artifact** [AIR.01](#task-air-01) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [AIR.03](#task-air-03) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [AIR.04](#task-air-04) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [AIR.05](#task-air-05) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [AIR.06](#task-air-06) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [AIR.07](#task-air-07) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [AIR.09](#task-air-09) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.ai-routing](adoption.md#task-adopt-07-ai-routing) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.06](release.md#task-rel-06) |
 | Write scope | `Cloud:tests/Cloud.Tests.Integration/AiMetering/**` |

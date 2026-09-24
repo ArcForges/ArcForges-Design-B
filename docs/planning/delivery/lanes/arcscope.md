@@ -51,7 +51,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-33.00](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.00) — shared adapter contract; ConnectionProfile storage/reuse; EffectiveConfigurationSnapshot immutability on profile edit; lease/busy exclusivity model ([BR-01](../../../architecture/14-build-packaging-and-release.md#rule-br-01)..[BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06), [BR-09](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-br-09)) |
 | Provides | scope.source-adapter-contract; scope.connection-profile |
 | Start prerequisites | **artifact** [PLT.01](platform.md#task-plt-01) — published store abstraction with the single write path (for ArcScope's own profile/session store). *Why:* connection profiles and effective configuration snapshots are persisted data; [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06) requires historical sessions to be structurally immune to later profile edits, which needs the real single-writer store, not an in-memory stub, to prove durability/isolation honestly<br>**contract** [CON.91](contracts.md#task-con-91) — published Contracts records for capture/session identifiers referenced by ConnectionProfile. *Why:* the adapter contract's identifiers must be the real published shapes so downstream ArcScope projects and any future Cloud/AI consumer are wire-compatible from the start, not a locally invented shape that is rewritten later |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.03](#task-scope-03), [SCOPE.04](#task-scope-04), [SCOPE.05](#task-scope-05), [SCOPE.08](#task-scope-08), [SCOPE.11](#task-scope-11), [SIM.06](simulator.md#task-sim-06) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Domain/**`<br>`ArcScope:src/ArcScope/ArcScope.Acquisition/Adapters/Contract/**`<br>`ArcScope:tests/ArcScopePipelineTests/Adapters/**` |
@@ -74,7 +74,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-33.03](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.03) — full |
 | Provides | scope.time-channel-model |
 | Start prerequisites | **contract** [CON.91](contracts.md#task-con-91) — published numeric/time wire types (rate, timestamp, duration) Channel/Signal/EventRecord must serialise as. *Why:* the time model's exactness/conversion guarantees are meaningless if the wire representation is invented locally and later has to be retrofitted to the real numbered wire profile |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.05](#task-scope-05), [SCOPE.06](#task-scope-06), [SCOPE.11](#task-scope-11), [SCOPE.12](#task-scope-12), [SCOPE.14](#task-scope-14) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Domain/Time/**`<br>`ArcScope:src/ArcScope/ArcScope.Domain/Channels/**`<br>`ArcScope:tests/ArcScopePipelineTests/TimeModel/**` |
@@ -96,7 +96,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-33.00](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.00) — TCP/UDP/file-replay concrete adapters over the shared contract; real-transport connect/disconnect/reconnect tests |
 | Provides | scope.adapters.network-file |
 | Start prerequisites | **artifact** [SCOPE.01](#task-scope-01) — DataSource/SourceAdapter contract and connection profile model. *Why:* concrete adapters implement the shared contract; cannot be written before it exists |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.05](#task-scope-05), [SCOPE.11](#task-scope-11) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Acquisition/Adapters/Network/**`<br>`ArcScope:src/ArcScope/ArcScope.Acquisition/Adapters/FileReplay/**`<br>`ArcScope:tests/ArcScopePipelineTests/Adapters/Network/**` |
@@ -118,7 +118,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-33.00](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.00) — serial/USB concrete adapters over the shared contract<br>[WP-33.90](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.90) — generic-USB-V1 body text (enumeration, explicit interface/endpoint open, control/bulk/interrupt transfers, partial writes, cancellation, driver/permission/busy refusal per Tier 1 RID; no automatic kernel-driver detach; hot unplug records an explicit capture gap) — this text sits orphaned between [WP-33](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33) §6 and §7 in the source doc with no substep id of its own; folded here since it is entirely about the serial/USB adapter, not §33.90's own verify-and-integration content<br>[WP-33](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33) orphaned 'Generic USB is V1' body text (enumeration/open/transfer/cancel/refusal per Tier-1 RID, no auto kernel-driver detach, hot-unplug=explicit gap) sitting between §6 Impacts and §7 Tests with no substep id — package-level obligation contribution |
 | Provides | scope.adapters.serial-usb |
 | Start prerequisites | **artifact** [SCOPE.01](#task-scope-01) — DataSource/SourceAdapter contract and connection profile model. *Why:* concrete adapters implement the shared contract<br>**artifact** [NAT.13](native.md#task-nat-13) — published ArcInstrumentsNative package (arc_instruments_* ABI) — at minimum its fixture/simulated-hardware tier build. *Why:* [BR-10](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-br-10) confines the acquisition loop/lifecycle to C# and restricts native code to transport, device access, timestamps and primitives only; DesktopPlatform HEAD fe8476d has no arc_instruments ABI at all yet (grep for 'instrument' is empty) — this is a genuine not-yet-produced artifact, not a design gap. |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.11](#task-scope-11) |
 | Permitted substitutes | [SUB-scope-instruments-fixture](../substitutes.md#sub-scope-instruments-fixture) |
@@ -141,7 +141,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-33.01](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.01) — full |
 | Provides | scope.acquisition-pipeline; scope.rolling-buffer |
 | Start prerequisites | **artifact** [SCOPE.01](#task-scope-01) — source adapter contract. *Why:* the loop consumes adapters through the shared contract, not a concrete adapter type<br>**artifact** [SCOPE.02](#task-scope-02) — time/channel model. *Why:* timestamping and rate/conversion semantics are the time model's types; the loop cannot record exact timestamps against an undefined model<br>**artifact** [SCOPE.03](#task-scope-03) — at least one real concrete adapter (network) to drive throughput/overrun tests. *Why:* sustained-throughput and induced-overrun acceptance need a real transport; TCP/UDP is the cheapest real one and must be real early regardless, so it is the natural throughput-test source rather than waiting for serial/USB |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.06](#task-scope-06), [SCOPE.11](#task-scope-11), [SCOPE.13](#task-scope-13) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Acquisition/Pipeline/**`<br>`ArcScope:tests/ArcScopePipelineTests/Throughput/**` |
@@ -163,7 +163,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-33.02](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.02) — full |
 | Provides | scope.session-capture-lifecycle |
 | Start prerequisites | **artifact** [SCOPE.05](#task-scope-05) — acquisition pipeline and rolling buffer. *Why:* live observation reads the rolling buffer; record capture consumes the same pipeline output<br>**artifact** [SCOPE.02](#task-scope-02) — time/channel model. *Why:* segments and gaps are time-model objects |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.07](#task-scope-07), [SCOPE.09](#task-scope-09), [SCOPE.11](#task-scope-11), [SCOPE.12](#task-scope-12), [SCOPE.13](#task-scope-13), [SCOPE.14](#task-scope-14), [SCOPE.15](#task-scope-15), [SCOPE.17](#task-scope-17), [SCOPE.20](#task-scope-20), [SCOPE.22](#task-scope-22) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Domain/Session/**`<br>`ArcScope:src/ArcScope/ArcScope.Domain/Capture/**`<br>`ArcScope:tests/ArcScopePipelineTests/Lifecycle/**` |
@@ -185,7 +185,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-33.04](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.04) — full |
 | Provides | scope.durable-capture-store |
 | Start prerequisites | **artifact** [SCOPE.06](#task-scope-06) — session/capture lifecycle types. *Why:* the writer persists Capture/CaptureSegment objects defined there<br>**artifact** [PLT.06](platform.md#task-plt-06) — published chunked/large-append verifiable store primitive. *Why:* [BR-11](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-br-11) forbids database blobs for raw capture; this is a real evidence-integrity requirement (immutability, per-chunk checksum, crash-boundary recovery) that a hand-rolled substitute would not honestly prove — the substitute rules treat evidence-integrity storage as a case where a substitute is not acceptable |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.08](#task-scope-08), [SCOPE.11](#task-scope-11), [SCOPE.23](#task-scope-23), [SCOPE.24](#task-scope-24), [SCOPE.25](#task-scope-25) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Recording/**`<br>`ArcScope:src/ArcScope/ArcScope.Infrastructure/CaptureStore/**`<br>`ArcScope:tests/ArcScopePipelineTests/DurableCapture/**` |
@@ -207,7 +207,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-33.05](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.05) — full |
 | Provides | scope.replay-source |
 | Start prerequisites | **artifact** [SCOPE.07](#task-scope-07) — durable, finalised captures to replay. *Why:* replay reads a finalised capture from the chunked store; cannot be built before that store and finalisation exist<br>**artifact** [SCOPE.01](#task-scope-01) — source adapter contract. *Why:* replay is implemented as a SourceAdapter feeding the ordinary pipeline ([BR-08](../../../architecture/14-build-packaging-and-release.md#rule-br-08)) |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.11](#task-scope-11) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Acquisition/Adapters/Replay/**`<br>`ArcScope:tests/ArcScopePipelineTests/Replay/**` |
@@ -229,7 +229,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-33.06](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.06) — full |
 | Provides | scope.capture-shell-integration |
 | Start prerequisites | **artifact** [SCOPE.06](#task-scope-06) — capture lifecycle (running/interrupted states) to bind the shell prompt to. *Why:* the close-prompt decision depends on live capture state<br>**artifact** [PLT.32](platform.md#task-plt-32) — published generic shell lifecycle/shutdown-prompt mechanism. *Why:* [WP-33](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33) §2 lists [WP-10](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10) shell output as a required input; this substep specialises the generic close/shutdown prompt for capture-in-progress rather than inventing a second prompt mechanism |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [PLT.56](platform.md#task-plt-56), [SCOPE.11](#task-scope-11) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Presentation/**`<br>`ArcScope:src/ArcScope/ArcScope.Desktop/CaptureLifecycle/**` |
@@ -251,7 +251,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-33.07](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.07) — full |
 | Provides | scope.reference-drift-report |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.11](#task-scope-11) |
 | Write scope | `Design:docs/assurance/reference-coverage/arcscope-serial-studio.md` |
@@ -271,10 +271,11 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 |---|---|
 | Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
 | Kind / size | feature / M |
+| Package acceptance | Records the [WP-33](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-33.90](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.90) — full (excluding the generic-USB-V1 body text folded into SCOPE.04)<br>[WP-33](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required-behavior-and-closure section (acquisition.source/framing/trigger profiles, gap/loss/durable-capture manifests, all accepted serial/network/file/USB sources) — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required-behavior-and-closure section: acquisition.source/framing/trigger profiles, gap/loss/durable-capture manifests, all accepted serial/network/file/USB sources, independent positive/negative vectors, actual owner integration |
 | Provides | scope.wp33-accepted-candidate |
 | Start prerequisites | **artifact** [SCOPE.01](#task-scope-01) — all WP33 tasks complete to assemble. *Why:* verify task<br>**artifact** [SCOPE.02](#task-scope-02) — as above. *Why:* as above<br>**artifact** [SCOPE.03](#task-scope-03) — as above. *Why:* as above<br>**artifact** [SCOPE.04](#task-scope-04) — as above. *Why:* as above<br>**artifact** [SCOPE.05](#task-scope-05) — as above. *Why:* as above<br>**artifact** [SCOPE.06](#task-scope-06) — as above. *Why:* as above<br>**artifact** [SCOPE.07](#task-scope-07) — as above. *Why:* as above<br>**artifact** [SCOPE.08](#task-scope-08) — as above. *Why:* as above<br>**artifact** [SCOPE.09](#task-scope-09) — as above. *Why:* as above<br>**artifact** [SCOPE.10](#task-scope-10) — drift report disposition (must be clean or corrected per [D-001](../../../decisions/phase-1-foundation-decisions.md#rule-d-001) before dependent work continues). *Why:* a changed licence position must correct affected rows before this package closes<br>**artifact** [NAT.24](native.md#task-nat-24) — published Instruments runtime packages. *Why:* hardware-tier acquisition evidence uses the real native family |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.02](release.md#task-rel-02) |
 | Write scope | `ArcScope:docs/wp-33-integration-receipt.md` |
@@ -295,7 +296,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-34.00](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.00) — full |
 | Provides | scope.visualisation |
 | Start prerequisites | **artifact** [SCOPE.02](#task-scope-02) — time/channel model. *Why:* plots render Channel/Signal/time-domain data<br>**artifact** [SCOPE.06](#task-scope-06) — session/capture to visualise. *Why:* visualisation reads captures |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.19](#task-scope-19) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Visualization/**`<br>`ArcScope:tests/ArcScopePipelineTests/Visualization/**` |
@@ -317,7 +318,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-34.01](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.01) — full |
 | Provides | scope.triggers |
 | Start prerequisites | **artifact** [SCOPE.05](#task-scope-05) — rolling buffer. *Why:* pre/post windows are served from it<br>**artifact** [SCOPE.06](#task-scope-06) — capture lifecycle. *Why:* triggers mark time within a running capture |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.19](#task-scope-19) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Domain/Triggers/**`<br>`ArcScope:tests/ArcScopePipelineTests/Triggers/**` |
@@ -338,7 +339,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-34.02](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.02) — full, including the required-design-implementation text: every basic family via declared population/sample-weighted formulas, half-open input selection, calibrated units, coverage/status rules, recorded pulse thresholds/interpolation, independent statistical hand-calculation and digital/analog/gap vectors<br>[WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) orphaned §6/§7 body text: 'Pearson independent vectors: x=[1,2,3], y=[2,4,6] gives r=1; y=[3,2,1] gives r=-1. Constant input is unavailable; preserve the declared lag and overlap rules' — a concrete correlation-family acceptance vector with no substep id of its own — orphaned §6/§7 body text: 'Pearson independent vectors: x=[1,2,3], y=[2,4,6] gives r=1; y=[3,2,1] gives r=-1. Constant input is unavailable; preserve the declared lag and overlap rules' — a concrete correlation-family acceptance vector with no substep id of its own; package-level obligation contribution<br>[WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) §8 additional completion requirement: every basic family has its formula/status oracle; reproduction uses the defined tolerance rather than an undefined byte-equality claim — §8 additional completion requirement: every basic family has its formula/status oracle; reproduction uses the defined tolerance rather than an undefined byte-equality claim; package-level obligation contribution |
 | Provides | scope.measurements |
 | Start prerequisites | **contract** [CON.91](contracts.md#task-con-91) — the published scope.measurement.v1 profile (families, formulas, units, coverage/status rules) in Contracts. *Why:* [WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) §2 states this is a frozen design input owned by Contracts; the measurement implementation is a direct realisation of that published profile, not a locally re-derived one<br>**artifact** [SCOPE.02](#task-scope-02) — time/channel model. *Why:* measurements operate over signals/events defined there<br>**artifact** [SCOPE.06](#task-scope-06) — capture/configuration snapshot. *Why:* a measurement records the configuration under which it was taken ([BR-05](../../../architecture/14-build-packaging-and-release.md#rule-br-05)) |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.16](#task-scope-16), [SCOPE.18](#task-scope-18), [SCOPE.19](#task-scope-19), [SCOPE.21](#task-scope-21), [SCOPE.24](#task-scope-24), [SIM.06](simulator.md#task-sim-06), [SIM.09](simulator.md#task-sim-09) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Analysis/Measurements/**`<br>`ArcScope:tests/ArcScopePipelineTests/Measurements/**` |
@@ -359,7 +360,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-34.03](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.03) — full |
 | Provides | scope.decoders |
 | Start prerequisites | **artifact** [SCOPE.06](#task-scope-06) — capture/channel data to decode. *Why:* decoders consume captured channel data |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.16](#task-scope-16), [SCOPE.18](#task-scope-18), [SCOPE.19](#task-scope-19), [SCOPE.21](#task-scope-21) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Decoders/**`<br>`ArcScope:tests/ArcScopePipelineTests/Decoders/**` |
@@ -381,7 +382,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-34.04](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.04) — full, including the required-design-implementation text: same profile through native ProductJobs over a frozen committed source; persist request/config hashes, resolved levels, per-family quality; delete-and-rebuild must match the profile oracle within tolerance |
 | Provides | scope.analysis-recipes |
 | Start prerequisites | **artifact** [SCOPE.14](#task-scope-14) — measurements. *Why:* recipes compose measurements<br>**artifact** [SCOPE.15](#task-scope-15) — decoders. *Why:* recipes compose decoder output |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.18](#task-scope-18), [SCOPE.19](#task-scope-19), [SCOPE.21](#task-scope-21) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Analysis/Recipes/**`<br>`ArcScope:tests/ArcScopePipelineTests/Analysis/**` |
@@ -403,7 +404,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-34.05](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.05) — full |
 | Provides | scope.annotations-findings-comparison |
 | Start prerequisites | **artifact** [SCOPE.06](#task-scope-06) — session/capture to annotate/compare. *Why:* direct consumer |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.18](#task-scope-18), [SCOPE.19](#task-scope-19), [SCOPE.22](#task-scope-22) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Domain/Annotations/**`<br>`ArcScope:tests/ArcScopePipelineTests/Annotations/**` |
@@ -425,7 +426,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-34.06](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.06) — full, including both required-design-implementation paragraphs: report/UI/offline-recomputation comparison with rendering/rounding never changing the stored numeric result; report-section origin plus enclosing union; deterministic measurement beside AI narrative never relabelled<br>[WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) §8 additional completion requirement: every basic family has its formula/status oracle; reproduction uses the defined tolerance rather than an undefined byte-equality claim — package-level obligation contribution |
 | Provides | scope.reports |
 | Start prerequisites | **artifact** [SCOPE.14](#task-scope-14) — measurements. *Why:* reports compose measurement results<br>**artifact** [SCOPE.15](#task-scope-15) — decoders. *Why:* reports trace decoder version<br>**artifact** [SCOPE.16](#task-scope-16) — analysis results. *Why:* reports compose analysis output<br>**artifact** [SCOPE.17](#task-scope-17) — annotations/findings. *Why:* reports compose findings |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.19](#task-scope-19), [SCOPE.22](#task-scope-22), [SIM.09](simulator.md#task-sim-09) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Reporting/**`<br>`ArcScope:tests/ArcScopePipelineTests/Reports/**` |
@@ -444,10 +445,11 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 |---|---|
 | Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
 | Kind / size | feature / M |
+| Package acceptance | Records the [WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-34.90](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.90) — full<br>[WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required-behavior-and-closure section (every remaining spectrum/correlation/threshold/event-pattern/decoder analysis profile in architecture 26) — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required-behavior-and-closure section: every remaining spectrum/correlation/threshold/event-pattern/decoder analysis profile in architecture 26, independent numeric and gap/error vectors |
 | Provides | scope.wp34-accepted-candidate |
 | Start prerequisites | **artifact** [SCOPE.12](#task-scope-12) — all WP34 tasks complete to assemble. *Why:* verify task<br>**artifact** [SCOPE.13](#task-scope-13) — as above. *Why:* as above<br>**artifact** [SCOPE.14](#task-scope-14) — as above. *Why:* as above<br>**artifact** [SCOPE.15](#task-scope-15) — as above. *Why:* as above<br>**artifact** [SCOPE.16](#task-scope-16) — as above. *Why:* as above<br>**artifact** [SCOPE.17](#task-scope-17) — as above. *Why:* as above<br>**artifact** [SCOPE.18](#task-scope-18) — as above. *Why:* as above |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.02](release.md#task-rel-02) |
 | Write scope | `ArcScope:docs/wp-34-integration-receipt.md` |
@@ -469,7 +471,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-35.00](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.00) — full |
 | Provides | scope.capability-surface |
 | Start prerequisites | **artifact** [SCOPE.06](#task-scope-06) — session/capture/channel/signal/event domain objects the query capabilities expose. *Why:* capability descriptors wrap real domain types<br>**contract** [CON.02](contracts.md#task-con-02) — the generic capability descriptor shape (risk level, permission requirement, approval posture) established by the Hub/minimal-provider-slice pattern. *Why:* [WP-14.04](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.04) ('Approval at the owner') looks like the origin of the generic owner-side approval posture every product's capability set implements; ArcScope should declare against the same shape ArcNotes's first slice used rather than inventing a second one. |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [AST.12](assistant.md#task-ast-12) — real ArcChat security/approval surface actually enforcing these descriptors end to end. *Why:* declaring capabilities does not require ArcChat's enforcement code to exist first; the real cross-product proof is a completion-time integration, and [WP-17.02](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.02) ('Security and approval surface') is the plausible ArcChat-side owner |
 | Unblocks | [SCOPE.25](#task-scope-25), [SCOPE.26](#task-scope-26) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.AssistantIntegration/**`<br>`ArcScope:tests/ArcScopePipelineTests/Capabilities/**` |
@@ -491,7 +493,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-35.01](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.01) — full, including required-design-implementation text: project measurement values with profile, immutable source/configuration binding, counts, coverage and status into bounded context/report references; unknown-profile and insufficient results are never silently rendered as numeric zero<br>[WP-35](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35) §4 content-origin/content-unit binding obligation applying broadly to WP35's changed files — package-level obligation contribution |
 | Provides | scope.bounded-context |
 | Start prerequisites | **artifact** [SCOPE.14](#task-scope-14) — measurements. *Why:* context projects measurement values<br>**artifact** [SCOPE.16](#task-scope-16) — analysis results. *Why:* context projects analysis outputs<br>**artifact** [SCOPE.15](#task-scope-15) — decoders. *Why:* context projects decoded event summaries |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [AST.15](assistant.md#task-ast-15) — real ArcChat 'Ask ArcChat' consumption of the bounded context reference. *Why:* producing the bounded, structurally-raw-capture-free context does not require the real AI consumer to exist first; the end-to-end proof that ArcChat actually receives and uses the reference (never the raw capture) is a completion-time integration. |
 | Unblocks | [SCOPE.26](#task-scope-26) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.Application/Context/**`<br>`ArcScope:tests/ArcScopePipelineTests/Context/**` |
@@ -512,7 +514,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-35.02](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.02) — all work except the parts mapped to SCOPE.27 |
 | Provides | scope.cloud-sync-scope |
 | Start prerequisites | **artifact** [SCOPE.06](#task-scope-06) — session metadata. *Why:* sync scope includes session metadata<br>**artifact** [SCOPE.18](#task-scope-18) — reports. *Why:* sync scope includes reports<br>**artifact** [SCOPE.17](#task-scope-17) — annotations/findings. *Why:* sync scope includes them |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [SCOPE.27](#task-scope-27) — real ArcScope metadata sync against deployed Cloud. *Why:* the sync scope is accepted only with real convergence evidence |
 | Unblocks | [SCOPE.26](#task-scope-26), [SCOPE.27](#task-scope-27) |
 | Permitted substitutes | [SUB-scope-sync-fixture](../substitutes.md#sub-scope-sync-fixture) |
@@ -534,7 +536,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-35.03](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.03) — full |
 | Provides | scope.raw-upload |
 | Start prerequisites | **artifact** [SCOPE.07](#task-scope-07) — durable capture to upload. *Why:* direct source of upload bytes<br>**artifact** [CLOUD.42](cloud.md#task-cloud-42) — published blob lifecycle mechanism (chunked upload, resumption, verification). *Why:* explicit large raw-capture upload reuses the real chunked object-storage upload path rather than a bespoke one; resumability/verification over genuinely large captures cannot be honestly proven against a stub |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.26](#task-scope-26) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.CloudClient/RawUpload/**`<br>`ArcScope:tests/SyncConflictTests/ArcScope/RawUpload/**` |
@@ -555,7 +557,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-35.04](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.04) — full, including required-design-implementation text: native bundles preserve origin, measurement profile/configuration and simulator provenance separately; CSV/JSON/report export publishes required sidecars atomically; structured context carries selected origins and measurement quality, never raw capture<br>[WP-35](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35) §4 content-origin/content-unit binding obligation applying broadly to WP35's changed files — package-level obligation contribution<br>[WP-35](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35) §8 additional completion requirements (measurement meaning/numerical profile survives portability; content-origin carrier vectors) — package-level obligation contribution |
 | Provides | scope.import-export-bundle |
 | Start prerequisites | **artifact** [SCOPE.07](#task-scope-07) — durable capture format to bundle/export. *Why:* native bundle wraps the real capture format<br>**artifact** [SCOPE.14](#task-scope-14) — measurement profile/configuration to carry in the bundle. *Why:* bundles preserve measurement profile/configuration separately per the required-design text |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.26](#task-scope-26), [SIM.06](simulator.md#task-sim-06), [SIM.09](simulator.md#task-sim-09) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.ImportExport/**`<br>`ArcScope:fixtures/formats/arcscope/**`<br>`ArcScope:tests/ArcScopePipelineTests/ImportExport/**` |
@@ -578,7 +580,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-35.05](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.05) — full |
 | Provides | scope.extension-boundary |
 | Start prerequisites | **artifact** [SCOPE.20](#task-scope-20) — capability surface. *Why:* extension access must route through the capability descriptors, not a separate path<br>**artifact** [SCOPE.07](#task-scope-07) — raw capture write path to assert exclusion against. *Why:* the structural guarantee is meaningless without the real write path to test against<br>**artifact** [EXT.02](extensions.md#task-ext-02) — published dual capability boundary mechanism. *Why:* [WP-41.02](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.02) ('The dual capability boundary') is the platform's generic owner-side-validation-only extension access pattern; ArcScope's structural no-write guarantee is this pattern applied to raw capture specifically, not a separately invented boundary |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.26](#task-scope-26) |
 | Write scope | `ArcScope:src/ArcScope/ArcScope.AssistantIntegration/ExtensionBoundary/**`<br>`ArcScope:tests/ArcScopePipelineTests/ExtensionBoundary/**` |
@@ -596,10 +598,11 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 |---|---|
 | Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
 | Kind / size | feature / M |
+| Package acceptance | Records the [WP-35](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-35.90](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.90) — full |
 | Provides | scope.wp35-accepted-candidate |
 | Start prerequisites | **artifact** [SCOPE.20](#task-scope-20) — all WP35 tasks complete to assemble. *Why:* verify task<br>**artifact** [SCOPE.21](#task-scope-21) — as above. *Why:* as above<br>**artifact** [SCOPE.22](#task-scope-22) — as above. *Why:* as above<br>**artifact** [SCOPE.23](#task-scope-23) — as above. *Why:* as above<br>**artifact** [SCOPE.24](#task-scope-24) — as above. *Why:* as above<br>**artifact** [SCOPE.25](#task-scope-25) — as above. *Why:* as above |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.02](release.md#task-rel-02) |
 | Write scope | `ArcScope:docs/wp-35-integration-receipt.md` |
@@ -620,7 +623,7 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 | Obligations | [WP-35.02](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.02) — real-integration evidence: metadata sync scope converges against deployed Cloud authority |
 | Provides | ArcScope real metadata sync evidence |
 | Start prerequisites | **artifact** [SCOPE.22](#task-scope-22) — ArcScope Cloud sync scope declaration and client. *Why:* the integration exercises the ArcScope client<br>**artifact** [CLOUD.39](cloud.md#task-cloud-39) — deployed guarded publication and convergent bootstrap. *Why:* real convergence needs the real publisher<br>**artifact** [CLOUD.44](cloud.md#task-cloud-44) — multi-device convergence harness. *Why:* convergence is proven with the shared harness |
-| Entry condition | [ADOPT.05](adoption.md#task-adopt-05) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.05.arcscope](adoption.md#task-adopt-05-arcscope) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [SCOPE.22](#task-scope-22) |
 | Write scope | `ArcScope:tests/ArcScope.Tests.Integration/Sync/**` |

@@ -36,7 +36,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.00](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.00) — full |
 | Provides | extension-host |
 | Start prerequisites | **artifact** [PLT.45](platform.md#task-plt-45) — the OS-level process isolation / ContentSandbox primitives (broker grants, syscall restriction). *Why:* [BR-01](../../../architecture/14-build-packaging-and-release.md#rule-br-01)/[PG-22](../../../assurance/open-gates-register.md#rule-pg-22) require actual packaged-RID isolation; the extension host reuses [WP-11](../../work-packages/11-security-foundation.md#rule-wp-11)'s isolation infrastructure rather than building a new sandbox -- a substitute would fail [PG-22](../../../assurance/open-gates-register.md#rule-pg-22)'s 'no same-user full-trust fallback' bar<br>**contract** [PLT.19](platform.md#task-plt-19) — the typed capability/resource contribution model. *Why:* the host must enforce the same capability model first-party code uses, per [WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41)'s own input table |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.extensions](adoption.md#task-adopt-02-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.01](#task-ext-01), [EXT.09](#task-ext-09), [EXT.90](#task-ext-90) |
 | Write scope | `DesktopPlatform:src/Extensions/ArcForges.Extensions.Runtime/Host/**` |
@@ -58,7 +58,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.01](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.01) — full |
 | Provides | extension-handshake |
 | Start prerequisites | **artifact** [EXT.00](#task-ext-00) — a running extension process to handshake with. *Why:* handshake happens over the process EXT.00 supervises |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.extensions](adoption.md#task-adopt-02-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.90](#task-ext-90) |
 | Write scope | `DesktopPlatform:src/Extensions/ArcForges.Extensions.Runtime/Handshake/**` |
@@ -79,7 +79,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.02](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.02) — full |
 | Provides | dual-capability-boundary |
 | Start prerequisites | **contract** [CON.05](contracts.md#task-con-05) — the published foundation/value-model proto types this layer extends. *Why:* StructuredValue must build on the already-published foundation types (e.g. arcforges.foundation.v1), not a parallel definition |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.extensions](adoption.md#task-adopt-03-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.03](#task-ext-03), [EXT.04](#task-ext-04), [EXT.08](#task-ext-08), [EXT.90](#task-ext-90), [SCOPE.25](arcscope.md#task-scope-25) |
 | Write scope | `Contracts:public/proto/arcforges/extensions/v1/**`<br>`DesktopPlatform:src/Extensions/ArcForges.Extensions.Contracts/**` |
@@ -102,7 +102,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.03](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.03) — full |
 | Provides | extension-declarative-ui |
 | Start prerequisites | **artifact** [EXT.02](#task-ext-02) — the closed StructuredValue/panel.v1 schema. *Why:* panel declarations are validated against the same closed value model EXT.02 defines |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.extensions](adoption.md#task-adopt-02-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.90](#task-ext-90) |
 | Write scope | `DesktopPlatform:src/Extensions/ArcForges.Extensions.Runtime/DeclarativeUi/**` |
@@ -123,7 +123,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.04](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.04) — manifest.v1/workflow.v1/panel.v1 validators and the immutable staged install/update/drain/migration/revocation/rollback state machine |
 | Provides | package-lifecycle-engine |
 | Start prerequisites | **artifact** [EXT.02](#task-ext-02) — the closed value model workflow.v1 nodes are typed against. *Why:* workflow.v1 DAG nodes are StructuredValue-typed and must validate against EXT.02's schema validator<br>**artifact** [CON.16](contracts.md#task-con-16) — [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) fixture signing/catalog keys (catalog/index/revocation/update/realm schemas + independent signed vectors). *Why:* archive signature verification in the lifecycle state machine needs a signed vector to check against; production keys are not required this early (see SUB-catalog-fixture-signing) |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.extensions](adoption.md#task-adopt-03-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.05](#task-ext-05), [EXT.90](#task-ext-90) |
 | Permitted substitutes | [SUB-signed-format-fixture-keys](../substitutes.md#sub-signed-format-fixture-keys) |
@@ -146,7 +146,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.04](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.04) — the six package contribution kinds (skill/template/workflow/mcp/connector/extension) runtime registration and execution wiring |
 | Provides | extension-contribution-kinds |
 | Start prerequisites | **artifact** [EXT.04](#task-ext-04) — the lifecycle state machine to register kinds into. *Why:* a contribution kind has nothing to attach to before install states exist |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.extensions](adoption.md#task-adopt-02-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.90](#task-ext-90) |
 | Write scope | `DesktopPlatform:src/Extensions/ArcForges.Extensions.Registry/Contributions/**` |
@@ -167,7 +167,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.05](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.05) — Cloud PackageCatalog producer: DNS publisher verification, immutable submissions, review-state/revocation authority, signed static index<br>[WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) PackageCatalog ownership paragraph (Sec.5-6 boundary): OperatorService is sole authenticator/caller; neither Extensions Runtime nor console writes PackageCatalog tables — package-level obligation contribution |
 | Provides | package-catalog-producer |
 | Start prerequisites | **artifact** [CLOUD.16](cloud.md#task-cloud-16) — publisher identity/PAT and operator authentication. *Why:* owner/PAT/operator separation is a completion requirement; catalog submission must authenticate against the real identity surface<br>**artifact** [CLOUD.42](cloud.md#task-cloud-42) — durable blob storage for submitted package archives. *Why:* immutable submissions need durable, content-addressed storage<br>**artifact** [CON.16](contracts.md#task-con-16) — [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) fixture catalog/index/revocation/update/realm schemas and signed vectors. *Why:* the index producer can be built and tested against fixture signing keys before [WP-53](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53) production keys exist (see SUB-catalog-fixture-signing) |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.extensions](adoption.md#task-adopt-07-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.07](#task-ext-07), [EXT.08](#task-ext-08), [EXT.90](#task-ext-90), [OPS.11](operations.md#task-ops-11) |
 | Write scope | `Cloud:src/Modules/PackageCatalog/PackageCatalog.Domain/**`<br>`Cloud:src/Modules/PackageCatalog/PackageCatalog.Application/**`<br>`Cloud:src/Modules/PackageCatalog/PackageCatalog.Infrastructure/**` |
@@ -189,7 +189,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.05](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.05) — desktop/CLI catalog consumers |
 | Provides | package-catalog-consumers |
 | Start prerequisites | **artifact** [EXT.06](#task-ext-06) — the real signed static index format and PackageCatalog API. *Why:* a consumer cannot be finished against an unpublished producer shape, though it may develop against EXT.06's fixture-signed index first |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.extensions](adoption.md#task-adopt-02-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.90](#task-ext-90) |
 | Write scope | `DesktopPlatform:src/Extensions/ArcForges.Extensions.Registry/CatalogClient/**` |
@@ -211,7 +211,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.06](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.06) — full<br>[WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) Sec.8 gate item 8: MCP vocabulary mapping + SDK version pin -- [VG-02](../../../assurance/open-gates-register.md#rule-vg-02) — package-level obligation contribution |
 | Provides | extension-public-sdk |
 | Start prerequisites | **artifact** [EXT.02](#task-ext-02) — the published extension protocol/value-model proto to generate from. *Why:* the SDK generator's input is EXT.02's authored proto<br>**artifact** [CLOUD.16](cloud.md#task-cloud-16) — publisher PAT issuance. *Why:* the CLI publish flow requires a real PAT-scoped identity |
-| Entry condition | [ADOPT.03](adoption.md#task-adopt-03) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.03.extensions](adoption.md#task-adopt-03-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [EXT.06](#task-ext-06) — the real Cloud PackageCatalog submit endpoint. *Why:* CLI publish must submit for review against the real endpoint, not a fixture, to close this substep's own gate ('CLI publish submits for review and never uploads directly into public catalog visibility') |
 | Unblocks | [EXT.90](#task-ext-90) |
 | Write scope | `Contracts:src/SDK/ArcForges.SDK.*/**`<br>`Contracts:src/SDK/ArcForges.Cli/**` |
@@ -233,7 +233,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.07](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.07) — local MCP stdio placement behind the owned connector child process<br>[WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) Sec.8 gate item 8: MCP vocabulary mapping + SDK version pin -- [VG-02](../../../assurance/open-gates-register.md#rule-vg-02) — package-level obligation contribution |
 | Provides | mcp-local-placement |
 | Start prerequisites | **artifact** [EXT.00](#task-ext-00) — the extension host's process supervision primitives. *Why:* the connector child reuses the same supervised-process model EXT.00 builds, per [BR-01](../../../architecture/14-build-packaging-and-release.md#rule-br-01)'s out-of-process default |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.extensions](adoption.md#task-adopt-02-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.90](#task-ext-90) |
 | Write scope | `DesktopPlatform:src/Communication/Mcp/**` |
@@ -254,7 +254,7 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 | Obligations | [WP-41.07](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.07) — Cloud MCP HTTP placement through the AI Worker adapter<br>[WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) Sec.8 gate item 8: MCP vocabulary mapping + SDK version pin -- [VG-02](../../../assurance/open-gates-register.md#rule-vg-02) — package-level obligation contribution |
 | Provides | mcp-cloud-placement |
 | Start prerequisites | **contract** [CON.15](contracts.md#task-con-15) — the internal AI HTTP port surface to attach an MCP adapter route to. *Why:* the AI Worker's internal port registry (the Cloud lane public API generation) must exist before a new adapter route can be added without breaking the fixed registry |
-| Entry condition | [ADOPT.08](adoption.md#task-adopt-08) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.08.extensions](adoption.md#task-adopt-08-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [EXT.90](#task-ext-90) |
 | Write scope | `AI:src/mcp/**` |
@@ -272,10 +272,11 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | producer / M |
+| Package acceptance | Records the [WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-41.90](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.90) — full<br>[WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) Sec.8 gate item 9: extension protocol conformance suite -- [PG-09](../../../assurance/open-gates-register.md#rule-pg-09) — package-level obligation contribution |
 | Provides | extension-platform-acceptance |
 | Start prerequisites | **artifact** [EXT.00](#task-ext-00) — all prior EXT tasks complete (EXT.00-EXT.10). *Why:* acceptance aggregates every EXT task's evidence<br>**artifact** [EXT.01](#task-ext-01) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [EXT.02](#task-ext-02) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [EXT.03](#task-ext-03) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [EXT.04](#task-ext-04) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [EXT.05](#task-ext-05) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [EXT.06](#task-ext-06) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [EXT.07](#task-ext-07) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [EXT.08](#task-ext-08) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [EXT.09](#task-ext-09) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [EXT.10](#task-ext-10) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.extensions](adoption.md#task-adopt-02-extensions) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.06](release.md#task-rel-06) |
 | Write scope | `DesktopPlatform:tests/McpAotTests/**`<br>`DesktopPlatform:tests/ExtensionPlatformTests/**` |

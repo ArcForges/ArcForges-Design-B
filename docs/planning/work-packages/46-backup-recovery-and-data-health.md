@@ -136,7 +136,7 @@ Scheduling is task-level under [P2-018](../../decisions/phase-2-specification-de
 | [CLOUD.53](../delivery/lanes/cloud.md#task-cloud-53) | [WP-46.05](46-backup-recovery-and-data-health.md#rule-wp-46.05) (full) | none |
 | [CLOUD.54](../delivery/lanes/cloud.md#task-cloud-54) | [WP-46.06](46-backup-recovery-and-data-health.md#rule-wp-46.06) (full) | none |
 | [CLOUD.55](../delivery/lanes/cloud.md#task-cloud-55) | [WP-46.90](46-backup-recovery-and-data-health.md#rule-wp-46.90) (full) | none |
-| [CLOUD.67](../delivery/lanes/cloud.md#task-cloud-67) | [WP-46.03](46-backup-recovery-and-data-health.md#rule-wp-46.03) (combined AI-reopen portion) | [HAR.05](../delivery/lanes/harness.md#task-har-05) (artifact) |
+| [CLOUD.67](../delivery/lanes/cloud.md#task-cloud-67) | [WP-46.03](46-backup-recovery-and-data-health.md#rule-wp-46.03) (combined AI-reopen portion) | [HAR.00](../delivery/lanes/harness.md#task-har-00) (artifact), [HAR.02](../delivery/lanes/harness.md#task-har-02) (artifact), [HAR.03](../delivery/lanes/harness.md#task-har-03) (artifact), [AIR.00](../delivery/lanes/ai-routing.md#task-air-00) (artifact) |
 
 **Consumers outside this package:** [OPS.03](../delivery/lanes/operations.md#task-ops-03), [REL.06](../delivery/lanes/release.md#task-rel-06), [WEB.13](../delivery/lanes/web.md#task-web-13).
 

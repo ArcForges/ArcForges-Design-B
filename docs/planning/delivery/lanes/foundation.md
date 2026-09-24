@@ -31,7 +31,7 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-04.00](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.00) — all work except the parts mapped to FND.07 |
 | Provides | identity-primitives; exact-value-adapters |
 | Start prerequisites | **contract** [CON.91](contracts.md#task-con-91) — ArcForges.Contracts.Foundation package: canonical UUID/Decimal/Rational/exact-value wire types and codecs. *Why:* BR-04.00 requires Foundation primitives to be adapters over the published Contracts wire types, never a duplicate/independent redefinition; the package already exists in Contracts (src/public/dotnet/ArcForges.Contracts.Foundation, Generated/ present) so this is a real but already-available artifact. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.foundation](adoption.md#task-adopt-02-foundation) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.01](app-composition.md#task-app-01), [FND.07](#task-fnd-07), [PLT.17](platform.md#task-plt-17), [PLT.36](platform.md#task-plt-36), [PLT.47](platform.md#task-plt-47), [PRF.01](runtime-proofs.md#task-prf-01), [PRF.02](runtime-proofs.md#task-prf-02), [PRF.03](runtime-proofs.md#task-prf-03) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Foundation/**` |
@@ -53,7 +53,7 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-04.01](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.01) — full |
 | Provides | execution-identity; idempotency-primitives; application-abstractions-ports |
 | Start prerequisites | **contract** [CON.91](contracts.md#task-con-91) — Contracts.Foundation exact-value/identity wire types. *Why:* same adapter requirement as FND.01; independently available now. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.foundation](adoption.md#task-adopt-02-foundation) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [PLT.01](platform.md#task-plt-01) — durable single-effect/receipt proof against real persistence. *Why:* [WP-04.01](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.01)'s own completion gate explicitly defers durable receipts/leases and crash tests to WP07/21/52; this task proves the storage-free algebra only. |
 | Unblocks | [APP.04](app-composition.md#task-app-04), [EXE.01](execution.md#task-exe-01), [FND.07](#task-fnd-07), [PLT.01](platform.md#task-plt-01), [PLT.02](platform.md#task-plt-02), [PLT.06](platform.md#task-plt-06), [PLT.14](platform.md#task-plt-14) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Foundation/**`<br>`DesktopPlatform:src/BuildingBlocks/ArcForges.Application.Abstractions/**` |
@@ -75,7 +75,7 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-04.02](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.02) — full |
 | Provides | revision-sequence-types |
 | Start prerequisites | **contract** [CON.91](contracts.md#task-con-91) — Contracts.Foundation revision/sequence wire primitives. *Why:* same adapter requirement; independently available now. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.foundation](adoption.md#task-adopt-02-foundation) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [APP.04](app-composition.md#task-app-04), [EXE.01](execution.md#task-exe-01), [FND.07](#task-fnd-07), [PLT.01](platform.md#task-plt-01), [PLT.02](platform.md#task-plt-02) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Foundation/**` |
@@ -96,7 +96,7 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-04.03](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.03) — full |
 | Provides | clock-abstraction; instant-type; monotonic-timestamp-type |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.foundation](adoption.md#task-adopt-02-foundation) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [FND.07](#task-fnd-07) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Foundation/**` |
@@ -117,7 +117,7 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-04.04](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.04) — full |
 | Provides | reason-code-registry; effect-certainty-type; outcome-result-type |
 | Start prerequisites | **contract** [CON.91](contracts.md#task-con-91) — Contracts error/reason-code wire schema. *Why:* the registry's wire shape and category taxonomy is fixed by Contracts. |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.foundation](adoption.md#task-adopt-02-foundation) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [FND.07](#task-fnd-07), [PLT.01](platform.md#task-plt-01), [PLT.31](platform.md#task-plt-31), [PLT.49](platform.md#task-plt-49), [UPD.01](updater.md#task-upd-01), [UPD.06](updater.md#task-upd-06) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Foundation/**`<br>`DesktopPlatform:eng/policy/reason-codes.json` |
@@ -139,7 +139,7 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 | Obligations | [WP-04.05](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.05) — full |
 | Provides | version-axis-types |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.foundation](adoption.md#task-adopt-02-foundation) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [FND.07](#task-fnd-07), [PLT.04](platform.md#task-plt-04) |
 | Write scope | `DesktopPlatform:src/BuildingBlocks/ArcForges.Foundation/**` |
@@ -158,10 +158,11 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 |---|---|
 | Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
 | Kind / size | acceptance / S |
+| Package acceptance | Records the [WP-04](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-04.90](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.90) — full<br>[WP-04.00](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.00) — first real external consumption of Contracts.Foundation<br>[WP-04](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04) TypeScript/Kotlin primitive projection of registry-04 exact-value rules (UUID canonical ordering, TS bigint/Decimal, JSON exceptions) — package-level obligation contribution |
 | Provides | foundation-package; application-abstractions-package |
 | Start prerequisites | **artifact** [FND.01](#task-fnd-01) — identity/exact-value types. *Why:* cannot pack or round-trip test a package whose types do not exist yet.<br>**artifact** [FND.02](#task-fnd-02) — execution identity/idempotency types. *Why:* same reason.<br>**artifact** [FND.03](#task-fnd-03) — revision/sequence types. *Why:* same reason.<br>**artifact** [FND.04](#task-fnd-04) — clock abstraction. *Why:* same reason.<br>**artifact** [FND.05](#task-fnd-05) — reason-code registry. *Why:* same reason; also the completeness gate spans this evidence.<br>**artifact** [FND.06](#task-fnd-06) — version axis types. *Why:* same reason.<br>**artifact** [CON.91](contracts.md#task-con-91) — real, delivered outcome of CON.91 (WP03.01 — foundation contract types (accepted, historical)). *Why:* this integration exercises the real wP03.01 — foundation contract types (accepted, historical) instead of a substitute, so it cannot start before that outcome exists |
-| Entry condition | [ADOPT.02](adoption.md#task-adopt-02) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.02.foundation](adoption.md#task-adopt-02-foundation) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | none |
 | Write scope | `DesktopPlatform:eng/packaging/packages.json`<br>`DesktopPlatform:eng/version-sources.json` |

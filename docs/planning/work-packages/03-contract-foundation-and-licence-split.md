@@ -128,7 +128,7 @@ The [WP03.01 completion receipt](../../assurance/wp03-01-implementation-evidence
 
 The [WP03.02 implementation profile](../../assurance/wp03-02-serialization-posture-profile.md) fixes the decode limits, strict HTTP-exception JSON codecs, generated service catalogues, forbidden serializer/dependency gate, Native AOT probe and ordered implementation/publication plan. It contributes to, but does not close, [F-026](../../assurance/open-gates-register.md#rule-f-026); WP06.02 retains the real published generated-client AOT call.
 
-The [WP03.02 completion receipt](../../assurance/wp03-02-implementation-evidence.md) records reviewed source, passing required checks, the Linux Native AOT probe, C#/TS vector conformance and complete normal publication. The user reported on 2026-09-23 that Substep 03.03 is complete; no corresponding source, pull request or receipt was present when the delivery graph was written, so its task carries the reported-unverified baseline and the [adoption stage](../delivery/adoption.md) reviews that report before recording it as inherited.
+The [WP03.02 completion receipt](../../assurance/wp03-02-implementation-evidence.md) records reviewed source, passing required checks, the Linux Native AOT probe, C#/TS vector conformance and complete normal publication. Substep 03.03 has not started.
 
 <a id="rule-wp-03.03"></a>
 

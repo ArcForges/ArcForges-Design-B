@@ -37,7 +37,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.00](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.00) — full |
 | Provides | slo-sli-definitions; alert-routing |
 | Start prerequisites | none |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.operations](adoption.md#task-adopt-07-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [OPS.02](#task-ops-02), [OPS.04](#task-ops-04), [OPS.12](#task-ops-12) |
 | Write scope | `Cloud:deploy/monitoring/**` |
@@ -59,7 +59,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.01](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.01) — full |
 | Provides | incident-severity-ladder; incident-state-system |
 | Start prerequisites | **artifact** [OPS.01](#task-ops-01) — alert routing to trigger incidents from. *Why:* the incident process consumes paging alerts as its primary trigger |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.operations](adoption.md#task-adopt-07-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [OPS.03](#task-ops-03), [OPS.09](#task-ops-09), [OPS.12](#task-ops-12) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Support/**/Incidents/**` |
@@ -80,7 +80,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.02](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.02) — full |
 | Provides | runbook-set; rehearsal-records |
 | Start prerequisites | **artifact** [OPS.02](#task-ops-02) — the incident process the runbooks are executed within. *Why:* a runbook is 'executable in an incident'; the incident system must exist to rehearse against |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.operations](adoption.md#task-adopt-07-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [CLOUD.51](cloud.md#task-cloud-51) — the DR drill programme's runbooks. *Why:* recovery runbooks depend on [WP-46](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46) (backup/recovery, out of this package's scope) to have something to rehearse<br>**integration** [HAR.04](harness.md#task-har-04) — Cloud Harness provider-failure/effect-certainty procedures. *Why:* CF-related runbook cases are explicitly named as awaiting [WP-46](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46)/[WP-52](../../work-packages/52-cloud-harness.md#rule-wp-52) and remain pending until WP50 joins them per [WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45)'s own completion gate text |
 | Unblocks | [OPS.12](#task-ops-12) |
 | Write scope | `Cloud:docs/runbooks/**` |
@@ -103,7 +103,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.03](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.03) — full<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) browser matrix acceptance; status page supported/degraded/blocked browser behavior, static no-JS readability — browser matrix acceptance; status page supported/degraded/blocked browser behavior, static no-JS readability<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) Browser matrix acceptance (browser-support.v1 supported/degraded/blocked) — package-level obligation contribution |
 | Provides | status-page; capability-health-mapping |
 | Start prerequisites | **artifact** [OPS.01](#task-ops-01) — capability health signals to map from. *Why:* the published component state is a reviewed mapping from internal capability health, which OPS.01 is the source of |
-| Entry condition | [ADOPT.09](adoption.md#task-adopt-09) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.09.operations](adoption.md#task-adopt-09-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [OPS.12](#task-ops-12) |
 | Write scope | `Web:apps/site/**/status/**` |
@@ -125,7 +125,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.04](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.04) — all work except the parts mapped to OPS.13<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) Operator contract closure — the real console join — operator contract closure; the real console join — wiring every generated role/method pair into the console UI<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) browser matrix acceptance; supported/degraded/blocked browser behavior for the operator console's own flows — browser matrix acceptance; supported/degraded/blocked browser behavior for the operator console's own flows<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) Browser matrix acceptance (browser-support.v1 supported/degraded/blocked) — package-level obligation contribution |
 | Provides | operator-console; support-access-grant-model |
 | Start prerequisites | **contract** [CON.14](contracts.md#task-con-14) — the OperatorService full RPC surface. *Why:* same gap noted at COM.13/POL.05 — the console has nothing to call until the operator RPCs are generated<br>**artifact** [POL.05](policy.md#task-pol-05) — the kill-switch RPC implementation. *Why:* the console must exercise kill-switch activation per the same generated role/method matrix |
-| Entry condition | [ADOPT.09](adoption.md#task-adopt-09) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.09.operations](adoption.md#task-adopt-09-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [COM.13](commerce.md#task-com-13) — the financial-owner RPC implementations. *Why:* the console must exercise grant/revoke/issueCredit/adjustCredit/refund end to end per [WP-45.04](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.04)'s testing requirement |
 | Unblocks | [CLOUD.64](cloud.md#task-cloud-64), [OPS.06](#task-ops-06), [OPS.07](#task-ops-07), [OPS.08](#task-ops-08), [OPS.11](#task-ops-11), [OPS.13](#task-ops-13), [WEB.31](web.md#task-web-31) |
 | Write scope | `Web:apps/app/**` |
@@ -148,7 +148,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.05](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.05) — full |
 | Provides | break-glass-path |
 | Start prerequisites | **artifact** [OPS.05](#task-ops-05) — the operator identity/audit infrastructure. *Why:* break-glass is a distinct path alongside normal operator access and reuses the same audit system ([BR-08](../../../architecture/14-build-packaging-and-release.md#rule-br-08)) |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.operations](adoption.md#task-adopt-07-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [OPS.12](#task-ops-12) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Support/**/BreakGlass/**` |
@@ -170,7 +170,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.06](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.06) — full |
 | Provides | support-case-model |
 | Start prerequisites | **artifact** [OPS.05](#task-ops-05) — operator case-handling surface. *Why:* support cases are worked by operators through the console's case model<br>**contract** [CON.22](contracts.md#task-con-22) — published support operations. *Why:* support cases implement the generated service |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.operations](adoption.md#task-adopt-07-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [OPS.08](#task-ops-08), [OPS.12](#task-ops-12) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Support/**/Cases/**` |
@@ -191,7 +191,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.07](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.07) — full |
 | Provides | enforcement-ladder; appeal-process |
 | Start prerequisites | **artifact** [OPS.07](#task-ops-07) — the support case/reference model. *Why:* community reports are worked as a case type reusing OPS.07's reference-resolution model<br>**artifact** [OPS.05](#task-ops-05) — operator audit infrastructure. *Why:* every enforcement action must be recorded to the audit system operators use |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.operations](adoption.md#task-adopt-07-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [OPS.12](#task-ops-12) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.TrustSafety/**` |
@@ -212,7 +212,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.08](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.08) — full<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) Producer prerequisites (WP45.08 must consume real WP22 mail, no fixture) — producer prerequisites; consuming [WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22) real mail artifacts without deferring [WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22)'s own gate; package-level obligation contribution |
 | Provides | operational-mail-drills; security-advisory-process |
 | Start prerequisites | **artifact** [CLOUD.12](cloud.md#task-cloud-12) — native/browser authentication's real Postmark/SES adapters. *Why:* [WP-45.08](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.08) text is explicit: 'Use WP22 real Postmark/SES adapters'; runtime mail fixtures are explicitly absent for this task per [WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45)'s own 'Producer prerequisites' note<br>**artifact** [OPS.02](#task-ops-02) — the incident process. *Why:* outage/reconciliation drills are rehearsed as incidents |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.operations](adoption.md#task-adopt-07-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [OPS.10](#task-ops-10), [OPS.12](#task-ops-12) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Modules.Notification/**`<br>`Cloud:src/Cloud/ArcForges.Cloud.Modules.TrustSafety/**/Advisories/**` |
@@ -235,7 +235,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.09](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.09) — all work except the parts mapped to AND.26 |
 | Provides | fcm-push-sender |
 | Start prerequisites | **artifact** [OPS.09](#task-ops-09) — the Notification module's adapter pattern and outbox convention. *Why:* IPushSender is expected to follow the same adapter/outbox shape the mail adapters establish in the same Notification module<br>**contract** [CON.22](contracts.md#task-con-22) — published notification operations including push registration. *Why:* push registration and delivery acknowledgement use the generated operations |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.operations](adoption.md#task-adopt-07-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | **integration** [AND.26](android.md#task-and-26) — physical Android device receipt, no-GMS and permission evidence. *Why:* [PG-24](../../../assurance/open-gates-register.md#rule-pg-24) explicitly remains open until [WP-32](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32) supplies physical-device evidence; this task proves provider acceptance only, labelled separately from device delivery |
 | Unblocks | [AND.26](android.md#task-and-26), [OPS.12](#task-ops-12) |
 | Permitted substitutes | [SUB-fcm-recorded-responses](../substitutes.md#sub-fcm-recorded-responses) |
@@ -258,7 +258,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Obligations | [WP-45.10](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.10) — all work except the parts mapped to OPS.13 |
 | Provides | package-review-console |
 | Start prerequisites | **artifact** [EXT.06](extensions.md#task-ext-06) — the PackageCatalog producer's operator methods (GetCatalogSubmission etc.). *Why:* producer-artifacts-and-integration.md records an explicit WP41.05 to WP45.10 edge; this task integrates [WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41)'s methods rather than reimplementing catalog review logic<br>**contract** [CON.14](contracts.md#task-con-14) — the catalogReview/catalogRevoke operator RPC shapes. *Why:* same operator-proto gap as COM.13/POL.05/OPS.05<br>**artifact** [OPS.05](#task-ops-05) — the operator console's identity/step-up/audit shell. *Why:* [WP-45.10](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.10) explicitly reuses 'independent operator authentication, step-up/evidence and audit' from the console rather than building a second one |
-| Entry condition | [ADOPT.09](adoption.md#task-adopt-09) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.09.operations](adoption.md#task-adopt-09-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [OPS.12](#task-ops-12), [OPS.13](#task-ops-13) |
 | Write scope | `Web:apps/app/**` |
@@ -277,10 +277,11 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 |---|---|
 | Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
 | Kind / size | service / S |
+| Package acceptance | Records the [WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-45.90](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.90) — full |
 | Provides | wp45-closure-receipt |
 | Start prerequisites | **artifact** [OPS.11](#task-ops-11) — the last domain producer's evidence to attach. *Why:* the receipt aggregates every amended §5 producer/consumer result<br>**artifact** [AND.26](android.md#task-and-26) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [OPS.01](#task-ops-01) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [OPS.02](#task-ops-02) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [OPS.03](#task-ops-03) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [OPS.04](#task-ops-04) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [OPS.06](#task-ops-06) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [OPS.07](#task-ops-07) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [OPS.08](#task-ops-08) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [OPS.09](#task-ops-09) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03))<br>**artifact** [OPS.10](#task-ops-10) — package task delivered. *Why:* the package acceptance receipt verifies every task mapped to the package ([DLV-03](../README.md#rule-dlv-03)) |
-| Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.07.operations](adoption.md#task-adopt-07-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [REL.06](release.md#task-rel-06), [REL.09](release.md#task-rel-09) |
 | Write scope | `Cloud:eng/provenance/records/**` |
@@ -300,7 +301,7 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 | Kind / size | integration / M |
 | Obligations | [WP-45.04](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.04) — exercise every generated role/method pair via the actual console UI<br>[WP-45.10](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.10) — real operator console join |
 | Start prerequisites | **artifact** [COM.13](commerce.md#task-com-13) — real, delivered outcome of COM.13 (Operator financial-owner proposal/approval operations). *Why:* this integration exercises the real operator financial-owner proposal/approval operations instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [POL.05](policy.md#task-pol-05) — real, delivered outcome of POL.05 (Kill switches). *Why:* this integration exercises the real kill switches instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [OPS.05](#task-ops-05) — real, delivered outcome of OPS.05 (Operator console and support access). *Why:* this integration exercises the real operator console and support access instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CON.14](contracts.md#task-con-14) — real, delivered outcome of CON.14 (Operator control service (OperatorService, full §9/9.1/9.2 protocol)). *Why:* this integration exercises the real operator control service (OperatorService, full §9/9.1/9.2 protocol) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [OPS.11](#task-ops-11) — real, delivered outcome of OPS.11 (Package review and revocation console). *Why:* this integration exercises the real package review and revocation console instead of a substitute, so it cannot start before that outcome exists |
-| Entry condition | [ADOPT.09](adoption.md#task-adopt-09) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
+| Entry condition | [ADOPT.09.operations](adoption.md#task-adopt-09-operations) — the adoption slice for this repository and lane is complete ([DLV-22](../README.md#rule-dlv-22)) |
 | Completion prerequisites | none |
 | Unblocks | [COM.13](commerce.md#task-com-13) |
 | Write scope |  |

@@ -140,7 +140,7 @@ A shared gate closes only after every contributing task records its required exe
 
 | # | Rule |
 |---|---|
-| <a id="rule-pa-01"></a>PA-01 | **A task starts when its own start prerequisites are satisfied** ([DLV-24](delivery/README.md#rule-dlv-24)) and its repository has completed adoption ([DLV-22](delivery/README.md#rule-dlv-22)). There is no package-level start rule: a package's other tasks, its numeric neighbours and unrelated lanes never gate it. |
+| <a id="rule-pa-01"></a>PA-01 | **A task starts when its own start prerequisites are satisfied** ([DLV-24](delivery/README.md#rule-dlv-24)) and the adoption slice for its repository and lane is complete ([DLV-22](delivery/README.md#rule-dlv-22)). There is no package-level start rule: a package's other tasks, its numeric neighbours and unrelated lanes never gate it. |
 | <a id="rule-pa-02"></a>PA-02 | **A change to a shared contract follows its ownership/compatibility process before dependent work proceeds.** The Architecture Owner accepts the change; consumers move to the new closure through reviewed pin updates. |
 | <a id="rule-pa-03"></a>PA-03 | **Independent tasks run concurrently** in the same or different repositories under atomic claims ([DLV-26](delivery/README.md#rule-dlv-26)); merges follow each repository's integration owner ([DLV-29](delivery/README.md#rule-dlv-29)); at most one CPU-heavy local build or test runs per workstation ([DLV-31](delivery/README.md#rule-dlv-31)). |
 

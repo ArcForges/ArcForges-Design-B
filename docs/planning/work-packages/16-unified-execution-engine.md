@@ -254,7 +254,7 @@ Scheduling is task-level under [P2-018](../../decisions/phase-2-specification-de
 | [EXE.08](../delivery/lanes/execution.md#task-exe-08) | [WP-16.07](16-unified-execution-engine.md#rule-wp-16.07) (full) | none |
 | [EXE.09](../delivery/lanes/execution.md#task-exe-09) | [WP-16.90](16-unified-execution-engine.md#rule-wp-16.90) (full)<br>[WP-16](16-unified-execution-engine.md#rule-wp-16) §6 Impacts row 'Compatibility: Task contract versioning for later cloud and mobile surfaces' (package-level obligation contribution) | none |
 
-**Consumers outside this package:** [AST.10](../delivery/lanes/assistant.md#task-ast-10), [AST.13](../delivery/lanes/assistant.md#task-ast-13), [AST.17](../delivery/lanes/assistant.md#task-ast-17), [DEV.09](../delivery/lanes/device-bridge.md#task-dev-09), [DEV.12](../delivery/lanes/device-bridge.md#task-dev-12), [SLATE.28](../delivery/lanes/arcslate.md#task-slate-28), [SLATE.30](../delivery/lanes/arcslate.md#task-slate-30).
+**Consumers outside this package:** [AST.10](../delivery/lanes/assistant.md#task-ast-10), [AST.13](../delivery/lanes/assistant.md#task-ast-13), [AST.17](../delivery/lanes/assistant.md#task-ast-17), [DEV.09](../delivery/lanes/device-bridge.md#task-dev-09), [DEV.12](../delivery/lanes/device-bridge.md#task-dev-12), [DEV.13](../delivery/lanes/device-bridge.md#task-dev-13), [DEV.14](../delivery/lanes/device-bridge.md#task-dev-14), [SLATE.28](../delivery/lanes/arcslate.md#task-slate-28), [SLATE.30](../delivery/lanes/arcslate.md#task-slate-30).
 
 <!-- delivery-graph:end -->
 
