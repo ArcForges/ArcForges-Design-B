@@ -225,7 +225,7 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 | Validation | offline unit tests: managed round-trip with integrity, reference-unavailable behaviour, malformed-image corpus asserting placeholder+reason+no crash, egress test |
 | Completion evidence | attachment integrity, no-embedding, malformed-input degradation and preview-egress results (image/file portion only; PDF portion is NOTES.09) |
 | Baseline (unreviewed unless accepted) | not-started |
-| Notes | Deliberately split from the PDF viewer (NOTES.09) so ordinary attachment handling does not wait on the native PDFium wrapper, which does not exist yet anywhere in DesktopPlatform - this is the aggregate-producer-gate pattern the brief asks to avoid. |
+| Notes | Deliberately split from the PDF viewer (NOTES.09) so ordinary attachment handling does not wait on the native PDFium wrapper, which does not exist yet anywhere in DesktopPlatform - this is the aggregate-producer-gate pattern the delivery model avoids. |
 
 <a id="task-notes-09"></a>
 
@@ -249,7 +249,7 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 | Validation | offline unit tests against the fixture parser now; real hostile-input containment test deferred to IM.notes-pdf-native-integration; no live GUI E2E in CI |
 | Completion evidence | real native-parser-crash/hang-survival-with-metadata-card result; page-anchor survive-reopen result; [PG-12](../../../assurance/open-gates-register.md#rule-pg-12)/[PG-22](../../../assurance/open-gates-register.md#rule-pg-22) evidence once the real [WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) artifact lands |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: grepped DesktopPlatform for 'pdf' (case-insensitive) - zero results anywhere in src/ |
-| Notes | Flagged as an early risk proof because [AT-05](../../../architecture/01-solution-and-project-layout.md#rule-at-05) (PDF first-class attachment) cannot be met by a metadata fallback per [PD-07](../../../architecture/18-editing-and-rich-content.md#rule-pd-07), and the native dependency chain ([WP-11.09](../../work-packages/11-security-foundation.md#rule-wp-11.09) -> [WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13)) is currently the least-built part of the whole Notes surface - worth surfacing to a02/a03 planning early rather than discovering it late. |
+| Notes | Flagged as an early risk proof because [AT-05](../../../architecture/01-solution-and-project-layout.md#rule-at-05) (PDF first-class attachment) cannot be met by a metadata fallback per [PD-07](../../../architecture/18-editing-and-rich-content.md#rule-pd-07), and the native dependency chain ([WP-11.09](../../work-packages/11-security-foundation.md#rule-wp-11.09) -> [WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13)) is currently the least-built part of the whole Notes surface - worth surfacing early rather than discovering it late. |
 
 <a id="task-notes-10"></a>
 

@@ -376,7 +376,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Validation | CPU display/readback, ownership and fence lifetime, device loss and forced software path; each advertised accelerator exercised with its actual driver where locally available |
 | Completion evidence | Portable graphics and optional OS backends: behavioral, failure and package evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: native/arcgraphics-metal-abi exists (APPLE-only ABI1.0 probe, ARC_ABI ok) but is explicitly NOT this task's deliverable -- design text requires it stay unchanged as a private backend of the new arcgraphics-abi. No arcgraphics-abi directory exists yet. |
-| Notes | Consumed by both ArcSlate (preview surface) and ArcScope (live-view surface) per the brief's consumer split. |
+| Notes | Consumed by both ArcSlate (preview surface) and ArcScope (live-view surface). |
 
 <a id="task-nat-20"></a>
 

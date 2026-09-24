@@ -41,7 +41,7 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 | Validation | Offline unit + Cloud integration tests against the real D1 schema in an ephemeral test host; no live web fetch in CI ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017) forbids live-service CI) -- the web-source path is exercised through the fixture web-search response only. |
 | Completion evidence | Rejection-before-snippet test matrix (other-product/realm/private), consent/origin record contents, source registration receipt. |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: Cloud repo is Hello-World stage (src/ArcForges.Cloud only: Program.cs/HelloEndpoint.cs/BuildIdentity.cs/HealthStatus.cs); no Modules.* tree exists. |
-| Notes | [WP-40](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40) has no explicit Sec.4 project/file table unlike [WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41)/43/52; the Cloud module path above is this agent's convention-based inference, not sourced WP text -- flagged in report.md. |
+| Notes | [WP-40](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40) has no explicit section 4 project/file table (unlike [WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41), [WP-43](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43) and [WP-52](../../work-packages/52-cloud-harness.md#rule-wp-52)); the Cloud module path above follows the Cloud module layout convention and is not stated in [WP-40](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40) itself. |
 
 <a id="task-srch-01"></a>
 

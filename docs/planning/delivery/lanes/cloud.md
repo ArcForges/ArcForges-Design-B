@@ -199,7 +199,7 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Provides | shared-atomic-family-engine |
 | Start prerequisites | **artifact** [CLOUD.02](#task-cloud-02) — the D1 named-plan bridge, since a guarded batch is executed as one named plan. *Why:* the family engine is built on top of the plan-execution mechanism, not a separate execution path |
 | Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
-| Completion prerequisites | **integration** [CLOUD.63](#task-cloud-63) — at least two real module family participants exercising the engine under contention (e.g. Identity's auth/enrollment family and Notes/Sync's synced-content-mutation family). *Why:* [WP-21.05](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.05)'s own completion gate requires evidence of 'two Containers contend, stale holder cannot finalize, exact credits and sync cursor safety' -- 'exact credits' is Commerce (a09) and 'sync cursor safety' is this area's own [WP-25](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25); the generic engine alone cannot demonstrate this |
+| Completion prerequisites | **integration** [CLOUD.63](#task-cloud-63) — at least two real module family participants exercising the engine under contention (e.g. Identity's auth/enrollment family and Notes/Sync's synced-content-mutation family). *Why:* [WP-21.05](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.05)'s own completion gate requires evidence of 'two Containers contend, stale holder cannot finalize, exact credits and sync cursor safety' -- 'exact credits' is Commerce and 'sync cursor safety' is this area's own [WP-25](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25); the generic engine alone cannot demonstrate this |
 | Unblocks | [CLOUD.07](#task-cloud-07), [CLOUD.10](#task-cloud-10), [CLOUD.11](#task-cloud-11), [CLOUD.13](#task-cloud-13), [CLOUD.37](#task-cloud-37), [CLOUD.42](#task-cloud-42), [CLOUD.46](#task-cloud-46), [CLOUD.63](#task-cloud-63), [SIM.03](simulator.md#task-sim-03) |
 | Write scope | `Cloud:src/ArcForges.Cloud.Storage.D1/SharedFamilies/**` |
 | Shared resources | [RES-shared-transaction-families](../shared-resources.md#res-shared-transaction-families) (append) |
@@ -474,7 +474,7 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Validation | offline + opt-in local tests: separate product sign-in/sign-out, canceled/lost callback, wrong state/realm, expired code, device revoke, local history preservation |
 | Completion evidence | per-client session isolation results |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: ArcForges.Security building block not yet inspected in depth; |
-| Notes | Cross-repo: owned by [WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22) (a08) but lives in DesktopPlatform. |
+| Notes | Cross-repo: owned by [WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22) but lives in DesktopPlatform. |
 
 <a id="task-cloud-19"></a>
 
@@ -1183,7 +1183,7 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Provides | dr-drill-evidence |
 | Start prerequisites | **artifact** [CLOUD.50](#task-cloud-50) — the fresh environment rebuild mechanism to drill. *Why:* the drill exercises the real rebuild procedure CLOUD.50 implements |
 | Entry condition | [ADOPT.07](adoption.md#task-adopt-07) — adoption of the owning repository is complete ([DLV-22](../README.md#rule-dlv-22)) |
-| Completion prerequisites | **integration** [CLOUD.67](#task-cloud-67) — AI (a10) reopen after the Cloud-side restore, per [WP-46](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46)'s own text 'then combined AI reopen at 50/52'. *Why:* the full drill is explicitly combined with AI and release ([WP-50](../../work-packages/50-full-platform-production-release.md#rule-wp-50)); Cloud's own restore evidence is necessary but not sufficient for the combined drill |
+| Completion prerequisites | **integration** [CLOUD.67](#task-cloud-67) — AI reopen after the Cloud-side restore, per [WP-46](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46)'s own text 'then combined AI reopen at 50/52'. *Why:* the full drill is explicitly combined with AI and release ([WP-50](../../work-packages/50-full-platform-production-release.md#rule-wp-50)); Cloud's own restore evidence is necessary but not sufficient for the combined drill |
 | Unblocks | [CLOUD.55](#task-cloud-55), [CLOUD.67](#task-cloud-67), [OPS.03](operations.md#task-ops-03), [REL.06](release.md#task-rel-06) |
 | Write scope | `Cloud:tests/DrillTests/**` |
 | Validation | RTO<=4h with real evidence, not SQLite/simulator-only restore |
@@ -1361,7 +1361,7 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 ### CLOUD.67 — Combined AI reopen after Cloud disaster-recovery restore
 
-**Outcome.** AI (a10) services genuinely reopen and function after a real Cloud DR restore, per [WP-46.03](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.03)'s own 'then combined AI reopen at 50/52'
+**Outcome.** AI services genuinely reopen and function after a real Cloud DR restore, per [WP-46.03](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.03)'s own 'then combined AI reopen at 50/52'
 
 | Field | Value |
 |---|---|
@@ -1374,5 +1374,5 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 | Unblocks | [CLOUD.51](#task-cloud-51) |
 | Write scope |  |
 | Validation | Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)). |
-| Completion evidence | AI (a10) services genuinely reopen and function after a real Cloud DR restore, per [WP-46.03](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.03)'s own 'then combined AI reopen at 50/52' |
+| Completion evidence | AI services genuinely reopen and function after a real Cloud DR restore, per [WP-46.03](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.03)'s own 'then combined AI reopen at 50/52' |
 | Baseline (unreviewed unless accepted) | not-started |

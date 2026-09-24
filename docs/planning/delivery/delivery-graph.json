@@ -1493,7 +1493,7 @@
    "baseline": {
     "state": "not-started"
    },
-   "notes": "F-023 (mobile provenance) and VG-07 (Android runtime posture) are separately scheduled at WP06.07/WP30/WP32 (a03/a11) and are not this task's concern.",
+   "notes": "F-023 (mobile provenance) and VG-07 (Android runtime posture) are separately scheduled at WP06.07/WP30/WP32 and are not this task's concern.",
    "complete": []
   },
   {
@@ -5036,7 +5036,7 @@
      "type": "artifact",
      "task": "PLT.05",
      "need": "managed resource store's identity-to-location resolution",
-     "why": "ResourceRef resolution at the capability layer is built on the persistence-level ManagedResourceRef PLT.05 defines; this is a real cross-lane (persistence->capabilities) dependency inside my own area."
+     "why": "ResourceRef resolution at the capability layer is built on the persistence-level ManagedResourceRef PLT.05 defines; this is a real cross-lane (persistence->capabilities) dependency within the DesktopPlatform repository."
     },
     {
      "type": "artifact",
@@ -5369,7 +5369,7 @@
      "type": "artifact",
      "task": "PLT.20",
      "need": "capability availability evaluation (WP-09.03)",
-     "why": "explicit BR: command availability must reuse WP-09.03's evaluation so the two never disagree; this is a real cross-lane (capabilities->shell) dependency inside my own area, distinct from the rest of WP10 which does not need WP09 at all."
+     "why": "explicit BR: command availability must reuse WP-09.03's evaluation so the two never disagree; this is a real cross-lane (capabilities->shell) dependency within the DesktopPlatform repository, distinct from the rest of WP10 which does not need WP09 at all."
     }
    ],
    "writes": [
@@ -6156,7 +6156,7 @@
      "type": "integration",
      "task": "NAT.14",
      "need": "production PDF/image/media/OTIO parser composition rebuilt and signed on top of this same helper",
-     "why": "this task's own gate is explicit: 'WP13 later adds production parser composition to the same host and publishes a new immutable Runtime version; this stage has no reverse dependency on those parsers.' Full PG-12/PG-22 closure additionally needs WP-18.04 (Notes PDF viewer, a05) and WP-37.01/41.00 (a07/a10) real per-format/extension proofs."
+     "why": "this task's own gate is explicit: 'WP13 later adds production parser composition to the same host and publishes a new immutable Runtime version; this stage has no reverse dependency on those parsers.' Full PG-12/PG-22 closure additionally needs WP-18.04 (Notes PDF viewer) and WP-37.01/41.00 real per-format/extension proofs."
     }
    ],
    "substitutes": [
@@ -6180,7 +6180,7 @@
     "notes": "Observed scaffold, unreviewed: src/DesktopHelpers/ArcForges.ContentSandbox/ contains only Program.cs (a placeholder, per docs/runtime-ownership.md: 'the ContentSandbox scaffold is not accepted containment behavior'). ContentSandbox.Contracts and.Broker do not exist as separate projects yet."
    },
    "earlyRiskProof": true,
-   "notes": "This is the single highest-stakes early risk proof in the whole a02 area: PG-22 explicitly states a mocked launcher or unrestricted same-user child cannot close the gate, and the failure mode (hostile parsing escaping containment) would invalidate downstream trust in every product that later touches untrusted content (Notes PDF, Slate media/OTIO, extensions). Recommend prioritising this alongside PLT.03 (persistence recovery). Merged duplicate integration or closure task formerly proposed as CON.96."
+   "notes": "This is the single highest-stakes early risk proof in the desktop platform foundation: PG-22 explicitly states a mocked launcher or unrestricted same-user child cannot close the gate, and the failure mode (hostile parsing escaping containment) would invalidate downstream trust in every product that later touches untrusted content (Notes PDF, Slate media/OTIO, extensions). Recommend prioritising this alongside PLT.03 (persistence recovery). Merged duplicate integration or closure task formerly proposed as CON.96."
   },
   {
    "id": "PLT.46",
@@ -7578,7 +7578,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: native/arcgraphics-metal-abi exists (APPLE-only ABI1.0 probe, ARC_ABI ok) but is explicitly NOT this task's deliverable -- design text requires it stay unchanged as a private backend of the new arcgraphics-abi. No arcgraphics-abi directory exists yet."
    },
-   "notes": "Consumed by both ArcSlate (preview surface) and ArcScope (live-view surface) per the brief's consumer split.",
+   "notes": "Consumed by both ArcSlate (preview surface) and ArcScope (live-view surface).",
    "complete": []
   },
   {
@@ -11421,7 +11421,7 @@
    "baseline": {
     "state": "not-started"
    },
-   "notes": "Deliberately split from the PDF viewer (NOTES.09) so ordinary attachment handling does not wait on the native PDFium wrapper, which does not exist yet anywhere in DesktopPlatform - this is the aggregate-producer-gate pattern the brief asks to avoid.",
+   "notes": "Deliberately split from the PDF viewer (NOTES.09) so ordinary attachment handling does not wait on the native PDFium wrapper, which does not exist yet anywhere in DesktopPlatform - this is the aggregate-producer-gate pattern the delivery model avoids.",
    "complete": []
   },
   {
@@ -11483,7 +11483,7 @@
     "notes": "Observed none, unreviewed: grepped DesktopPlatform for 'pdf' (case-insensitive) - zero results anywhere in src/"
    },
    "earlyRiskProof": true,
-   "notes": "Flagged as an early risk proof because AT-05 (PDF first-class attachment) cannot be met by a metadata fallback per PD-07, and the native dependency chain (WP-11.09 -> WP-13) is currently the least-built part of the whole Notes surface - worth surfacing to a02/a03 planning early rather than discovering it late."
+   "notes": "Flagged as an early risk proof because AT-05 (PDF first-class attachment) cannot be met by a metadata fallback per PD-07, and the native dependency chain (WP-11.09 -> WP-13) is currently the least-built part of the whole Notes surface - worth surfacing early rather than discovering it late."
   },
   {
    "id": "NOTES.10",
@@ -13327,7 +13327,7 @@
      "type": "artifact",
      "task": "PLT.06",
      "need": "published chunked/large-append verifiable store primitive",
-     "why": "BR-11 forbids database blobs for raw capture; this is a real evidence-integrity requirement (immutability, per-chunk checksum, crash-boundary recovery) that a hand-rolled substitute would not honestly prove — the brief's own guidance treats evidence-integrity storage as a case where a substitute is not acceptable"
+     "why": "BR-11 forbids database blobs for raw capture; this is a real evidence-integrity requirement (immutability, per-chunk checksum, crash-boundary recovery) that a hand-rolled substitute would not honestly prove — the substitute rules treat evidence-integrity storage as a case where a substitute is not acceptable"
     }
    ],
    "writes": [
@@ -17542,7 +17542,7 @@
      "type": "integration",
      "task": "CLOUD.63",
      "need": "at least two real module family participants exercising the engine under contention (e.g. Identity's auth/enrollment family and Notes/Sync's synced-content-mutation family)",
-     "why": "WP-21.05's own completion gate requires evidence of 'two Containers contend, stale holder cannot finalize, exact credits and sync cursor safety' -- 'exact credits' is Commerce (a09) and 'sync cursor safety' is this area's own WP-25; the generic engine alone cannot demonstrate this"
+     "why": "WP-21.05's own completion gate requires evidence of 'two Containers contend, stale holder cannot finalize, exact credits and sync cursor safety' -- 'exact credits' is Commerce and 'sync cursor safety' is this area's own WP-25; the generic engine alone cannot demonstrate this"
     }
    ],
    "writes": [
@@ -18187,7 +18187,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: ArcForges.Security building block not yet inspected in depth;"
    },
-   "notes": "Cross-repo: owned by WP-22 (a08) but lives in DesktopPlatform.",
+   "notes": "Cross-repo: owned by WP-22 but lives in DesktopPlatform.",
    "complete": []
   },
   {
@@ -19980,7 +19980,7 @@
     {
      "type": "integration",
      "task": "CLOUD.67",
-     "need": "AI (a10) reopen after the Cloud-side restore, per WP-46's own text 'then combined AI reopen at 50/52'",
+     "need": "AI reopen after the Cloud-side restore, per WP-46's own text 'then combined AI reopen at 50/52'",
      "why": "the full drill is explicitly combined with AI and release (WP-50); Cloud's own restore evidence is necessary but not sufficient for the combined drill"
     }
    ],
@@ -20369,7 +20369,7 @@
      "part": "combined AI-reopen portion"
     }
    ],
-   "outcome": "AI (a10) services genuinely reopen and function after a real Cloud DR restore, per WP-46.03's own 'then combined AI reopen at 50/52'",
+   "outcome": "AI services genuinely reopen and function after a real Cloud DR restore, per WP-46.03's own 'then combined AI reopen at 50/52'",
    "start": [
     {
      "type": "artifact",
@@ -20385,7 +20385,7 @@
     }
    ],
    "validation": "Local real-integration run of the affected scenario in an existing environment, recorded once; offline and static checks in CI; no hosted runtime, device, browser, live-service or inference CI (P2-017).",
-   "evidence": "AI (a10) services genuinely reopen and function after a real Cloud DR restore, per WP-46.03's own 'then combined AI reopen at 50/52'",
+   "evidence": "AI services genuinely reopen and function after a real Cloud DR restore, per WP-46.03's own 'then combined AI reopen at 50/52'",
    "baseline": {
     "state": "not-started"
    },
@@ -22451,7 +22451,7 @@
     "state": "not-started",
     "notes": "Observed none, unreviewed: Cloud repo is Hello-World stage (src/ArcForges.Cloud only: Program.cs/HelloEndpoint.cs/BuildIdentity.cs/HealthStatus.cs); no Modules.* tree exists."
    },
-   "notes": "WP-40 has no explicit Sec.4 project/file table unlike WP-41/43/52; the Cloud module path above is this agent's convention-based inference, not sourced WP text -- flagged in report.md.",
+   "notes": "WP-40 has no explicit section 4 project/file table (unlike WP-41, WP-43 and WP-52); the Cloud module path above follows the Cloud module layout convention and is not stated in WP-40 itself.",
    "complete": []
   },
   {
@@ -27585,7 +27585,7 @@
      "type": "artifact",
      "task": "PLT.32",
      "need": "lifecycle/shutdown handshake (WP-10.06)",
-     "why": "UC-02/UP-03 explicitly require coordinating with 'the real lifecycle shutdown handshake' - this is a genuine Shell->Updater dependency inside my own area, not an external one."
+     "why": "UC-02/UP-03 explicitly require coordinating with 'the real lifecycle shutdown handshake' - this is a genuine Shell->Updater dependency within the DesktopPlatform repository, not an external one."
     }
    ],
    "writes": [
@@ -27637,7 +27637,7 @@
      "type": "artifact",
      "task": "PLT.04",
      "need": "migration runner's read/write compatibility-horizon concept (WP-07.03)",
-     "why": "BR-05 says explicitly: 'use the existing data-store migration read/write compatibility horizon before rollback' - this is a direct, real Persistence->Updater contract dependency inside my own area, not invented by the updater."
+     "why": "BR-05 says explicitly: 'use the existing data-store migration read/write compatibility horizon before rollback' - this is a direct, real Persistence->Updater contract dependency within the DesktopPlatform repository, not invented by the updater."
     }
    ],
    "writes": [
@@ -27681,7 +27681,7 @@
      "type": "integration",
      "task": "POL.09",
      "need": "real activated Cloud policy distribution and the WP-45 advisory process",
-     "why": "per the brief's substitute guidance, a contract-bound fixture of the policy shape unblocks the start; real cross-area integration with the commerce, policy and operations lanes policy/advisory pipeline is deferred to a real scenario, not a start blocker."
+     "why": "under the substitute rules, a contract-bound fixture of the policy shape unblocks the start; real cross-area integration with the commerce, policy and operations lanes policy/advisory pipeline is deferred to a real scenario, not a start blocker."
     }
    ],
    "substitutes": [
@@ -27852,7 +27852,7 @@
      "type": "artifact",
      "task": "PRF.01",
      "need": "a real signed candidate AOT application to install/update",
-     "why": "WP53's own SS2 lists WP02/06 as supplying 'signed candidate pipeline and real AOT applications to install' - the full lifecycle test genuinely needs an installable product, which only exists once a03/a12's early proofs and at least one product's own AOT publish exist; this is a real integration-time (not code-start) need, consistent with implementation-sequence.md listing WP53 after 45 and before 46 in the serial schedule."
+     "why": "WP53's own SS2 lists WP02/06 as supplying 'signed candidate pipeline and real AOT applications to install' - the full lifecycle test genuinely needs an installable product, which only exists once the early platform runtime proofs and at least one product's own AOT publish exist; this is a real integration-time (not code-start) need, consistent with implementation-sequence.md listing WP53 after 45 and before 46 in the serial schedule."
     },
     {
      "type": "artifact",
@@ -28154,7 +28154,7 @@
    "baseline": {
     "state": "not-started"
    },
-   "notes": "F-023 final closure and VG-13 (store category fit) are WP32's own gates (a11), consumed here rather than produced.",
+   "notes": "F-023 final closure and VG-13 (store category fit) are WP32's own gates, consumed here rather than produced.",
    "complete": []
   },
   {
@@ -28471,7 +28471,7 @@
    "baseline": {
     "state": "not-started"
    },
-   "notes": "VG-10/VG-11/VG-12 (supplier onboarding, payout eligibility, regional enablement) are WP42's own gates (a09), consumed here rather than produced.",
+   "notes": "VG-10/VG-11/VG-12 (supplier onboarding, payout eligibility, regional enablement) are WP42's own gates, consumed here rather than produced.",
    "complete": []
   },
   {
@@ -29974,7 +29974,7 @@
  "gates": [
   {
    "gate": "F-013",
-   "contribution": "Historical/informational only: licence/provenance gate closed pre-package; NOTES.13 re-verifies the AFFiNE licence split on drift only Closed 2026-09-05 by design-stage evidence (the five Reference Coverage Matrices). Registered as a versioned planning input at 00.04 (GOV.01, accepted). Drift maintenance only at 15.07/18.08/33.07/36.07, all owned by other areas (a04/a05/a06/a07).",
+   "contribution": "Historical/informational only: licence/provenance gate closed pre-package; NOTES.13 re-verifies the AFFiNE licence split on drift only. Closed 2026-09-05 by design-stage evidence (the five Reference Coverage Matrices). Registered as a versioned planning input at 00.04 (GOV.01, accepted). Drift maintenance only at 15.07/18.08/33.07/36.07, all owned by other areas.",
    "tasks": [
     "GOV.01",
     "NOTES.13"
@@ -29982,7 +29982,7 @@
   },
   {
    "gate": "F-023",
-   "contribution": "06.07 is the scheduled first-artifact producer; already CLOSED for the inspected android-0.1.0-ci.14.1 candidate, reopens on dependency/resource change Android licence/provenance/dependency-closure evidence at identity change and before the final companion artifact Mobile provenance and dependency closure: 06.07 before first artifact, 30.00 on change and 32.02 final closure. No GOV/REL substep listed as a producer.",
+   "contribution": "06.07 is the scheduled first-artifact producer; already CLOSED for the inspected android-0.1.0-ci.14.1 candidate, reopens on dependency/resource change. Android licence/provenance/dependency-closure evidence at identity change and before the final companion artifact. Mobile provenance and dependency closure: 06.07 before first artifact, 30.00 on change and 32.02 final closure.",
    "tasks": [
     "AND.01",
     "AND.18",
@@ -29991,7 +29991,7 @@
   },
   {
    "gate": "F-026",
-   "contribution": "New services generated under WP03.02's already-accepted reflection-free/AOT-safe posture; no new reflection dependency introduced 06.02 proves a real generated-client AOT call against deployed CF ingress, closing the open gate (WP03.02 already supplied the descriptor/compat/no-reflection producer leg) Typed HTTP client AOT packaging: 03.02, 06.02. No GOV/REL substep listed as a producer.",
+   "contribution": "New services generated under WP03.02's already-accepted reflection-free/AOT-safe posture; no new reflection dependency introduced. 06.02 proves a real generated-client AOT call against deployed CF ingress, closing the open gate (WP03.02 already supplied the descriptor/compat/no-reflection producer leg). Typed HTTP client AOT packaging: 03.02, 06.02.",
    "tasks": [
     "CON.07",
     "CON.08",
@@ -30007,7 +30007,7 @@
   },
   {
    "gate": "L-16",
-   "contribution": "Interplay only: Notes' local FTS index footprint is one input to WP-40's index/namespace capacity accounting; no direct Notes evidence produced against L-16 Capacity measurement harness/config and proposed capacity report",
+   "contribution": "Interplay only: Notes' local FTS index footprint is one input to WP-40's index/namespace capacity accounting; no direct Notes evidence produced against L-16. Capacity measurement harness/config and proposed capacity report.",
    "tasks": [
     "CLOUD.07",
     "NOTES.15"
@@ -30015,14 +30015,14 @@
   },
   {
    "gate": "L-30",
-   "contribution": "Received-payout evidence explicitly remains at WP-50; not produced here",
+   "contribution": "Received-payout evidence explicitly remains at WP-50; not produced here.",
    "tasks": [
     "COM.14"
    ]
   },
   {
    "gate": "PG-01",
-   "contribution": "Historical/informational only: the ArcNotes reference matrix was closed pre-package; NOTES.13 performs maintenance drift-checking, not baseline evidence consumed (already closed pre-package) by the drift check; not re-created here ArcSlate's matrix is already closed pre-package (2026-09-05); WP-36.07 performs only the maintenance drift re-check the package gate requires Per-product Reference Coverage Matrix: closed 2026-09-05 by design-stage evidence; registered as a versioned input at 00.04 (GOV.01, accepted); drift maintenance at 15.07/18.08/33.07/36.07 (other areas).",
+   "contribution": "Historical/informational only: the ArcNotes reference matrix was closed pre-package; NOTES.13 performs maintenance drift-checking, not baseline evidence. consumed (already closed pre-package) by the drift check; not re-created here. ArcSlate's matrix is already closed pre-package (2026-09-05); WP-36.07 performs only the maintenance drift re-check the package gate requires. Per-product Reference Coverage Matrix: closed 2026-09-05 by design-stage evidence; registered as a versioned input at 00.04 (GOV.01, accepted); drift maintenance at 15.07/18.08/33.07/36.07 (other areas).",
    "tasks": [
     "GOV.01",
     "NOTES.13",
@@ -30039,7 +30039,7 @@
   },
   {
    "gate": "PG-03",
-   "contribution": "every native dependency the WP13 families admit (FFmpeg, miniaudio, libusb, OCIO, OIIO, OpenEXR, Imath, OTIO, PDFium) receives AD-01..08 obligations and a licence position licence/provenance disposition for admitted acquisition and import native dependencies (ArcInstruments ABI consumer; native import dependency) Native dependency licence review for ArcSlate's native surface: WP-37.00 explicitly 'satisfies PG-03 for ArcSlate' via the ABI boundary/licence-position record; WP-39.05 separately contributes the OTIO-bridge-specific licence/provenance analysis Native dependency licence review: 13.04 (a03), 33/35.04 (a06), 37.00/39.05 (a07). No GOV/REL substep listed.",
+   "contribution": "every native dependency the WP13 families admit (FFmpeg, miniaudio, libusb, OCIO, OIIO, OpenEXR, Imath, OTIO, PDFium) receives AD-01..08 obligations and a licence position. licence/provenance disposition for admitted acquisition and import native dependencies (ArcInstruments ABI consumer; native import dependency). Native dependency licence review for ArcSlate's native surface: WP-37.00 explicitly 'satisfies PG-03 for ArcSlate' via the ABI boundary/licence-position record; WP-39.05 separately contributes the OTIO-bridge-specific licence/provenance analysis. Native dependency licence review: 13.04, 33/35.04, 37.00/39.05.",
    "tasks": [
     "NAT.07",
     "NAT.08",
@@ -30059,14 +30059,14 @@
   },
   {
    "gate": "PG-04",
-   "contribution": "Runbook rehearsal records for every implemented owner (WP-45.02) Runbook rehearsal evidence: satisfied within WP45, the first rehearsal and gate closure. REL.09 (combined disaster drill) re-exercises runbooks at release time as a live-confirmation, not a re-close of this gate.",
+   "contribution": "Runbook rehearsal records for every implemented owner (WP-45.02). Runbook rehearsal evidence: satisfied within WP45, the first rehearsal and gate closure. REL.09 (combined disaster drill) re-exercises runbooks at release time as a live-confirmation, not a re-close of this gate.",
    "tasks": [
     "OPS.03"
    ]
   },
   {
    "gate": "PG-05",
-   "contribution": "Marker-injection redaction proof: no header/token/prompt/note-content/file-path marker ever appears in exported telemetry; content/secret types structurally unloggable Telemetry redaction proof: satisfied entirely within WP12. No GOV/REL contribution.",
+   "contribution": "Marker-injection redaction proof: no header/token/prompt/note-content/file-path marker ever appears in exported telemetry; content/secret types structurally unloggable. Telemetry redaction proof: satisfied entirely within WP12.",
    "tasks": [
     "PLT.49"
    ]
@@ -30080,7 +30080,7 @@
   },
   {
    "gate": "PG-07",
-   "contribution": "ArcNotes' contribution is the import-fixture obligation only (per declared source format); the export side of PG-07 belongs to WP-25.08 per-product import format fixture completeness for every claimed ArcScope import version Format fixture completeness for every claimed ArcSlate import/export version (OTIO) Cloud Notes/Chat portion: real snapshot/export jobs, origin/fidelity/attachment manifest, structural absence of the runtime export fixture Format fixture completeness: 19.04, 35.04, 39.05 ; real Cloud Notes/Chat export closure is separately at 25.08. No GOV/REL substep listed.",
+   "contribution": "ArcNotes' contribution is the import-fixture obligation only (per declared source format); the export side of PG-07 belongs to WP-25.08. per-product import format fixture completeness for every claimed ArcScope import version. Format fixture completeness for every claimed ArcSlate import/export version (OTIO). Cloud Notes/Chat portion: real snapshot/export jobs, origin/fidelity/attachment manifest, structural absence of the runtime export fixture. Format fixture completeness: 19.04, 35.04, 39.05 ; real Cloud Notes/Chat export closure is separately at 25.08.",
    "tasks": [
     "CLOUD.45",
     "NOTES.19",
@@ -30092,7 +30092,7 @@
   },
   {
    "gate": "PG-08",
-   "contribution": "13.04 seeds the hardware-lab inventory structure; 13.16 completes it with physical USB/serial/audio/GPU receipts and binds simulated-absence labels to their evidence class real hardware-lab evidence for every claimed adapter (serial/USB in particular) and for hardware-based measurement/analysis; a scoped contribution alone does not close the shared gate Hardware lab inventory evidence for ArcSlate playback/render/colour hardware paths (device/driver/firmware identity, software-fallback comparison) Hardware lab inventory: WP13 (a03) establishes it; WP33/34 (a06) and WP37/38 (a07) bind hardware results to it. No GOV/REL substep listed.",
+   "contribution": "13.04 seeds the hardware-lab inventory structure; 13.16 completes it with physical USB/serial/audio/GPU receipts and binds simulated-absence labels to their evidence class. real hardware-lab evidence for every claimed adapter (serial/USB in particular) and for hardware-based measurement/analysis; a scoped contribution alone does not close the shared gate. Hardware lab inventory evidence for ArcSlate playback/render/colour hardware paths (device/driver/firmware identity, software-fallback comparison). Hardware lab inventory: WP13 establishes it; WP33/34 and WP37/38 bind hardware results to it.",
    "tasks": [
     "NAT.05",
     "NAT.28",
@@ -30106,7 +30106,7 @@
   },
   {
    "gate": "PG-09",
-   "contribution": "Extension both-direction schema groundwork later consumed by WP41's public third-party conformance Extension protocol conformance suite passes before 3rd-party extension enablement Extension protocol conformance: satisfied entirely within WP41. No GOV/REL contribution.",
+   "contribution": "Extension both-direction schema groundwork later consumed by WP41's public third-party conformance. Extension protocol conformance suite passes before 3rd-party extension enablement. Extension protocol conformance: satisfied entirely within WP41.",
    "tasks": [
     "CON.05",
     "EXT.90"
@@ -30114,7 +30114,7 @@
   },
   {
    "gate": "PG-10",
-   "contribution": "Recorded payment-provider test-environment scenarios and contract fixtures including event duplication/loss (WP-42.10) Every AI provider exercised against its test environment with recorded fixtures Provider test-environment coverage: WP42/WP43 (a09/a10). No GOV/REL substep listed.",
+   "contribution": "Recorded payment-provider test-environment scenarios and contract fixtures including event duplication/loss (WP-42.10). Every AI provider exercised against its test environment with recorded fixtures. Provider test-environment coverage: WP42/WP43.",
    "tasks": [
     "AIR.07",
     "COM.14"
@@ -30129,7 +30129,7 @@
   },
   {
    "gate": "PG-12",
-   "contribution": "Contribution ONLY: the common ContentSandbox host/broker/OS-launch-profile containment evidence. The full gate additionally needs WP-13.13's real PDFium parser composition and WP-18.04's ArcNotes viewer integration/provenance-licence review ; this area does not close PG-12 alone. 13.13 supplies the actual PDF dependency and ContentSandbox containment evidence; the ArcNotes viewer path itself (AT-05) closes separately at WP-18.04 Real PDF viewer integration and malformed native input containment, consuming the packaged ContentSandbox proof PDF dependency and containment: 11.09 (a02), 13.13 (a03), 18.04 (a05). No GOV/REL substep listed.",
+   "contribution": "Contribution ONLY: the common ContentSandbox host/broker/OS-launch-profile containment evidence. The full gate additionally needs WP-13.13's real PDFium parser composition and WP-18.04's ArcNotes viewer integration/provenance-licence review ; this area does not close PG-12 alone. 13.13 supplies the actual PDF dependency and ContentSandbox containment evidence; the ArcNotes viewer path itself (AT-05) closes separately at WP-18.04. Real PDF viewer integration and malformed native input containment, consuming the packaged ContentSandbox proof. PDF dependency and containment: 11.09, 13.13, 18.04.",
    "tasks": [
     "NAT.14",
     "NAT.25",
@@ -30139,7 +30139,7 @@
   },
   {
    "gate": "PG-13",
-   "contribution": "Real payment event normalized through persistent term/capacity code (WP-42.11); combines with WP-43.07 provider usage/monetary fixture (external, the AI lanes) Real provider usage + real payment-provider event reconciled through production code, worked fixture exact Real-provider metering: 43.07 (a10), 42.11 (a09). No GOV/REL substep listed.",
+   "contribution": "Real payment event normalized through persistent term/capacity code (WP-42.11); combines with WP-43.07 provider usage/monetary fixture (external, the AI lanes). Real provider usage + real payment-provider event reconciled through production code, worked fixture exact. Real-provider metering: 43.07, 42.11.",
    "tasks": [
     "AIR.08",
     "COM.12"
@@ -30147,14 +30147,14 @@
   },
   {
    "gate": "PG-14b",
-   "contribution": "all real-host/storage/native-adapter simulator scenarios including the 24-hour soak; explicitly does not gate WP-34 Real Cloud simulator: satisfied entirely within WP51 (the ArcScope lanes SIM). No GOV/REL contribution.",
+   "contribution": "all real-host/storage/native-adapter simulator scenarios including the 24-hour soak; explicitly does not gate WP-34. Real Cloud simulator: satisfied entirely within WP51 (the ArcScope lanes SIM).",
    "tasks": [
     "SIM.08"
    ]
   },
   {
    "gate": "PG-15",
-   "contribution": "OTIO bidirectional evidence: real fixtures and the pinned official library, both directions, mixed/fractional rates with no frame shift, malicious paths, malformed input, cancellation, semantic round-trip Bidirectional OTIO: satisfied entirely within WP39.05. No GOV/REL contribution.",
+   "contribution": "OTIO bidirectional evidence: real fixtures and the pinned official library, both directions, mixed/fractional rates with no frame shift, malicious paths, malformed input, cancellation, semantic round-trip. Bidirectional OTIO: satisfied entirely within WP39.05.",
    "tasks": [
     "SLATE.38",
     "SLATE.39"
@@ -30162,7 +30162,7 @@
   },
   {
    "gate": "PG-16",
-   "contribution": "Durable term/capacity/refill state surviving concurrent requests and restart without double grant (WP-42.11), combined with atomic configuration-activation evidence (WP-44.01) Configuration activation: 44.01 (a09), 42.11 (a09). No GOV/REL substep listed.",
+   "contribution": "Durable term/capacity/refill state surviving concurrent requests and restart without double grant (WP-42.11), combined with atomic configuration-activation evidence (WP-44.01). Configuration activation: 44.01, 42.11.",
    "tasks": [
     "COM.12",
     "POL.02"
@@ -30170,7 +30170,7 @@
   },
   {
    "gate": "PG-17",
-   "contribution": "Downstream/consumer only: Notes objects (documents, blocks, attachments) are exercised inside the WP-25.07 three-device convergence harness; Notes produces no direct PG-17 evidence itself Bootstrap/feed convergence, old revisions/tombstones/echoes, late commit after an advanced cursor, consuming the publisher from package 21 Feed publication and bootstrap: 21.05/25.02/25.07, all the Cloud lane. No GOV/REL substep listed. (Not to be confused with REL.10's DESKTOP update-feed cutover, which is a different feed.)",
+   "contribution": "Downstream/consumer only: Notes objects (documents, blocks, attachments) are exercised inside the WP-25.07 three-device convergence harness; Notes produces no direct PG-17 evidence itself. Bootstrap/feed convergence, old revisions/tombstones/echoes, late commit after an advanced cursor, consuming the publisher from package 21. Feed publication and bootstrap: 21.05/25.02/25.07, all the Cloud lane. (Not to be confused with REL.10's DESKTOP update-feed cutover, which is a different feed.).",
    "tasks": [
     "CLOUD.39",
     "CLOUD.44",
@@ -30179,7 +30179,7 @@
   },
   {
    "gate": "PG-18",
-   "contribution": "Dispatch/crash unknown-effect resolution; capability declaring neither idempotency nor status op is unregistrable (UR-02) Uncertain-effect resolution: satisfied entirely within WP52 (the AI lanes HAR). No GOV/REL contribution.",
+   "contribution": "Dispatch/crash unknown-effect resolution; capability declaring neither idempotency nor status op is unregistrable (UR-02). Uncertain-effect resolution: satisfied entirely within WP52 (the AI lanes HAR).",
    "tasks": [
     "HAR.02",
     "HAR.04"
@@ -30194,7 +30194,7 @@
   },
   {
    "gate": "PG-20",
-   "contribution": "Time-model proof: SLATE.01 (exact output-grid projections, inexact-source conform reporting), SLATE.20 (per-track cut ownership, one mixed sample across tracks/dissolves/gaps), SLATE.38/39 (official OTIO double boundary without silent frame/sample drift) Time model and official OTIO boundary: 36.01/37.04/39.05, all the ArcSlate lane. No GOV/REL substep listed.",
+   "contribution": "Time-model proof: SLATE.01 (exact output-grid projections, inexact-source conform reporting), SLATE.20 (per-track cut ownership, one mixed sample across tracks/dissolves/gaps), SLATE.38/39 (official OTIO double boundary without silent frame/sample drift). Time model and official OTIO boundary: 36.01/37.04/39.05, all the ArcSlate lane.",
    "tasks": [
     "SLATE.01",
     "SLATE.20",
@@ -30211,7 +30211,7 @@
   },
   {
    "gate": "PG-22",
-   "contribution": "Contribution ONLY: the common ContentSandbox/executable-extension OS-isolation mechanics (AppContainer/Job Object, Landlock/seccomp, App-Sandbox/XPC) proven against a hostile first-party test parser. The full gate additionally needs WP-18.04 (a05), WP-37.01 and WP-41.00 (the AI lanes extension platform) real per-consumer proofs. 13.13 composes the first real hostile parser (PDFium + approved wrappers) into the WP-11.09 host and proves containment at the package level; WP-11.09 itself supplies the mechanism + fixture-parser leg Real packaged PDF/image parser isolation integration, combined with the platform broker proof Real packaged hostile media parsing containment with no unrestricted fallback Packaged-RID OS isolation proof, no same-user full-trust fallback accepted OS-enforced content/extension isolation: 11.09 (a02), 13.13 (a03), 18.04 (a05), 37.01 (a07), 41.00 (a10). No GOV/REL substep listed.",
+   "contribution": "Contribution ONLY: the common ContentSandbox/executable-extension OS-isolation mechanics (AppContainer/Job Object, Landlock/seccomp, App-Sandbox/XPC) proven against a hostile first-party test parser. The full gate additionally needs WP-18.04, WP-37.01 and WP-41.00 (the AI lanes extension platform) real per-consumer proofs. 13.13 composes the first real hostile parser (PDFium + approved wrappers) into the WP-11.09 host and proves containment at the package level; WP-11.09 itself supplies the mechanism + fixture-parser leg. Real packaged PDF/image parser isolation integration, combined with the platform broker proof. Real packaged hostile media parsing containment with no unrestricted fallback. Packaged-RID OS isolation proof, no same-user full-trust fallback accepted. OS-enforced content/extension isolation: 11.09, 13.13, 18.04, 37.01, 41.00.",
    "tasks": [
     "EXT.00",
     "NAT.14",
@@ -30224,7 +30224,7 @@
   },
   {
    "gate": "PG-23",
-   "contribution": "06.05 supplies the foundation-only slice (production Node build, generated SDK round trip, AOT probe call, esproj/CLI evidence); the full gate needs many other areas' contributions too Real cookie-only browser identity/session/CSRF/expiry/revocation conformance (server side) plus generated C#/TS contract and real-server exact-value/error/header/client conformance (client side) Scoped Site/Account/Chat production evidence (Node-built assets, generated SDK exact values, cookie/CSRF/expiry/revocation, realtime recovery, visual/accessibility/performance) — the shared gate itself closes later at WP50 once every required producer, including these, has recorded evidence Commercial Web: 06.05 (a03), 22.08/23.05/24.06 (a08), 47/48/49 (a11), and 50.06 (REL.05) - REL.05 combines all applicable producer evidence into the final production Web release/rollback.",
+   "contribution": "06.05 supplies the foundation-only slice (production Node build, generated SDK round trip, AOT probe call, esproj/CLI evidence); the full gate needs many other areas' contributions too. Real cookie-only browser identity/session/CSRF/expiry/revocation conformance (server side) plus generated C#/TS contract and real-server exact-value/error/header/client conformance (client side). Scoped Site/Account/Chat production evidence (Node-built assets, generated SDK exact values, cookie/CSRF/expiry/revocation, realtime recovery, visual/accessibility/performance) — the shared gate itself closes later at WP50 once every required producer, including these, has recorded evidence. Commercial Web: 06.05, 22.08/23.05/24.06, 47/48/49, and 50.06 (REL.05) - REL.05 combines all applicable producer evidence into the final production Web release/rollback.",
    "tasks": [
     "CLOUD.19",
     "CLOUD.26",
@@ -30238,7 +30238,7 @@
   },
   {
    "gate": "PG-24",
-   "contribution": "Signed Android update feed format later consumed by WP32's physical-device receipt gate Server-side FCM send/credential/rate-limit evidence (WP-45.09); device-physical half stays with external WP-32.05 Android side of push delivery: registration, physical arm64 receipt, duplicate/rotation/revocation and denied-permission/no-GMS recovery (the live-sending half is WP-45.09, owned by the commerce, policy and operations lanes) Real Android push: 45.09 (a09) live sender; 32 (a11) physical receipt and fallback. No GOV/REL substep listed.",
+   "contribution": "Signed Android update feed format later consumed by WP32's physical-device receipt gate. Server-side FCM send/credential/rate-limit evidence (WP-45.09); device-physical half stays with external WP-32.05. Android side of push delivery: registration, physical arm64 receipt, duplicate/rotation/revocation and denied-permission/no-GMS recovery (the live-sending half is WP-45.09, owned by the commerce, policy and operations lanes). Real Android push: 45.09 live sender; 32 physical receipt and fallback.",
    "tasks": [
     "AND.12",
     "AND.15",
@@ -30249,14 +30249,14 @@
   },
   {
    "gate": "PG-25",
-   "contribution": "Selfhost.v1 production evidence remains external to this closure; WP-21.08 hands WP-46 a runnable deployment and configuration inventory only",
+   "contribution": "Selfhost.v1 production evidence remains external to this closure; WP-21.08 hands WP-46 a runnable deployment and configuration inventory only.",
    "tasks": [
     "CLOUD.09"
    ]
   },
   {
    "gate": "PG-26",
-   "contribution": "launch-capacity.v1 measurement: four fixed standard-2 slots, idle sleep/wake, pre-dispatch refusal vs unknown dispatched outcome, control-slot reserve, Vectorize/R2 thresholds -- a localhost benchmark cannot close it Launch capacity envelope (index reservations, capacity acceptance)",
+   "contribution": "launch-capacity.v1 measurement: four fixed standard-2 slots, idle sleep/wake, pre-dispatch refusal vs unknown dispatched outcome, control-slot reserve, Vectorize/R2 thresholds -- a localhost benchmark cannot close it. Launch capacity envelope (index reservations, capacity acceptance).",
    "tasks": [
     "CLOUD.07",
     "CLOUD.10",
@@ -30265,7 +30265,7 @@
   },
   {
    "gate": "UX-A",
-   "contribution": "Two products/two windows/two installs, no crossover -- application scope and independent lifecycle",
+   "contribution": "Two products/two windows/two installs, no crossover -- application scope and independent lifecycle.",
    "tasks": [
     "APP.01",
     "APP.07",
@@ -30274,7 +30274,7 @@
   },
   {
    "gate": "UX-B",
-   "contribution": "Exact Platform candidate consumed by product host adapters",
+   "contribution": "Exact Platform candidate consumed by product host adapters.",
    "tasks": [
     "APP.01",
     "AST.10"
@@ -30282,7 +30282,7 @@
   },
   {
    "gate": "UX-C",
-   "contribution": "Local/Cloud/temporary history CRUD",
+   "contribution": "Local/Cloud/temporary history CRUD.",
    "tasks": [
     "AST.01",
     "AST.07",
@@ -30291,7 +30291,7 @@
   },
   {
    "gate": "UX-D",
-   "contribution": "Stale context/epoch/approval refusal on the device tool bridge",
+   "contribution": "Stale context/epoch/approval refusal on the device tool bridge.",
    "tasks": [
     "DEV.03",
     "DEV.04",
@@ -30301,7 +30301,7 @@
   },
   {
    "gate": "UX-E",
-   "contribution": "Actual binary gRPC-Web protocol; no named fixture retained at final release",
+   "contribution": "Actual binary gRPC-Web protocol; no named fixture retained at final release.",
    "tasks": [
     "AST.11",
     "DEV.01",
@@ -30310,14 +30310,14 @@
   },
   {
    "gate": "UX-F",
-   "contribution": "Local search citations/branches (resources/search group)",
+   "contribution": "Local search citations/branches (resources/search group).",
    "tasks": [
     "AST.06"
    ]
   },
   {
    "gate": "UX-H",
-   "contribution": "Native usability of the assistant shell",
+   "contribution": "Native usability of the assistant shell.",
    "tasks": [
     "AST.10",
     "AST.17"
@@ -30325,7 +30325,7 @@
   },
   {
    "gate": "VG-01",
-   "contribution": "Provider interaction record separation/redaction, cost transparency, per-artifact-type marking; regime determination recorded separately AI transparency marking: satisfied entirely within WP43. No GOV/REL contribution.",
+   "contribution": "Provider interaction record separation/redaction, cost transparency, per-artifact-type marking; regime determination recorded separately. AI transparency marking: satisfied entirely within WP43.",
    "tasks": [
     "AIR.04",
     "AIR.05"
@@ -30333,7 +30333,7 @@
   },
   {
    "gate": "VG-02",
-   "contribution": "possible capability-vocabulary touchpoint for ArcScope's capability surface (MCP mapping); not confirmed as a hard requirement from this area's own WP text MCP SDK version pinned and concepts explicitly mapped to ArcForges vocabulary MCP SDK pin and vocabulary mapping: satisfied entirely within WP41. No GOV/REL contribution.",
+   "contribution": "possible capability-vocabulary touchpoint for ArcScope's capability surface (MCP mapping); not confirmed as a hard requirement from this area's own WP text. MCP SDK version pinned and concepts explicitly mapped to ArcForges vocabulary. MCP SDK pin and vocabulary mapping: satisfied entirely within WP41.",
    "tasks": [
     "EXT.08",
     "EXT.09",
@@ -30343,7 +30343,7 @@
   },
   {
    "gate": "VG-03",
-   "contribution": "Real AOT publish proof of every third-party control the shared shell uses, zero trim/AOT diagnostics, recorded licence position 06.06 establishes and exercises the third-party-control AOT admission process once, formally scheduling VG-03 itself to WP10 Third-party control AOT proof: satisfied entirely within WP10. No GOV/REL contribution.",
+   "contribution": "Real AOT publish proof of every third-party control the shared shell uses, zero trim/AOT diagnostics, recorded licence position. 06.06 establishes and exercises the third-party-control AOT admission process once, formally scheduling VG-03 itself to WP10. Third-party control AOT proof: satisfied entirely within WP10.",
    "tasks": [
     "PLT.34",
     "PRF.09"
@@ -30351,7 +30351,7 @@
   },
   {
    "gate": "VG-04",
-   "contribution": "Generated-shape policy test for every real local/in-process RPC interface (combines with WP06's published-host RPC proof) Local gRPC over real Named Pipes/UDS, full generated service set and callback listeners - this is where VG-04 is actually implemented end to end, even though open-gates-register.md schedules it only to WP-03.04(a01)/WP-06.01(a03). 06.01 proves bidirectional local RPC over real named-pipe/UDS between two published AOT binaries with the full generated service set Desktop host AOT proof with the real contract set: README lists 03.04/06.01 (a01/a03) as producer. WP05's own section 8 completion-gate text additionally states that WP-05.03 (GOV.05) 'makes VG-04's policy-test half enforceable' - a second contributing substep not listed in the README's deferred-gate table.",
+   "contribution": "Generated-shape policy test for every real local/in-process RPC interface (combines with WP06's published-host RPC proof). Local gRPC over real Named Pipes/UDS, full generated service set and callback listeners - this is where VG-04 is actually implemented end to end, even though open-gates-register.md schedules it only to WP-03.04/WP-06.01. 06.01 proves bidirectional local RPC over real named-pipe/UDS between two published AOT binaries with the full generated service set. Desktop host AOT proof with the real contract set: README lists 03.04/06.01 as producer. WP05's own section 8 completion-gate text additionally states that WP-05.03 (GOV.05) 'makes VG-04's policy-test half enforceable' - a second contributing substep not listed in the README's deferred-gate table.",
    "tasks": [
     "CON.04",
     "CON.05",
@@ -30365,12 +30365,12 @@
   },
   {
    "gate": "VG-05",
-   "contribution": "Merged into F-026; no separate closure. No GOV/REL contribution.",
+   "contribution": "Merged into F-026; no separate closure.",
    "tasks": []
   },
   {
    "gate": "VG-06",
-   "contribution": "06.04 supplies the Cloud full Native AOT closure evidence (D1, gRPC-Web, sessions, passkeys, operator OIDC, CF adapters); VG-06 stays TRIGGERED platform-wide until WP-21.00/WP-50.04 also contribute Cloud Native AOT closure (triggered): 06.04 (a03), 21.00 (a08), and 50.04 (REL.06) - REL.06 supplies the WP50-side promoted-candidate evidence for this recurring gate.",
+   "contribution": "06.04 supplies the Cloud full Native AOT closure evidence (D1, gRPC-Web, sessions, passkeys, operator OIDC, CF adapters); VG-06 stays TRIGGERED platform-wide until WP-21.00/WP-50.04 also contribute. Cloud Native AOT closure (triggered): 06.04, 21.00, and 50.04 (REL.06) - REL.06 supplies the WP50-side promoted-candidate evidence for this recurring gate.",
    "tasks": [
     "PRF.07",
     "REL.06"
@@ -30378,7 +30378,7 @@
   },
   {
    "gate": "VG-07",
-   "contribution": "06.07 inspects the selected Kotlin/ART release artifact, native module closure and real Android native gRPC transport Kotlin/ART release artifact, native module closure and real Android native gRPC transport inspection Android runtime posture confirmed from the artifact: 06.07 (a03), 30.02/32.01 (a11). No GOV/REL substep listed.",
+   "contribution": "06.07 inspects the selected Kotlin/ART release artifact, native module closure and real Android native gRPC transport. Kotlin/ART release artifact, native module closure and real Android native gRPC transport inspection. Android runtime posture confirmed from the artifact: 06.07, 30.02/32.01.",
    "tasks": [
     "AND.03",
     "AND.17",
@@ -30387,7 +30387,7 @@
   },
   {
    "gate": "VG-08",
-   "contribution": "Recurring re-verification of Android runtime posture on any future framework major-version upgrade (ongoing obligation owned wherever the toolchain is next bumped, not a one-time task) Framework upgrade re-verification (recurring): satisfied at 02 (GOV.03, accepted; WP02.05's evidence explicitly ties to VG-08) and re-run on every future upgrade thereafter, wherever that upgrade lands.",
+   "contribution": "Recurring re-verification of Android runtime posture on any future framework major-version upgrade (ongoing obligation owned wherever the toolchain is next bumped, not a one-time task). Framework upgrade re-verification (recurring): satisfied at 02 (GOV.03, accepted; WP02.05's evidence explicitly ties to VG-08) and re-run on every future upgrade thereafter, wherever that upgrade lands.",
    "tasks": [
     "AND.17",
     "GOV.03"
@@ -30400,28 +30400,28 @@
   },
   {
    "gate": "VG-10",
-   "contribution": "WP-42.10 supplies the technical/test-mode activation checklist only; does not close VG-10 (supplier onboarding/sanctions), which stays with Commercial Operations Owner via WP48/WP50 Supplier onboarding and screening: satisfied within WP42. REL.08 (commercial activation) CONSUMES this closed gate as a start prerequisite but does not itself produce it.",
+   "contribution": "WP-42.10 supplies the technical/test-mode activation checklist only; does not close VG-10 (supplier onboarding/sanctions), which stays with Commercial Operations Owner via WP48/WP50. Supplier onboarding and screening: satisfied within WP42. REL.08 (commercial activation) CONSUMES this closed gate as a start prerequisite but does not itself produce it.",
    "tasks": [
     "COM.14"
    ]
   },
   {
    "gate": "VG-11",
-   "contribution": "Same as VG-10 — activation checklist only; payout eligibility itself is not claimed Payout eligibility and currency: satisfied within WP42. REL.08 consumes, does not produce.",
+   "contribution": "Same as VG-10 — activation checklist only; payout eligibility itself is not claimed. Payout eligibility and currency: satisfied within WP42. REL.08 consumes, does not produce.",
    "tasks": [
     "COM.14"
    ]
   },
   {
    "gate": "VG-12",
-   "contribution": "Regional route stays disabled pending VG-12; WP-42 does not enable it Regional enablement gates (conditional): satisfied within WP42. REL.08 consumes (the regional-route configuration assertion), does not produce.",
+   "contribution": "Regional route stays disabled pending VG-12; WP-42 does not enable it. Regional enablement gates (conditional): satisfied within WP42. REL.08 consumes (the regional-route configuration assertion), does not produce.",
    "tasks": [
     "COM.14"
    ]
   },
   {
    "gate": "VG-13",
-   "contribution": "Category-fit, no-purchase-CTA/licence-key and consumption-only confirmation before store/alt-store submission Store category fit and consumption-only posture: satisfied within WP32. REL.04 (Android release readiness) consumes, does not produce.",
+   "contribution": "Category-fit, no-purchase-CTA/licence-key and consumption-only confirmation before store/alt-store submission. Store category fit and consumption-only posture: satisfied within WP32. REL.04 (Android release readiness) consumes, does not produce.",
    "tasks": [
     "AND.19",
     "AND.23"

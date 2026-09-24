@@ -297,7 +297,7 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 | Validation | Offline Gradle-time checks, negative fixtures, PR CI; no device/emulator runtime here, per [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017) (that is WP06.07/WP30/WP32). |
 | Completion evidence | Per-rule pass/fail fixture table for Mobile's Gradle dependency graph. |
 | Baseline (unreviewed unless accepted) | not-started |
-| Notes | [F-023](../../../assurance/open-gates-register.md#rule-f-023) (mobile provenance) and [VG-07](../../../assurance/open-gates-register.md#rule-vg-07) (Android runtime posture) are separately scheduled at WP06.07/WP30/WP32 (a03/a11) and are not this task's concern. |
+| Notes | [F-023](../../../assurance/open-gates-register.md#rule-f-023) (mobile provenance) and [VG-07](../../../assurance/open-gates-register.md#rule-vg-07) (Android runtime posture) are separately scheduled at WP06.07/WP30/WP32 and are not this task's concern. |
 
 <a id="task-gov-13"></a>
 

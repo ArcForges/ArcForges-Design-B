@@ -114,7 +114,7 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 | Validation | Post-release store-channel install/update verification, listing-consistency check; no emulator/device CI per [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017) (real device evidence is WP06.07/WP30/WP32). |
 | Completion evidence | Store install/update verification results; listing-consistency check. |
 | Baseline (unreviewed unless accepted) | not-started |
-| Notes | [F-023](../../../assurance/open-gates-register.md#rule-f-023) final closure and [VG-13](../../../assurance/open-gates-register.md#rule-vg-13) (store category fit) are WP32's own gates (a11), consumed here rather than produced. |
+| Notes | [F-023](../../../assurance/open-gates-register.md#rule-f-023) final closure and [VG-13](../../../assurance/open-gates-register.md#rule-vg-13) (store category fit) are WP32's own gates, consumed here rather than produced. |
 
 <a id="task-rel-05"></a>
 
@@ -202,7 +202,7 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 | Validation | Full commercial gate evidence set from WP42; configuration assertion on the regional route; a received payout is required, not merely a successful test transaction, per [BR-05](../../../architecture/14-build-packaging-and-release.md#rule-br-05). |
 | Completion evidence | Commercial gate evidence set including the received payout; regional-route configuration assertion. |
 | Baseline (unreviewed unless accepted) | not-started |
-| Notes | [VG-10](../../../assurance/open-gates-register.md#rule-vg-10)/[VG-11](../../../assurance/open-gates-register.md#rule-vg-11)/[VG-12](../../../assurance/open-gates-register.md#rule-vg-12) (supplier onboarding, payout eligibility, regional enablement) are WP42's own gates (a09), consumed here rather than produced. |
+| Notes | [VG-10](../../../assurance/open-gates-register.md#rule-vg-10)/[VG-11](../../../assurance/open-gates-register.md#rule-vg-11)/[VG-12](../../../assurance/open-gates-register.md#rule-vg-12) (supplier onboarding, payout eligibility, regional enablement) are WP42's own gates, consumed here rather than produced. |
 
 <a id="task-rel-09"></a>
 
