@@ -27,7 +27,8 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/app-01` and ledger record `ledger/tasks/app-01.md` in the Plan repository; task branch `task/app-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-14.00](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.00) — full |
 | Provides | assistant-abstractions-pkg; host-ports-v1; application-scope-identity |
@@ -50,7 +51,8 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/app-02` and ledger record `ledger/tasks/app-02.md` in the Plan repository; task branch `task/app-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-14.01](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.01) — full |
 | Provides | arcnotes-minimal-services; arcnotes-write-path |
@@ -72,7 +74,8 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/app-03` and ledger record `ledger/tasks/app-03.md` in the Plan repository; task branch `task/app-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S · early risk proof |
 | Obligations | [WP-14.02](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.02) — full |
 | Provides | arcnotes-aot-consumer-proof |
@@ -94,7 +97,8 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/app-04` and ledger record `ledger/tasks/app-04.md` in the Plan repository; task branch `task/app-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-14.03](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.03) — full |
 | Provides | host-idempotency-proof |
@@ -116,7 +120,8 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/app-05` and ledger record `ledger/tasks/app-05.md` in the Plan repository; task branch `task/app-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-14.04](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.04) — full |
 | Provides | owner-approval-enforcement |
@@ -138,7 +143,8 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/app-06` and ledger record `ledger/tasks/app-06.md` in the Plan repository; task branch `task/app-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-14.05](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.05) — full |
 | Provides | host-context-freeze; host-artifact-preview-port |
@@ -160,7 +166,8 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/app-07` and ledger record `ledger/tasks/app-07.md` in the Plan repository; task branch `task/app-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-14.06](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.06) — full |
 | Provides | host-independent-lifecycle |
@@ -181,7 +188,8 @@ Tasks: 8 · Owning repositories: ArcNotes, DesktopPlatform · Integration owner(
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/app-08` and ledger record `ledger/tasks/app-08.md` in the Plan repository; task branch `task/app-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Package acceptance | Records the [WP-14](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-14.90](../../work-packages/14-hub-and-minimal-provider-slice.md#rule-wp-14.90) — full |

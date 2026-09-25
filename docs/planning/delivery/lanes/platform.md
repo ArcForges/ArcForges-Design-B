@@ -75,7 +75,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-01` and ledger record `ledger/tasks/plt-01.md` in the Plan repository; task branch `task/plt-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-07.00](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.00) — full<br>[WP-07](../../work-packages/07-local-persistence-foundation.md#rule-wp-07) Content-origin carrier projection committed atomically with payload in the same owner transaction/journal boundary (SS2 required design input) — package-level obligation contribution |
 | Provides | persistence-write-path; commit-unit-type |
@@ -98,7 +99,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-02` and ledger record `ledger/tasks/plt-02.md` in the Plan repository; task branch `task/plt-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-07.01](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.01) — full |
 | Provides | persistence-journal |
@@ -120,7 +122,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-03` and ledger record `ledger/tasks/plt-03.md` in the Plan repository; task branch `task/plt-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L · early risk proof |
 | Obligations | [WP-07.02](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.02) — full |
 | Provides | persistence-snapshot-recovery; recovery-outcome-type |
@@ -143,7 +146,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-04` and ledger record `ledger/tasks/plt-04.md` in the Plan repository; task branch `task/plt-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-07.03](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.03) — full |
 | Provides | persistence-migration-runner; storage-schema-version-axis-source |
@@ -165,7 +169,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-05` and ledger record `ledger/tasks/plt-05.md` in the Plan repository; task branch `task/plt-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-07.04](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.04) — full |
 | Provides | persistence-resource-store; managed-resource-ref-type |
@@ -187,7 +192,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-06` and ledger record `ledger/tasks/plt-06.md` in the Plan repository; task branch `task/plt-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-07.05](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.05) — full |
 | Provides | persistence-append-store |
@@ -209,7 +215,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-07` and ledger record `ledger/tasks/plt-07.md` in the Plan repository; task branch `task/plt-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-07.06](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.06) — full |
 | Provides | persistence-derived-store-pressure; derived-store-abstraction |
@@ -231,7 +238,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-08` and ledger record `ledger/tasks/plt-08.md` in the Plan repository; task branch `task/plt-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Package acceptance | Records the [WP-07](../../work-packages/07-local-persistence-foundation.md#rule-wp-07) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-07.90](../../work-packages/07-local-persistence-foundation.md#rule-wp-07.90) — full |
@@ -254,7 +262,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-09` and ledger record `ledger/tasks/plt-09.md` in the Plan repository; task branch `task/plt-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-08.00](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.00) — full<br>[WP-08](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08) No product listener/global discovery - structural constraint on every substep, most directly tested by transport/registration — package-level obligation contribution |
 | Provides | ipc-transport |
@@ -277,7 +286,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-10` and ledger record `ledger/tasks/plt-10.md` in the Plan repository; task branch `task/plt-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-08.01](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.01) — full |
 | Provides | ipc-endpoint-identity |
@@ -298,7 +308,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-11` and ledger record `ledger/tasks/plt-11.md` in the Plan repository; task branch `task/plt-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-08.02](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.02) — full<br>[WP-08](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08) No product listener/global discovery - structural constraint on every substep, most directly tested by transport/registration — package-level obligation contribution |
 | Provides | ipc-registration |
@@ -319,7 +330,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-12` and ledger record `ledger/tasks/plt-12.md` in the Plan repository; task branch `task/plt-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-08.03](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.03) — full |
 | Provides | ipc-routing |
@@ -340,7 +352,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-13` and ledger record `ledger/tasks/plt-13.md` in the Plan repository; task branch `task/plt-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-08.04](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.04) — full |
 | Provides | ipc-bounds |
@@ -361,7 +374,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-14` and ledger record `ledger/tasks/plt-14.md` in the Plan repository; task branch `task/plt-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-08.05](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.05) — full |
 | Provides | ipc-cancel-retry |
@@ -382,7 +396,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-15` and ledger record `ledger/tasks/plt-15.md` in the Plan repository; task branch `task/plt-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-08.06](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.06) — full |
 | Provides | ipc-brokered-data |
@@ -403,7 +418,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-16` and ledger record `ledger/tasks/plt-16.md` in the Plan repository; task branch `task/plt-16` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Package acceptance | Records the [WP-08](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-08.90](../../work-packages/08-local-ipc-and-registration.md#rule-wp-08.90) — full |
@@ -426,7 +442,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-17` and ledger record `ledger/tasks/plt-17.md` in the Plan repository; task branch `task/plt-17` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-09.00](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.00) — full |
 | Provides | app-identity-composition |
@@ -449,7 +466,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-18` and ledger record `ledger/tasks/plt-18.md` in the Plan repository; task branch `task/plt-18` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-09.01](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.01) — full<br>[WP-09](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09) Contribution/registration state durable across restarts (SS6 impacts) — package-level obligation contribution |
 | Provides | contribution-registration |
@@ -470,7 +488,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-19` and ledger record `ledger/tasks/plt-19.md` in the Plan repository; task branch `task/plt-19` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-09.02](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.02) — full |
 | Provides | capability-registry-selection; capability-descriptor-type |
@@ -491,7 +510,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-20` and ledger record `ledger/tasks/plt-20.md` in the Plan repository; task branch `task/plt-20` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-09.03](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.03) — full |
 | Provides | action-availability; availability-result-type |
@@ -512,7 +532,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-21` and ledger record `ledger/tasks/plt-21.md` in the Plan repository; task branch `task/plt-21` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-09.04](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.04) — full |
 | Provides | context-freezing; frozen-context-type |
@@ -533,7 +554,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-22` and ledger record `ledger/tasks/plt-22.md` in the Plan repository; task branch `task/plt-22` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-09.05](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.05) — full |
 | Provides | resource-artifact-resolution; resource-ref-type |
@@ -554,7 +576,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-23` and ledger record `ledger/tasks/plt-23.md` in the Plan repository; task branch `task/plt-23` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-09.06](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.06) — full |
 | Provides | own-navigation-health; health-dimension-type |
@@ -575,7 +598,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-24` and ledger record `ledger/tasks/plt-24.md` in the Plan repository; task branch `task/plt-24` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-09.07](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.07) — all work except the parts mapped to PLT.57 |
 | Provides | invocation-pipeline |
@@ -597,7 +621,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-25` and ledger record `ledger/tasks/plt-25.md` in the Plan repository; task branch `task/plt-25` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Package acceptance | Records the [WP-09](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-09.90](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.90) — full |
@@ -620,7 +645,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-26` and ledger record `ledger/tasks/plt-26.md` in the Plan repository; task branch `task/plt-26` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-10.00](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.00) — full<br>[WP-10](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10) Reconciliation of the five legacy src/BuildingBlocks/ArcForges.Desktop.{Experience,Graphics,Preview,RichContent,Text} scaffold projects per [WP-01.02](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.02) into DesignSystem/Shell — package-level obligation contribution |
 | Provides | design-tokens |
@@ -642,7 +668,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-27` and ledger record `ledger/tasks/plt-27.md` in the Plan repository; task branch `task/plt-27` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-10.01](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.01) — full<br>[WP-10](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10) Reconciliation of the five legacy src/BuildingBlocks/ArcForges.Desktop.{Experience,Graphics,Preview,RichContent,Text} scaffold projects per [WP-01.02](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.02) into DesignSystem/Shell — package-level obligation contribution |
 | Provides | window-panel-layout |
@@ -664,7 +691,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-28` and ledger record `ledger/tasks/plt-28.md` in the Plan repository; task branch `task/plt-28` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-10.02](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.02) — full |
 | Provides | command-system |
@@ -686,7 +714,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-29` and ledger record `ledger/tasks/plt-29.md` in the Plan repository; task branch `task/plt-29` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-10.03](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.03) — full |
 | Provides | scoped-settings |
@@ -707,7 +736,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-30` and ledger record `ledger/tasks/plt-30.md` in the Plan repository; task branch `task/plt-30` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-10.04](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.04) — full |
 | Provides | attention-model |
@@ -728,7 +758,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-31` and ledger record `ledger/tasks/plt-31.md` in the Plan repository; task branch `task/plt-31` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-10.05](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.05) — full |
 | Provides | error-presentation |
@@ -749,7 +780,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-32` and ledger record `ledger/tasks/plt-32.md` in the Plan repository; task branch `task/plt-32` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-10.06](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.06) — full |
 | Provides | lifecycle-shutdown |
@@ -770,7 +802,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-33` and ledger record `ledger/tasks/plt-33.md` in the Plan repository; task branch `task/plt-33` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-10.07](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.07) — full |
 | Provides | accessibility-l10n |
@@ -792,7 +825,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-34` and ledger record `ledger/tasks/plt-34.md` in the Plan repository; task branch `task/plt-34` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-10.08](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.08) — full |
 | Provides | third-party-control-admission |
@@ -813,7 +847,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-35` and ledger record `ledger/tasks/plt-35.md` in the Plan repository; task branch `task/plt-35` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Package acceptance | Records the [WP-10](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-10.90](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.90) — all work except the parts mapped to PLT.56 |
@@ -836,7 +871,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-36` and ledger record `ledger/tasks/plt-36.md` in the Plan repository; task branch `task/plt-36` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-11.00](../../work-packages/11-security-foundation.md#rule-wp-11.00) — full |
 | Provides | actor-chain |
@@ -857,7 +893,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-37` and ledger record `ledger/tasks/plt-37.md` in the Plan repository; task branch `task/plt-37` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-11.01](../../work-packages/11-security-foundation.md#rule-wp-11.01) — full |
 | Provides | risk-model |
@@ -878,7 +915,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-38` and ledger record `ledger/tasks/plt-38.md` in the Plan repository; task branch `task/plt-38` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-11.02](../../work-packages/11-security-foundation.md#rule-wp-11.02) — all work except the parts mapped to PLT.57 |
 | Provides | decision-pipeline; security-decision-type |
@@ -900,7 +938,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-39` and ledger record `ledger/tasks/plt-39.md` in the Plan repository; task branch `task/plt-39` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-11.03](../../work-packages/11-security-foundation.md#rule-wp-11.03) — full |
 | Provides | approval-stepup; approval-request-type |
@@ -921,7 +960,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-40` and ledger record `ledger/tasks/plt-40.md` in the Plan repository; task branch `task/plt-40` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-11.04](../../work-packages/11-security-foundation.md#rule-wp-11.04) — full<br>[WP-11](../../work-packages/11-security-foundation.md#rule-wp-11) Application credential boundary: shared security packages use the caller application/installation storage namespace; deny sibling credential reads; no device-SSO signing broker — package-level obligation contribution |
 | Provides | secret-broker; secret-ref-type |
@@ -943,7 +983,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-41` and ledger record `ledger/tasks/plt-41.md` in the Plan repository; task branch `task/plt-41` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-11.05](../../work-packages/11-security-foundation.md#rule-wp-11.05) — full |
 | Provides | egress-control |
@@ -964,7 +1005,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-42` and ledger record `ledger/tasks/plt-42.md` in the Plan repository; task branch `task/plt-42` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-11.06](../../work-packages/11-security-foundation.md#rule-wp-11.06) — full |
 | Provides | instruction-provenance |
@@ -985,7 +1027,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-43` and ledger record `ledger/tasks/plt-43.md` in the Plan repository; task branch `task/plt-43` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-11.07](../../work-packages/11-security-foundation.md#rule-wp-11.07) — full |
 | Provides | capability-leases |
@@ -1006,7 +1049,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-44` and ledger record `ledger/tasks/plt-44.md` in the Plan repository; task branch `task/plt-44` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-11.08](../../work-packages/11-security-foundation.md#rule-wp-11.08) — full |
 | Provides | audit-subsystem; audit-event-type |
@@ -1028,7 +1072,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-45` and ledger record `ledger/tasks/plt-45.md` in the Plan repository; task branch `task/plt-45` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / XL · early risk proof |
 | Obligations | [WP-11.09](../../work-packages/11-security-foundation.md#rule-wp-11.09) — full; production ContentSandbox helper, real transport<br>[WP-11](../../work-packages/11-security-foundation.md#rule-wp-11) Local gRPC closure (SS7): own actual signed restricted gRPC helper, launch-secret/OS-descriptor allowlist, hostile-fixture containment, private-copy/digest validation, ConnectorBroker security boundary (real connector providers are WP41) — package-level obligation contribution |
 | Provides | content-helper-isolation; contentsandbox-host |
@@ -1052,7 +1097,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-46` and ledger record `ledger/tasks/plt-46.md` in the Plan repository; task branch `task/plt-46` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Package acceptance | Records the [WP-11](../../work-packages/11-security-foundation.md#rule-wp-11) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-11.90](../../work-packages/11-security-foundation.md#rule-wp-11.90) — full |
@@ -1075,7 +1121,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-47` and ledger record `ledger/tasks/plt-47.md` in the Plan repository; task branch `task/plt-47` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-12.00](../../work-packages/12-observability-foundation.md#rule-wp-12.00) — full |
 | Provides | signal-emission |
@@ -1096,7 +1143,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-48` and ledger record `ledger/tasks/plt-48.md` in the Plan repository; task branch `task/plt-48` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-12.01](../../work-packages/12-observability-foundation.md#rule-wp-12.01) — full |
 | Provides | correlation-causation |
@@ -1117,7 +1165,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-49` and ledger record `ledger/tasks/plt-49.md` in the Plan repository; task branch `task/plt-49` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-12.02](../../work-packages/12-observability-foundation.md#rule-wp-12.02) — full<br>[WP-12](../../work-packages/12-observability-foundation.md#rule-wp-12) eng/policy/telemetry-policy.json creation: dimension allowlist, metric label allowlist, sampling and retention configuration — package-level obligation contribution |
 | Provides | redaction |
@@ -1138,7 +1187,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-50` and ledger record `ledger/tasks/plt-50.md` in the Plan repository; task branch `task/plt-50` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-12.03](../../work-packages/12-observability-foundation.md#rule-wp-12.03) — full<br>[WP-12](../../work-packages/12-observability-foundation.md#rule-wp-12) eng/policy/telemetry-policy.json creation: dimension allowlist, metric label allowlist, sampling and retention configuration — package-level obligation contribution |
 | Provides | cardinality-sampling |
@@ -1159,7 +1209,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-51` and ledger record `ledger/tasks/plt-51.md` in the Plan repository; task branch `task/plt-51` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-12.04](../../work-packages/12-observability-foundation.md#rule-wp-12.04) — full |
 | Provides | health-probes; health-dimension-source |
@@ -1180,7 +1231,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-52` and ledger record `ledger/tasks/plt-52.md` in the Plan repository; task branch `task/plt-52` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-12.05](../../work-packages/12-observability-foundation.md#rule-wp-12.05) — full |
 | Provides | desktop-diagnostics-consent |
@@ -1202,7 +1254,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-53` and ledger record `ledger/tasks/plt-53.md` in the Plan repository; task branch `task/plt-53` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Package acceptance | Records the [WP-12](../../work-packages/12-observability-foundation.md#rule-wp-12) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-12.90](../../work-packages/12-observability-foundation.md#rule-wp-12.90) — full |
@@ -1225,7 +1278,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-54` and ledger record `ledger/tasks/plt-54.md` in the Plan repository; task branch `task/plt-54` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-11.09](../../work-packages/11-security-foundation.md#rule-wp-11.09) — containment mechanics re-verified against the real parser closure<br>[WP-13.13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.13) — production parser composition and its own containment evidence |
 | Start prerequisites | **artifact** [PLT.45](#task-plt-45) — real, delivered outcome of PLT.45 (Content helper and OS-enforced isolation (ContentSandbox host)). *Why:* this integration exercises the real content helper and OS-enforced isolation (ContentSandbox host) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NAT.14](native.md#task-nat-14) — real, delivered outcome of NAT.14 (Pdf family: PDFium and production parser containment in the WP11 helper (NEW library)). *Why:* this integration exercises the real pdf family: PDFium and production parser containment in the WP11 helper (NEW library) instead of a substitute, so it cannot start before that outcome exists |
@@ -1245,7 +1299,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-56` and ledger record `ledger/tasks/plt-56.md` in the Plan repository; task branch `task/plt-56` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-10.90](../../work-packages/10-design-system-and-desktop-shell.md#rule-wp-10.90) — the multi-product consumption evidence beyond a single clean package-only diagnostic |
 | Start prerequisites | **artifact** [PLT.35](#task-plt-35) — real, delivered outcome of PLT.35 (Publish DesignSystem/Shell packages and verify real integration). *Why:* this integration exercises the real publish DesignSystem/Shell packages and verify real integration instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NOTES.03](arcnotes.md#task-notes-03) — real, delivered outcome of NOTES.03 (Editor interaction: caret, selection, IME composition, markdown-friendly input). *Why:* this integration exercises the real editor interaction: caret, selection, IME composition, markdown-friendly input instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SCOPE.09](arcscope.md#task-scope-09) — real, delivered outcome of SCOPE.09 (Long-running capture in the shell). *Why:* this integration exercises the real long-running capture in the shell instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SLATE.22](arcslate.md#task-slate-22) — real, delivered outcome of SLATE.22 (Viewer: source and sequence, professional transport). *Why:* this integration exercises the real viewer: source and sequence, professional transport instead of a substitute, so it cannot start before that outcome exists |
@@ -1265,7 +1320,8 @@ Tasks: 56 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/plt-57` and ledger record `ledger/tasks/plt-57.md` in the Plan repository; task branch `task/plt-57` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-09.07](../../work-packages/09-capability-contribution-and-resource-model.md#rule-wp-09.07) — real authorize-step integration<br>[WP-11.02](../../work-packages/11-security-foundation.md#rule-wp-11.02) — real invocation-pipeline attachment |
 | Start prerequisites | **artifact** [PLT.24](#task-plt-24) — real, delivered outcome of PLT.24 (Invocation pipeline). *Why:* this integration exercises the real invocation pipeline instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [PLT.38](#task-plt-38) — real, delivered outcome of PLT.38 (Decision pipeline and the four enforcement points). *Why:* this integration exercises the real decision pipeline and the four enforcement points instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [APP.01](app-composition.md#task-app-01) — real, delivered outcome of APP.01 (Assistant.Abstractions host ports and application identity). *Why:* this integration exercises the real assistant.Abstractions host ports and application identity instead of a substitute, so it cannot start before that outcome exists |

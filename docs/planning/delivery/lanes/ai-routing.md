@@ -30,7 +30,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/air-00` and ledger record `ledger/tasks/air-00.md` in the Plan repository; task branch `task/air-00` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L · early risk proof |
 | Obligations | [WP-43.00](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.00) — full |
 | Provides | workers-ai-adapter |
@@ -53,7 +54,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/air-01` and ledger record `ledger/tasks/air-01.md` in the Plan repository; task branch `task/air-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-43.01](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.01) — full |
 | Provides | ai-tariffs |
@@ -75,7 +77,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/air-02` and ledger record `ledger/tasks/air-02.md` in the Plan repository; task branch `task/air-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-43.02](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.02) — full |
 | Provides | ai-metering-settlement |
@@ -96,7 +99,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/air-03` and ledger record `ledger/tasks/air-03.md` in the Plan repository; task branch `task/air-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-43.03](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.03) — full |
 | Provides | ai-realm-routing |
@@ -118,7 +122,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/air-04` and ledger record `ledger/tasks/air-04.md` in the Plan repository; task branch `task/air-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-43.04](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.04) — interaction record, redaction, and cost-transparency surfaces (Cloud side) |
 | Provides | ai-interaction-records |
@@ -139,7 +144,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/air-05` and ledger record `ledger/tasks/air-05.md` in the Plan repository; task branch `task/air-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-43.04](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.04) — transparency marking mechanism at the provider generation boundary; marking-coverage per artifact type |
 | Provides | ai-content-origin-marking |
@@ -162,7 +168,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/air-06` and ledger record `ledger/tasks/air-06.md` in the Plan repository; task branch `task/air-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-43.05](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.05) — full |
 | Provides | ai-funding-uncertainty-proof |
@@ -185,7 +192,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/air-07` and ledger record `ledger/tasks/air-07.md` in the Plan repository; task branch `task/air-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-43.06](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.06) — full |
 | Provides | ai-provider-test-env-coverage |
@@ -207,7 +215,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/air-08` and ledger record `ledger/tasks/air-08.md` in the Plan repository; task branch `task/air-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / L |
 | Obligations | [WP-43.07](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.07) — full |
 | Provides | ai-real-provider-evidence |
@@ -231,7 +240,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/air-09` and ledger record `ledger/tasks/air-09.md` in the Plan repository; task branch `task/air-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-43.90](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.90) — the final-review closure paragraph: real Workers AI Whisper with typed audio manifests/service object grants, supplier metering against actual response/manifest with missing usage retained uncertain, inference-late-outcome evidence-only reconciliation, bounded Workflow limits, stale-result non-publication<br>[WP-43](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43) Final-review closure paragraph: real Whisper/typed audio manifests, inference-late-outcome reconciliation, bounded Workflow limits, stale-result non-publication — package-level obligation contribution |
 | Provides | ai-asr-capability-closure |
@@ -254,7 +264,8 @@ Tasks: 11 · Owning repositories: AI, Cloud · Integration owner(s): AI integrat
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/air-90` and ledger record `ledger/tasks/air-90.md` in the Plan repository; task branch `task/air-90` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Package acceptance | Records the [WP-43](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-43.90](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43.90) — remaining aggregation/receipt<br>[WP-43](../../work-packages/43-managed-ai-routing-and-metering.md#rule-wp-43) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure: real ExecutionOwner task/turn + operator-funded compaction/search support, durable receipts vs temporary bodies outside D1/SQLite/backups/checkpoints — package-level obligation contribution |

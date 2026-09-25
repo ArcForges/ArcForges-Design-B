@@ -34,7 +34,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-01` and ledger record `ledger/tasks/com-01.md` in the Plan repository; task branch `task/com-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Obligations | [WP-42.00](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.00) — full |
 | Provides | provider-adapter-boundary; provider-capability-description |
@@ -56,7 +57,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-02` and ledger record `ledger/tasks/com-02.md` in the Plan repository; task branch `task/com-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-42.01](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.01) — full |
 | Provides | catalogue-offer-price-policy-version |
@@ -78,7 +80,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-03` and ledger record `ledger/tasks/com-03.md` in the Plan repository; task branch `task/com-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-42.02](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.02) — full |
 | Provides | purchase-intent; checkout-attempt; order-confirming-state |
@@ -101,7 +104,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-04` and ledger record `ledger/tasks/com-04.md` in the Plan repository; task branch `task/com-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L · early risk proof |
 | Obligations | [WP-42.03](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.03) — full |
 | Provides | provider-event-inbox; event-verification-chain |
@@ -125,7 +129,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-05` and ledger record `ledger/tasks/com-05.md` in the Plan repository; task branch `task/com-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L · early risk proof |
 | Obligations | [WP-42.04](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.04) — full |
 | Provides | entitlement-grant-revocation-model; entitlement-snapshot-resolver |
@@ -148,7 +153,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-06` and ledger record `ledger/tasks/com-06.md` in the Plan repository; task branch `task/com-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-42.05](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.05) — full |
 | Provides | entitlement-distribution-endpoint; server-side-enforcement-port |
@@ -170,7 +176,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-07` and ledger record `ledger/tasks/com-07.md` in the Plan repository; task branch `task/com-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-42.06](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.06) — full |
 | Provides | quota-usage-storage-accounting |
@@ -192,7 +199,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-08` and ledger record `ledger/tasks/com-08.md` in the Plan repository; task branch `task/com-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-42.07](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.07) — full |
 | Provides | credit-lot-model; credit-reservation-settle-release |
@@ -214,7 +222,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-09` and ledger record `ledger/tasks/com-09.md` in the Plan repository; task branch `task/com-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-42.08](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.08) — full<br>[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure; three ledgers with unresolved holds through their existing deadline — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure; three ledgers with unresolved holds through their existing deadline<br>[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure — package-level obligation contribution |
 | Provides | three-ledgers; reconciliation-subsystem |
@@ -236,7 +245,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-10` and ledger record `ledger/tasks/com-10.md` in the Plan repository; task branch `task/com-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-42.09](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.09) — full |
 | Provides | refund-rollback; dispute-record; commercial-evidence-export |
@@ -258,7 +268,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-11` and ledger record `ledger/tasks/com-11.md` in the Plan repository; task branch `task/com-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-42.11](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.11) — service_term interval model keyed on (kind, period_ref); the three separated identities (subscription_ref stable / period_ref per paid interval / provider-event dedup in commerce.provider_event); union-of-overlap effective term; plan-change supersede. Capacity bucket/refill/reservation half split to COM.12. |
 | Provides | service-term-interval-model |
@@ -280,7 +291,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-12` and ledger record `ledger/tasks/com-12.md` in the Plan repository; task branch `task/com-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / XL · early risk proof |
 | Obligations | [WP-42.11](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.11) — entitlement.capacity_bucket refill algorithm (§7.2), capacity_policy_period history, capacity_reservation with three funding sources, idempotent once-per-contiguous-run initialisation, and atomic admission with the service-term check first |
 | Provides | capacity-bucket-refill; capacity-reservation-three-source; admission-unit-of-work |
@@ -303,7 +315,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-13` and ledger record `ledger/tasks/com-13.md` in the Plan repository; task branch `task/com-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) Operator contract closure — financial owners (grant/revokeGrant/issueCredit/adjustCredit/refund) — operator contract closure; financial-owner RPC implementations: grant, revokeGrant, issueCredit, adjustCredit, refund |
 | Provides | operator-financial-owner-rpcs |
@@ -325,7 +338,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-14` and ledger record `ledger/tasks/com-14.md` in the Plan repository; task branch `task/com-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-42.10](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.10) — full<br>[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure — package-level obligation contribution |
 | Provides | technical-commerce-closure; activation-checklist |
@@ -348,7 +362,8 @@ Tasks: 15 · Owning repositories: Cloud · Integration owner(s): Cloud integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/com-15` and ledger record `ledger/tasks/com-15.md` in the Plan repository; task branch `task/com-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Package acceptance | Records the [WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-42.90](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42.90) — full<br>[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure; active Pass/subscription mutual exclusion, no immediate proration, exact renewal/reset periods — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure; active Pass/subscription mutual exclusion, no immediate proration, exact renewal/reset periods<br>[WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure — package-level obligation contribution |

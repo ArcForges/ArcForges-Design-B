@@ -30,7 +30,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/rel-01` and ledger record `ledger/tasks/rel-01.md` in the Plan repository; task branch `task/rel-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / L |
 | Obligations | [WP-50.02](../../work-packages/50-full-platform-production-release.md#rule-wp-50.02) — ArcNotes' own complete update matrix (fresh install, upgrade, two-version upgrade, downgrade protection, rollback, interrupted download, interrupted install, corrupted-artifact rejection, update during a long task, update with documents open, uninstall preserving user data, channel switch both ways, blocked bad version) on Windows/macOS/Linux<br>[WP-50.01](../../work-packages/50-full-platform-production-release.md#rule-wp-50.01) — ArcNotes' own licence inventory, SBOM, provenance attestation and verified NOTICE |
 | Provides | arcnotes-release-candidate-proven |
@@ -54,7 +55,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/rel-02` and ledger record `ledger/tasks/rel-02.md` in the Plan repository; task branch `task/rel-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / L |
 | Obligations | [WP-50.02](../../work-packages/50-full-platform-production-release.md#rule-wp-50.02) — ArcScope's own complete update matrix on Windows/macOS/Linux<br>[WP-50.01](../../work-packages/50-full-platform-production-release.md#rule-wp-50.01) — ArcScope's own licence inventory, SBOM, provenance attestation and verified NOTICE |
 | Provides | arcscope-release-candidate-proven |
@@ -78,7 +80,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/rel-03` and ledger record `ledger/tasks/rel-03.md` in the Plan repository; task branch `task/rel-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / L |
 | Obligations | [WP-50.02](../../work-packages/50-full-platform-production-release.md#rule-wp-50.02) — ArcSlate's own complete update matrix on Windows/macOS/Linux<br>[WP-50.01](../../work-packages/50-full-platform-production-release.md#rule-wp-50.01) — ArcSlate's own licence inventory, SBOM, provenance attestation and verified NOTICE |
 | Provides | arcslate-release-candidate-proven |
@@ -102,7 +105,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/rel-04` and ledger record `ledger/tasks/rel-04.md` in the Plan repository; task branch `task/rel-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / M |
 | Obligations | [WP-50.03](../../work-packages/50-full-platform-production-release.md#rule-wp-50.03) — full<br>[WP-50.01](../../work-packages/50-full-platform-production-release.md#rule-wp-50.01) — Android's own licence inventory, SBOM, provenance attestation and verified NOTICE |
 | Provides | android-release-live |
@@ -124,7 +128,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/rel-05` and ledger record `ledger/tasks/rel-05.md` in the Plan repository; task branch `task/rel-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / L |
 | Obligations | [WP-50.06](../../work-packages/50-full-platform-production-release.md#rule-wp-50.06) — full<br>[WP-50.01](../../work-packages/50-full-platform-production-release.md#rule-wp-50.01) — Web's own npm SBOM/provenance and CLI evidence<br>[WP-50](../../work-packages/50-full-platform-production-release.md#rule-wp-50) Browser matrix acceptance (unlabeled paragraph after [WP-50.90](../../work-packages/50-full-platform-production-release.md#rule-wp-50.90)): browser-support.v1 against the exact release artifact/OS/browser patches, supported/degraded/blocked flows including delayed-stream polling, refusal of unavailable required auth/step-up, safe-preview refusal, preserved pending work; no-JS static-site readability; joins WP23/45/47/48/49 production hashes with real browser evidence - a Playwright WebKit run alone does not claim Safari/OS authenticator proof — package-level obligation contribution |
 | Provides | web-release-live; pg-23-web-contribution |
@@ -146,7 +151,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/rel-06` and ledger record `ledger/tasks/rel-06.md` in the Plan repository; task branch `task/rel-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / XL |
 | Obligations | [WP-50.04](../../work-packages/50-full-platform-production-release.md#rule-wp-50.04) — production deployment from a promoted artifact; expand/contract migration and compatible rollback rehearsed; backup verified with proven restore; upgrade/rollback rehearsed; [L-01](../../../assurance/release-gates.md#rule-l-01)..[L-16](../../../assurance/release-gates.md#rule-l-16) evidence except the game-day exercise itself (REL.09); status page live with emergency alternate URL; approved/measured capacity envelope and independently operated self-host deployment ([PG-25](../../../assurance/open-gates-register.md#rule-pg-25)/26)<br>[WP-50.01](../../work-packages/50-full-platform-production-release.md#rule-wp-50.01) — Cloud/AI's own licence inventory, SBOM, provenance attestation and verified NOTICE |
 | Provides | cloud-production-deployed; vg-06-wp50-contribution; pg-19-wp50-contribution |
@@ -168,7 +174,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/rel-07` and ledger record `ledger/tasks/rel-07.md` in the Plan repository; task branch `task/rel-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Obligations | [WP-50.01](../../work-packages/50-full-platform-production-release.md#rule-wp-50.01) — the audit mechanism (licence inventory, SBOM, provenance attestation, NOTICE-generation verification per artifact, copied-content audit) plus Contracts/public-SDK's own candidate audit and the cross-artifact provenance-completeness rollup |
 | Provides | release-audit-rollup; sbom-provenance-closure-report |
@@ -190,7 +197,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/rel-08` and ledger record `ledger/tasks/rel-08.md` in the Plan repository; task branch `task/rel-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / L |
 | Obligations | [WP-50.05](../../work-packages/50-full-platform-production-release.md#rule-wp-50.05) — full |
 | Provides | commercial-launch-live; vg-10-vg-11-vg-12-wp50-contribution |
@@ -212,7 +220,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/rel-09` and ledger record `ledger/tasks/rel-09.md` in the Plan repository; task branch `task/rel-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / L |
 | Obligations | [WP-50.04](../../work-packages/50-full-platform-production-release.md#rule-wp-50.04) — the game-day exercise across the severity ladder against the real production topology only (the rest of 50.04 is REL.06)<br>[WP-50.07](../../work-packages/50-full-platform-production-release.md#rule-wp-50.07) — full: alerting live and mapped to rehearsed runbooks, on-call arrangement in place, incident process exercised, support entry points live, enforcement/appeal paths operable, advisory process rehearsed |
 | Provides | disaster-drill-complete; operational-readiness-confirmed |
@@ -234,7 +243,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/rel-10` and ledger record `ledger/tasks/rel-10.md` in the Plan repository; task branch `task/rel-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / M |
 | Obligations | [WP-50.02](../../work-packages/50-full-platform-production-release.md#rule-wp-50.02) — the shared production update-feed population (hashes, compatibility ranges, minimum versions) and code-signing/publication-pointer cutover only; per-product update-matrix testing is REL.01/REL.02/REL.03 |
 | Provides | production-feed-live; signing-switch-complete |
@@ -257,7 +267,8 @@ Tasks: 11 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, Contracts
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/rel-11` and ledger record `ledger/tasks/rel-11.md` in the Plan repository; task branch `task/rel-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / L |
 | Package acceptance | Records the [WP-50](../../work-packages/50-full-platform-production-release.md#rule-wp-50) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-50.00](../../work-packages/50-full-platform-production-release.md#rule-wp-50.00) — full<br>[WP-50.08](../../work-packages/50-full-platform-production-release.md#rule-wp-50.08) — full<br>[WP-50.90](../../work-packages/50-full-platform-production-release.md#rule-wp-50.90) — full |

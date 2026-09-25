@@ -44,7 +44,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-01` and ledger record `ledger/tasks/nat-01.md` in the Plan repository; task branch `task/nat-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M · early risk proof |
 | Obligations | [WP-13.00](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.00) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution |
 | Provides | probe-a-device-tool-aot-proof |
@@ -66,7 +67,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-02` and ledger record `ledger/tasks/nat-02.md` in the Plan repository; task branch `task/nat-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M · early risk proof |
 | Obligations | [WP-13.01](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.01) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution |
 | Provides | probe-b-editor-recovery-proof |
@@ -88,7 +90,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-03` and ledger record `ledger/tasks/nat-03.md` in the Plan repository; task branch `task/nat-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M · early risk proof |
 | Obligations | [WP-13.02](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.02) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution |
 | Provides | probe-c-acquisition-proof |
@@ -110,7 +113,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-04` and ledger record `ledger/tasks/nat-04.md` in the Plan repository; task branch `task/nat-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L · early risk proof |
 | Obligations | [WP-13.03](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.03) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution |
 | Provides | probe-d-decode-sync-proof |
@@ -119,7 +123,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.05](#task-nat-05), [NAT.30](#task-nat-30) |
 | Write scope | `DesktopPlatform:benchmarks/probes/media/**` |
-| Shared resources | [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Frame-display run; audio/video sync measurement; sanitiser run (ASan/UBSan); sacrificial-process crash test; forced-software-path run |
 | Completion evidence | Frame display, synchronisation measurement, sanitiser and sacrificial-process results |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: no benchmarks/probes/media scaffolding found; DesktopPlatform's own native toolchain (CMake profiles, sanitiser support) is the real prerequisite and already exists per native-abi.yml. |
@@ -133,7 +137,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-05` and ledger record `ledger/tasks/nat-05.md` in the Plan repository; task branch `task/nat-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-13.04](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.04) — full |
 | Provides | probe-conclusions; hardware-lab-inventory-seed |
@@ -155,7 +160,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-06` and ledger record `ledger/tasks/nat-06.md` in the Plan repository; task branch `task/nat-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-13.05](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.05) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS4 major-types note: no native pointer becomes a managed domain identifier or a wire field — package-level obligation contribution |
 | Provides | native-abi-common-v1.1; native-abstractions-package |
@@ -164,7 +170,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.07](#task-nat-07), [NAT.08](#task-nat-08), [NAT.09](#task-nat-09), [NAT.10](#task-nat-10), [NAT.11](#task-nat-11), [NAT.12](#task-nat-12), [NAT.13](#task-nat-13), [NAT.14](#task-nat-14), [NAT.15](#task-nat-15), [NAT.30](#task-nat-30), [NOTES.09](arcnotes.md#task-notes-09), [SLATE.15](arcslate.md#task-slate-15), [SLATE.38](arcslate.md#task-slate-38) |
 | Write scope | `DesktopPlatform:native/shared/**`<br>`DesktopPlatform:native/*/include/arc/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Abstractions/**` |
-| Shared resources | [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Compile C17/C++20 headers and C# layouts on the admitted RIDs; offset/size assertions; wrong-size/version/null/closed-handle negative tests |
 | Completion evidence | Common ABI and deterministic failure surface: behavioral, failure and package evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed partial, unreviewed: native/shared/include/arc/arc_native_abi.h and native/shared/src/arc_native_abi_internal.hpp already exist (probe-level ABI1.0: get_abi_version/get_build_info/get_last_error only, per design's repeated 'probe-only' warning); the ABI1.1 functional preamble/pack8 records from contracts/06-native-functional-abi.md SS2 are not yet present. src/Native/ArcForges.Native.Abstractions/NativeAbi.cs exists as an early scaffold. |
@@ -178,7 +184,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-07` and ledger record `ledger/tasks/nat-07.md` in the Plan repository; task branch `task/nat-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-13.06](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.06) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS4 major-types note: no native pointer becomes a managed domain identifier or a wire field — package-level obligation contribution |
 | Provides | arc-media-reader-functions |
@@ -187,7 +194,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.20](#task-nat-20), [NAT.30](#task-nat-30), [SLATE.04](arcslate.md#task-slate-04), [SLATE.15](arcslate.md#task-slate-15) |
 | Write scope | `DesktopPlatform:native/arcmedia-ffmpeg-abi/src/**`<br>`DesktopPlatform:native/arcmedia-ffmpeg-abi/include/**`<br>`DesktopPlatform:native/arcmedia-ffmpeg-abi/tests/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Media/**` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Known two-frame seek, malformed input, B-frame/drain, tiled copy, exact audio sample bounds, repeated cancel/close against the actual FFmpeg dependency build; sanitiser build for parser paths ([SB-03](../../../architecture/12-native-interop-and-media.md#rule-sb-03)/[SB-04](../../../architecture/12-native-interop-and-media.md#rule-sb-04)) |
 | Completion evidence | Media reader/probe/frame/seek: behavioral, failure and package evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: native/arcmedia-ffmpeg-abi/{src,include/arc,tests,exports,fuzz,generated} directories exist with only the ABI1.0 probe exports (get_abi_version/get_build_info/get_last_error); src/Native/ArcForges.Native.Media/MediaAbi.cs is an early probe-level scaffold; native/CMakeLists.txt already requires FFmpeg/libusb/miniaudio for the 'runtime-shared' profile that builds this target. |
@@ -201,7 +208,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-08` and ledger record `ledger/tasks/nat-08.md` in the Plan repository; task branch `task/nat-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-13.07](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.07) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS4 major-types note: no native pointer becomes a managed domain identifier or a wire field — package-level obligation contribution |
 | Provides | arc-media-writer-convert-functions |
@@ -210,7 +218,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.20](#task-nat-20), [NAT.30](#task-nat-30), [SLATE.15](arcslate.md#task-slate-15), [SLATE.19](arcslate.md#task-slate-19), [SLATE.20](arcslate.md#task-slate-20), [SLATE.21](arcslate.md#task-slate-21), [SLATE.27](arcslate.md#task-slate-27), [SLATE.28](arcslate.md#task-slate-28) |
 | Write scope | `DesktopPlatform:native/arcmedia-ffmpeg-abi/src/**`<br>`DesktopPlatform:native/arcmedia-ffmpeg-abi/include/**`<br>`DesktopPlatform:native/arcmedia-ffmpeg-abi/tests/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Media/**` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Independent fresh decode of FFV1/PCM/WAV and MP4 MPEG4-AAC; resample length, finish-twice, cancel/abort, disk-full corruption rejection |
 | Completion evidence | Convert, resample and media writer: behavioral, failure and package evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: same directory state as NAT.07; writer/convert exports not yet implemented. |
@@ -224,7 +232,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-09` and ledger record `ledger/tasks/nat-09.md` in the Plan repository; task branch `task/nat-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-13.08](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.08) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS4 major-types note: no native pointer becomes a managed domain identifier or a wire field — package-level obligation contribution |
 | Provides | arc-media-audio-functions |
@@ -233,7 +242,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.20](#task-nat-20), [NAT.30](#task-nat-30) |
 | Write scope | `DesktopPlatform:native/arcmedia-ffmpeg-abi/src/**`<br>`DesktopPlatform:native/arcmedia-ffmpeg-abi/include/**`<br>`DesktopPlatform:native/arcmedia-ffmpeg-abi/tests/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Media/**` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Physical output/input, underflow, overflow, device loss, exclusive-use refusal, no-device video clock, offline render -- physical audio hardware is ordinary (most dev machines have one), not a scarce [PG-08](../../../assurance/open-gates-register.md#rule-pg-08) lab resource |
 | Completion evidence | Audio devices: behavioral, failure and package evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: same directory state as NAT.07; miniaudio already required by native/CMakeLists.txt's runtime-shared profile but no audio exports implemented yet. |
@@ -247,7 +256,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-10` and ledger record `ledger/tasks/nat-10.md` in the Plan repository; task branch `task/nat-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-13.09](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.09) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS4 major-types note: no native pointer becomes a managed domain identifier or a wire field — package-level obligation contribution |
 | Provides | arc-colour-functions |
@@ -256,7 +266,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.21](#task-nat-21), [NAT.30](#task-nat-30), [SLATE.24](arcslate.md#task-slate-24) |
 | Write scope | `DesktopPlatform:native/arcslate-color-abi/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Colour/**` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Independent RGB/alpha vectors, alpha 0, unknown space, tampered bundle, preview/render agreement |
 | Completion evidence | Colour transforms: behavioral, failure and package evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: native/arcslate-color-abi and src/Native/ArcForges.Native.Colour exist at ABI1.0 probe level only; OpenColorIO already required by the 'shim-static' CMake profile. |
@@ -270,7 +280,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-11` and ledger record `ledger/tasks/nat-11.md` in the Plan repository; task branch `task/nat-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-13.10](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.10) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS4 major-types note: no native pointer becomes a managed domain identifier or a wire field — package-level obligation contribution |
 | Provides | arc-image-functions |
@@ -279,7 +290,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.22](#task-nat-22), [NAT.30](#task-nat-30), [SLATE.21](arcslate.md#task-slate-21) |
 | Write scope | `DesktopPlatform:native/arcslate-image-abi/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Image/**` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Bit depth/metadata round trip, edge tiles, decompression bomb, failed codec, incomplete-output refusal |
 | Completion evidence | Still-image codecs: behavioral, failure and package evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: native/arcslate-image-abi and src/Native/ArcForges.Native.Image exist at ABI1.0 probe level; OpenImageIO already required by the 'shim-static' CMake profile. |
@@ -293,7 +304,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-12` and ledger record `ledger/tasks/nat-12.md` in the Plan repository; task branch `task/nat-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-13.11](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.11) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS4 major-types note: no native pointer becomes a managed domain identifier or a wire field — package-level obligation contribution |
 | Provides | arc-otio-functions |
@@ -302,7 +314,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.23](#task-nat-23), [NAT.30](#task-nat-30), [SLATE.38](arcslate.md#task-slate-38), [SLATE.39](arcslate.md#task-slate-39) |
 | Write scope | `DesktopPlatform:native/arcslate-otio-abi/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Otio/**` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Mixed/fractional rate round trip, unsupported schema, malicious path, parser death, reported loss before commit -- [PG-15](../../../assurance/open-gates-register.md#rule-pg-15) evidence class |
 | Completion evidence | OTIO interchange: behavioral, failure and package evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: native/arcslate-otio-abi and src/Native/ArcForges.Native.Otio exist at ABI1.0 probe level; the custom vcpkg opentimelineio port (with a patch removing the pybind11/Python build requirement) is already committed under eng/native/vcpkg/ports/opentimelineio. |
@@ -316,7 +328,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-13` and ledger record `ledger/tasks/nat-13.md` in the Plan repository; task branch `task/nat-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-13.12](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.12) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS4 major-types note: no native pointer becomes a managed domain identifier or a wire field — package-level obligation contribution |
 | Provides | arc-instruments-functions |
@@ -325,7 +338,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.24](#task-nat-24), [NAT.30](#task-nat-30), [SCOPE.04](arcscope.md#task-scope-04) |
 | Write scope | `DesktopPlatform:native/arcinstruments-abi/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Instruments/**`<br>`DesktopPlatform:native/CMakeLists.txt`<br>`DesktopPlatform:eng/packaging/packages.json` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Enumeration, explicit interface claim, control/bulk/interrupt transfers, partial writes, cancellation callback, hot unplug, driver absence, permission denial on Tier 1 -- against the [PG-08](../../../assurance/open-gates-register.md#rule-pg-08) hardware inventory for the physical-device cases |
 | Completion evidence | Serial and USB instruments: behavioral, failure and package evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: no arcinstruments-abi directory and no ArcForges.Native.Instruments managed project exist yet; this is the first fully-new native library of the seven. libusb is already declared as a required dependency in native/CMakeLists.txt's runtime-shared profile even though nothing consumes it yet. |
@@ -339,7 +352,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-14` and ledger record `ledger/tasks/nat-14.md` in the Plan repository; task branch `task/nat-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L · early risk proof |
 | Obligations | [WP-13.13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.13) — all work except the parts mapped to PLT.54<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS4 major-types note: no native pointer becomes a managed domain identifier or a wire field — package-level obligation contribution |
 | Provides | arc-pdf-functions; contentsandbox-production-parser-runtime |
@@ -349,7 +363,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Unblocks | [NAT.25](#task-nat-25), [NAT.30](#task-nat-30), [NOTES.09](arcnotes.md#task-notes-09), [NOTES.37](arcnotes.md#task-notes-37), [PLT.45](platform.md#task-plt-45), [PLT.54](platform.md#task-plt-54), [SLATE.04](arcslate.md#task-slate-04), [SLATE.16](arcslate.md#task-slate-16) |
 | Permitted substitutes | [SUB-hostile-test-parser](../substitutes.md#sub-hostile-test-parser) |
 | Write scope | `DesktopPlatform:native/arcpdf-abi/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Pdf/**`<br>`DesktopPlatform:src/DesktopHelpers/ArcForges.ContentSandbox/**`<br>`DesktopPlatform:native/CMakeLists.txt`<br>`DesktopPlatform:eng/packaging/packages.json` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Packaged PDF page/text/tile fixtures, malformed/native-crash/hang and parent-death cleanup on every admitted RID; rerun of actual image/media/OTIO parser containment (not just PDF) |
 | Completion evidence | Actual PDF dependency and containment evidence contributing to [PG-12](../../../assurance/open-gates-register.md#rule-pg-12); [PG-22](../../../assurance/open-gates-register.md#rule-pg-22) runtime evidence for the real-parser leg (11.09 supplies the mechanism leg) |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: src/DesktopHelpers/ArcForges.ContentSandbox exists with only a minimal Program.cs (the WP11.09 foundation shell); no arcpdf-abi, no ArcForges.Native.Pdf, no production parser composition yet. PDFium is not present in any vcpkg port or CMake profile found in this pass. |
@@ -363,7 +377,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-15` and ledger record `ledger/tasks/nat-15.md` in the Plan repository; task branch `task/nat-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-13.14](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.14) — full<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS1/[ND-05](../../implementation-sequence.md#rule-nd-05): probe scaffolds (13.00-13.03) are cleanup-or-regression-fixture; production 13.05-13.16 code is retained and maintained -- different lifecycle rules for the two groups even though both may live under similar directories — package-level obligation contribution<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) SS4 major-types note: no native pointer becomes a managed domain identifier or a wire field — package-level obligation contribution |
 | Provides | arc-graphics-functions |
@@ -372,7 +387,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.26](#task-nat-26), [NAT.30](#task-nat-30), [SLATE.19](arcslate.md#task-slate-19), [SLATE.22](arcslate.md#task-slate-22), [SLATE.25](arcslate.md#task-slate-25) |
 | Write scope | `DesktopPlatform:native/arcgraphics-abi/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Graphics/**`<br>`DesktopPlatform:native/CMakeLists.txt`<br>`DesktopPlatform:eng/packaging/packages.json` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | CPU display/readback, ownership and fence lifetime, device loss and forced software path; each advertised accelerator exercised with its actual driver where locally available |
 | Completion evidence | Portable graphics and optional OS backends: behavioral, failure and package evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: native/arcgraphics-metal-abi exists (APPLE-only ABI1.0 probe, ARC_ABI ok) but is explicitly NOT this task's deliverable -- design text requires it stay unchanged as a private backend of the new arcgraphics-abi. No arcgraphics-abi directory exists yet. |
@@ -386,7 +401,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-20` and ledger record `ledger/tasks/nat-20.md` in the Plan repository; task branch `task/nat-20` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-13.15](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.15) — ArcForges.Native.Media + Runtime.<rid> only<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) producer-artifacts-and-integration.md WP13 row: 'Probe-only 1.0, missing functional export or dependency prevents completion' — package-level obligation contribution |
 | Provides | arc-media-packages-all-rid |
@@ -395,7 +411,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.28](#task-nat-28), [NAT.30](#task-nat-30) |
 | Write scope | `DesktopPlatform:src/Native/ArcForges.Native.Media.Runtime.win-arm64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Media.Runtime.osx-arm64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Media.Runtime.osx-x64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Media.Runtime.linux-x64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Media.Runtime.linux-arm64/**`<br>`DesktopPlatform:eng/packaging/packages.json` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Clean-cache C17 and C# AOT consumers per RID; missing/transitive/wrong-RID library, hash collision, absent export, revoked artifact, source-unavailable negatives |
 | Completion evidence | Immutable native package production: behavioral, failure and package evidence (Media slice) |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: win-x64 packaging already scaffolded (ArcForges.Native.Media.Runtime.win-x64 csproj + packages.json entry); the other 5 RIDs are entirely new package projects. |
@@ -409,7 +425,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-21` and ledger record `ledger/tasks/nat-21.md` in the Plan repository; task branch `task/nat-21` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-13.15](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.15) — ArcForges.Native.Colour + Runtime.<rid> only<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) producer-artifacts-and-integration.md WP13 row: 'Probe-only 1.0, missing functional export or dependency prevents completion' — package-level obligation contribution |
 | Provides | arc-colour-packages-all-rid |
@@ -418,7 +435,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.28](#task-nat-28), [NAT.30](#task-nat-30) |
 | Write scope | `DesktopPlatform:src/Native/ArcForges.Native.Colour.Runtime.win-arm64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Colour.Runtime.osx-arm64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Colour.Runtime.osx-x64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Colour.Runtime.linux-x64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Colour.Runtime.linux-arm64/**`<br>`DesktopPlatform:eng/packaging/packages.json` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Clean-cache C17/C# AOT consumers per RID; same negative matrix as NAT.20 |
 | Completion evidence | Immutable native package production: behavioral, failure and package evidence (Colour slice) |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: win-x64 already scaffolded. |
@@ -432,7 +449,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-22` and ledger record `ledger/tasks/nat-22.md` in the Plan repository; task branch `task/nat-22` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-13.15](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.15) — ArcForges.Native.Image + Runtime.<rid> only<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) producer-artifacts-and-integration.md WP13 row: 'Probe-only 1.0, missing functional export or dependency prevents completion' — package-level obligation contribution |
 | Provides | arc-image-packages-all-rid |
@@ -441,7 +459,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.28](#task-nat-28), [NAT.30](#task-nat-30) |
 | Write scope | `DesktopPlatform:src/Native/ArcForges.Native.Image.Runtime.win-arm64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Image.Runtime.osx-arm64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Image.Runtime.osx-x64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Image.Runtime.linux-x64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Image.Runtime.linux-arm64/**`<br>`DesktopPlatform:eng/packaging/packages.json` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Clean-cache C17/C# AOT consumers per RID; same negative matrix as NAT.20 |
 | Completion evidence | Immutable native package production: behavioral, failure and package evidence (Image slice) |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: win-x64 already scaffolded. |
@@ -455,7 +473,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-23` and ledger record `ledger/tasks/nat-23.md` in the Plan repository; task branch `task/nat-23` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-13.15](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.15) — ArcForges.Native.Otio + Runtime.<rid> only<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) producer-artifacts-and-integration.md WP13 row: 'Probe-only 1.0, missing functional export or dependency prevents completion' — package-level obligation contribution |
 | Provides | arc-otio-packages-all-rid |
@@ -464,7 +483,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.28](#task-nat-28), [NAT.30](#task-nat-30) |
 | Write scope | `DesktopPlatform:src/Native/ArcForges.Native.Otio.Runtime.win-arm64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Otio.Runtime.osx-arm64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Otio.Runtime.osx-x64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Otio.Runtime.linux-x64/**`<br>`DesktopPlatform:src/Native/ArcForges.Native.Otio.Runtime.linux-arm64/**`<br>`DesktopPlatform:eng/packaging/packages.json` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Clean-cache C17/C# AOT consumers per RID; same negative matrix as NAT.20 |
 | Completion evidence | Immutable native package production: behavioral, failure and package evidence (Otio slice) |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: win-x64 already scaffolded. |
@@ -478,7 +497,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-24` and ledger record `ledger/tasks/nat-24.md` in the Plan repository; task branch `task/nat-24` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-13.15](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.15) — ArcForges.Native.Instruments + Runtime.<rid> only<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) producer-artifacts-and-integration.md WP13 row: 'Probe-only 1.0, missing functional export or dependency prevents completion' — package-level obligation contribution |
 | Provides | arc-instruments-packages-all-rid |
@@ -487,7 +507,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.28](#task-nat-28), [NAT.30](#task-nat-30), [SCOPE.11](arcscope.md#task-scope-11) |
 | Write scope | `DesktopPlatform:src/Native/ArcForges.Native.Instruments.Runtime.*/**`<br>`DesktopPlatform:eng/packaging/packages.json` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Clean-cache C17/C# AOT consumers per RID; same negative matrix as NAT.20 |
 | Completion evidence | Immutable native package production: behavioral, failure and package evidence (Instruments slice) |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: no packaging scaffolding at all yet (family itself is new). |
@@ -501,7 +521,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-25` and ledger record `ledger/tasks/nat-25.md` in the Plan repository; task branch `task/nat-25` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-13.15](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.15) — ArcForges.Native.Pdf + Runtime.<rid>, plus the ContentSandbox.Runtime.<rid> republication from 13.13<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) producer-artifacts-and-integration.md WP13 row: 'Probe-only 1.0, missing functional export or dependency prevents completion' — package-level obligation contribution |
 | Provides | arc-pdf-packages-all-rid; contentsandbox-runtime-production-all-rid |
@@ -510,7 +531,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.28](#task-nat-28), [NAT.30](#task-nat-30), [NOTES.37](arcnotes.md#task-notes-37) |
 | Write scope | `DesktopPlatform:src/Native/ArcForges.Native.Pdf.Runtime.*/**`<br>`DesktopPlatform:src/DesktopHelpers/ArcForges.ContentSandbox/**`<br>`DesktopPlatform:eng/packaging/packages.json` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Clean-cache C17/C# AOT consumers per RID; [PG-22](../../../assurance/open-gates-register.md#rule-pg-22) hostile-parser containment re-run at package level (not just source level) |
 | Completion evidence | Immutable native package production: behavioral, failure and package evidence (Pdf slice); [PG-12](../../../assurance/open-gates-register.md#rule-pg-12) contribution |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: no Pdf packaging scaffolding yet. |
@@ -524,7 +545,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-26` and ledger record `ledger/tasks/nat-26.md` in the Plan repository; task branch `task/nat-26` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-13.15](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.15) — ArcForges.Native.Graphics + Runtime.<rid> only<br>[WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) producer-artifacts-and-integration.md WP13 row: 'Probe-only 1.0, missing functional export or dependency prevents completion' — package-level obligation contribution |
 | Provides | arc-graphics-packages-all-rid |
@@ -533,7 +555,7 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 | Completion prerequisites | none |
 | Unblocks | [NAT.28](#task-nat-28), [NAT.30](#task-nat-30) |
 | Write scope | `DesktopPlatform:src/Native/ArcForges.Native.Graphics.Runtime.*/**`<br>`DesktopPlatform:eng/packaging/packages.json` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-desktopplatform-package-inventory](../shared-resources.md#res-desktopplatform-package-inventory) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Clean-cache C17/C# AOT consumers per RID; forced-software-path verified on every RID even where an accelerator is also present |
 | Completion evidence | Immutable native package production: behavioral, failure and package evidence (Graphics slice) |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: no packaging scaffolding yet (family itself is new). |
@@ -547,7 +569,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-28` and ledger record `ledger/tasks/nat-28.md` in the Plan repository; task branch `task/nat-28` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-13.16](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.16) — full |
 | Provides | pg03-full-closure; pg08-full-closure |
@@ -569,7 +592,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-29` and ledger record `ledger/tasks/nat-29.md` in the Plan repository; task branch `task/nat-29` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-06.90](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.90) — full |
@@ -590,7 +614,8 @@ Tasks: 25 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/nat-30` and ledger record `ledger/tasks/nat-30.md` in the Plan repository; task branch `task/nat-30` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-13](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-13.90](../../work-packages/13-high-risk-technical-probes.md#rule-wp-13.90) — full |

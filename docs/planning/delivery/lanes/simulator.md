@@ -29,7 +29,8 @@ Tasks: 10 · Owning repositories: ArcScope, Cloud · Integration owner(s): ArcSc
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/sim-01` and ledger record `ledger/tasks/sim-01.md` in the Plan repository; task branch `task/sim-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-51.00](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51.00) — full |
 | Provides | sim.definitions-ast |
@@ -52,7 +53,8 @@ Tasks: 10 · Owning repositories: ArcScope, Cloud · Integration owner(s): ArcSc
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/sim-02` and ledger record `ledger/tasks/sim-02.md` in the Plan repository; task branch `task/sim-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-51.01](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51.01) — the pure-algorithmic half: fixed logical ticks driving canonical data; independently seeded RNG per channel and per fault source; the execution profile pinning numeric/RNG/generator/encoding versions; fault profiles (latency, jitter, drop, duplicate, reorder, disconnect, malformed frame, outlier) at explicit logical boundaries with provenance and counters; same-seed-same-hash and changed-seed-different-data tests; exact fault positions; one channel's RNG not perturbing another's |
 | Provides | sim.generators-faults |
@@ -74,7 +76,8 @@ Tasks: 10 · Owning repositories: ArcScope, Cloud · Integration owner(s): ArcSc
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/sim-03` and ledger record `ledger/tasks/sim-03.md` in the Plan repository; task branch `task/sim-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / XL |
 | Obligations | [WP-51.02](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51.02) — full: architecture-23 DO alarm integration owner plus bounded Container segments, D1 checkpoint/fence/next_due_at, minutely rescue scan; default 1s and 0.25-10s segment bounds; no permanent hosted-service loop<br>[WP-51.01](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51.01) — the real-host half: identical hashes under real-time and accelerated pacing; exercise the SimulationPacer state diagram (duplicate/delayed alarm, exhausted automatic retries plus Cron rescue, Container cold start, pause/resume, epoch loss); record 24-hour run cost, alarm/Container/Queue counts and end-to-end pacing distribution against the proposed 5-second target, no hard real-time claim<br>[WP-51](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51) 'Slice recovery acceptance' body text (between §5 and §6, no substep id): kill the real Container before D1 publication, after the guarded segment/checkpoint/outbox batch, and before/after alarm scheduling; race a duplicate alarm with Cron rescue; assert one committed segment per run/range, deterministic continuation, no lost next-due intent, rejection of stale fences; alarm delivery itself may repeat; use the bounded mechanism in architecture 23 §1.2, never interactive BEGIN/COMMIT or an in-memory continuation loop — 'Slice recovery acceptance' body text (between §5 and §6, no substep id): kill the real Container before D1 publication, after the guarded segment/checkpoint/outbox batch, and before/after alarm scheduling; race a duplicate alarm with Cron rescue; assert one committed segment per run/range, deterministic continuation, no lost next-due intent, rejection of stale fences; alarm delivery itself may repeat; use the bounded mechanism in architecture 23 §1.2, never interactive BEGIN/COMMIT or an in-memory continuation loop; package-level obligation contribution |
 | Provides | sim.pacer-fenced-execution |
@@ -97,7 +100,8 @@ Tasks: 10 · Owning repositories: ArcScope, Cloud · Integration owner(s): ArcSc
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/sim-04` and ledger record `ledger/tasks/sim-04.md` in the Plan repository; task branch `task/sim-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-51.03](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51.03) — full |
 | Provides | sim.canonical-publication |
@@ -119,7 +123,8 @@ Tasks: 10 · Owning repositories: ArcScope, Cloud · Integration owner(s): ArcSc
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/sim-05` and ledger record `ledger/tasks/sim-05.md` in the Plan repository; task branch `task/sim-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-51.04](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51.04) — the Cloud API half: the eleven simulation.* operations as durable, idempotent, expected-state commands; authorised manifest listing; resumable hash-verifiable segment fetch over HTTP or object storage; revision-/cursor-based state polling |
 | Provides | sim.cloud-api |
@@ -141,7 +146,8 @@ Tasks: 10 · Owning repositories: ArcScope, Cloud · Integration owner(s): ArcSc
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/sim-06` and ledger record `ledger/tasks/sim-06.md` in the Plan repository; task branch `task/sim-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-51.04](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51.04) — the ArcScope consumer half: feed retained canonical simulator output through the existing Scope measurement/replay consumer using its recorded profile and configuration; simulation labels remain synthetic, separate from AI origin; recompute statistical/pulse fixtures without changing measurement meaning or treating simulation as hardware evidence; ArcScope's clearly synthetic DataSource feeding the normal acquisition pipeline; seed and profile provenance surviving export and copy; simulated data flowing through session/capture/decoder/measurement/report unchanged; synthetic labelling surviving export<br>[WP-51](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51) §7 required evidence addition (canonical simulator replay retains measurement profile and synthetic provenance) — package-level obligation contribution |
 | Provides | sim.arcscope-ingestion |
@@ -163,7 +169,8 @@ Tasks: 10 · Owning repositories: ArcScope, Cloud · Integration owner(s): ArcSc
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/sim-07` and ledger record `ledger/tasks/sim-07.md` in the Plan repository; task branch `task/sim-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-51.05](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51.05) — full |
 | Provides | sim.limits-entitlement |
@@ -185,7 +192,8 @@ Tasks: 10 · Owning repositories: ArcScope, Cloud · Integration owner(s): ArcSc
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/sim-08` and ledger record `ledger/tasks/sim-08.md` in the Plan repository; task branch `task/sim-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Package acceptance | Records the [WP-51](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-51.90](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51.90) — full<br>[WP-51](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51) §8 additional completion requirement: the simulator remains an optional later source for already-defined measurement semantics, never a prerequisite for the earlier replay-based analysis package (confirms [WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) does not wait on [WP-51](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51)) — §8 additional completion requirement: the simulator remains an optional later source for already-defined measurement semantics, never a prerequisite for the earlier replay-based analysis package (confirms [WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) does not wait on [WP-51](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51)) |
@@ -208,7 +216,8 @@ Tasks: 10 · Owning repositories: ArcScope, Cloud · Integration owner(s): ArcSc
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/sim-09` and ledger record `ledger/tasks/sim-09.md` in the Plan repository; task branch `task/sim-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-51.04](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51.04) — final-review closure paragraph: real service-authorized R2 segments; consume WP34 measurement/report and WP35 import/portability outputs; Cloud->R2->native hash/timebase/provenance check; stale grant/fence refusal<br>[WP-51](../../work-packages/51-arcscope-cloud-simulator.md#rule-wp-51) 'Required implementation and closure from the final review' paragraph (real service-authorized R2 segments; consume WP34 measurement/report and WP35 import/portability outputs; Cloud->R2->native hash/timebase/provenance check; stale grant/fence refusal) — package-level obligation contribution |
 | Start prerequisites | **artifact** [SIM.05](#task-sim-05) — real, delivered outcome of SIM.05 (Cloud-side simulation.* operations, manifest listing and segment fetch). *Why:* this integration exercises the real cloud-side simulation.* operations, manifest listing and segment fetch instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SIM.06](#task-sim-06) — real, delivered outcome of SIM.06 (ArcScope-side simulated DataSource and native ingestion). *Why:* this integration exercises the real arcScope-side simulated DataSource and native ingestion instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SCOPE.14](arcscope.md#task-scope-14) — real, delivered outcome of SCOPE.14 (Measurements: scope.measurement.v1). *Why:* this integration exercises the real measurements: scope.measurement.v1 instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SCOPE.18](arcscope.md#task-scope-18) — real, delivered outcome of SCOPE.18 (Reports and reproducibility). *Why:* this integration exercises the real reports and reproducibility instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SCOPE.24](arcscope.md#task-scope-24) — real, delivered outcome of SCOPE.24 (Import, export and format fixtures). *Why:* this integration exercises the real import, export and format fixtures instead of a substitute, so it cannot start before that outcome exists |
@@ -228,7 +237,8 @@ Tasks: 10 · Owning repositories: ArcScope, Cloud · Integration owner(s): ArcSc
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/sim-10` and ledger record `ledger/tasks/sim-10.md` in the Plan repository; task branch `task/sim-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-21.06](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.06) — SimulationPacer real-consumer integration |
 | Start prerequisites | **artifact** [CLOUD.07](cloud.md#task-cloud-07) — real, delivered outcome of CLOUD.07 (Capacity, Container/D1 integration producer and harness). *Why:* this integration exercises the real capacity, Container/D1 integration producer and harness instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SIM.01](#task-sim-01) — real, delivered outcome of SIM.01 (Simulation definitions, immutable scenario versions and bounded AST evaluator). *Why:* this integration exercises the real simulation definitions, immutable scenario versions and bounded AST evaluator instead of a substitute, so it cannot start before that outcome exists |

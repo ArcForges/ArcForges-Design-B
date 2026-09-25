@@ -30,7 +30,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/pol-01` and ledger record `ledger/tasks/pol-01.md` in the Plan repository; task branch `task/pol-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S · early risk proof |
 | Obligations | [WP-44.00](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.00) — full |
 | Provides | policy-boundary-markers; boundary-architecture-test |
@@ -52,7 +53,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/pol-02` and ledger record `ledger/tasks/pol-02.md` in the Plan repository; task branch `task/pol-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-44.01](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.01) — full<br>[WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) Operator contract closure — configuration/policy owners — operator contract closure; configuration/policy owner: dry-run proposal/dual-approval/activation CAS as the typed proposal protocol |
 | Provides | configuration-schema-validation; activation-cas-pipeline |
@@ -74,7 +76,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/pol-03` and ledger record `ledger/tasks/pol-03.md` in the Plan repository; task branch `task/pol-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M · early risk proof |
 | Obligations | [WP-44.02](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.02) — full |
 | Provides | compiled-hard-limits |
@@ -97,7 +100,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/pol-04` and ledger record `ledger/tasks/pol-04.md` in the Plan repository; task branch `task/pol-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-44.03](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.03) — server-side flag/rollout definition, publication and byte/hash/bucket algorithm; on-device execution split to POL.09 |
 | Provides | rollout-hashing-algorithm; flag-lifecycle |
@@ -119,7 +123,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/pol-05` and ledger record `ledger/tasks/pol-05.md` in the Plan repository; task branch `task/pol-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-44.04](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.04) — full<br>[WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) operator contract closure; the 'kill' typed operator RPC — operator contract closure; the 'kill' typed operator RPC<br>[WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) Operator contract closure — configuration/policy owners — package-level obligation contribution |
 | Provides | kill-switch-modes |
@@ -141,7 +146,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/pol-06` and ledger record `ledger/tasks/pol-06.md` in the Plan repository; task branch `task/pol-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-44.05](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.05) — server-side resolution across application/workspace/device/installation scopes with fixed order, and the explainability endpoint/data; client-side consumption split to POL.09 |
 | Provides | scoped-resolution-server; explainability-data |
@@ -162,7 +168,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/pol-07` and ledger record `ledger/tasks/pol-07.md` in the Plan repository; task branch `task/pol-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-44.06](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.06) — full |
 | Provides | compatibility-policy-rules |
@@ -183,7 +190,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/pol-08` and ledger record `ledger/tasks/pol-08.md` in the Plan repository; task branch `task/pol-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-44.07](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.07) — bundle publication with versioning and audit; server-side staleness signalling; the application-timing contract clients must honour. Client caching/fallback/mid-operation behaviour split to POL.09 |
 | Provides | bundle-publication; staleness-signal-contract |
@@ -204,7 +212,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/pol-09` and ledger record `ledger/tasks/pol-09.md` in the Plan repository; task branch `task/pol-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-44.05](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.05) — client-side consumption of scoped resolution/explainability<br>[WP-44.07](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.07) — client caching, staleness threshold, fallback to last-known-good then compiled defaults, staleness visible, mid-operation application timing<br>[WP-44.03](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.03) — client execution of the deterministic rollout hash so the same subject/version selects the same result on-device |
 | Provides | client-policy-resolution-library |
@@ -228,7 +237,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/pol-10` and ledger record `ledger/tasks/pol-10.md` in the Plan repository; task branch `task/pol-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Package acceptance | Records the [WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-44.90](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.90) — full |
@@ -250,7 +260,8 @@ Tasks: 11 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/pol-11` and ledger record `ledger/tasks/pol-11.md` in the Plan repository; task branch `task/pol-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-44.07](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44.07) — real fallback chain against a deployed publication endpoint |
 | Start prerequisites | **artifact** [POL.08](#task-pol-08) — real, delivered outcome of POL.08 (Publication, staleness and last-known-good (server side)). *Why:* this integration exercises the real publication, staleness and last-known-good (server side) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [POL.09](#task-pol-09) — real, delivered outcome of POL.09 (Client-side policy resolution library (native/AOT)). *Why:* this integration exercises the real client-side policy resolution library (native/AOT) instead of a substitute, so it cannot start before that outcome exists |

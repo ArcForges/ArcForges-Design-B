@@ -60,7 +60,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-01` and ledger record `ledger/tasks/slate-01.md` in the Plan repository; task branch `task/slate-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-36.01](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.01) — full |
 | Provides | slate.time.ticks; slate.time.rational; slate.time.range |
@@ -82,7 +83,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-02` and ledger record `ledger/tasks/slate-02.md` in the Plan repository; task branch `task/slate-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-36.00](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.00) — full |
 | Provides | slate.domain.project; slate.domain.sequence |
@@ -104,7 +106,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-03` and ledger record `ledger/tasks/slate-03.md` in the Plan repository; task branch `task/slate-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-36.02](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.02) — domain types (MediaAsset/MediaStream/MediaMetadata/MediaAvailability) and the relink-by-content-hash algorithm; excludes the real native read/probe adapter |
 | Provides | slate.domain.mediaasset; slate.domain.relink-algorithm |
@@ -126,7 +129,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-04` and ledger record `ledger/tasks/slate-04.md` in the Plan repository; task branch `task/slate-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-36.02](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.02) — the real metadata/read adapter using the approved owned ABI and ContentSandbox, and the content-origin carrier/propagation/failure vectors recorded in this substep's evidence row<br>[WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) Content-origin carrier/propagation/failure vectors ([WP-36.02](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.02) required evidence addition; §8 additional completion requirement) — package-level obligation contribution |
 | Provides | slate.media.probe-adapter |
@@ -148,7 +152,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-05` and ledger record `ledger/tasks/slate-05.md` in the Plan repository; task branch `task/slate-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-36.03](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.03) — full |
 | Provides | slate.domain.medialibrary |
@@ -169,7 +174,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-06` and ledger record `ledger/tasks/slate-06.md` in the Plan repository; task branch `task/slate-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-36.04](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.04) — full |
 | Provides | slate.domain.timeline |
@@ -191,7 +197,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-07` and ledger record `ledger/tasks/slate-07.md` in the Plan repository; task branch `task/slate-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / XL |
 | Obligations | [WP-36.05](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.05) — the shared validate->expand-affected-set->one-transaction command pipeline, plus Insert/Overwrite/Move/Trim(in/out)/Split/Delete/Lift/RippleDelete/Extract/Duplicate exactly per slate.edit.v1 (26-product-behavior-profiles.md §4) |
 | Provides | slate.edit.pipeline; slate.edit.core-ops |
@@ -214,7 +221,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-08` and ledger record `ledger/tasks/slate-08.md` in the Plan repository; task branch `task/slate-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-36.05](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.05) — RippleTrim/Roll/Slip/Slide/Group-Ungroup/Link-Unlink/Enable-Disable/ReorderTracks/Transition(create-delete)/Snap/Retime+RetimeCurve/ripple-marker-scope exactly per slate.edit.v1 |
 | Provides | slate.edit.advanced-ops |
@@ -236,7 +244,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-09` and ledger record `ledger/tasks/slate-09.md` in the Plan repository; task branch `task/slate-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-36.06](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.06) — undo/redo as a distinct mechanism from checkpoint/recovery: composite operation grouping, explicit commit-boundary (a transient drag/preview is never a committed command) |
 | Provides | slate.undo |
@@ -257,7 +266,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-10` and ledger record `ledger/tasks/slate-10.md` in the Plan repository; task branch `task/slate-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) Database impact: ArcSlate project store and its V1 migration baseline (§6) — package-level: §6 Impacts row "Database: the ArcSlate project store and its V1 migration baseline"; §4 ArcSlate.Infrastructure project store/media index/migration set; package-level obligation contribution |
 | Provides | slate.persistence.store |
@@ -279,7 +289,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-11` and ledger record `ledger/tasks/slate-11.md` in the Plan repository; task branch `task/slate-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-36.06](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.06) — project checkpoints as an explicit user mechanism distinct from undo; crash recovery to the last committed boundary with explicit loss reporting; migration from prior project versions with semantic preservation |
 | Provides | slate.checkpoint; slate.recovery |
@@ -301,7 +312,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-12` and ledger record `ledger/tasks/slate-12.md` in the Plan repository; task branch `task/slate-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) Unlabelled final-review closure: complete slate.project.v1/graph.v1 model, generators/nesting/adjustment/title/subtitle, cycle rejection, unknown-effect inert — the unlabelled final-review closure paragraph: "Implement the complete slate.project.v1/graph.v1 model: bins, exact sequence video/audio/colour config, track roles, generators/nesting/adjustment/title/subtitle, graph definition/instance identity and keyframe time scope. Metadata-only cross-device round-trip preserves every edit with Offline Media. Reject graph/nesting cycles and preserve unknown imported effects inert."; package-level obligation contribution |
 | Provides | slate.wire.projection |
@@ -323,7 +335,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-13` and ledger record `ledger/tasks/slate-13.md` in the Plan repository; task branch `task/slate-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Obligations | [WP-36.07](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.07) — full |
 | Provides | slate.drift-report |
@@ -345,7 +358,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-14` and ledger record `ledger/tasks/slate-14.md` in the Plan repository; task branch `task/slate-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Package acceptance | Records the [WP-36](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-36.90](../../work-packages/36-arcslate-project-and-timeline.md#rule-wp-36.90) — full |
@@ -367,7 +381,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-15` and ledger record `ledger/tasks/slate-15.md` in the Plan repository; task branch `task/slate-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L · early risk proof |
 | Obligations | [WP-37.00](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.00) — full |
 | Provides | slate.media.abi-boundary |
@@ -377,7 +392,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Unblocks | [SLATE.16](#task-slate-16), [SLATE.19](#task-slate-19), [SLATE.23](#task-slate-23) |
 | Permitted substitutes | [SUB-no-op-media-adapter](../substitutes.md#sub-no-op-media-adapter) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Media/**`<br>`ArcSlate:src/ArcForges.ArcSlate.Native/**` |
-| Shared resources | [RES-arcslate-build-config](../shared-resources.md#res-arcslate-build-config) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-arcslate-build-config](../shared-resources.md#res-arcslate-build-config) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | ABI conformance and version-mismatch rejection tests, ownership/handle-lifetime tests, sanitiser runs, sacrificial-process crash tests, domain-purity test -- all local, once, per [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017) (no hosted native CI). |
 | Completion evidence | ABI version-negotiation result; leak-free handle-lifetime proof; clean sanitiser run; sacrificial-process crash-containment result; [PG-03](../../../assurance/open-gates-register.md#rule-pg-03) licence-position record. |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: DesktopPlatform's native/ tree has real ABI header/shim scaffolding (native/arcmedia-ffmpeg-abi, native/arcslate-color-abi, native/arcslate-otio-abi, native/shared) and managed wrapper stubs (src/Native/ArcForges.Native.{Media,Colour,Otio,Image}), but every managed wrapper currently exports only the 3-function version/build/error probe triad (33 lines each); no functional export exists yet. |
@@ -391,7 +406,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-16` and ledger record `ledger/tasks/slate-16.md` in the Plan repository; task branch `task/slate-16` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L · early risk proof |
 | Obligations | [WP-37.01](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.01) — full |
 | Provides | slate.media.decode |
@@ -400,7 +416,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Completion prerequisites | **integration** [NAT.14](native.md#task-nat-14) — production ContentSandbox.Runtime.<rid> parser composition. *Why:* [WP-37.01](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.01) is the named [PG-22](../../../assurance/open-gates-register.md#rule-pg-22) evidence anchor: 'real packaged hostile media parsing containment and no unrestricted fallback' cannot be satisfied by the earlier [WP-11](../../work-packages/11-security-foundation.md#rule-wp-11) test-parser fixture |
 | Unblocks | [SLATE.17](#task-slate-17), [SLATE.20](#task-slate-20), [SLATE.21](#task-slate-21), [SLATE.30](#task-slate-30) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Media/Decode/**` |
-| Shared resources | [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Long-run buffer accounting, pool-exhaustion behaviour, forced-software-path equivalence, decode-capability disclosure -- local, once, on the existing environment. |
 | Completion evidence | Buffer-leak-free soak result; pool-exhaustion surfaced result; software-vs-hardware equivalence-within-tolerance result; [PG-22](../../../assurance/open-gates-register.md#rule-pg-22) hostile-input containment result. |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -414,7 +430,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-17` and ledger record `ledger/tasks/slate-17.md` in the Plan repository; task branch `task/slate-17` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L · early risk proof |
 | Obligations | [WP-37.02](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.02) — full |
 | Provides | slate.playback.engine |
@@ -436,7 +453,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-18` and ledger record `ledger/tasks/slate-18.md` in the Plan repository; task branch `task/slate-18` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-37.03](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.03) — graph topology/ports/EffectDefinition-vs-Instance/keyframe-scope/curve-evaluation engine, including the built-in definitions and formulas of 26-product-behavior-profiles.md §5 (transform/crop/opacity/colourAdjustment/audioGain/pan, hold/linear/bezier keyframe evaluation, RetimeCurve); excludes execution of any node that requires a native pixel/sample operation |
 | Provides | slate.processing.graph-engine |
@@ -458,7 +476,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-19` and ledger record `ledger/tasks/slate-19.md` in the Plan repository; task branch `task/slate-19` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-37.03](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.03) — execution of graph nodes that require a real pixel/sample operation (video convert/scale/transform), and generated media (colour/gradient/counter/test-pattern/title per 26§5) |
 | Provides | slate.processing.native-nodes |
@@ -467,7 +486,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Completion prerequisites | none |
 | Unblocks | [SLATE.23](#task-slate-23), [SLATE.25](#task-slate-25), [SLATE.28](#task-slate-28) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Processing/NativeNodes/**` |
-| Shared resources | [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Reference-vector comparison at 1e-5 per-channel tolerance before quantisation; identity-operation exactness check. |
 | Completion evidence | Per-formula reference-vector results (exposure/contrast/saturation/composite/crop/transform). |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -480,7 +499,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-20` and ledger record `ledger/tasks/slate-20.md` in the Plan repository; task branch `task/slate-20` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / XL · early risk proof |
 | Obligations | [WP-37.04](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.04) — full |
 | Provides | slate.audio.mixing |
@@ -489,7 +509,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Completion prerequisites | none |
 | Unblocks | [SLATE.23](#task-slate-23), [SLATE.28](#task-slate-28) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Audio/**` |
-| Shared resources | [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Two-mixed-tracks/dissolve/track-gap/resampler-priming/NTSC-frame-one-boundary vectors, each asserting exactly one mixed output sample at index k; mixing-against-reference-output test; sync-under-load test with video. |
 | Completion evidence | The [TV-08](../../../architecture/13-observability-and-operations.md#rule-tv-08) fixture (a cut at frame 1 of 30000/1001 fps @ 48 kHz emits sample 1601 exactly once and 1602 exactly once); mixing-vs-reference results. |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -503,7 +523,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-21` and ledger record `ledger/tasks/slate-21.md` in the Plan repository; task branch `task/slate-21` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-37.05](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.05) — full |
 | Provides | slate.proxy-cache |
@@ -525,7 +546,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-22` and ledger record `ledger/tasks/slate-22.md` in the Plan repository; task branch `task/slate-22` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-37.06](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.06) — full |
 | Provides | slate.viewer |
@@ -546,7 +568,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-23` and ledger record `ledger/tasks/slate-23.md` in the Plan repository; task branch `task/slate-23` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Package acceptance | Records the [WP-37](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-37.90](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37.90) — full<br>[WP-37](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37) Unlabelled final-review closure: consume actual Platform media packages, portable baseline codec/graph/audio-grid verification, unsupported-capability-cannot-be-advertised, font/colour/source identity affects render snapshot — the unlabelled final-review closure paragraph: consume actual Platform media packages, test portable baseline render codecs/graph-source semantics/audio-grid mixing together, confirm unsupported native capabilities cannot be advertised, and that font/colour/source identity affects the render snapshot (the last clause is jointly satisfied here and at SLATE.26); package-level obligation contribution |
@@ -568,7 +591,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-24` and ledger record `ledger/tasks/slate-24.md` in the Plan repository; task branch `task/slate-24` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-38.00](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.00) — full |
 | Provides | slate.colour.management |
@@ -577,7 +601,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Completion prerequisites | none |
 | Unblocks | [SLATE.27](#task-slate-27), [SLATE.32](#task-slate-32) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Color/**` |
-| Shared resources | [RES-arcslate-build-config](../shared-resources.md#res-arcslate-build-config) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-arcslate-build-config](../shared-resources.md#res-arcslate-build-config) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Round-trip colour tests against reference values, override-non-destructiveness assertion, display-transform-never-alters-export test, domain-purity test on the colour model. |
 | Completion evidence | Round-trip colour results; display/export separation proof; domain-purity result. |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -590,7 +614,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-25` and ledger record `ledger/tasks/slate-25.md` in the Plan repository; task branch `task/slate-25` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-38.01](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.01) — full |
 | Provides | slate.scopes |
@@ -611,7 +636,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-26` and ledger record `ledger/tasks/slate-26.md` in the Plan repository; task branch `task/slate-26` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-38.02](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.02) — full<br>[WP-37](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37) final-review closure clause: font/colour/source identity affects the render snapshot (the snapshot-binding half; the native-package-consumption half is SLATE.23) — final-review closure clause: font/colour/source identity affects the render snapshot (the snapshot-binding half; the native-package-consumption half is SLATE.23)<br>[WP-37](../../work-packages/37-arcslate-playback-and-processing.md#rule-wp-37) Unlabelled final-review closure: consume actual Platform media packages, portable baseline codec/graph/audio-grid verification, unsupported-capability-cannot-be-advertised, font/colour/source identity affects render snapshot — package-level obligation contribution |
 | Provides | slate.render.plan |
@@ -632,7 +658,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-27` and ledger record `ledger/tasks/slate-27.md` in the Plan repository; task branch `task/slate-27` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-38.04](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.04) — full |
 | Provides | slate.export.presets |
@@ -641,7 +668,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Completion prerequisites | none |
 | Unblocks | [SLATE.28](#task-slate-28), [SLATE.31](#task-slate-31) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Domain/Render/ExportPreset.cs`<br>`ArcSlate:src/ArcForges.ArcSlate.Rendering/Encoding/**` |
-| Shared resources | [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-arcslate-migrations](../shared-resources.md#res-arcslate-migrations) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-arcslate-migrations](../shared-resources.md#res-arcslate-migrations) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Preset validation negative tests; encode conformance tests per preset against golden fixtures with declared tolerance; metadata-correctness check on output files. |
 | Completion evidence | Invalid-preset-refused-before-start results; per-preset conformance results. |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -654,7 +681,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-28` and ledger record `ledger/tasks/slate-28.md` in the Plan repository; task branch `task/slate-28` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / XL |
 | Obligations | [WP-38.03](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.03) — full<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Security impact: output paths validated, no arbitrary write location (§6) — package-level obligation contribution<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Additional completion requirement: content-origin vectors on render/subtitle output paths, including unknown input and failed publication (§8) — package-level obligation contribution |
 | Provides | slate.render.execution |
@@ -663,7 +691,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Completion prerequisites | none |
 | Unblocks | [SLATE.31](#task-slate-31), [SLATE.33](#task-slate-33) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.Rendering/Execution/**` |
-| Shared resources | [RES-arcslate-build-config](../shared-resources.md#res-arcslate-build-config) (append), [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-arcslate-build-config](../shared-resources.md#res-arcslate-build-config) (append), [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Cancellation and failure tests asserting no complete-looking partial file; long-render soak; sleep-and-resume test; disk-full test -- local, once, on the existing environment. |
 | Completion evidence | No-complete-looking-partial-file results; soak survival result; sleep/resume result. |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -677,7 +705,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-29` and ledger record `ledger/tasks/slate-29.md` in the Plan repository; task branch `task/slate-29` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-38.05](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.05) — authored subtitles and SRT/WebVTT import/export: exact canonical ticks, declared nearest-ms bounded loss on export (<=0.5ms), explicit collapsed-interval handling, retained sidecar/origin<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Additional completion requirement: content-origin vectors on render/subtitle output paths, including unknown input and failed publication (§8) — package-level obligation contribution<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Unlabelled final-review closure: SRT/WebVTT preview/import/export plus local extraction ProductJob/TranscriptRecord adoption — package-level obligation contribution |
 | Provides | slate.subtitles |
@@ -699,7 +728,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-30` and ledger record `ledger/tasks/slate-30.md` in the Plan repository; task branch `task/slate-30` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-38.05](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.05) — the final-review closure clause: local extraction ProductJob and TranscriptRecord review/adoption under expectedNative/undo/origin (slate.transcribe.v1)<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Additional completion requirement: content-origin vectors on render/subtitle output paths, including unknown input and failed publication (§8) — package-level obligation contribution<br>[WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) Unlabelled final-review closure: SRT/WebVTT preview/import/export plus local extraction ProductJob/TranscriptRecord adoption — package-level obligation contribution |
 | Provides | slate.transcription.extraction |
@@ -722,7 +752,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-31` and ledger record `ledger/tasks/slate-31.md` in the Plan repository; task branch `task/slate-31` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-38.06](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.06) — full |
 | Provides | slate.golden-corpus |
@@ -731,7 +762,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Completion prerequisites | none |
 | Unblocks | [SLATE.32](#task-slate-32) |
 | Write scope | `ArcSlate:fixtures/media/golden/**` |
-| Shared resources | [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Golden comparison across the corpus; a deliberate-change negative test asserting the gate fires -- local, once. |
 | Completion evidence | Full-corpus comparison result; negative-gate-fires proof. |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -745,7 +776,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-32` and ledger record `ledger/tasks/slate-32.md` in the Plan repository; task branch `task/slate-32` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Package acceptance | Records the [WP-38](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-38.90](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.90) — full |
@@ -767,7 +799,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-33` and ledger record `ledger/tasks/slate-33.md` in the Plan repository; task branch `task/slate-33` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-39.00](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.00) — full |
 | Provides | slate.capabilities |
@@ -790,7 +823,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-34` and ledger record `ledger/tasks/slate-34.md` in the Plan repository; task branch `task/slate-34` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-39.01](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.01) — full |
 | Provides | slate.ai-context |
@@ -812,7 +846,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-35` and ledger record `ledger/tasks/slate-35.md` in the Plan repository; task branch `task/slate-35` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-39.02](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.02) — full<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) Security impact: media path handling, no path leakage through references (§6) — package-level obligation contribution |
 | Provides | slate.portable-package |
@@ -833,7 +868,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-36` and ledger record `ledger/tasks/slate-36.md` in the Plan repository; task branch `task/slate-36` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-39.03](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.03) — full<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) Security impact: media path handling, no path leakage through references (§6) — package-level obligation contribution |
 | Provides | slate.relink |
@@ -855,7 +891,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-37` and ledger record `ledger/tasks/slate-37.md` in the Plan repository; task branch `task/slate-37` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-39.04](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.04) — all work except the parts mapped to SLATE.42 |
 | Provides | slate.sync-scope |
@@ -877,7 +914,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-38` and ledger record `ledger/tasks/slate-38.md` in the Plan repository; task branch `task/slate-38` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L · early risk proof |
 | Obligations | [WP-39.05](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.05) — import direction: [OB-01](../../../architecture/07-sync-conflict-and-backup.md#rule-ob-01)..[OB-05](../../../architecture/07-sync-conflict-and-backup.md#rule-ob-05) numeric boundary, staged-before-commit import creating ArcSlate-owned canonical objects with provenance, item-level retained/approximated/omitted dispositions, media relink for Offline Media<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) Completion gate item 6: every claimed interchange version has a fixture and states fidelity before writing -- satisfies [PG-07](../../../assurance/open-gates-register.md#rule-pg-07) for ArcSlate (§8) — package-level obligation contribution |
 | Provides | slate.otio.import |
@@ -886,7 +924,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Completion prerequisites | none |
 | Unblocks | [SLATE.39](#task-slate-39) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.ImportExport/Otio/Import/**` |
-| Shared resources | [RES-arcslate-build-config](../shared-resources.md#res-arcslate-build-config) (append), [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-contracts-schema-sources](../shared-resources.md#res-contracts-schema-sources) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-arcslate-build-config](../shared-resources.md#res-arcslate-build-config) (append), [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-contracts-schema-sources](../shared-resources.md#res-contracts-schema-sources) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Finite/nonfinite/large/fractional-value vectors, standard-30000/1001-vs-decimal-29.97 vector, metadata-stripped-external-file vector -- against real fixtures and the pinned official library, local, once. |
 | Completion evidence | Per-vector numeric-boundary results; no-silent-frame-shift proof; malicious-path-denied and malformed-input-rejected-before-commit results. |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -900,7 +938,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-39` and ledger record `ledger/tasks/slate-39.md` in the Plan repository; task branch `task/slate-39` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-39.05](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.05) — export direction: binds a committed sequence revision, writes a temporary destination and publishes atomically, item-level dispositions for everything outside the supported subset<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) Completion gate item 6: every claimed interchange version has a fixture and states fidelity before writing -- satisfies [PG-07](../../../assurance/open-gates-register.md#rule-pg-07) for ArcSlate (§8) — package-level obligation contribution |
 | Provides | slate.otio.export |
@@ -909,7 +948,7 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 | Completion prerequisites | none |
 | Unblocks | [SLATE.40](#task-slate-40) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate.ImportExport/Otio/Export/**` |
-| Shared resources | [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-contracts-schema-sources](../shared-resources.md#res-contracts-schema-sources) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-arcslate-golden-media](../shared-resources.md#res-arcslate-golden-media) (append), [RES-contracts-schema-sources](../shared-resources.md#res-contracts-schema-sources) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Mixed/fractional-rate round trip, gaps/stack ordering, repeated-media-retains-placement, missing-references-become-relinkable-Offline-Media, supported-dissolves/markers, unsupported-feature-reports, export-cancellation-leaves-project-untouched -- against real fixtures and the pinned official library, local, once. |
 | Completion evidence | Both-directions-against-real-fixtures result (paired with SLATE.38); semantic-round-trip (meaning/references, not bytes/internal-IDs) result; cancellation-leaves-nothing-touched result. Together with SLATE.38, satisfies [PG-15](../../../assurance/open-gates-register.md#rule-pg-15), contributes to [PG-20](../../../assurance/open-gates-register.md#rule-pg-20) and [PG-03](../../../assurance/open-gates-register.md#rule-pg-03) (OTIO bridge licence/provenance), and [PG-07](../../../assurance/open-gates-register.md#rule-pg-07) for ArcSlate. |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -922,7 +961,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/slate-40` and ledger record `ledger/tasks/slate-40.md` in the Plan repository; task branch `task/slate-40` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Package acceptance | Records the [WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-39.90](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.90) — full<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) Unlabelled final-review closure: Cloud data-model round-trip of complete Slate metadata/archive, managed asset uploads, exact grids, graph scopes, fonts/colour, ASR references, anti-truncation — the unlabelled final-review closure paragraph: Cloud data-model round-trip of complete Slate metadata/archive with originals absent, explicit managed asset uploads, exact grids, graph scopes, titles/subtitles/fonts/colour and ASR source/artifact references; an older DTO cannot truncate the native project before sync; package-level obligation contribution |
@@ -944,7 +984,8 @@ Tasks: 41 · Owning repositories: ArcSlate · Integration owner(s): ArcSlate int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner; also touches Cloud |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate`; also touches Cloud |
+| Claim, branch and ledger | `claims/slate-42` and ledger record `ledger/tasks/slate-42.md` in the Plan repository; task branch `task/slate-42` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-39.04](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39.04) — testing requirement: 'multi-device project convergence'<br>[WP-39](../../work-packages/39-arcslate-integration-and-portability.md#rule-wp-39) unlabelled final-review closure paragraph (01-cloud-data-model.md structural-move-and-complete-media-replica-constraints) — unlabelled final-review closure paragraph (01-cloud-data-model.md structural-move-and-complete-media-replica-constraints) |
 | Start prerequisites | **artifact** [SLATE.37](#task-slate-37) — real, delivered outcome of SLATE.37 (Cloud sync scope declaration). *Why:* this integration exercises the real cloud sync scope declaration instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.39](cloud.md#task-cloud-39) — real, delivered outcome of CLOUD.39 (Guarded publication and convergent bootstrap). *Why:* this integration exercises the real guarded publication and convergent bootstrap instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.44](cloud.md#task-cloud-44) — real, delivered outcome of CLOUD.44 (Multi-device convergence harness). *Why:* this integration exercises the real multi-device convergence harness instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SLATE.12](#task-slate-12) — real, delivered outcome of SLATE.12 (Slate.project.v1/graph.v1 wire projection: bins, generators, nesting, adjustment, title/subtitle, cycle rejection). *Why:* this integration exercises the real slate.project.v1/graph.v1 wire projection: bins, generators, nesting, adjustment, title/subtitle, cycle rejection instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SLATE.35](#task-slate-35) — real, delivered outcome of SLATE.35 (Collect, consolidate and the portable project package). *Why:* this integration exercises the real collect, consolidate and the portable project package instead of a substitute, so it cannot start before that outcome exists |

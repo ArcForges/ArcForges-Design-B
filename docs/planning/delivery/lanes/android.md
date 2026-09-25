@@ -45,7 +45,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-01` and ledger record `ledger/tasks/and-01.md` in the Plan repository; task branch `task/and-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M · early risk proof |
 | Obligations | [WP-30.00](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30.00) — all work except the parts mapped to AND.04<br>[WP-30](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30) §3 binding rules: Apache-2.0 boundary, no GPL-family implementation, immutable producer artifacts — package-level obligation contribution |
 | Provides | android-app-identity; android-stable-toolchain |
@@ -68,7 +69,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-02` and ledger record `ledger/tasks/and-02.md` in the Plan repository; task branch `task/and-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-30.01](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30.01) — full |
 | Provides | android-module-boundaries; android-nav-contracts |
@@ -90,7 +92,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-03` and ledger record `ledger/tasks/and-03.md` in the Plan repository; task branch `task/and-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-30.02](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30.02) — full |
 | Provides | android-os-adapters; android-keystore-wrapper; android-workmanager |
@@ -113,7 +116,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-04` and ledger record `ledger/tasks/and-04.md` in the Plan repository; task branch `task/and-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-30.03](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30.03) — full<br>[WP-30.00](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30.00) — Kotlin Android foundation real package consumption |
 | Provides | android-grpc-web-client |
@@ -136,7 +140,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-05` and ledger record `ledger/tasks/and-05.md` in the Plan repository; task branch `task/and-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-30.04](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30.04) — full |
 | Provides | android-room-store; android-outbox |
@@ -159,7 +164,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-06` and ledger record `ledger/tasks/and-06.md` in the Plan repository; task branch `task/and-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-30.05](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30.05) — full |
 | Provides | android-secure-lifecycle |
@@ -180,7 +186,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-07` and ledger record `ledger/tasks/and-07.md` in the Plan repository; task branch `task/and-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-30](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-30.90](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30.90) — full<br>[WP-23.05](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23.05) — Android real-consumer integration beyond the [WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) probe |
@@ -203,7 +210,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-08` and ledger record `ledger/tasks/and-08.md` in the Plan repository; task branch `task/and-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-31.00](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.00) — full |
 | Provides | android-auth-home |
@@ -225,7 +233,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-09` and ledger record `ledger/tasks/and-09.md` in the Plan repository; task branch `task/and-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-31.01](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.01) — all work except the parts mapped to AND.24 |
 | Provides | android-chat-ui |
@@ -247,7 +256,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-10` and ledger record `ledger/tasks/and-10.md` in the Plan repository; task branch `task/and-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-31.02](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.02) — all work except the parts mapped to AND.24, AND.25 |
 | Provides | android-tasks-ui |
@@ -269,7 +279,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-11` and ledger record `ledger/tasks/and-11.md` in the Plan repository; task branch `task/and-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-31.03](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.03) — full |
 | Provides | android-library-ui |
@@ -291,7 +302,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-12` and ledger record `ledger/tasks/and-12.md` in the Plan repository; task branch `task/and-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-31.04](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.04) — all work except the parts mapped to AND.26<br>[WP-31](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31) [PG-24](../../../assurance/open-gates-register.md#rule-pg-24) completion-gate paragraph: physical arm64 push/Doze/background evidence — package-level obligation contribution |
 | Provides | android-push-settings |
@@ -313,7 +325,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-13` and ledger record `ledger/tasks/and-13.md` in the Plan repository; task branch `task/and-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / L |
 | Obligations | [WP-31.05](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.05) — all work except the parts mapped to AND.25 |
 | Provides | android-native-interaction-verified |
@@ -334,7 +347,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-14` and ledger record `ledger/tasks/and-14.md` in the Plan repository; task branch `task/and-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Obligations | [WP-31.06](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.06) — full<br>[WP-30](../../work-packages/30-mobile-shared-architecture.md#rule-wp-30) §3 binding rules: Apache-2.0 boundary, no GPL-family implementation, immutable producer artifacts — package-level obligation contribution |
 | Provides | android-scope-enforced |
@@ -356,7 +370,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-15` and ledger record `ledger/tasks/and-15.md` in the Plan repository; task branch `task/and-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-31](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-31.90](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.90) — full<br>[WP-31](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31) [PG-24](../../../assurance/open-gates-register.md#rule-pg-24) completion-gate paragraph: physical arm64 push/Doze/background evidence — package-level obligation contribution |
@@ -378,7 +393,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-16` and ledger record `ledger/tasks/and-16.md` in the Plan repository; task branch `task/and-16` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / S |
 | Obligations | [WP-32.00](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32.00) — full |
 | Provides | android-signed-artifacts |
@@ -400,7 +416,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-17` and ledger record `ledger/tasks/and-17.md` in the Plan repository; task branch `task/and-17` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Obligations | [WP-32.01](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32.01) — full |
 | Provides | android-release-runtime-verified |
@@ -421,7 +438,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-18` and ledger record `ledger/tasks/and-18.md` in the Plan repository; task branch `task/and-18` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Obligations | [WP-32.02](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32.02) — full |
 | Provides | android-dependency-rights-verified |
@@ -443,7 +461,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-19` and ledger record `ledger/tasks/and-19.md` in the Plan repository; task branch `task/and-19` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Obligations | [WP-32.03](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32.03) — full |
 | Provides | android-consumption-only-verified |
@@ -464,7 +483,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-20` and ledger record `ledger/tasks/and-20.md` in the Plan repository; task branch `task/and-20` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-32.04](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32.04) — full |
 | Provides | android-update-channels |
@@ -487,7 +507,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-21` and ledger record `ledger/tasks/and-21.md` in the Plan repository; task branch `task/and-21` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / L |
 | Obligations | [WP-32.05](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32.05) — all work except the parts mapped to AND.26 |
 | Provides | android-device-recovery-verified |
@@ -508,7 +529,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-22` and ledger record `ledger/tasks/and-22.md` in the Plan repository; task branch `task/and-22` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Obligations | [WP-32.06](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32.06) — full |
 | Provides | android-scope-statement |
@@ -530,7 +552,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-23` and ledger record `ledger/tasks/and-23.md` in the Plan repository; task branch `task/and-23` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / M |
 | Package acceptance | Records the [WP-32](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-32.90](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32.90) — full<br>[WP-32](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32) [PG-24](../../../assurance/open-gates-register.md#rule-pg-24) completion-gate paragraph (recheck on distributed artifact) — package-level obligation contribution |
@@ -553,7 +576,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-24` and ledger record `ledger/tasks/and-24.md` in the Plan repository; task branch `task/and-24` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-31.01](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.01) — real-integration closure<br>[WP-31.02](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.02) — real-integration closure |
 | Start prerequisites | **artifact** [AND.09](#task-and-09) — real, delivered outcome of AND.09 (Conversations and context (AN07-AN10/15/16)). *Why:* this integration exercises the real conversations and context (AN07-AN10/15/16) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AND.10](#task-and-10) — real, delivered outcome of AND.10 (Tasks, approvals and automation (AN11-AN13/19/25)). *Why:* this integration exercises the real tasks, approvals and automation (AN11-AN13/19/25) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.00](harness.md#task-har-00) — real, delivered outcome of HAR.00 (Turn loop, tool batching and bounds (RunWorkflow core)). *Why:* this integration exercises the real turn loop, tool batching and bounds (RunWorkflow core) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.03](harness.md#task-har-03) — real generated streaming and durable output. *Why:* the Android end-to-end scenario reads real Harness output |
@@ -573,7 +597,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-25` and ledger record `ledger/tasks/and-25.md` in the Plan repository; task branch `task/and-25` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-31.02](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.02) — device-dispatch closure<br>[WP-31.05](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.05) — real-52/26 evidence |
 | Start prerequisites | **artifact** [AND.10](#task-and-10) — real, delivered outcome of AND.10 (Tasks, approvals and automation (AN11-AN13/19/25)). *Why:* this integration exercises the real tasks, approvals and automation (AN11-AN13/19/25) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AND.13](#task-and-13) — real, delivered outcome of AND.13 (Native interaction and recovery: full experience-02 device matrix). *Why:* this integration exercises the real native interaction and recovery: full experience-02 device matrix instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [DEV.02](device-bridge.md#task-dev-02) — the real durable target queue. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.03](device-bridge.md#task-dev-03) — real owner reauthorization on the desktop. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.06](device-bridge.md#task-dev-06) — real remote approval and steering. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.07](device-bridge.md#task-dev-07) — real offline expiry and unknown-effect recovery. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.12](device-bridge.md#task-dev-12) — the cross-repository (toolRequestId, attemptId, commandId) agreement. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier |
@@ -593,7 +618,8 @@ Tasks: 26 · Owning repositories: Mobile · Integration owner(s): Mobile integra
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/and-26` and ledger record `ledger/tasks/and-26.md` in the Plan repository; task branch `task/and-26` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-31.04](../../work-packages/31-arcchat-mobile-android.md#rule-wp-31.04) — physical receipt closure<br>[WP-32](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32) [PG-24](../../../assurance/open-gates-register.md#rule-pg-24) completion-gate paragraph (recheck on distributed artifact) — [PG-24](../../../assurance/open-gates-register.md#rule-pg-24) closure<br>[WP-45.09](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.09) — device-delivery half<br>[WP-32.05](../../work-packages/32-mobile-release-and-store-gates.md#rule-wp-32.05) — physical/no-GMS/permission evidence half |
 | Start prerequisites | **artifact** [AND.12](#task-and-12) — real, delivered outcome of AND.12 (Presence, push, links and settings (AN20-AN24)). *Why:* this integration exercises the real presence, push, links and settings (AN20-AN24) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AND.23](#task-and-23) — real, delivered outcome of AND.23 (Distribution acceptance). *Why:* this integration exercises the real distribution acceptance instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [OPS.10](operations.md#task-ops-10) — real, delivered outcome of OPS.10 (Customer push delivery and registration lifecycle). *Why:* this integration exercises the real customer push delivery and registration lifecycle instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AND.21](#task-and-21) — real, delivered outcome of AND.21 (Physical device and recovery gates). *Why:* this integration exercises the real physical device and recovery gates instead of a substitute, so it cannot start before that outcome exists |

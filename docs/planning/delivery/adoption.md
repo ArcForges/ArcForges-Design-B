@@ -40,9 +40,9 @@ Exit: a slice is complete when its record is merged in the Plan ledger with a cl
 | Record | Location in Plan | Content |
 |---|---|---|
 | Baseline | `ledger/adoption/baseline.md` | Repository heads, open pull requests and branches, latest candidates |
-| Slice | `ledger/tasks/ADOPT.NN.<lane>.md` with `status: complete` | One row per task in the slice: classification, evidence references, bound write scope, remaining scope, conflicts raised, blockers |
-| Repository record | `ledger/adoption/<repository>.md` and `ledger/tasks/ADOPT.NN.md` | Repository-wide facts, links to every slice record and the combined classification table |
-| Inherited task | `ledger/tasks/<task-id>.md` with `status: inherited` | Obligation parts satisfied, receipts and source commits relied on, untested coverage carried forward |
+| Slice | `ledger/tasks/adopt-nn-<lane>.md` with `status: complete` (for example `ledger/tasks/adopt-03-contracts.md`) | One row per task in the slice: classification, evidence references, bound write scope, remaining scope, conflicts raised, blockers |
+| Repository record | `ledger/adoption/<repository>.md` and `ledger/tasks/adopt-nn.md` | Repository-wide facts, links to every slice record and the combined classification table |
+| Inherited task | `ledger/tasks/<key>.md` with `status: inherited`, where the key is the task identifier in lower case with dots replaced by hyphens | Obligation parts satisfied, receipts and source commits relied on, untested coverage carried forward |
 | Planning change | Design and Plan pull requests | New or adjusted tasks for adjustments that do not fit existing scope |
 
 ## 4. Observations recorded while planning (unreviewed inputs)

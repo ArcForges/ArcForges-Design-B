@@ -31,7 +31,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ext-00` and ledger record `ledger/tasks/ext-00.md` in the Plan repository; task branch `task/ext-00` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L · early risk proof |
 | Obligations | [WP-41.00](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.00) — full |
 | Provides | extension-host |
@@ -53,7 +54,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ext-01` and ledger record `ledger/tasks/ext-01.md` in the Plan repository; task branch `task/ext-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-41.01](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.01) — full |
 | Provides | extension-handshake |
@@ -74,7 +76,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/ext-02` and ledger record `ledger/tasks/ext-02.md` in the Plan repository; task branch `task/ext-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L · early risk proof |
 | Obligations | [WP-41.02](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.02) — full |
 | Provides | dual-capability-boundary |
@@ -97,7 +100,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ext-03` and ledger record `ledger/tasks/ext-03.md` in the Plan repository; task branch `task/ext-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-41.03](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.03) — full |
 | Provides | extension-declarative-ui |
@@ -118,7 +122,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/ext-04` and ledger record `ledger/tasks/ext-04.md` in the Plan repository; task branch `task/ext-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-41.04](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.04) — manifest.v1/workflow.v1/panel.v1 validators and the immutable staged install/update/drain/migration/revocation/rollback state machine |
 | Provides | package-lifecycle-engine |
@@ -141,7 +146,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ext-05` and ledger record `ledger/tasks/ext-05.md` in the Plan repository; task branch `task/ext-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-41.04](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.04) — the six package contribution kinds (skill/template/workflow/mcp/connector/extension) runtime registration and execution wiring |
 | Provides | extension-contribution-kinds |
@@ -162,7 +168,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/ext-06` and ledger record `ledger/tasks/ext-06.md` in the Plan repository; task branch `task/ext-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-41.05](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.05) — Cloud PackageCatalog producer: DNS publisher verification, immutable submissions, review-state/revocation authority, signed static index<br>[WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) PackageCatalog ownership paragraph (Sec.5-6 boundary): OperatorService is sole authenticator/caller; neither Extensions Runtime nor console writes PackageCatalog tables — package-level obligation contribution |
 | Provides | package-catalog-producer |
@@ -184,7 +191,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ext-07` and ledger record `ledger/tasks/ext-07.md` in the Plan repository; task branch `task/ext-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-41.05](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.05) — desktop/CLI catalog consumers |
 | Provides | package-catalog-consumers |
@@ -206,7 +214,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/ext-08` and ledger record `ledger/tasks/ext-08.md` in the Plan repository; task branch `task/ext-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-41.06](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.06) — full<br>[WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) Sec.8 gate item 8: MCP vocabulary mapping + SDK version pin -- [VG-02](../../../assurance/open-gates-register.md#rule-vg-02) — package-level obligation contribution |
 | Provides | extension-public-sdk |
@@ -228,7 +237,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ext-09` and ledger record `ledger/tasks/ext-09.md` in the Plan repository; task branch `task/ext-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-41.07](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.07) — local MCP stdio placement behind the owned connector child process<br>[WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) Sec.8 gate item 8: MCP vocabulary mapping + SDK version pin -- [VG-02](../../../assurance/open-gates-register.md#rule-vg-02) — package-level obligation contribution |
 | Provides | mcp-local-placement |
@@ -249,7 +259,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/ext-10` and ledger record `ledger/tasks/ext-10.md` in the Plan repository; task branch `task/ext-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-41.07](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.07) — Cloud MCP HTTP placement through the AI Worker adapter<br>[WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) Sec.8 gate item 8: MCP vocabulary mapping + SDK version pin -- [VG-02](../../../assurance/open-gates-register.md#rule-vg-02) — package-level obligation contribution |
 | Provides | mcp-cloud-placement |
@@ -270,7 +281,8 @@ Tasks: 12 · Owning repositories: AI, Cloud, Contracts, DesktopPlatform · Integ
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ext-90` and ledger record `ledger/tasks/ext-90.md` in the Plan repository; task branch `task/ext-90` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Package acceptance | Records the [WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-41.90](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41.90) — full<br>[WP-41](../../work-packages/41-extension-platform-and-integrations.md#rule-wp-41) Sec.8 gate item 9: extension protocol conformance suite -- [PG-09](../../../assurance/open-gates-register.md#rule-pg-09) — package-level obligation contribution |

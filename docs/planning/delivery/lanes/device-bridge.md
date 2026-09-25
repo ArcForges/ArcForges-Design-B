@@ -31,7 +31,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/dev-01` and ledger record `ledger/tasks/dev-01.md` in the Plan repository; task branch `task/dev-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-26.00](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.00) — full |
 | Provides | application-presence-service |
@@ -54,7 +55,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/dev-02` and ledger record `ledger/tasks/dev-02.md` in the Plan repository; task branch `task/dev-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-26.01](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.01) — full |
 | Provides | tool-request-queue |
@@ -76,7 +78,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/dev-03` and ledger record `ledger/tasks/dev-03.md` in the Plan repository; task branch `task/dev-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-26.02](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.02) — full |
 | Provides | device-runtime-owner-reauth |
@@ -97,7 +100,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/dev-04` and ledger record `ledger/tasks/dev-04.md` in the Plan repository; task branch `task/dev-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-26.03](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.03) — Cloud-side D1 attempt-row persistence, hash dedup and cross-application delivery guard<br>[WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) Tool-result acceptance paragraph (between §5 and §6): two distinct toolRequestIds in one attempt both persist and each replay returns its own original receipt; a changed result under the same (toolRequestId,attemptId,commandId) refuses with command.reused_identifier; lost acknowledgement never allocates a fresh command or drops the second result. Bound to the wire registry, [TK-05](../../../architecture/contracts/01-public-api-operations.md#rule-tk-05) and task.tool_result -- the same key [WP-26.03](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.03) uses. — package-level obligation contribution |
 | Provides | bridge-dedup-store-cloud |
@@ -120,7 +124,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/dev-05` and ledger record `ledger/tasks/dev-05.md` in the Plan repository; task branch `task/dev-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-26.03](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.03) — Desktop command_log persistence and (toolRequestId,attemptId,commandId) agreement with the Cloud attempt row<br>[WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) Tool-result acceptance paragraph (between §5 and §6): two distinct toolRequestIds in one attempt both persist and each replay returns its own original receipt; a changed result under the same (toolRequestId,attemptId,commandId) refuses with command.reused_identifier; lost acknowledgement never allocates a fresh command or drops the second result. Bound to the wire registry, [TK-05](../../../architecture/contracts/01-public-api-operations.md#rule-tk-05) and task.tool_result -- the same key [WP-26.03](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.03) uses. — package-level obligation contribution |
 | Provides | bridge-dedup-store-desktop |
@@ -143,7 +148,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/dev-06` and ledger record `ledger/tasks/dev-06.md` in the Plan repository; task branch `task/dev-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-26.04](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.04) — full |
 | Provides | bridge-remote-approval |
@@ -165,7 +171,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/dev-07` and ledger record `ledger/tasks/dev-07.md` in the Plan repository; task branch `task/dev-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Obligations | [WP-26.05](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.05) — full |
 | Provides | bridge-offline-expiry |
@@ -187,7 +194,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/dev-08` and ledger record `ledger/tasks/dev-08.md` in the Plan repository; task branch `task/dev-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Obligations | [WP-26.06](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.06) — full |
 | Provides | bridge-frozen-locality |
@@ -209,7 +217,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/dev-09` and ledger record `ledger/tasks/dev-09.md` in the Plan repository; task branch `task/dev-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Package acceptance | Records the [WP-26](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-26.90](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.90) — full |
@@ -232,7 +241,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/dev-12` and ledger record `ledger/tasks/dev-12.md` in the Plan repository; task branch `task/dev-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-26.03](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.03) — cross-repo agreement proof beyond each side's own unit coverage |
 | Start prerequisites | **artifact** [DEV.04](#task-dev-04) — real, delivered outcome of DEV.04 (Execution and result deduplication -- Cloud D1 attempt/result store). *Why:* this integration exercises the real execution and result deduplication -- Cloud D1 attempt/result store instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [DEV.05](#task-dev-05) — real, delivered outcome of DEV.05 (Execution and result deduplication -- Desktop command_log agreement). *Why:* this integration exercises the real execution and result deduplication -- Desktop command_log agreement instead of a substitute, so it cannot start before that outcome exists |
@@ -252,7 +262,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/dev-13` and ledger record `ledger/tasks/dev-13.md` in the Plan repository; task branch `task/dev-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-52.05](../../work-packages/52-cloud-harness.md#rule-wp-52.05) — all work except the parts mapped to AST.19, HAR.05 |
 | Start prerequisites | **artifact** [AST.19](assistant.md#task-ast-19) — real, delivered outcome of AST.19 (Real Cloud Harness turn loop replacing the fixture turn endpoint). *Why:* this integration exercises the real real Cloud Harness turn loop replacing the fixture turn endpoint instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.02](harness.md#task-har-02) — real Harness approval and tool-dispatch path. *Why:* a Harness-planned tool request must originate from the real approval and dispatch loop<br>**artifact** [DEV.02](#task-dev-02) — the real durable target queue. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.03](#task-dev-03) — real owner reauthorization on the desktop. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.04](#task-dev-04) — real Cloud attempt and result deduplication. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.05](#task-dev-05) — real desktop command_log agreement. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.06](#task-dev-06) — real remote approval and steering. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.12](#task-dev-12) — the cross-repository (toolRequestId, attemptId, commandId) agreement. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier |
@@ -272,7 +283,8 @@ Tasks: 12 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner; also touches Cloud |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform`; also touches Cloud |
+| Claim, branch and ledger | `claims/dev-14` and ledger record `ledger/tasks/dev-14.md` in the Plan repository; task branch `task/dev-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-24.01](../../work-packages/24-realtime-and-reliable-events.md#rule-wp-24.01) — device-targeted feed real integration |
 | Start prerequisites | **artifact** [CLOUD.29](cloud.md#task-cloud-29) — real, delivered outcome of CLOUD.29 (Stream connection and authentication (EventService.Watch/ExecutionService.WatchOutput shells)). *Why:* this integration exercises the real stream connection and authentication (EventService.Watch/ExecutionService.WatchOutput shells) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.30](cloud.md#task-cloud-30) — real, delivered outcome of CLOUD.30 (Scoped subscription (owner/product/filter/recovery-generation binding)). *Why:* this integration exercises the real scoped subscription (owner/product/filter/recovery-generation binding) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.31](cloud.md#task-cloud-31) — real, delivered outcome of CLOUD.31 (Cursor and gap handling (DO projection backed by D1 outbox)). *Why:* this integration exercises the real cursor and gap handling (DO projection backed by D1 outbox) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.33](cloud.md#task-cloud-33) — real, delivered outcome of CLOUD.33 (Publication and wake (D1 outbox to bounded DO feed via Queues)). *Why:* this integration exercises the real publication and wake (D1 outbox to bounded DO feed via Queues) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.34](cloud.md#task-cloud-34) — real, delivered outcome of CLOUD.34 (Bounded stream lifecycle). *Why:* this integration exercises the real bounded stream lifecycle instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AST.11](assistant.md#task-ast-11) — assistant Cloud client and device runtime. *Why:* the real bridge integration replaces the loopback used by the assistant device runtime<br>**artifact** [DEV.01](#task-dev-01) — real application presence. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.02](#task-dev-02) — the real durable target queue. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.03](#task-dev-03) — real owner reauthorization on the desktop. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.04](#task-dev-04) — real Cloud attempt and result deduplication. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.05](#task-dev-05) — real desktop command_log agreement. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.12](#task-dev-12) — the cross-repository (toolRequestId, attemptId, commandId) agreement. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier |

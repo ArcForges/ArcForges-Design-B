@@ -2,7 +2,7 @@
 
 > Generated from [the delivery graph](delivery-graph.json) by Plan `tools/delivery.py`; do not edit by hand. Rules and definitions: [delivery model](README.md).
 
-Each shared file, registry, sequence, environment, key or pointer has exactly one owning role. Tasks declare how they touch it; the owner applies the protocol. Independent worktrees do not remove semantic conflicts, so these declarations are part of task readiness and merge review.
+Each shared file, registry, sequence, environment, key or pointer has exactly one owning role. Tasks declare how they touch it; the owner applies the protocol. Independent worktrees do not remove semantic conflicts, so these declarations are part of task readiness and merge review. A protocol that names an exclusive phase (a live run in a deployed environment, a heavy local build) binds every task that enters that phase, for that phase only, whatever mode the task declares for its other edits ([DLV-11](README.md#rule-dlv-11)).
 
 | Resource | Kind | Owner | Tasks (mode) |
 |---|---|---|---|
@@ -45,7 +45,7 @@ Each shared file, registry, sequence, environment, key or pointer has exactly on
 | [RES-web-app-routing](#res-web-app-routing) | registry | Web integration owner | [OPS.05](lanes/operations.md#task-ops-05) (append), [OPS.11](lanes/operations.md#task-ops-11) (append), [WEB.07](lanes/web.md#task-web-07) (append), [WEB.10](lanes/web.md#task-web-10) (append), [WEB.16](lanes/web.md#task-web-16) (append), [WEB.19](lanes/web.md#task-web-19) (append) |
 | [RES-web-build-config](#res-web-build-config) | file | Web integration owner | [WEB.03](lanes/web.md#task-web-03) (append), [WEB.07](lanes/web.md#task-web-07) (append), [WEB.10](lanes/web.md#task-web-10) (append), [WEB.16](lanes/web.md#task-web-16) (append), [WEB.19](lanes/web.md#task-web-19) (append), [WEB.25](lanes/web.md#task-web-25) (append) |
 | [RES-web-shared-ui](#res-web-shared-ui) | file | Web integration owner | [WEB.08](lanes/web.md#task-web-08) (append), [WEB.10](lanes/web.md#task-web-10) (append), [WEB.19](lanes/web.md#task-web-19) (append) |
-| [RES-workstation-build-slot](#res-workstation-build-slot) | build-slot | each workstation operator | [PRF.01](lanes/runtime-proofs.md#task-prf-01) (append), [PRF.02](lanes/runtime-proofs.md#task-prf-02) (append), [PRF.03](lanes/runtime-proofs.md#task-prf-03) (append), [PRF.04](lanes/runtime-proofs.md#task-prf-04) (append), [PRF.07](lanes/runtime-proofs.md#task-prf-07) (append), [PRF.10](lanes/runtime-proofs.md#task-prf-10) (append), [NAT.04](lanes/native.md#task-nat-04) (append), [NAT.06](lanes/native.md#task-nat-06) (append), [NAT.07](lanes/native.md#task-nat-07) (append), [NAT.08](lanes/native.md#task-nat-08) (append), [NAT.09](lanes/native.md#task-nat-09) (append), [NAT.10](lanes/native.md#task-nat-10) (append), [NAT.11](lanes/native.md#task-nat-11) (append), [NAT.12](lanes/native.md#task-nat-12) (append), [NAT.13](lanes/native.md#task-nat-13) (append), [NAT.14](lanes/native.md#task-nat-14) (append), [NAT.15](lanes/native.md#task-nat-15) (append), [NAT.20](lanes/native.md#task-nat-20) (append), [NAT.21](lanes/native.md#task-nat-21) (append), [NAT.22](lanes/native.md#task-nat-22) (append), [NAT.23](lanes/native.md#task-nat-23) (append), [NAT.24](lanes/native.md#task-nat-24) (append), [NAT.25](lanes/native.md#task-nat-25) (append), [NAT.26](lanes/native.md#task-nat-26) (append), [SLATE.15](lanes/arcslate.md#task-slate-15) (append), [SLATE.16](lanes/arcslate.md#task-slate-16) (append), [SLATE.19](lanes/arcslate.md#task-slate-19) (append), [SLATE.20](lanes/arcslate.md#task-slate-20) (append), [SLATE.24](lanes/arcslate.md#task-slate-24) (append), [SLATE.27](lanes/arcslate.md#task-slate-27) (append), [SLATE.28](lanes/arcslate.md#task-slate-28) (append), [SLATE.31](lanes/arcslate.md#task-slate-31) (append), [SLATE.38](lanes/arcslate.md#task-slate-38) (append), [SLATE.39](lanes/arcslate.md#task-slate-39) (append) |
+| [RES-workstation-build-slot](#res-workstation-build-slot) | build-slot | each workstation operator | [PRF.01](lanes/runtime-proofs.md#task-prf-01) (exclusive), [PRF.02](lanes/runtime-proofs.md#task-prf-02) (exclusive), [PRF.03](lanes/runtime-proofs.md#task-prf-03) (exclusive), [PRF.04](lanes/runtime-proofs.md#task-prf-04) (exclusive), [PRF.07](lanes/runtime-proofs.md#task-prf-07) (exclusive), [PRF.10](lanes/runtime-proofs.md#task-prf-10) (exclusive), [NAT.04](lanes/native.md#task-nat-04) (exclusive), [NAT.06](lanes/native.md#task-nat-06) (exclusive), [NAT.07](lanes/native.md#task-nat-07) (exclusive), [NAT.08](lanes/native.md#task-nat-08) (exclusive), [NAT.09](lanes/native.md#task-nat-09) (exclusive), [NAT.10](lanes/native.md#task-nat-10) (exclusive), [NAT.11](lanes/native.md#task-nat-11) (exclusive), [NAT.12](lanes/native.md#task-nat-12) (exclusive), [NAT.13](lanes/native.md#task-nat-13) (exclusive), [NAT.14](lanes/native.md#task-nat-14) (exclusive), [NAT.15](lanes/native.md#task-nat-15) (exclusive), [NAT.20](lanes/native.md#task-nat-20) (exclusive), [NAT.21](lanes/native.md#task-nat-21) (exclusive), [NAT.22](lanes/native.md#task-nat-22) (exclusive), [NAT.23](lanes/native.md#task-nat-23) (exclusive), [NAT.24](lanes/native.md#task-nat-24) (exclusive), [NAT.25](lanes/native.md#task-nat-25) (exclusive), [NAT.26](lanes/native.md#task-nat-26) (exclusive), [SLATE.15](lanes/arcslate.md#task-slate-15) (exclusive), [SLATE.16](lanes/arcslate.md#task-slate-16) (exclusive), [SLATE.19](lanes/arcslate.md#task-slate-19) (exclusive), [SLATE.20](lanes/arcslate.md#task-slate-20) (exclusive), [SLATE.24](lanes/arcslate.md#task-slate-24) (exclusive), [SLATE.27](lanes/arcslate.md#task-slate-27) (exclusive), [SLATE.28](lanes/arcslate.md#task-slate-28) (exclusive), [SLATE.31](lanes/arcslate.md#task-slate-31) (exclusive), [SLATE.38](lanes/arcslate.md#task-slate-38) (exclusive), [SLATE.39](lanes/arcslate.md#task-slate-39) (exclusive) |
 
 <a id="res-ai-workflow-and-routes"></a>
 
@@ -53,7 +53,7 @@ Each shared file, registry, sequence, environment, key or pointer has exactly on
 
 Repository: AI · Kind: file · Owner: AI integration owner
 
-**Protocol.** The Workflow entry is owned by the turn-loop task; other Harness tasks add steps through their own modules; the route-pin table changes only with a policy snapshot; the AI deployment environment is exclusive during live runs.
+**Protocol.** The Workflow entry is owned by the turn-loop task; other Harness tasks add steps through their own modules; the route-pin table changes only with a policy snapshot. Any task that runs against the AI deployment environment holds the lease `leases/res-ai-workflow-and-routes` for that live run only.
 
 <a id="res-android-signing-and-store"></a>
 
@@ -173,7 +173,7 @@ Repository: Cloud · Kind: sequence · Owner: Cloud integration owner
 
 Repository: Cloud · Kind: environment · Owner: Cloud integration owner
 
-**Protocol.** Bindings are added by the owning module task in its own section; the deployed test environment is exclusive during live integration runs and is scheduled by the integration owner; production deployment belongs to release tasks.
+**Protocol.** Bindings are added by the owning module task in its own section, and the Cloud integration owner resolves ordering conflicts at merge. Any task that runs against the deployed test environment holds the lease `leases/res-cloud-deployment` for that live run only, whatever mode it declares for its binding edits; production deployment belongs to release tasks.
 
 <a id="res-cloud-host-composition"></a>
 
@@ -293,7 +293,7 @@ Repository: DesktopPlatform · Kind: registry · Owner: DesktopPlatform integrat
 
 Repository: Mobile · Kind: file · Owner: Mobile integration owner
 
-**Protocol.** The module skeleton task registers all modules once; later tasks edit only their module; catalog entries are appended and locks regenerated after rebase; dependency additions carry admission receipts.
+**Protocol.** The module skeleton task registers all modules once and holds the lease `leases/res-mobile-build-config` while it restructures the build; later tasks edit only their module; catalog entries are appended and locks regenerated after rebase; dependency additions carry admission receipts.
 
 <a id="res-notes-scalar-vectors"></a>
 
@@ -365,4 +365,4 @@ Repository: Web · Kind: file · Owner: Web integration owner
 
 Repository: workstation · Kind: build-slot · Owner: each workstation operator
 
-**Protocol.** One CPU-heavy local build or test at a time per workstation, coordinated by a lock file in the user profile; coding and review continue meanwhile; CI capacity is not limited by this rule.
+**Protocol.** Exclusive per workstation for the duration of each CPU-heavy local build or test, through the workstation lock rather than a Plan lease: run the command as `python tools/delivery.py build-slot run --worker <name> --task <task> -- <command>` with the Plan repository tool, which holds the lock directory `.arcforges/build-slot` in the user profile with an owner record and heartbeat and recovers a lock whose holder stopped. Coding and review continue while a build waits; CI capacity is not limited by this rule.

@@ -35,7 +35,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/gov-01` and ledger record `ledger/tasks/gov-01.md` in the Plan repository; task branch `task/gov-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / XL · early risk proof |
 | Obligations | [WP-00.00](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-wp-00.00) — full<br>[WP-00.01](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-wp-00.01) — full<br>[WP-00.02](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-wp-00.02) — full<br>[WP-00.03](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-wp-00.03) — full<br>[WP-00.04](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-wp-00.04) — full<br>[WP-00.05](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-wp-00.05) — full<br>[WP-00.90](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-wp-00.90) — full |
 | Provides | product-names-policy-v1; glossary-invariant-policy-v1; licence-boundary-declarations; provenance-process-v1; reference-matrix-registrations |
@@ -57,7 +58,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/gov-02` and ledger record `ledger/tasks/gov-02.md` in the Plan repository; task branch `task/gov-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / XL |
 | Obligations | [WP-01.00](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.00) — full<br>[WP-01.01](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.01) — full<br>[WP-01.02](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.02) — full<br>[WP-01.03](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.03) — full<br>[WP-01.04](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.04) — full<br>[WP-01.05](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.05) — full<br>[WP-01.90](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01.90) — full<br>[WP-01](../../work-packages/01-repository-reconciliation-and-target-layout.md#rule-wp-01) Cloud module layout acceptance - map 17 historical scaffold names to the 21 declared domain owners in WP21; Cloud owns the Native AOT Container host and Worker bindings, AI owns the sole Workflow Harness; empty module projects are not created during reconciliation — package-level obligation contribution |
 | Provides | contract-licence-split-assignment; shared-foundation-boundary-classification; native-admission-record; test-family-coverage-map; cloud-domain-owner-map |
@@ -78,7 +80,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/gov-03` and ledger record `ledger/tasks/gov-03.md` in the Plan repository; task branch `task/gov-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / XL · early risk proof |
 | Obligations | [WP-02.00](../../work-packages/02-build-governance-and-analyzer-policy.md#rule-wp-02.00) — full<br>[WP-02.01](../../work-packages/02-build-governance-and-analyzer-policy.md#rule-wp-02.01) — full<br>[WP-02.02](../../work-packages/02-build-governance-and-analyzer-policy.md#rule-wp-02.02) — full<br>[WP-02.03](../../work-packages/02-build-governance-and-analyzer-policy.md#rule-wp-02.03) — full<br>[WP-02.04](../../work-packages/02-build-governance-and-analyzer-policy.md#rule-wp-02.04) — full, under [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)<br>[WP-02.05](../../work-packages/02-build-governance-and-analyzer-policy.md#rule-wp-02.05) — full, under [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)<br>[WP-02.90](../../work-packages/02-build-governance-and-analyzer-policy.md#rule-wp-02.90) — full |
 | Provides | locked-toolchain-pins; warnings-as-errors-build; aot-trim-diagnostic-posture; runtime-boundary-config; version-axis-plumbing; dependency-admission-policy |
@@ -100,7 +103,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/gov-04` and ledger record `ledger/tasks/gov-04.md` in the Plan repository; task branch `task/gov-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / L · early risk proof |
 | Obligations | [WP-05.00](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.00) — build the reusable [AT-01](../../../architecture/01-solution-and-project-layout.md#rule-at-01)..14/[RP-01](../../../architecture/01-solution-and-project-layout.md#rule-rp-01)..10 rule engine and project-graph reader; apply it to DesktopPlatform's own layering/reference-direction rules<br>[WP-05.01](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.01) — licence-boundary rule implementation in the shared engine; DesktopPlatform's own licence-boundary enforcement<br>[WP-05.04](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.04) — banned-symbol scanner mechanism in the shared engine; DesktopPlatform's own banned-API fixtures<br>[WP-05.02](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.02) — wire the existing WP00.00 forbidden-term scanner into DesktopPlatform's own PR build as a failing policy test |
 | Provides | architecture-policy-rule-engine-v1; project-graph-reader; fixture-compiler; banned-symbol-scanner |
@@ -123,7 +127,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/gov-05` and ledger record `ledger/tasks/gov-05.md` in the Plan repository; task branch `task/gov-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / L |
 | Obligations | [WP-05.03](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.03) — full: build the contract/serialization policy engine (generated-from-proto DTO check, explicit JSON metadata for HTTP exceptions, no reflection-based serializer reachable, every local RPC contract interface carries the generated service/descriptor identity, generated artifacts match the committed baseline) and apply it to Contracts itself<br>[WP-05.00](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.00) — Contracts layering: contract projects reference only contract projects and the foundation<br>[WP-05.01](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.01) — Contracts licence-boundary enforcement (public/internal Apache-2.0 split from WP01.01)<br>[WP-05.02](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.02) — wire the forbidden-term scanner into Contracts' own PR build as a failing policy test<br>[WP-05.04](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.04) — Contracts banned-API fixtures |
 | Provides | contract-serialization-policy-engine; contract-generated-baseline-check |
@@ -146,7 +151,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/gov-06` and ledger record `ledger/tasks/gov-06.md` in the Plan repository; task branch `task/gov-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / S |
 | Obligations | [WP-05.00](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.00) — ArcNotes slice: layering/reference-direction fixtures<br>[WP-05.01](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.01) — ArcNotes slice: licence boundary + dependency allowlist<br>[WP-05.02](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.02) — wire the forbidden-term scanner into ArcNotes' own PR build<br>[WP-05.03](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.03) — ArcNotes' generated-client consumption checks (RPC interface carries generated descriptor identity)<br>[WP-05.04](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.04) — ArcNotes banned-API fixtures |
 | Provides | arcnotes-policy-suite |
@@ -169,7 +175,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/gov-07` and ledger record `ledger/tasks/gov-07.md` in the Plan repository; task branch `task/gov-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / S |
 | Obligations | [WP-05.00](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.00) — ArcScope slice<br>[WP-05.01](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.01) — ArcScope slice<br>[WP-05.02](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.02) — wire the forbidden-term scanner into ArcScope's own PR build<br>[WP-05.03](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.03) — ArcScope's generated-client consumption checks<br>[WP-05.04](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.04) — ArcScope banned-API fixtures |
 | Provides | arcscope-policy-suite |
@@ -192,7 +199,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/gov-08` and ledger record `ledger/tasks/gov-08.md` in the Plan repository; task branch `task/gov-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / S |
 | Obligations | [WP-05.00](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.00) — ArcSlate slice<br>[WP-05.01](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.01) — ArcSlate slice<br>[WP-05.02](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.02) — wire the forbidden-term scanner into ArcSlate's own PR build<br>[WP-05.03](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.03) — ArcSlate's generated-client consumption checks<br>[WP-05.04](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.04) — ArcSlate banned-API fixtures |
 | Provides | arcslate-policy-suite |
@@ -215,7 +223,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/gov-09` and ledger record `ledger/tasks/gov-09.md` in the Plan repository; task branch `task/gov-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / M |
 | Obligations | [WP-05.00](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.00) — Cloud slice<br>[WP-05.01](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.01) — Cloud slice<br>[WP-05.02](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.02) — wire the forbidden-term scanner into Cloud's own PR build<br>[WP-05.03](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.03) — Cloud's own generated public API/RPC descriptor checks<br>[WP-05.04](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.04) — Cloud banned-API fixtures, weighted toward AOT-path reflection/dynamic-codegen since Cloud is the Native AOT host |
 | Provides | cloud-policy-suite |
@@ -238,7 +247,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/gov-10` and ledger record `ledger/tasks/gov-10.md` in the Plan repository; task branch `task/gov-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / S |
 | Obligations | [WP-05.00](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.00) — AI slice<br>[WP-05.01](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.01) — AI slice<br>[WP-05.02](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.02) — wire the forbidden-term scanner into AI's own PR build<br>[WP-05.03](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.03) — AI's generated-client consumption checks<br>[WP-05.04](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.04) — AI banned-API fixtures |
 | Provides | ai-policy-suite |
@@ -261,7 +271,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/gov-11` and ledger record `ledger/tasks/gov-11.md` in the Plan repository; task branch `task/gov-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / M |
 | Obligations | [WP-05.01](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.01) — Web slice: SDK-to-UI licence separation<br>[WP-05.02](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.02) — wire the forbidden-term scanner into Web's own PR build<br>[WP-05.04](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.04) — Web banned dependency/route fixtures<br>[WP-05](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05) Web repository and architecture assertions (unlabeled paragraph after [WP-05.06](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.06)): Node/TS import and dependency checks - one Web workspace/lock, exact Node/npm/generator pins, SDK-to-UI licence separation, generated wire types only, no private/server/local-RPC imports, desktop JS/DOM prohibition scoped to desktop graphs, no obsolete Blazor target, no esproj in portable managed references, no implicit npm install or production dev/HMR server, no TS fixtures/test helpers in the release route graph — package-level obligation contribution |
 | Provides | web-policy-suite |
@@ -284,7 +295,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/gov-12` and ledger record `ledger/tasks/gov-12.md` in the Plan repository; task branch `task/gov-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / M |
 | Obligations | [WP-05.00](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.00) — Mobile slice, via Gradle dependency-graph verification rather than the.NET engine<br>[WP-05.01](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.01) — Mobile slice: licence boundary + dependency allowlist over Gradle dependencies<br>[WP-05.02](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.02) — wire the forbidden-term scanner into Mobile's own PR build<br>[WP-05.04](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.04) — Mobile banned-API fixtures |
 | Provides | mobile-policy-suite |
@@ -307,7 +319,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/gov-13` and ledger record `ledger/tasks/gov-13.md` in the Plan repository; task branch `task/gov-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / M |
 | Obligations | [WP-05.05](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.05) — full |
 | Provides | invariant-accounting-report-v1 |
@@ -329,7 +342,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/gov-14` and ledger record `ledger/tasks/gov-14.md` in the Plan repository; task branch `task/gov-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / M |
 | Obligations | [WP-05.06](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.06) — full: six checks over docs/ in ArcForges-Design, plus the 23+8-row Phase-1/Phase-2 decision-coverage check against traceability-matrix.md<br>[P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — delivery-graph validation replacing the retired package-level graph check |
 | Provides | spec-integrity-check-v1 |
@@ -352,7 +366,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/gov-15` and ledger record `ledger/tasks/gov-15.md` in the Plan repository; task branch `task/gov-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-05](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-05.90](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05.90) — full |
@@ -376,7 +391,8 @@ Tasks: 16 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/gov-16` and ledger record `ledger/tasks/gov-16.md` in the Plan repository; task branch `task/gov-16` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / M |
 | Obligations | [WP-05](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05) Section 7 operation-by-actor [AZ-04](../../../architecture/08-security-architecture.md#rule-az-04) authorization reachability matrix (public/local/operator/CF/exception bindings, hostile actor-chain fixtures, resource/context/connector egress denials) and section 8 'Identity boundary evidence' (owner/deployment identity chain; automation loses authorization when its owner loses eligibility) - both unlabeled, no [WP-05](../../work-packages/05-architecture-and-repository-policy-tests.md#rule-wp-05).MM anchor — package-level obligation contribution |
 | Provides | authz-reachability-matrix-v1; identity-boundary-check |
