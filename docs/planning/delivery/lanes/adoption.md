@@ -255,7 +255,7 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 ## Adoption slices
 
-Each slice classifies the tasks of one repository and lane against the frozen baseline and opens exactly those tasks when it is recorded ([DLV-22](../README.md#rule-dlv-22)). Slices are claimed and recorded separately (claim `claims/adopt-NN-<lane>`, record `ledger/tasks/adopt-NN-<lane>.md`); one reviewed pull request may carry several. The repository adoption task records the repository-wide facts and closes after all of its slices.
+Each slice classifies the tasks of one repository and lane against the frozen baseline and, when it is recorded, opens those tasks except the ones it classifies as inherited ([DLV-22](../README.md#rule-dlv-22)). Slices are claimed and recorded separately (claim `claims/adopt-NN-<lane>`, record `ledger/tasks/adopt-NN-<lane>.md`); one reviewed pull request may carry several. Every task a slice classifies as inherited, including each accepted-baseline task in its scope, also gets its own record `ledger/tasks/<key>.md` with `status: inherited` ([ledger records produced by adoption](../adoption.md#3-ledger-records-produced-by-adoption)) in the same pull request as the slice record, so it never becomes ready; a task inherited with adjustment opens with its remaining scope. The repository adoption task records the repository-wide facts and closes after all of its slices.
 
 | Slice | Repository | Lane | Tasks it opens | Accepted baseline in scope | Repository record |
 |---|---|---|---|---|---|
