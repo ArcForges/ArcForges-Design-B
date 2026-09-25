@@ -27,7 +27,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/srch-00` and ledger record `ledger/tasks/srch-00.md` in the Plan repository; task branch `task/srch-00` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-40.00](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.00) — full |
 | Provides | search-source-registry |
@@ -51,7 +52,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/srch-01` and ledger record `ledger/tasks/srch-01.md` in the Plan repository; task branch `task/srch-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-40.01](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.01) — full |
 | Provides | scoped-derived-index |
@@ -74,7 +76,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/srch-02` and ledger record `ledger/tasks/srch-02.md` in the Plan repository; task branch `task/srch-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-40.02](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.02) — full |
 | Provides | hybrid-retrieval |
@@ -97,7 +100,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/srch-03` and ledger record `ledger/tasks/srch-03.md` in the Plan repository; task branch `task/srch-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Obligations | [WP-40.03](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.03) — full |
 | Provides | retrieval-permission-recheck |
@@ -118,7 +122,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/srch-04` and ledger record `ledger/tasks/srch-04.md` in the Plan repository; task branch `task/srch-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-40.04](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.04) — full |
 | Provides | retrieval-citations |
@@ -139,7 +144,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/srch-05` and ledger record `ledger/tasks/srch-05.md` in the Plan repository; task branch `task/srch-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-40.05](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.05) — full |
 | Provides | retrieval-privacy-partitioning |
@@ -161,7 +167,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/srch-06` and ledger record `ledger/tasks/srch-06.md` in the Plan repository; task branch `task/srch-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-40.06](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.06) — full |
 | Provides | real-cloud-retrieval |
@@ -183,7 +190,8 @@ Tasks: 8 · Owning repositories: Cloud · Integration owner(s): Cloud integratio
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/srch-90` and ledger record `ledger/tasks/srch-90.md` in the Plan repository; task branch `task/srch-90` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Package acceptance | Records the [WP-40](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-40.90](../../work-packages/40-knowledge-search-and-retrieval.md#rule-wp-40.90) — full, including index capacity acceptance |

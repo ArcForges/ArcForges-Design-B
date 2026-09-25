@@ -41,7 +41,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-01` and ledger record `ledger/tasks/ast-01.md` in the Plan repository; task branch `task/ast-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L · early risk proof |
 | Obligations | [WP-15.00](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.00) — full |
 | Provides | assistant-history-store; assistant-core-pkg |
@@ -64,7 +65,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-02` and ledger record `ledger/tasks/ast-02.md` in the Plan repository; task branch `task/ast-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-15.01](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.01) — full |
 | Provides | assistant-branch-service |
@@ -86,7 +88,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-03` and ledger record `ledger/tasks/ast-03.md` in the Plan repository; task branch `task/ast-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-15.02](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.02) — full |
 | Provides | assistant-attachment-service |
@@ -108,7 +111,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-04` and ledger record `ledger/tasks/ast-04.md` in the Plan repository; task branch `task/ast-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-15.03](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.03) — full |
 | Provides | assistant-project-profile-service |
@@ -130,7 +134,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-05` and ledger record `ledger/tasks/ast-05.md` in the Plan repository; task branch `task/ast-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-15.04](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.04) — full |
 | Provides | assistant-skill-service |
@@ -152,7 +157,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-06` and ledger record `ledger/tasks/ast-06.md` in the Plan repository; task branch `task/ast-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-15.05](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.05) — full |
 | Provides | assistant-local-search |
@@ -173,7 +179,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-07` and ledger record `ledger/tasks/ast-07.md` in the Plan repository; task branch `task/ast-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-15.06](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.06) — full |
 | Provides | assistant-history-export-format |
@@ -197,7 +204,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-08` and ledger record `ledger/tasks/ast-08.md` in the Plan repository; task branch `task/ast-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-15.07](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.07) — full |
 | Provides | assistant-core-sqlite-package-proof |
@@ -218,7 +226,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-09` and ledger record `ledger/tasks/ast-09.md` in the Plan repository; task branch `task/ast-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Package acceptance | Records the [WP-15](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-15.90](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.90) — full |
@@ -241,7 +250,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-10` and ledger record `ledger/tasks/ast-10.md` in the Plan repository; task branch `task/ast-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-17.00](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.00) — full |
 | Provides | assistant-host-shell; assistanthost-api |
@@ -264,7 +274,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-11` and ledger record `ledger/tasks/ast-11.md` in the Plan repository; task branch `task/ast-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-17.01](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.01) — full |
 | Provides | cloud-client-sdk; device-runtime-client-adapter |
@@ -288,7 +299,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-12` and ledger record `ledger/tasks/ast-12.md` in the Plan repository; task branch `task/ast-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-17.02](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.02) — full |
 | Provides | assistant-security-surface |
@@ -309,7 +321,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-13` and ledger record `ledger/tasks/ast-13.md` in the Plan repository; task branch `task/ast-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-17.03](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.03) — full |
 | Provides | assistant-task-centre |
@@ -330,7 +343,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-14` and ledger record `ledger/tasks/ast-14.md` in the Plan repository; task branch `task/ast-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-17.04](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.04) — full |
 | Provides | assistant-automation-client |
@@ -353,7 +367,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-15` and ledger record `ledger/tasks/ast-15.md` in the Plan repository; task branch `task/ast-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-17.05](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.05) — full |
 | Provides | assistant-history-admission-ui |
@@ -376,7 +391,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-16` and ledger record `ledger/tasks/ast-16.md` in the Plan repository; task branch `task/ast-16` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-17.06](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.06) — full |
 | Provides | assistant-preview-surface |
@@ -397,7 +413,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-17` and ledger record `ledger/tasks/ast-17.md` in the Plan repository; task branch `task/ast-17` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / L |
 | Obligations | [WP-17.07](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.07) — full |
 | Provides | assistant-full-package-set |
@@ -419,7 +436,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-18` and ledger record `ledger/tasks/ast-18.md` in the Plan repository; task branch `task/ast-18` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Package acceptance | Records the [WP-17](../../work-packages/17-arcchat-independent-core.md#rule-wp-17) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-17.90](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.90) — full |
@@ -443,7 +461,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-19` and ledger record `ledger/tasks/ast-19.md` in the Plan repository; task branch `task/ast-19` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-52.05](../../work-packages/52-cloud-harness.md#rule-wp-52.05) — all work except the parts mapped to DEV.13, HAR.05 |
 | Start prerequisites | **artifact** [AST.11](#task-ast-11) — real, delivered outcome of AST.11 (Cloud client and device runtime (fixture turn endpoint boundary)). *Why:* this integration exercises the real cloud client and device runtime (fixture turn endpoint boundary) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.00](harness.md#task-har-00) — real Harness turn loop. *Why:* the assistant switches from the fixture turn endpoint to the real Workflow loop<br>**artifact** [HAR.03](harness.md#task-har-03) — real generated streaming and durable output. *Why:* the assistant reads real output streams |
@@ -463,7 +482,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/ast-20` and ledger record `ledger/tasks/ast-20.md` in the Plan repository; task branch `task/ast-20` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-52.06](../../work-packages/52-cloud-harness.md#rule-wp-52.06) — all work except the parts mapped to HAR.06, HAR.91 |
 | Start prerequisites | **artifact** [AST.14](#task-ast-14) — real, delivered outcome of AST.14 (Automation client (automation fixture state transitions)). *Why:* this integration exercises the real automation client (automation fixture state transitions) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.06](harness.md#task-har-06) — real, delivered outcome of HAR.06 (Durable Cloud automation, scheduling and automation-fixture removal). *Why:* this integration exercises the real durable Cloud automation, scheduling and automation-fixture removal instead of a substitute, so it cannot start before that outcome exists |
@@ -483,7 +503,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner; also touches Cloud |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform`; also touches Cloud |
+| Claim, branch and ledger | `claims/ast-21` and ledger record `ledger/tasks/ast-21.md` in the Plan repository; task branch `task/ast-21` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-25.08](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.08) — all work except the parts mapped to CLOUD.45, CLOUD.58, NOTES.33 |
 | Start prerequisites | **artifact** [AST.07](#task-ast-07) — real, delivered outcome of AST.07 (Local history export and import (assistant-history.v1)). *Why:* this integration exercises the real local history export and import (assistant-history.v1) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.45](cloud.md#task-cloud-45) — real, delivered outcome of CLOUD.45 (Real Cloud Notes and Chat export producers). *Why:* this integration exercises the real real Cloud Notes and Chat export producers instead of a substitute, so it cannot start before that outcome exists |
@@ -503,7 +524,8 @@ Tasks: 22 · Owning repositories: DesktopPlatform · Integration owner(s): Deskt
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner; also touches Cloud |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform`; also touches Cloud |
+| Claim, branch and ledger | `claims/ast-22` and ledger record `ledger/tasks/ast-22.md` in the Plan repository; task branch `task/ast-22` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-25.09](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.09) — full; consumer-side real integration |
 | Start prerequisites | **artifact** [AST.15](#task-ast-15) — real, delivered outcome of AST.15 (History and AI admission (local/cloud/temporary modes)). *Why:* this integration exercises the real history and AI admission (local/cloud/temporary modes) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.46](cloud.md#task-cloud-46) — real, delivered outcome of CLOUD.46 (Application Cloud history and restartable import). *Why:* this integration exercises the real application Cloud history and restartable import instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AST.01](#task-ast-01) — real, delivered outcome of AST.01 (Single application history store (model 05 schema)). *Why:* this integration exercises the real single application history store (model 05 schema) instead of a substitute, so it cannot start before that outcome exists |

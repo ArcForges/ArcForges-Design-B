@@ -32,7 +32,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/ops-01` and ledger record `ledger/tasks/ops-01.md` in the Plan repository; task branch `task/ops-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-45.00](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.00) — full |
 | Provides | slo-sli-definitions; alert-routing |
@@ -54,7 +55,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/ops-02` and ledger record `ledger/tasks/ops-02.md` in the Plan repository; task branch `task/ops-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-45.01](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.01) — full |
 | Provides | incident-severity-ladder; incident-state-system |
@@ -75,7 +77,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/ops-03` and ledger record `ledger/tasks/ops-03.md` in the Plan repository; task branch `task/ops-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-45.02](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.02) — full |
 | Provides | runbook-set; rehearsal-records |
@@ -98,7 +101,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/ops-04` and ledger record `ledger/tasks/ops-04.md` in the Plan repository; task branch `task/ops-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-45.03](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.03) — full<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) browser matrix acceptance; status page supported/degraded/blocked browser behavior, static no-JS readability — browser matrix acceptance; status page supported/degraded/blocked browser behavior, static no-JS readability<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) Browser matrix acceptance (browser-support.v1 supported/degraded/blocked) — package-level obligation contribution |
 | Provides | status-page; capability-health-mapping |
@@ -120,7 +124,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/ops-05` and ledger record `ledger/tasks/ops-05.md` in the Plan repository; task branch `task/ops-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / XL · early risk proof |
 | Obligations | [WP-45.04](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.04) — all work except the parts mapped to OPS.13<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) Operator contract closure — the real console join — operator contract closure; the real console join — wiring every generated role/method pair into the console UI<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) browser matrix acceptance; supported/degraded/blocked browser behavior for the operator console's own flows — browser matrix acceptance; supported/degraded/blocked browser behavior for the operator console's own flows<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) Browser matrix acceptance (browser-support.v1 supported/degraded/blocked) — package-level obligation contribution |
 | Provides | operator-console; support-access-grant-model |
@@ -143,7 +148,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/ops-06` and ledger record `ledger/tasks/ops-06.md` in the Plan repository; task branch `task/ops-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-45.05](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.05) — full |
 | Provides | break-glass-path |
@@ -165,7 +171,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/ops-07` and ledger record `ledger/tasks/ops-07.md` in the Plan repository; task branch `task/ops-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-45.06](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.06) — full |
 | Provides | support-case-model |
@@ -186,7 +193,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/ops-08` and ledger record `ledger/tasks/ops-08.md` in the Plan repository; task branch `task/ops-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-45.07](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.07) — full |
 | Provides | enforcement-ladder; appeal-process |
@@ -207,7 +215,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/ops-09` and ledger record `ledger/tasks/ops-09.md` in the Plan repository; task branch `task/ops-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-45.08](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.08) — full<br>[WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) Producer prerequisites (WP45.08 must consume real WP22 mail, no fixture) — producer prerequisites; consuming [WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22) real mail artifacts without deferring [WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22)'s own gate; package-level obligation contribution |
 | Provides | operational-mail-drills; security-advisory-process |
@@ -230,7 +239,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/ops-10` and ledger record `ledger/tasks/ops-10.md` in the Plan repository; task branch `task/ops-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-45.09](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.09) — all work except the parts mapped to AND.26 |
 | Provides | fcm-push-sender |
@@ -253,7 +263,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/ops-11` and ledger record `ledger/tasks/ops-11.md` in the Plan repository; task branch `task/ops-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-45.10](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.10) — all work except the parts mapped to OPS.13 |
 | Provides | package-review-console |
@@ -275,7 +286,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/ops-12` and ledger record `ledger/tasks/ops-12.md` in the Plan repository; task branch `task/ops-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Package acceptance | Records the [WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-45.90](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.90) — full |
@@ -297,7 +309,8 @@ Tasks: 13 · Owning repositories: Cloud, Web · Integration owner(s): Cloud inte
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/ops-13` and ledger record `ledger/tasks/ops-13.md` in the Plan repository; task branch `task/ops-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-45.04](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.04) — exercise every generated role/method pair via the actual console UI<br>[WP-45.10](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45.10) — real operator console join |
 | Start prerequisites | **artifact** [COM.13](commerce.md#task-com-13) — real, delivered outcome of COM.13 (Operator financial-owner proposal/approval operations). *Why:* this integration exercises the real operator financial-owner proposal/approval operations instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [POL.05](policy.md#task-pol-05) — real, delivered outcome of POL.05 (Kill switches). *Why:* this integration exercises the real kill switches instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [OPS.05](#task-ops-05) — real, delivered outcome of OPS.05 (Operator console and support access). *Why:* this integration exercises the real operator console and support access instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CON.14](contracts.md#task-con-14) — real, delivered outcome of CON.14 (Operator control service (OperatorService, full §9/9.1/9.2 protocol)). *Why:* this integration exercises the real operator control service (OperatorService, full §9/9.1/9.2 protocol) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [OPS.11](#task-ops-11) — real, delivered outcome of OPS.11 (Package review and revocation console). *Why:* this integration exercises the real package review and revocation console instead of a substitute, so it cannot start before that outcome exists |

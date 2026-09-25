@@ -54,7 +54,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-01` and ledger record `ledger/tasks/notes-01.md` in the Plan repository; task branch `task/notes-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-18.00](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.00) — notebook->folder hierarchy, stable folder IDs, document placement, notebook-owned structural commands, no-documents-in-documents; final-review paragraph: typed structural outbox entries, multi-root local tokens, move classification mapping/preview, offline create->move->edit crash test<br>[WP-18](../../work-packages/18-arcnotes-document-core.md#rule-wp-18) Final-review paragraph (S5, before 18.90): independent verification of 02-desktop-data-model; typed structural outbox entries; multi-root local tokens; complete move classification mapping/preview; offline create->move->edit and crash-before/after-acknowledgement test; scalar-definition fixtures follow the fixed profile ([WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28) repeats with real property/view UI) — package-level obligation contribution |
 | Provides | notes.notebook-store; notes.structural-commands |
@@ -77,7 +78,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-02` and ledger record `ledger/tasks/notes-02.md` in the Plan repository; task branch `task/notes-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / XL · early risk proof |
 | Obligations | [WP-18.00](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.00) — typed inline content model, closed block-kind set, EditTransaction closed operation set with computed inverses and fractional ordinals, declared kind-conversion mappings, multi-block selection, drag/drop move-vs-reference-vs-copy, unknown-kind/mark forward compatibility; clipboard tests: exact code round-trip, table-shape preservation; repository-policy test that no internal path serialises content to Markdown/HTML/RTF<br>[WP-18.90](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.90) — block/document/editor scalar base and content-origin/attachment checks (domain-model portion)<br>[WP-18](../../work-packages/18-arcnotes-document-core.md#rule-wp-18) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure (bottom of file): stable run/atom/cell IDs, NotesTextPosition/NotesCommand, explicit IME conflict preservation, disabled stale undo with original recoverable inverse, no unspecified rebase — package-level obligation contribution<br>[WP-18](../../work-packages/18-arcnotes-document-core.md#rule-wp-18) S8 additional completion requirement: content paths pass the stated content-origin vectors, including unknown input and failed publication — package-level obligation contribution |
 | Provides | notes.block-model; notes.edit-transaction; notes.content-origin-binding |
@@ -100,7 +102,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-03` and ledger record `ledger/tasks/notes-03.md` in the Plan repository; task branch `task/notes-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-18.01](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.01) — grapheme-correct caret/selection, Unicode word boundaries, bidirectional caret movement, discontiguous selection painting, IME composition as view state (one transaction, never interrupted by concurrent edit), markdown keyboard syntax, slash menu distinct from command palette<br>[WP-18.00](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.00) — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) closure: stable run/atom/cell IDs, NotesTextPosition/NotesCommand, explicit IME conflict preservation, disabled stale undo with original recoverable inverse<br>[WP-18](../../work-packages/18-arcnotes-document-core.md#rule-wp-18) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure (bottom of file): stable run/atom/cell IDs, NotesTextPosition/NotesCommand, explicit IME conflict preservation, disabled stale undo with original recoverable inverse, no unspecified rebase — package-level obligation contribution |
 | Provides | notes.editor.caret-ime; notes.editor.markdown-input |
@@ -122,7 +125,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-04` and ledger record `ledger/tasks/notes-04.md` in the Plan repository; task branch `task/notes-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-18.01](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.01) — virtualised block layout with measurement caching, scroll anchoring to (blockId, offset), bounded nesting, 10000-block scale-corpus responsiveness |
 | Provides | notes.editor.virtualised-layout |
@@ -145,7 +149,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-05` and ledger record `ledger/tasks/notes-05.md` in the Plan repository; task branch `task/notes-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-18.01](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.01) — code highlighting from a bounded statically-registered grammar set degrading to plain text; math rendering with explicit unsupported-construct marking; run every notes.math.v1 accepted/unsupported/malformed/depth/length vector |
 | Provides | notes.editor.rich-content-kinds |
@@ -167,7 +172,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-06` and ledger record `ledger/tasks/notes-06.md` in the Plan repository; task branch `task/notes-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-18.02](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.02) — full |
 | Provides | notes.link-index; notes.backlinks; notes.outline |
@@ -189,7 +195,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-07` and ledger record `ledger/tasks/notes-07.md` in the Plan repository; task branch `task/notes-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-18.03](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.03) — full<br>[WP-18](../../work-packages/18-arcnotes-document-core.md#rule-wp-18) S8 additional completion requirement: property types and persistence agree with the frozen query profile; no local culture defaults affect stored meaning — package-level obligation contribution |
 | Provides | notes.property-store.basic; notes.tags |
@@ -212,7 +219,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-08` and ledger record `ledger/tasks/notes-08.md` in the Plan repository; task branch `task/notes-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-18.04](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.04) — managed/external attachment classification, availability states, metadata-card and thin-preview levels for images/files, bounded off-thread image decode with EXIF orientation, no-embedding structural test, malformed-input degradation for images, egress test (no preview path fetches a remote resource)<br>[WP-18](../../work-packages/18-arcnotes-document-core.md#rule-wp-18) S8 additional completion requirement: content paths pass the stated content-origin vectors, including unknown input and failed publication — package-level obligation contribution |
 | Provides | notes.attachments.non-pdf |
@@ -235,7 +243,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-09` and ledger record `ledger/tasks/notes-09.md` in the Plan repository; task branch `task/notes-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L · early risk proof |
 | Obligations | [WP-18.04](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.04) — PDF viewer (pdfViewer attachment presentation), page-anchored annotation targets, citation anchors, routing hostile PDF parsing through [WP-11.09](../../work-packages/11-security-foundation.md#rule-wp-11.09) ContentSandbox, [PG-12](../../../assurance/open-gates-register.md#rule-pg-12) completion, PDF-specific malformed-input containment |
 | Provides | notes.attachments.pdf-viewer |
@@ -259,7 +268,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-10` and ledger record `ledger/tasks/notes-10.md` in the Plan repository; task branch `task/notes-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-18.05](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.05) — full<br>[WP-18.00](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.00) — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) closure: disabled stale undo with original recoverable inverse, no unspecified rebase (undo portion)<br>[WP-18](../../work-packages/18-arcnotes-document-core.md#rule-wp-18) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure (bottom of file): stable run/atom/cell IDs, NotesTextPosition/NotesCommand, explicit IME conflict preservation, disabled stale undo with original recoverable inverse, no unspecified rebase — package-level obligation contribution |
 | Provides | notes.undo; notes.history; notes.checkpoint; notes.trash |
@@ -281,7 +291,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-11` and ledger record `ledger/tasks/notes-11.md` in the Plan repository; task branch `task/notes-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-18.06](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.06) — full |
 | Provides | notes.recovery; notes.migration |
@@ -303,7 +314,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-12` and ledger record `ledger/tasks/notes-12.md` in the Plan repository; task branch `task/notes-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-18.07](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.07) — full |
 | Provides | notes.capability-surface |
@@ -326,7 +338,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-13` and ledger record `ledger/tasks/notes-13.md` in the Plan repository; task branch `task/notes-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / S |
 | Obligations | [WP-18.08](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.08) — full |
 | Provides | notes.reference-drift-report |
@@ -348,7 +361,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-14` and ledger record `ledger/tasks/notes-14.md` in the Plan repository; task branch `task/notes-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Package acceptance | Records the [WP-18](../../work-packages/18-arcnotes-document-core.md#rule-wp-18) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-18.90](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.90) — all work except the parts mapped to NOTES.02<br>[WP-18.00](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.00) — final-review paragraph: independent verification of 02-desktop-data-model; scalar-definition fixtures follow the fixed profile<br>[WP-18](../../work-packages/18-arcnotes-document-core.md#rule-wp-18) Final-review paragraph (S5, before 18.90): independent verification of 02-desktop-data-model; typed structural outbox entries; multi-root local tokens; complete move classification mapping/preview; offline create->move->edit and crash-before/after-acknowledgement test; scalar-definition fixtures follow the fixed profile ([WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28) repeats with real property/view UI) — package-level obligation contribution |
@@ -370,7 +384,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-15` and ledger record `ledger/tasks/notes-15.md` in the Plan repository; task branch `task/notes-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L · early risk proof |
 | Obligations | [WP-19.00](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19.00) — full |
 | Provides | notes.fts-index |
@@ -393,7 +408,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-16` and ledger record `ledger/tasks/notes-16.md` in the Plan repository; task branch `task/notes-16` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-19.01](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19.01) — full |
 | Provides | notes.search.query |
@@ -415,7 +431,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-17` and ledger record `ledger/tasks/notes-17.md` in the Plan repository; task branch `task/notes-17` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M · early risk proof |
 | Obligations | [WP-19.02](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19.02) — full |
 | Provides | notes.citation-anchor |
@@ -438,7 +455,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-18` and ledger record `ledger/tasks/notes-18.md` in the Plan repository; task branch `task/notes-18` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-19.03](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19.03) — full - eq/ne/isMissing/isPresent for all declared scalar kinds, all/any/not composition, DocumentId ordering under the profile bounds; later value operators and property sorting explicitly unavailable until [WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28)<br>[WP-19](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19) S8 additional completion requirement: the initial view stores the final profile/bindings; neither invents a temporary semantic profile nor claims full table/query delivery before [WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28) — package-level obligation contribution |
 | Provides | notes.saved-view.list |
@@ -460,7 +478,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-19` and ledger record `ledger/tasks/notes-19.md` in the Plan repository; task branch `task/notes-19` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-19.04](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19.04) — full |
 | Provides | notes.import.markdown |
@@ -483,7 +502,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-20` and ledger record `ledger/tasks/notes-20.md` in the Plan repository; task branch `task/notes-20` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-19.05](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19.05) — full - client-side export flow, fidelity manifest, offline-refuses-new-export-without-losing-drafts behaviour<br>[WP-19](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19) S6 Impacts: no Notes printing/PDF-export feature is added — package-level obligation contribution |
 | Provides | notes.cloud-export-client |
@@ -507,7 +527,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-21` and ledger record `ledger/tasks/notes-21.md` in the Plan repository; task branch `task/notes-21` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / S |
 | Obligations | [WP-19.06](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19.06) — full |
 | Provides | notes.no-repository-projection |
@@ -529,7 +550,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-22` and ledger record `ledger/tasks/notes-22.md` in the Plan repository; task branch `task/notes-22` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Package acceptance | Records the [WP-19](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-19.90](../../work-packages/19-arcnotes-search-and-portability.md#rule-wp-19.90) — full |
@@ -551,7 +573,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-23` and ledger record `ledger/tasks/notes-23.md` in the Plan repository; task branch `task/notes-23` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-28.00](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.00) — full - all eight declared scalar kinds/config bounds/exact encodings; rename preserves semantic bindings; dependent type/option changes refused after preview; trashed definitions make views visibly invalid<br>[WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28) Final-review paragraph (S5, before 28.90): independent verification of 04-protobuf-wire-registry; cross-notebook move with real scalar definitions/select options/tags - stale target semantics, incomplete mapping and conflicting destination mappings refuse atomically; explicit approved removals remain in history — package-level obligation contribution |
 | Provides | notes.property-store.full |
@@ -573,7 +596,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-24` and ledger record `ledger/tasks/notes-24.md` in the Plan repository; task branch `task/notes-24` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-28.01](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.01) — local evaluator + fixture-based conformance suite covering every v1 operator, boolean/missing behaviour, AST limit, ordinal/decimal/instant comparison, signed dataset-bound pagination<br>[WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28) S8 additional completion requirement: every scalar/query/profile vector passes on both owners; all supported list/table operations implemented without new product design choices — package-level obligation contribution |
 | Provides | notes.query-evaluator.local |
@@ -596,7 +620,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-26` and ledger record `ledger/tasks/notes-26.md` in the Plan repository; task branch `task/notes-26` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-28.02](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.02) — full - list/table projections with visible-properties/sorting/filtering configuration, D1 to D4/numeric/checkbox/offset/equal-key/mutation-restart vectors, kind-switch preserves query<br>[WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28) S8 additional completion requirement: every scalar/query/profile vector passes on both owners; all supported list/table operations implemented without new product design choices — package-level obligation contribution |
 | Provides | notes.view.list-table |
@@ -618,7 +643,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-27` and ledger record `ledger/tasks/notes-27.md` in the Plan repository; task branch `task/notes-27` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-28.03](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.03) — full |
 | Provides | notes.view-editing |
@@ -639,7 +665,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-28` and ledger record `ledger/tasks/notes-28.md` in the Plan repository; task branch `task/notes-28` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / S |
 | Obligations | [WP-28.04](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.04) — full |
 | Provides | notes.lightness-guarantee |
@@ -660,7 +687,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-29` and ledger record `ledger/tasks/notes-29.md` in the Plan repository; task branch `task/notes-29` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-28.05](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.05) — supported-schema migration: actual shipped scalar-property/list/table schemas migrate preserving stable IDs and additive fields; reading additive unknown fields |
 | Provides | notes.schema-migration |
@@ -683,7 +711,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-30` and ledger record `ledger/tasks/notes-30.md` in the Plan repository; task branch `task/notes-30` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / S |
 | Obligations | [WP-28.05](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.05) — Cloud export includes declared property/view metadata and a fidelity report, verified through the real [WP-25.08](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.08) producer<br>[WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure (bottom of file): verify local hydrated/pending export + actual Cloud export; source-policy/one-use context permission; notebook/document/query/structural conflict behavior — package-level obligation contribution |
 | Provides | notes.export.property-view-fidelity |
@@ -705,7 +734,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-31` and ledger record `ledger/tasks/notes-31.md` in the Plan repository; task branch `task/notes-31` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-28.06](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.06) — full |
 | Provides | notes.view.scale |
@@ -726,7 +756,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/notes-32` and ledger record `ledger/tasks/notes-32.md` in the Plan repository; task branch `task/notes-32` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Package acceptance | Records the [WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-28.90](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.90) — all work except the parts mapped to NOTES.34<br>[WP-28.00](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.00) — final-review paragraph: independent verification of 04-protobuf-wire-registry; cross-notebook move with real scalar defs/select options/tags<br>[WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28) Final-review paragraph (S5, before 28.90): independent verification of 04-protobuf-wire-registry; cross-notebook move with real scalar definitions/select options/tags - stale target semantics, incomplete mapping and conflicting destination mappings refuse atomically; explicit approved removals remain in history — package-level obligation contribution<br>[WP-28](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure (bottom of file): verify local hydrated/pending export + actual Cloud export; source-policy/one-use context permission; notebook/document/query/structural conflict behavior — package-level obligation contribution |
@@ -748,7 +779,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner; also touches Cloud |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes`; also touches Cloud |
+| Claim, branch and ledger | `claims/notes-33` and ledger record `ledger/tasks/notes-33.md` in the Plan repository; task branch `task/notes-33` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-28.05](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.05) — Cloud export fidelity for property/view metadata<br>[WP-25.08](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.08) — Notes/Chat export producer (owned by the Cloud lane; Chat half is the assistant lanes [WP-15.06](../../work-packages/15-arcchat-conversation-core.md#rule-wp-15.06)) |
 | Start prerequisites | **artifact** [NOTES.20](#task-notes-20) — real, delivered outcome of NOTES.20 (Cloud Notes export client and its named fixture endpoint). *Why:* this integration exercises the real cloud Notes export client and its named fixture endpoint instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NOTES.30](#task-notes-30) — real, delivered outcome of NOTES.30 (Cloud export fidelity for property/view metadata). *Why:* this integration exercises the real cloud export fidelity for property/view metadata instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.45](cloud.md#task-cloud-45) — real, delivered outcome of CLOUD.45 (Real Cloud Notes and Chat export producers). *Why:* this integration exercises the real real Cloud Notes and Chat export producers instead of a substitute, so it cannot start before that outcome exists |
@@ -768,7 +800,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner; also touches Cloud |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes`; also touches Cloud |
+| Claim, branch and ledger | `claims/notes-34` and ledger record `ledger/tasks/notes-34.md` in the Plan repository; task branch `task/notes-34` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-28.01](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.01) — native-vs-Cloud conformance suite execution<br>[WP-28.90](../../work-packages/28-arcnotes-properties-and-views.md#rule-wp-28.90) — independent local/Cloud query vectors, no mock Cloud acceptance |
 | Start prerequisites | **artifact** [NOTES.24](#task-notes-24) — real, delivered outcome of NOTES.24 (Query model: local evaluator and notes.scalar.v1 conformance fixtures). *Why:* this integration exercises the real query model: local evaluator and notes.scalar.v1 conformance fixtures instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.37](cloud.md#task-cloud-37) — real, delivered outcome of CLOUD.37 (Cloud Notes authority and sync scopes). *Why:* this integration exercises the real cloud Notes authority and sync scopes instead of a substitute, so it cannot start before that outcome exists |
@@ -788,7 +821,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner; also touches Cloud |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes`; also touches Cloud |
+| Claim, branch and ledger | `claims/notes-35` and ledger record `ledger/tasks/notes-35.md` in the Plan repository; task branch `task/notes-35` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-25.07](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.07) — Notes object-kind coverage of the convergence harness; the real ArcNotes-client side of the three-device convergence harness |
 | Start prerequisites | **artifact** [NOTES.01](#task-notes-01) — real, delivered outcome of NOTES.01 (Notebook/folder hierarchy, document placement and structural commands). *Why:* this integration exercises the real notebook/folder hierarchy, document placement and structural commands instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NOTES.02](#task-notes-02) — real, delivered outcome of NOTES.02 (Block/inline content model, EditTransaction engine, kind conversions and clipboard). *Why:* this integration exercises the real block/inline content model, EditTransaction engine, kind conversions and clipboard instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NOTES.10](#task-notes-10) — real, delivered outcome of NOTES.10 (Undo, history, checkpoint and trash as four distinct mechanisms). *Why:* this integration exercises the real undo, history, checkpoint and trash as four distinct mechanisms instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.44](cloud.md#task-cloud-44) — real, delivered outcome of CLOUD.44 (Multi-device convergence harness). *Why:* this integration exercises the real multi-device convergence harness instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.37](cloud.md#task-cloud-37) — real, delivered outcome of CLOUD.37 (Cloud Notes authority and sync scopes). *Why:* this integration exercises the real cloud Notes authority and sync scopes instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.38](cloud.md#task-cloud-38) — real, delivered outcome of CLOUD.38 (Client outbox and conflict lineage (desktop data model)). *Why:* this integration exercises the real client outbox and conflict lineage (desktop data model) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.39](cloud.md#task-cloud-39) — real, delivered outcome of CLOUD.39 (Guarded publication and convergent bootstrap). *Why:* this integration exercises the real guarded publication and convergent bootstrap instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.40](cloud.md#task-cloud-40) — real, delivered outcome of CLOUD.40 (Conflict detection and five resolution policies). *Why:* this integration exercises the real conflict detection and five resolution policies instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.41](cloud.md#task-cloud-41) — real, delivered outcome of CLOUD.41 (Deletion and tombstones). *Why:* this integration exercises the real deletion and tombstones instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.42](cloud.md#task-cloud-42) — real, delivered outcome of CLOUD.42 (Blob lifecycle (real R2 staged/verified/committed)). *Why:* this integration exercises the real blob lifecycle (real R2 staged/verified/committed) instead of a substitute, so it cannot start before that outcome exists |
@@ -809,7 +843,8 @@ Tasks: 35 · Owning repositories: ArcNotes · Integration owner(s): ArcNotes int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner; also touches DesktopPlatform |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes`; also touches DesktopPlatform |
+| Claim, branch and ledger | `claims/notes-37` and ledger record `ledger/tasks/notes-37.md` in the Plan repository; task branch `task/notes-37` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-18.04](../../work-packages/18-arcnotes-document-core.md#rule-wp-18.04) — full - owned by the ArcNotes lane, listed here only because it is the gate-closing consumer of this area's PLT.45; real PDF viewer integration and malformed native input containment |
 | Start prerequisites | **artifact** [PLT.45](platform.md#task-plt-45) — real, delivered outcome of PLT.45 (Content helper and OS-enforced isolation (ContentSandbox host)). *Why:* this integration exercises the real content helper and OS-enforced isolation (ContentSandbox host) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NAT.14](native.md#task-nat-14) — real, delivered outcome of NAT.14 (Pdf family: PDFium and production parser containment in the WP11 helper (NEW library)). *Why:* this integration exercises the real pdf family: PDFium and production parser containment in the WP11 helper (NEW library) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NOTES.09](#task-notes-09) — real, delivered outcome of NOTES.09 (PDF in-product viewer, page anchors and native parser isolation). *Why:* this integration exercises the real pDF in-product viewer, page anchors and native parser isolation instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NAT.25](native.md#task-nat-25) — real, delivered outcome of NAT.25 (Pdf package production: all 6 RIDs + ContentSandbox Runtime.<rid> composition). *Why:* this integration exercises the real pdf package production: all 6 RIDs + ContentSandbox Runtime.<rid> composition instead of a substitute, so it cannot start before that outcome exists |

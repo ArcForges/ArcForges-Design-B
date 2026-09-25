@@ -46,7 +46,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-01` and ledger record `ledger/tasks/scope-01.md` in the Plan repository; task branch `task/scope-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-33.00](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.00) — shared adapter contract; ConnectionProfile storage/reuse; EffectiveConfigurationSnapshot immutability on profile edit; lease/busy exclusivity model ([BR-01](../../../architecture/14-build-packaging-and-release.md#rule-br-01)..[BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06), [BR-09](../../work-packages/00-specification-naming-and-rights-freeze.md#rule-br-09)) |
 | Provides | scope.source-adapter-contract; scope.connection-profile |
@@ -69,7 +70,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-02` and ledger record `ledger/tasks/scope-02.md` in the Plan repository; task branch `task/scope-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-33.03](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.03) — full |
 | Provides | scope.time-channel-model |
@@ -91,7 +93,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-03` and ledger record `ledger/tasks/scope-03.md` in the Plan repository; task branch `task/scope-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-33.00](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.00) — TCP/UDP/file-replay concrete adapters over the shared contract; real-transport connect/disconnect/reconnect tests |
 | Provides | scope.adapters.network-file |
@@ -113,7 +116,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-04` and ledger record `ledger/tasks/scope-04.md` in the Plan repository; task branch `task/scope-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-33.00](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.00) — serial/USB concrete adapters over the shared contract<br>[WP-33.90](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.90) — generic-USB-V1 body text (enumeration, explicit interface/endpoint open, control/bulk/interrupt transfers, partial writes, cancellation, driver/permission/busy refusal per Tier 1 RID; no automatic kernel-driver detach; hot unplug records an explicit capture gap) — this text sits orphaned between [WP-33](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33) §6 and §7 in the source doc with no substep id of its own; folded here since it is entirely about the serial/USB adapter, not §33.90's own verify-and-integration content<br>[WP-33](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33) orphaned 'Generic USB is V1' body text (enumeration/open/transfer/cancel/refusal per Tier-1 RID, no auto kernel-driver detach, hot-unplug=explicit gap) sitting between §6 Impacts and §7 Tests with no substep id — package-level obligation contribution |
 | Provides | scope.adapters.serial-usb |
@@ -136,7 +140,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-05` and ledger record `ledger/tasks/scope-05.md` in the Plan repository; task branch `task/scope-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-33.01](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.01) — full |
 | Provides | scope.acquisition-pipeline; scope.rolling-buffer |
@@ -158,7 +163,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-06` and ledger record `ledger/tasks/scope-06.md` in the Plan repository; task branch `task/scope-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-33.02](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.02) — full |
 | Provides | scope.session-capture-lifecycle |
@@ -180,7 +186,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-07` and ledger record `ledger/tasks/scope-07.md` in the Plan repository; task branch `task/scope-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-33.04](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.04) — full |
 | Provides | scope.durable-capture-store |
@@ -202,7 +209,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-08` and ledger record `ledger/tasks/scope-08.md` in the Plan repository; task branch `task/scope-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-33.05](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.05) — full |
 | Provides | scope.replay-source |
@@ -224,7 +232,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-09` and ledger record `ledger/tasks/scope-09.md` in the Plan repository; task branch `task/scope-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / S |
 | Obligations | [WP-33.06](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.06) — full |
 | Provides | scope.capture-shell-integration |
@@ -246,7 +255,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-10` and ledger record `ledger/tasks/scope-10.md` in the Plan repository; task branch `task/scope-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / S |
 | Obligations | [WP-33.07](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.07) — full |
 | Provides | scope.reference-drift-report |
@@ -269,7 +279,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-11` and ledger record `ledger/tasks/scope-11.md` in the Plan repository; task branch `task/scope-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Package acceptance | Records the [WP-33](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-33.90](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33.90) — full (excluding the generic-USB-V1 body text folded into SCOPE.04)<br>[WP-33](../../work-packages/33-arcscope-acquisition-and-session.md#rule-wp-33) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required-behavior-and-closure section (acquisition.source/framing/trigger profiles, gap/loss/durable-capture manifests, all accepted serial/network/file/USB sources) — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required-behavior-and-closure section: acquisition.source/framing/trigger profiles, gap/loss/durable-capture manifests, all accepted serial/network/file/USB sources, independent positive/negative vectors, actual owner integration |
@@ -291,7 +302,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-12` and ledger record `ledger/tasks/scope-12.md` in the Plan repository; task branch `task/scope-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-34.00](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.00) — full |
 | Provides | scope.visualisation |
@@ -313,7 +325,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-13` and ledger record `ledger/tasks/scope-13.md` in the Plan repository; task branch `task/scope-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-34.01](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.01) — full |
 | Provides | scope.triggers |
@@ -334,7 +347,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-14` and ledger record `ledger/tasks/scope-14.md` in the Plan repository; task branch `task/scope-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-34.02](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.02) — full, including the required-design-implementation text: every basic family via declared population/sample-weighted formulas, half-open input selection, calibrated units, coverage/status rules, recorded pulse thresholds/interpolation, independent statistical hand-calculation and digital/analog/gap vectors<br>[WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) orphaned §6/§7 body text: 'Pearson independent vectors: x=[1,2,3], y=[2,4,6] gives r=1; y=[3,2,1] gives r=-1. Constant input is unavailable; preserve the declared lag and overlap rules' — a concrete correlation-family acceptance vector with no substep id of its own — orphaned §6/§7 body text: 'Pearson independent vectors: x=[1,2,3], y=[2,4,6] gives r=1; y=[3,2,1] gives r=-1. Constant input is unavailable; preserve the declared lag and overlap rules' — a concrete correlation-family acceptance vector with no substep id of its own; package-level obligation contribution<br>[WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) §8 additional completion requirement: every basic family has its formula/status oracle; reproduction uses the defined tolerance rather than an undefined byte-equality claim — §8 additional completion requirement: every basic family has its formula/status oracle; reproduction uses the defined tolerance rather than an undefined byte-equality claim; package-level obligation contribution |
 | Provides | scope.measurements |
@@ -355,7 +369,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-15` and ledger record `ledger/tasks/scope-15.md` in the Plan repository; task branch `task/scope-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-34.03](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.03) — full |
 | Provides | scope.decoders |
@@ -377,7 +392,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-16` and ledger record `ledger/tasks/scope-16.md` in the Plan repository; task branch `task/scope-16` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-34.04](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.04) — full, including the required-design-implementation text: same profile through native ProductJobs over a frozen committed source; persist request/config hashes, resolved levels, per-family quality; delete-and-rebuild must match the profile oracle within tolerance |
 | Provides | scope.analysis-recipes |
@@ -399,7 +415,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-17` and ledger record `ledger/tasks/scope-17.md` in the Plan repository; task branch `task/scope-17` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-34.05](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.05) — full |
 | Provides | scope.annotations-findings-comparison |
@@ -421,7 +438,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-18` and ledger record `ledger/tasks/scope-18.md` in the Plan repository; task branch `task/scope-18` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-34.06](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.06) — full, including both required-design-implementation paragraphs: report/UI/offline-recomputation comparison with rendering/rounding never changing the stored numeric result; report-section origin plus enclosing union; deterministic measurement beside AI narrative never relabelled<br>[WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) §8 additional completion requirement: every basic family has its formula/status oracle; reproduction uses the defined tolerance rather than an undefined byte-equality claim — package-level obligation contribution |
 | Provides | scope.reports |
@@ -443,7 +461,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-19` and ledger record `ledger/tasks/scope-19.md` in the Plan repository; task branch `task/scope-19` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Package acceptance | Records the [WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-34.90](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34.90) — full<br>[WP-34](../../work-packages/34-arcscope-analysis-and-reporting.md#rule-wp-34) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required-behavior-and-closure section (every remaining spectrum/correlation/threshold/event-pattern/decoder analysis profile in architecture 26) — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required-behavior-and-closure section: every remaining spectrum/correlation/threshold/event-pattern/decoder analysis profile in architecture 26, independent numeric and gap/error vectors |
@@ -466,7 +485,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-20` and ledger record `ledger/tasks/scope-20.md` in the Plan repository; task branch `task/scope-20` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-35.00](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.00) — full |
 | Provides | scope.capability-surface |
@@ -488,7 +508,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-21` and ledger record `ledger/tasks/scope-21.md` in the Plan repository; task branch `task/scope-21` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-35.01](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.01) — full, including required-design-implementation text: project measurement values with profile, immutable source/configuration binding, counts, coverage and status into bounded context/report references; unknown-profile and insufficient results are never silently rendered as numeric zero<br>[WP-35](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35) §4 content-origin/content-unit binding obligation applying broadly to WP35's changed files — package-level obligation contribution |
 | Provides | scope.bounded-context |
@@ -509,7 +530,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-22` and ledger record `ledger/tasks/scope-22.md` in the Plan repository; task branch `task/scope-22` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-35.02](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.02) — all work except the parts mapped to SCOPE.27 |
 | Provides | scope.cloud-sync-scope |
@@ -531,7 +553,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-23` and ledger record `ledger/tasks/scope-23.md` in the Plan repository; task branch `task/scope-23` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-35.03](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.03) — full |
 | Provides | scope.raw-upload |
@@ -552,7 +575,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-24` and ledger record `ledger/tasks/scope-24.md` in the Plan repository; task branch `task/scope-24` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-35.04](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.04) — full, including required-design-implementation text: native bundles preserve origin, measurement profile/configuration and simulator provenance separately; CSV/JSON/report export publishes required sidecars atomically; structured context carries selected origins and measurement quality, never raw capture<br>[WP-35](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35) §4 content-origin/content-unit binding obligation applying broadly to WP35's changed files — package-level obligation contribution<br>[WP-35](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35) §8 additional completion requirements (measurement meaning/numerical profile survives portability; content-origin carrier vectors) — package-level obligation contribution |
 | Provides | scope.import-export-bundle |
@@ -575,7 +599,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-25` and ledger record `ledger/tasks/scope-25.md` in the Plan repository; task branch `task/scope-25` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / S |
 | Obligations | [WP-35.05](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.05) — full |
 | Provides | scope.extension-boundary |
@@ -596,7 +621,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/scope-26` and ledger record `ledger/tasks/scope-26.md` in the Plan repository; task branch `task/scope-26` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Package acceptance | Records the [WP-35](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-35.90](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.90) — full |
@@ -618,7 +644,8 @@ Tasks: 27 · Owning repositories: ArcScope · Integration owner(s): ArcScope int
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner; also touches Cloud |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope`; also touches Cloud |
+| Claim, branch and ledger | `claims/scope-27` and ledger record `ledger/tasks/scope-27.md` in the Plan repository; task branch `task/scope-27` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-35.02](../../work-packages/35-arcscope-integration-and-sync.md#rule-wp-35.02) — real-integration evidence: metadata sync scope converges against deployed Cloud authority |
 | Provides | ArcScope real metadata sync evidence |

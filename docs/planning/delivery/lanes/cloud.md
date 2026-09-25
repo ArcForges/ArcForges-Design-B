@@ -79,7 +79,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-01` and ledger record `ledger/tasks/cloud-01.md` in the Plan repository; task branch `task/cloud-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M · early risk proof |
 | Obligations | [WP-21.00](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.00) — all work except the parts mapped to CLOUD.37 |
 | Provides | cloud-ingress-pipeline |
@@ -102,7 +103,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-02` and ledger record `ledger/tasks/cloud-02.md` in the Plan repository; task branch `task/cloud-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M · early risk proof |
 | Obligations | [WP-21.02](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.02) — full |
 | Provides | d1-plan-bridge; module-boundary-pattern |
@@ -125,7 +127,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-03` and ledger record `ledger/tasks/cloud-03.md` in the Plan repository; task branch `task/cloud-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L · early risk proof |
 | Obligations | [WP-21.03](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.03) — full<br>[WP-21](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21) §6 Impacts -- migration/compatibility manifests include source/schema/plan/ABI/runtime versions — package-level obligation contribution |
 | Provides | d1-physical-schema; d1-migration-runner |
@@ -148,7 +151,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-04` and ledger record `ledger/tasks/cloud-04.md` in the Plan repository; task branch `task/cloud-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-21.04](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.04) — full |
 | Provides | d1-receipts-outbox |
@@ -170,7 +174,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-05` and ledger record `ledger/tasks/cloud-05.md` in the Plan repository; task branch `task/cloud-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-21.01](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.01) — full |
 | Provides | finite-job-runner |
@@ -193,7 +198,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-06` and ledger record `ledger/tasks/cloud-06.md` in the Plan repository; task branch `task/cloud-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-21.05](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.05) — generic guarded-batch engine and fixed [SU-04](../../../architecture/04-desktop-application-architecture.md#rule-su-04) module lock-order enforcement only; each module's own family participant list is a separate obligation carried by that module's own task (see coverage) |
 | Provides | shared-atomic-family-engine |
@@ -216,7 +222,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-07` and ledger record `ledger/tasks/cloud-07.md` in the Plan repository; task branch `task/cloud-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-21.06](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.06) — all work except the parts mapped to SIM.10 |
 | Provides | capacity-harness; simulation-pacer-do |
@@ -240,7 +247,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-08` and ledger record `ledger/tasks/cloud-08.md` in the Plan repository; task branch `task/cloud-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Obligations | [WP-21.07](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.07) — full |
 | Provides | readiness-surface |
@@ -262,7 +270,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-09` and ledger record `ledger/tasks/cloud-09.md` in the Plan repository; task branch `task/cloud-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-21.08](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.08) — full |
 | Provides | selfhost-deployment-profile |
@@ -285,7 +294,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-10` and ledger record `ledger/tasks/cloud-10.md` in the Plan repository; task branch `task/cloud-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-21](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-21.90](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.90) — full, including the Launch configuration acceptance subsection (launch-capacity.v1, [PG-26](../../../assurance/open-gates-register.md#rule-pg-26))<br>[WP-21](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21) §6 Impacts -- migration/compatibility manifests include source/schema/plan/ABI/runtime versions — package-level obligation contribution |
@@ -309,7 +319,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-11` and ledger record `ledger/tasks/cloud-11.md` in the Plan repository; task branch `task/cloud-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-22.00](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.00) — all work except the parts mapped to CLOUD.20 |
 | Provides | identity-core-model |
@@ -332,7 +343,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-12` and ledger record `ledger/tasks/cloud-12.md` in the Plan repository; task branch `task/cloud-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-22.01](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.01) — full |
 | Provides | real-email-delivery; native-browser-auth |
@@ -355,7 +367,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-13` and ledger record `ledger/tasks/cloud-13.md` in the Plan repository; task branch `task/cloud-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-22.02](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.02) — full |
 | Provides | device-session-model |
@@ -377,7 +390,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-14` and ledger record `ledger/tasks/cloud-14.md` in the Plan repository; task branch `task/cloud-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Obligations | [WP-22.03](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.03) — full |
 | Provides | device-trust-gating |
@@ -398,7 +412,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-15` and ledger record `ledger/tasks/cloud-15.md` in the Plan repository; task branch `task/cloud-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-22.04](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.04) — the step-up mechanism itself and coverage for Cloud/Identity-owned sensitive operations (credential change, recovery, deletion, trust elevation); full coverage across every enumerated operation in every module is completed as each owning module wires it in -- see IM.step-up-cross-product-coverage |
 | Provides | step-up-mechanism |
@@ -420,7 +435,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-16` and ledger record `ledger/tasks/cloud-16.md` in the Plan repository; task branch `task/cloud-16` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-22.05](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.05) — full |
 | Provides | pat-actor-authorization |
@@ -441,7 +457,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-17` and ledger record `ledger/tasks/cloud-17.md` in the Plan repository; task branch `task/cloud-17` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-22.06](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.06) — full |
 | Provides | recovery-account-states |
@@ -462,7 +479,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/cloud-18` and ledger record `ledger/tasks/cloud-18.md` in the Plan repository; task branch `task/cloud-18` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-22.07](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.07) — full |
 | Provides | native-session-client-primitives |
@@ -485,7 +503,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-19` and ledger record `ledger/tasks/cloud-19.md` in the Plan repository; task branch `task/cloud-19` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-22.08](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.08) — full, including the 'Required implementation and closure from the final review' paragraph (complete typed account surface: profile/email, recovery-code set, scoped PAT, credential rename, session listing, four sign-out scopes, per-installation browser authorization, remote capability policy, restricted deletion-cancel reauthentication)<br>[WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22) Browser-session evidence note ([WP-22.08](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.08) must pass before [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) consumes its contract; a written [P2-003](../../../decisions/phase-2-specification-decisions.md#rule-p2-003) decision alone is insufficient) — package-level obligation contribution |
 | Provides | browser-session-adapter; account-surface |
@@ -507,7 +526,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-20` and ledger record `ledger/tasks/cloud-20.md` in the Plan repository; task branch `task/cloud-20` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-22.90](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.90) — full<br>[WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure appendix (initial enrollment/recovery/provider/account/SSO methods wired end-to-end in client journeys) — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure appendix (initial enrollment/recovery/provider/account/SSO methods wired end-to-end in client journeys)<br>[WP-22.00](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.00) — real identity/session implementation |
@@ -530,7 +550,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-21` and ledger record `ledger/tasks/cloud-21.md` in the Plan repository; task branch `task/cloud-21` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-23.00](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23.00) — full<br>[WP-22](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22) Browser-session evidence note ([WP-22.08](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.08) must pass before [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) consumes its contract; a written [P2-003](../../../decisions/phase-2-specification-decisions.md#rule-p2-003) decision alone is insufficient) — package-level obligation contribution |
 | Provides | public-api-endpoints |
@@ -551,7 +572,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-22` and ledger record `ledger/tasks/cloud-22.md` in the Plan repository; task branch `task/cloud-22` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-23.01](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23.01) — full |
 | Provides | typed-error-mapping |
@@ -572,7 +594,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-23` and ledger record `ledger/tasks/cloud-23.md` in the Plan repository; task branch `task/cloud-23` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-23.02](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23.02) — full |
 | Provides | typed-query-cursors |
@@ -593,7 +616,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-24` and ledger record `ledger/tasks/cloud-24.md` in the Plan repository; task branch `task/cloud-24` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-23.03](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23.03) — full |
 | Provides | idempotency-rate-limiting |
@@ -614,7 +638,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-25` and ledger record `ledger/tasks/cloud-25.md` in the Plan repository; task branch `task/cloud-25` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-23.04](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23.04) — full (schema/transport/fixture boundary only; real R2 multipart behavior is [WP-25.05](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.05)) |
 | Provides | resource-transport-schema |
@@ -636,7 +661,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-26` and ledger record `ledger/tasks/cloud-26.md` in the Plan repository; task branch `task/cloud-26` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-23.05](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23.05) — all work except the parts mapped to AND.07, WEB.30 |
 | Provides | generated-clients-csharp-ts-kotlin |
@@ -658,7 +684,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-27` and ledger record `ledger/tasks/cloud-27.md` in the Plan repository; task branch `task/cloud-27` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-23.06](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23.06) — full |
 | Provides | compatibility-matrix |
@@ -679,7 +706,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-28` and ledger record `ledger/tasks/cloud-28.md` in the Plan repository; task branch `task/cloud-28` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / L |
 | Package acceptance | Records the [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-23.90](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23.90) — full<br>[WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) Operator contract closure appendix -- Cloud's own share: generate/implement every operation with its eight authorization fields, operator scope and [OC-03](../../../architecture/contracts/00-operation-catalogue.md#rule-oc-03) role binding, refuse public customer/PAT/agent access, verify distinct approver/stale hash/revision/configuration/role revocation/expiry/concurrent consumption/lost receipt; the financial owners ([WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42)), configuration/policy owners ([WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44)) and console join ([WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45)) are NOT this task's obligation -- see IM.operator-contract-closure — Operator contract closure appendix -- Cloud's own share: generate/implement every operation with its eight authorization fields, operator scope and [OC-03](../../../architecture/contracts/00-operation-catalogue.md#rule-oc-03) role binding, refuse public customer/PAT/agent access, verify distinct approver/stale hash/revision/configuration/role revocation/expiry/concurrent consumption/lost receipt; the financial owners ([WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42)), configuration/policy owners ([WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44)) and console join ([WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45)) are NOT this task's obligation -- see IM.operator-contract-closure<br>[WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) Browser matrix acceptance appendix -- Cloud's own share: prove generated transports support delayed-stream polling, refusal of unavailable required auth/step-up, safe-preview refusal, preserved pending work; [WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45)/47/48/49/50's own operations/site/account/chat/production-hash evidence is NOT this task's obligation -- see IM.browser-matrix-acceptance — Browser matrix acceptance appendix -- Cloud's own share: prove generated transports support delayed-stream polling, refusal of unavailable required auth/step-up, safe-preview refusal, preserved pending work; [WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45)/47/48/49/50's own operations/site/account/chat/production-hash evidence is NOT this task's obligation -- see IM.browser-matrix-acceptance<br>[WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) Operator contract closure appendix (registry04 §9 + model01 operator state; eight authorization fields, operator scope, [OC-03](../../../architecture/contracts/00-operation-catalogue.md#rule-oc-03) role binding) — package-level obligation contribution<br>[WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) Browser matrix acceptance appendix (browser-support.v1, supported/degraded/blocked behavior for generated transports) — package-level obligation contribution |
@@ -702,7 +730,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-29` and ledger record `ledger/tasks/cloud-29.md` in the Plan repository; task branch `task/cloud-29` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-24.00](../../work-packages/24-realtime-and-reliable-events.md#rule-wp-24.00) — full |
 | Provides | realtime-stream-transport |
@@ -723,7 +752,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-30` and ledger record `ledger/tasks/cloud-30.md` in the Plan repository; task branch `task/cloud-30` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-24.01](../../work-packages/24-realtime-and-reliable-events.md#rule-wp-24.01) — all work except the parts mapped to DEV.14 |
 | Provides | scoped-subscription |
@@ -744,7 +774,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-31` and ledger record `ledger/tasks/cloud-31.md` in the Plan repository; task branch `task/cloud-31` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-24.02](../../work-packages/24-realtime-and-reliable-events.md#rule-wp-24.02) — full |
 | Provides | stream-cursor-recovery |
@@ -765,7 +796,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-32` and ledger record `ledger/tasks/cloud-32.md` in the Plan repository; task branch `task/cloud-32` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Obligations | [WP-24.03](../../work-packages/24-realtime-and-reliable-events.md#rule-wp-24.03) — full |
 | Provides | durable-unary-fallback |
@@ -787,7 +819,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-33` and ledger record `ledger/tasks/cloud-33.md` in the Plan repository; task branch `task/cloud-33` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-24.04](../../work-packages/24-realtime-and-reliable-events.md#rule-wp-24.04) — full |
 | Provides | outbox-to-feed-publisher |
@@ -809,7 +842,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-34` and ledger record `ledger/tasks/cloud-34.md` in the Plan repository; task branch `task/cloud-34` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Obligations | [WP-24.05](../../work-packages/24-realtime-and-reliable-events.md#rule-wp-24.05) — full |
 | Provides | bounded-stream-lifecycle |
@@ -830,7 +864,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-35` and ledger record `ledger/tasks/cloud-35.md` in the Plan repository; task branch `task/cloud-35` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-24.06](../../work-packages/24-realtime-and-reliable-events.md#rule-wp-24.06) — full |
 | Provides | stream-consumer-adapters |
@@ -852,7 +887,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-36` and ledger record `ledger/tasks/cloud-36.md` in the Plan repository; task branch `task/cloud-36` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-24](../../work-packages/24-realtime-and-reliable-events.md#rule-wp-24) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-24.90](../../work-packages/24-realtime-and-reliable-events.md#rule-wp-24.90) — full, including the Tool-result acceptance subsection (toolRequestId dedup for Task and ChatTurn owners, command.reused_identifier refusal, wire registry + [TK-05](../../../architecture/contracts/01-public-api-operations.md#rule-tk-05) + task.tool_result binding) |
@@ -874,7 +910,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-37` and ledger record `ledger/tasks/cloud-37.md` in the Plan repository; task branch `task/cloud-37` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-25.00](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.00) — full<br>[WP-21.00](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.00) — real Sync owner transaction implementation |
 | Provides | cloud-notes-authority |
@@ -897,7 +934,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/cloud-38` and ledger record `ledger/tasks/cloud-38.md` in the Plan repository; task branch `task/cloud-38` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-25.01](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.01) — full |
 | Provides | client-sync-outbox |
@@ -920,7 +958,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-39` and ledger record `ledger/tasks/cloud-39.md` in the Plan repository; task branch `task/cloud-39` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L · early risk proof |
 | Obligations | [WP-25.02](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.02) — full |
 | Provides | sync-publication-bootstrap; sync-change-feed |
@@ -943,7 +982,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-40` and ledger record `ledger/tasks/cloud-40.md` in the Plan repository; task branch `task/cloud-40` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-25.03](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.03) — full |
 | Provides | conflict-policies |
@@ -964,7 +1004,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-41` and ledger record `ledger/tasks/cloud-41.md` in the Plan repository; task branch `task/cloud-41` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-25.04](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.04) — full |
 | Provides | deletion-tombstones |
@@ -985,7 +1026,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-42` and ledger record `ledger/tasks/cloud-42.md` in the Plan repository; task branch `task/cloud-42` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-25.05](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.05) — full |
 | Provides | blob-lifecycle-r2 |
@@ -1008,7 +1050,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-43` and ledger record `ledger/tasks/cloud-43.md` in the Plan repository; task branch `task/cloud-43` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-25.06](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.06) — full |
 | Provides | availability-protection-health |
@@ -1030,7 +1073,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-44` and ledger record `ledger/tasks/cloud-44.md` in the Plan repository; task branch `task/cloud-44` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / L |
 | Obligations | [WP-25.07](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.07) — all work except the parts mapped to NOTES.35 |
 | Provides | multi-device-convergence-proof |
@@ -1052,7 +1096,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-45` and ledger record `ledger/tasks/cloud-45.md` in the Plan repository; task branch `task/cloud-45` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-25.08](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.08) — all work except the parts mapped to AST.21, CLOUD.58, NOTES.33 |
 | Provides | real-notes-chat-export |
@@ -1074,7 +1119,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-46` and ledger record `ledger/tasks/cloud-46.md` in the Plan repository; task branch `task/cloud-46` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-25.09](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.09) — all work except the parts mapped to AST.22 |
 | Provides | cloud-history-import-service |
@@ -1096,7 +1142,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-47` and ledger record `ledger/tasks/cloud-47.md` in the Plan repository; task branch `task/cloud-47` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-25](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-25.90](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.90) — full<br>[WP-25](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25) Required implementation and closure from the final review (01-cloud-data-model verification; real structural move/ack/conflict transactions, full native metadata replicas, job-authorized R2 staging/verification/promotion, quarantined old-generation client commands) — package-level obligation contribution |
@@ -1118,7 +1165,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-48` and ledger record `ledger/tasks/cloud-48.md` in the Plan repository; task branch `task/cloud-48` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-46.00](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.00) — full |
 | Provides | d1-object-backup |
@@ -1140,7 +1188,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-49` and ledger record `ledger/tasks/cloud-49.md` in the Plan repository; task branch `task/cloud-49` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-46.01](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.01) — full |
 | Provides | point-in-time-restore |
@@ -1161,7 +1210,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-50` and ledger record `ledger/tasks/cloud-50.md` in the Plan repository; task branch `task/cloud-50` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-46.02](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.02) — full |
 | Provides | fresh-environment-rebuild |
@@ -1182,7 +1232,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-51` and ledger record `ledger/tasks/cloud-51.md` in the Plan repository; task branch `task/cloud-51` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-46.03](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.03) — Cloud-side drill: real Container/Worker/DO/R2/D1 restore using separate credentials and immutable archive, RTO<=4h. The combined AI reopen portion is a joint step with the AI lanes/the governance and release lanes -- see IM.dr-drill-combined-ai-reopen |
 | Provides | dr-drill-evidence |
@@ -1203,7 +1254,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-52` and ledger record `ledger/tasks/cloud-52.md` in the Plan repository; task branch `task/cloud-52` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Obligations | [WP-46.04](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.04) — full |
 | Provides | data-health-read-projection |
@@ -1225,7 +1277,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-53` and ledger record `ledger/tasks/cloud-53.md` in the Plan repository; task branch `task/cloud-53` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-46.05](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.05) — full |
 | Provides | realm-export-import |
@@ -1248,7 +1301,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-54` and ledger record `ledger/tasks/cloud-54.md` in the Plan repository; task branch `task/cloud-54` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / S |
 | Obligations | [WP-46.06](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.06) — full |
 | Provides | backup-release-gate |
@@ -1269,7 +1323,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-55` and ledger record `ledger/tasks/cloud-55.md` in the Plan repository; task branch `task/cloud-55` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-46](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-46.90](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.90) — full |
@@ -1291,7 +1346,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-58` and ledger record `ledger/tasks/cloud-58.md` in the Plan repository; task branch `task/cloud-58` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-25.08](../../work-packages/25-sync-engine-and-blob-lifecycle.md#rule-wp-25.08) — full, joint with consumer-side structural fixture-registration removal |
 | Start prerequisites | **artifact** [CLOUD.45](#task-cloud-45) — real, delivered outcome of CLOUD.45 (Real Cloud Notes and Chat export producers). *Why:* this integration exercises the real real Cloud Notes and Chat export producers instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [NOTES.33](arcnotes.md#task-notes-33) — real, delivered outcome of NOTES.33 (Real Cloud Notes export join replaces the / fixture endpoint). *Why:* this integration exercises the real real Cloud Notes export join replaces the / fixture endpoint instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AST.21](assistant.md#task-ast-21) — assistant history export consuming the real Cloud export producer. *Why:* runtime export fixtures are removed only after every consumer uses the real producer |
@@ -1311,7 +1367,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-63` and ledger record `ledger/tasks/cloud-63.md` in the Plan repository; task branch `task/cloud-63` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-21.05](../../work-packages/21-cloud-host-and-persistence.md#rule-wp-21.05) — Commerce/Entitlement family participant evidence for the shared completion gate |
 | Start prerequisites | **artifact** [CLOUD.06](#task-cloud-06) — real, delivered outcome of CLOUD.06 (Shared atomic family guarded-batch engine). *Why:* this integration exercises the real shared atomic family guarded-batch engine instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.16](#task-cloud-16) — real, delivered outcome of CLOUD.16 (PAT and actor authorization). *Why:* this integration exercises the real pAT and actor authorization instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [COM.09](commerce.md#task-com-09) — real, delivered outcome of COM.09 (Ledgers and reconciliation). *Why:* this integration exercises the real ledgers and reconciliation instead of a substitute, so it cannot start before that outcome exists |
@@ -1331,7 +1388,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-64` and ledger record `ledger/tasks/cloud-64.md` in the Plan repository; task branch `task/cloud-64` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) Operator contract closure appendix, full cross-area join — Operator contract closure appendix, full cross-area join |
 | Start prerequisites | **artifact** [COM.13](commerce.md#task-com-13) — real, delivered outcome of COM.13 (Operator financial-owner proposal/approval operations). *Why:* this integration exercises the real operator financial-owner proposal/approval operations instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [POL.05](policy.md#task-pol-05) — real, delivered outcome of POL.05 (Kill switches). *Why:* this integration exercises the real kill switches instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [OPS.05](operations.md#task-ops-05) — real, delivered outcome of OPS.05 (Operator console and support access). *Why:* this integration exercises the real operator console and support access instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.21](#task-cloud-21) — real public endpoint mapping for the operator operations. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [CLOUD.22](#task-cloud-22) — real typed protocol and error mapping. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier |
@@ -1351,7 +1409,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-66` and ledger record `ledger/tasks/cloud-66.md` in the Plan repository; task branch `task/cloud-66` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-22.04](../../work-packages/22-identity-workspace-and-device.md#rule-wp-22.04) — cross-product operation coverage beyond Identity's own operations |
 | Start prerequisites | **artifact** [CLOUD.15](#task-cloud-15) — real, delivered outcome of CLOUD.15 (Step-up challenges for sensitive operations). *Why:* this integration exercises the real step-up challenges for sensitive operations instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [COM.10](commerce.md#task-com-10) — real, delivered outcome of COM.10 (Refunds, disputes and evidence). *Why:* this integration exercises the real refunds, disputes and evidence instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.21](#task-cloud-21) — real public endpoint mapping for the sensitive operations. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [CLOUD.22](#task-cloud-22) — real typed protocol and error mapping that returns step-up challenges. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier |
@@ -1371,7 +1430,8 @@ Tasks: 60 · Owning repositories: Cloud, DesktopPlatform · Integration owner(s)
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/cloud-67` and ledger record `ledger/tasks/cloud-67.md` in the Plan repository; task branch `task/cloud-67` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-46.03](../../work-packages/46-backup-recovery-and-data-health.md#rule-wp-46.03) — combined AI-reopen portion |
 | Start prerequisites | **artifact** [CLOUD.51](#task-cloud-51) — real, delivered outcome of CLOUD.51 (Disaster-recovery drill programme). *Why:* this integration exercises the real disaster-recovery drill programme instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.00](harness.md#task-har-00) — the real Harness turn loop to reopen. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [HAR.02](harness.md#task-har-02) — real approval, cancellation and crash recovery. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [HAR.03](harness.md#task-har-03) — real generated streaming and durable output. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [AIR.00](ai-routing.md#task-air-00) — real Workers AI provider adapters. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier |

@@ -28,7 +28,8 @@ Tasks: 9 · Owning repositories: AI, Cloud · Integration owner(s): AI integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/har-00` and ledger record `ledger/tasks/har-00.md` in the Plan repository; task branch `task/har-00` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / XL · early risk proof |
 | Obligations | [WP-52.00](../../work-packages/52-cloud-harness.md#rule-wp-52.00) — full |
 | Provides | turn-loop-core |
@@ -52,7 +53,8 @@ Tasks: 9 · Owning repositories: AI, Cloud · Integration owner(s): AI integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/har-01` and ledger record `ledger/tasks/har-01.md` in the Plan repository; task branch `task/har-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-52.01](../../work-packages/52-cloud-harness.md#rule-wp-52.01) — full |
 | Provides | context-assembly-compaction |
@@ -74,7 +76,8 @@ Tasks: 9 · Owning repositories: AI, Cloud · Integration owner(s): AI integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/har-02` and ledger record `ledger/tasks/har-02.md` in the Plan repository; task branch `task/har-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-52.02](../../work-packages/52-cloud-harness.md#rule-wp-52.02) — full |
 | Provides | approval-cancel-recovery |
@@ -96,7 +99,8 @@ Tasks: 9 · Owning repositories: AI, Cloud · Integration owner(s): AI integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/har-03` and ledger record `ledger/tasks/har-03.md` in the Plan repository; task branch `task/har-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-52.03](../../work-packages/52-cloud-harness.md#rule-wp-52.03) — full<br>[WP-52](../../work-packages/52-cloud-harness.md#rule-wp-52) Sec.8 gate item 9: every surface converges to the same authoritative final answer/artifact with realtime disabled — package-level obligation contribution |
 | Provides | streaming-durable-output |
@@ -118,7 +122,8 @@ Tasks: 9 · Owning repositories: AI, Cloud · Integration owner(s): AI integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/har-04` and ledger record `ledger/tasks/har-04.md` in the Plan repository; task branch `task/har-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Obligations | [WP-52.04](../../work-packages/52-cloud-harness.md#rule-wp-52.04) — full |
 | Provides | effect-certainty-classification |
@@ -140,7 +145,8 @@ Tasks: 9 · Owning repositories: AI, Cloud · Integration owner(s): AI integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/har-05` and ledger record `ledger/tasks/har-05.md` in the Plan repository; task branch `task/har-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / XL |
 | Obligations | [WP-52.05](../../work-packages/52-cloud-harness.md#rule-wp-52.05) — all work except the parts mapped to AST.19, DEV.13<br>[WP-52.90](../../work-packages/52-cloud-harness.md#rule-wp-52.90) — structural assertion that the [WP-17.01](../../work-packages/17-arcchat-independent-core.md#rule-wp-17.01) fixture turn endpoint no longer exists (Sec.8 gate item 10) |
 | Provides | own-app-execution-proof; fixture-turn-endpoint-removed |
@@ -163,7 +169,8 @@ Tasks: 9 · Owning repositories: AI, Cloud · Integration owner(s): AI integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/har-06` and ledger record `ledger/tasks/har-06.md` in the Plan repository; task branch `task/har-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / L |
 | Obligations | [WP-52.06](../../work-packages/52-cloud-harness.md#rule-wp-52.06) — automation definition/version, trigger schedule/event cursor, occurrence dedup, grant/budget snapshot, bounded leased dispatch through the existing outbox, disable/revoke control, and removal of the labelled [WP-17](../../work-packages/17-arcchat-independent-core.md#rule-wp-17) automation fixture -- excluding the Slate transcription closure scenario<br>[WP-52](../../work-packages/52-cloud-harness.md#rule-wp-52) Final-review closure paragraph: paid Slate transcription end-to-end, CF purge inventory paging, seven-day wait guards, post-backup unsafe-effect quarantine, real active/waiting/unknown states for [WP-50](../../work-packages/50-full-platform-production-release.md#rule-wp-50) recovery — package-level obligation contribution |
 | Provides | automation-scheduler; automation-fixture-removed |
@@ -187,7 +194,8 @@ Tasks: 9 · Owning repositories: AI, Cloud · Integration owner(s): AI integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/har-90` and ledger record `ledger/tasks/har-90.md` in the Plan repository; task branch `task/har-90` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | service / M |
 | Package acceptance | Records the [WP-52](../../work-packages/52-cloud-harness.md#rule-wp-52) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-52.90](../../work-packages/52-cloud-harness.md#rule-wp-52.90) — remaining aggregation/receipt beyond HAR.05's structural assertion<br>[WP-52](../../work-packages/52-cloud-harness.md#rule-wp-52) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure: ordinary persistent/temporary ChatTurn and AgentTask through the same RunWorkflow, pure-read vs promoted-effectful mode — package-level obligation contribution |
@@ -210,7 +218,8 @@ Tasks: 9 · Owning repositories: AI, Cloud · Integration owner(s): AI integrati
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner; also touches ArcSlate |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai`; also touches ArcSlate |
+| Claim, branch and ledger | `claims/har-91` and ledger record `ledger/tasks/har-91.md` in the Plan repository; task branch `task/har-91` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-52.06](../../work-packages/52-cloud-harness.md#rule-wp-52.06) — the Slate transcription closure paragraph from the final-review addendum<br>[WP-38.05](../../work-packages/38-arcslate-render-and-colour.md#rule-wp-38.05) — the ASR real-provider closure named explicitly: 'WP43 provides real model output and WP52 closes the paid end-to-end path'<br>[WP-52](../../work-packages/52-cloud-harness.md#rule-wp-52) Final-review closure paragraph: paid Slate transcription end-to-end, CF purge inventory paging, seven-day wait guards, post-backup unsafe-effect quarantine, real active/waiting/unknown states for [WP-50](../../work-packages/50-full-platform-production-release.md#rule-wp-50) recovery — package-level obligation contribution |
 | Start prerequisites | **artifact** [HAR.06](#task-har-06) — real, delivered outcome of HAR.06 (Durable Cloud automation, scheduling and automation-fixture removal). *Why:* this integration exercises the real durable Cloud automation, scheduling and automation-fixture removal instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AIR.09](ai-routing.md#task-air-09) — real, delivered outcome of AIR.09 (ASR/Whisper capability closure and inference-late-outcome reconciliation). *Why:* this integration exercises the real aSR/Whisper capability closure and inference-late-outcome reconciliation instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [SLATE.30](arcslate.md#task-slate-30) — real, delivered outcome of SLATE.30 (Local transcription extraction ProductJob and TranscriptRecord adoption). *Why:* this integration exercises the real local transcription extraction ProductJob and TranscriptRecord adoption instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [AIR.08](ai-routing.md#task-air-08) — real, delivered outcome of AIR.08 (Real-provider metering evidence and stubbed-path removal). *Why:* this integration exercises the real real-provider metering evidence and stubbed-path removal instead of a substitute, so it cannot start before that outcome exists |

@@ -26,7 +26,8 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/fnd-01` and ledger record `ledger/tasks/fnd-01.md` in the Plan repository; task branch `task/fnd-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-04.00](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.00) — all work except the parts mapped to FND.07 |
 | Provides | identity-primitives; exact-value-adapters |
@@ -48,7 +49,8 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/fnd-02` and ledger record `ledger/tasks/fnd-02.md` in the Plan repository; task branch `task/fnd-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-04.01](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.01) — full |
 | Provides | execution-identity; idempotency-primitives; application-abstractions-ports |
@@ -70,7 +72,8 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/fnd-03` and ledger record `ledger/tasks/fnd-03.md` in the Plan repository; task branch `task/fnd-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-04.02](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.02) — full |
 | Provides | revision-sequence-types |
@@ -91,7 +94,8 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/fnd-04` and ledger record `ledger/tasks/fnd-04.md` in the Plan repository; task branch `task/fnd-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-04.03](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.03) — full |
 | Provides | clock-abstraction; instant-type; monotonic-timestamp-type |
@@ -112,7 +116,8 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/fnd-05` and ledger record `ledger/tasks/fnd-05.md` in the Plan repository; task branch `task/fnd-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-04.04](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.04) — full |
 | Provides | reason-code-registry; effect-certainty-type; outcome-result-type |
@@ -134,7 +139,8 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/fnd-06` and ledger record `ledger/tasks/fnd-06.md` in the Plan repository; task branch `task/fnd-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-04.05](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.05) — full |
 | Provides | version-axis-types |
@@ -156,7 +162,8 @@ Tasks: 7 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/fnd-07` and ledger record `ledger/tasks/fnd-07.md` in the Plan repository; task branch `task/fnd-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / S |
 | Package acceptance | Records the [WP-04](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-04.90](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.90) — full<br>[WP-04.00](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04.00) — first real external consumption of Contracts.Foundation<br>[WP-04](../../work-packages/04-identity-error-and-versioning-primitives.md#rule-wp-04) TypeScript/Kotlin primitive projection of registry-04 exact-value rules (UUID canonical ordering, TS bigint/Decimal, JSON exceptions) — package-level obligation contribution |

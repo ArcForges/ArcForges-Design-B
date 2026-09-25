@@ -30,7 +30,8 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Plan (`C:\MyFile\Projects\Plan-B`); integration owner: Plan integration owner |
+| Owning repository | Plan (`C:\MyFile\Projects\Plan-B`); integration owner: Plan integration owner, the holder of `roles/integration-plan` |
+| Claim, branch and ledger | `claims/adopt-01` and ledger record `ledger/tasks/adopt-01.md` in the Plan repository; task branch `task/adopt-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: baseline inputs |
 | Provides | adoption baseline record; ledger skeleton |
@@ -50,14 +51,15 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/adopt-02` and ledger record `ledger/tasks/adopt-02.md` in the Plan repository; task branch `task/adopt-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: DesktopPlatform repository record |
 | Provides | DesktopPlatform adoption record |
 | Start prerequisites | **artifact** [ADOPT.01](#task-adopt-01) — frozen baseline record. *Why:* repository-wide facts are recorded against the same frozen heads and receipts as every slice |
 | Completion prerequisites | **integration** [ADOPT.02.app-composition](#task-adopt-02-app-composition) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.assistant](#task-adopt-02-assistant) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.cloud](#task-adopt-02-cloud) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.device-bridge](#task-adopt-02-device-bridge) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.execution](#task-adopt-02-execution) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.extensions](#task-adopt-02-extensions) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.foundation](#task-adopt-02-foundation) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.governance](#task-adopt-02-governance) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.native](#task-adopt-02-native) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.platform](#task-adopt-02-platform) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.policy](#task-adopt-02-policy) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.release](#task-adopt-02-release) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.runtime-proofs](#task-adopt-02-runtime-proofs) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.02.updater](#task-adopt-02-updater) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository |
 | Unblocks | none |
-| Write scope | `Plan:ledger/adoption/DesktopPlatform.md`<br>`Plan:ledger/tasks/ADOPT.02.md` |
+| Write scope | `Plan:ledger/adoption/DesktopPlatform.md`<br>`Plan:ledger/tasks/adopt-02.md` |
 | Validation | Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)). |
 | Completion evidence | Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under [D-001](../../../decisions/phase-1-foundation-decisions.md#rule-d-001). |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -70,14 +72,15 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/adopt-03` and ledger record `ledger/tasks/adopt-03.md` in the Plan repository; task branch `task/adopt-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: Contracts repository record |
 | Provides | Contracts adoption record |
 | Start prerequisites | **artifact** [ADOPT.01](#task-adopt-01) — frozen baseline record. *Why:* repository-wide facts are recorded against the same frozen heads and receipts as every slice |
 | Completion prerequisites | **integration** [ADOPT.03.contracts](#task-adopt-03-contracts) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.03.extensions](#task-adopt-03-extensions) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.03.governance](#task-adopt-03-governance) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.03.release](#task-adopt-03-release) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository |
 | Unblocks | none |
-| Write scope | `Plan:ledger/adoption/Contracts.md`<br>`Plan:ledger/tasks/ADOPT.03.md` |
+| Write scope | `Plan:ledger/adoption/Contracts.md`<br>`Plan:ledger/tasks/adopt-03.md` |
 | Validation | Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)). |
 | Completion evidence | Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under [D-001](../../../decisions/phase-1-foundation-decisions.md#rule-d-001). |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -90,14 +93,15 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/adopt-04` and ledger record `ledger/tasks/adopt-04.md` in the Plan repository; task branch `task/adopt-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: ArcNotes repository record |
 | Provides | ArcNotes adoption record |
 | Start prerequisites | **artifact** [ADOPT.01](#task-adopt-01) — frozen baseline record. *Why:* repository-wide facts are recorded against the same frozen heads and receipts as every slice |
 | Completion prerequisites | **integration** [ADOPT.04.app-composition](#task-adopt-04-app-composition) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.04.arcnotes](#task-adopt-04-arcnotes) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.04.governance](#task-adopt-04-governance) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.04.release](#task-adopt-04-release) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.04.runtime-proofs](#task-adopt-04-runtime-proofs) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository |
 | Unblocks | none |
-| Write scope | `Plan:ledger/adoption/ArcNotes.md`<br>`Plan:ledger/tasks/ADOPT.04.md` |
+| Write scope | `Plan:ledger/adoption/ArcNotes.md`<br>`Plan:ledger/tasks/adopt-04.md` |
 | Validation | Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)). |
 | Completion evidence | Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under [D-001](../../../decisions/phase-1-foundation-decisions.md#rule-d-001). |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -110,14 +114,15 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/adopt-05` and ledger record `ledger/tasks/adopt-05.md` in the Plan repository; task branch `task/adopt-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: ArcScope repository record |
 | Provides | ArcScope adoption record |
 | Start prerequisites | **artifact** [ADOPT.01](#task-adopt-01) — frozen baseline record. *Why:* repository-wide facts are recorded against the same frozen heads and receipts as every slice |
 | Completion prerequisites | **integration** [ADOPT.05.arcscope](#task-adopt-05-arcscope) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.05.governance](#task-adopt-05-governance) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.05.release](#task-adopt-05-release) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.05.runtime-proofs](#task-adopt-05-runtime-proofs) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.05.simulator](#task-adopt-05-simulator) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository |
 | Unblocks | none |
-| Write scope | `Plan:ledger/adoption/ArcScope.md`<br>`Plan:ledger/tasks/ADOPT.05.md` |
+| Write scope | `Plan:ledger/adoption/ArcScope.md`<br>`Plan:ledger/tasks/adopt-05.md` |
 | Validation | Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)). |
 | Completion evidence | Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under [D-001](../../../decisions/phase-1-foundation-decisions.md#rule-d-001). |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -130,14 +135,15 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/adopt-06` and ledger record `ledger/tasks/adopt-06.md` in the Plan repository; task branch `task/adopt-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: ArcSlate repository record |
 | Provides | ArcSlate adoption record |
 | Start prerequisites | **artifact** [ADOPT.01](#task-adopt-01) — frozen baseline record. *Why:* repository-wide facts are recorded against the same frozen heads and receipts as every slice |
 | Completion prerequisites | **integration** [ADOPT.06.arcslate](#task-adopt-06-arcslate) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.06.governance](#task-adopt-06-governance) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.06.release](#task-adopt-06-release) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.06.runtime-proofs](#task-adopt-06-runtime-proofs) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository |
 | Unblocks | none |
-| Write scope | `Plan:ledger/adoption/ArcSlate.md`<br>`Plan:ledger/tasks/ADOPT.06.md` |
+| Write scope | `Plan:ledger/adoption/ArcSlate.md`<br>`Plan:ledger/tasks/adopt-06.md` |
 | Validation | Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)). |
 | Completion evidence | Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under [D-001](../../../decisions/phase-1-foundation-decisions.md#rule-d-001). |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -150,14 +156,15 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/adopt-07` and ledger record `ledger/tasks/adopt-07.md` in the Plan repository; task branch `task/adopt-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: Cloud repository record |
 | Provides | Cloud adoption record |
 | Start prerequisites | **artifact** [ADOPT.01](#task-adopt-01) — frozen baseline record. *Why:* repository-wide facts are recorded against the same frozen heads and receipts as every slice |
 | Completion prerequisites | **integration** [ADOPT.07.ai-routing](#task-adopt-07-ai-routing) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.cloud](#task-adopt-07-cloud) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.commerce](#task-adopt-07-commerce) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.device-bridge](#task-adopt-07-device-bridge) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.extensions](#task-adopt-07-extensions) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.governance](#task-adopt-07-governance) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.harness](#task-adopt-07-harness) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.operations](#task-adopt-07-operations) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.policy](#task-adopt-07-policy) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.release](#task-adopt-07-release) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.runtime-proofs](#task-adopt-07-runtime-proofs) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.search](#task-adopt-07-search) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.07.simulator](#task-adopt-07-simulator) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository |
 | Unblocks | none |
-| Write scope | `Plan:ledger/adoption/Cloud.md`<br>`Plan:ledger/tasks/ADOPT.07.md` |
+| Write scope | `Plan:ledger/adoption/Cloud.md`<br>`Plan:ledger/tasks/adopt-07.md` |
 | Validation | Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)). |
 | Completion evidence | Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under [D-001](../../../decisions/phase-1-foundation-decisions.md#rule-d-001). |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -170,14 +177,15 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner |
+| Owning repository | AI (`C:\MyFile\Projects\ArcForges\AI`); integration owner: AI integration owner, the holder of `roles/integration-ai` |
+| Claim, branch and ledger | `claims/adopt-08` and ledger record `ledger/tasks/adopt-08.md` in the Plan repository; task branch `task/adopt-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: AI repository record |
 | Provides | AI adoption record |
 | Start prerequisites | **artifact** [ADOPT.01](#task-adopt-01) — frozen baseline record. *Why:* repository-wide facts are recorded against the same frozen heads and receipts as every slice |
 | Completion prerequisites | **integration** [ADOPT.08.ai-routing](#task-adopt-08-ai-routing) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.08.extensions](#task-adopt-08-extensions) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.08.governance](#task-adopt-08-governance) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.08.harness](#task-adopt-08-harness) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository |
 | Unblocks | none |
-| Write scope | `Plan:ledger/adoption/AI.md`<br>`Plan:ledger/tasks/ADOPT.08.md` |
+| Write scope | `Plan:ledger/adoption/AI.md`<br>`Plan:ledger/tasks/adopt-08.md` |
 | Validation | Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)). |
 | Completion evidence | Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under [D-001](../../../decisions/phase-1-foundation-decisions.md#rule-d-001). |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -190,14 +198,15 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/adopt-09` and ledger record `ledger/tasks/adopt-09.md` in the Plan repository; task branch `task/adopt-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: Web repository record |
 | Provides | Web adoption record |
 | Start prerequisites | **artifact** [ADOPT.01](#task-adopt-01) — frozen baseline record. *Why:* repository-wide facts are recorded against the same frozen heads and receipts as every slice |
 | Completion prerequisites | **integration** [ADOPT.09.governance](#task-adopt-09-governance) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.09.operations](#task-adopt-09-operations) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.09.release](#task-adopt-09-release) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.09.runtime-proofs](#task-adopt-09-runtime-proofs) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.09.web](#task-adopt-09-web) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository |
 | Unblocks | none |
-| Write scope | `Plan:ledger/adoption/Web.md`<br>`Plan:ledger/tasks/ADOPT.09.md` |
+| Write scope | `Plan:ledger/adoption/Web.md`<br>`Plan:ledger/tasks/adopt-09.md` |
 | Validation | Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)). |
 | Completion evidence | Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under [D-001](../../../decisions/phase-1-foundation-decisions.md#rule-d-001). |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -210,14 +219,15 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/adopt-10` and ledger record `ledger/tasks/adopt-10.md` in the Plan repository; task branch `task/adopt-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: Mobile repository record |
 | Provides | Mobile adoption record |
 | Start prerequisites | **artifact** [ADOPT.01](#task-adopt-01) — frozen baseline record. *Why:* repository-wide facts are recorded against the same frozen heads and receipts as every slice |
 | Completion prerequisites | **integration** [ADOPT.10.android](#task-adopt-10-android) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.10.governance](#task-adopt-10-governance) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.10.release](#task-adopt-10-release) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository<br>**integration** [ADOPT.10.runtime-proofs](#task-adopt-10-runtime-proofs) — slice recorded. *Why:* the repository adoption record closes after every slice of the repository |
 | Unblocks | none |
-| Write scope | `Plan:ledger/adoption/Mobile.md`<br>`Plan:ledger/tasks/ADOPT.10.md` |
+| Write scope | `Plan:ledger/adoption/Mobile.md`<br>`Plan:ledger/tasks/adopt-10.md` |
 | Validation | Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)). |
 | Completion evidence | Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under [D-001](../../../decisions/phase-1-foundation-decisions.md#rule-d-001). |
 | Baseline (unreviewed unless accepted) | not-started |
@@ -230,7 +240,8 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 | Field | Value |
 |---|---|
-| Owning repository | Design (`C:\MyFile\Projects\ArcForges-Design-B`); integration owner: Design integration owner; also touches Plan |
+| Owning repository | Design (`C:\MyFile\Projects\ArcForges-Design-B`); integration owner: Design integration owner, the holder of `roles/integration-design`; also touches Plan |
+| Claim, branch and ledger | `claims/adopt-11` and ledger record `ledger/tasks/adopt-11.md` in the Plan repository; task branch `task/adopt-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | adoption / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — adoption stage: documentation reconciliation |
 | Provides | documentation reconciliation record |
@@ -244,7 +255,7 @@ Tasks: 11 · Owning repositories: AI, ArcNotes, ArcScope, ArcSlate, Cloud, Contr
 
 ## Adoption slices
 
-Each slice classifies the tasks of one repository and lane against the frozen baseline and opens exactly those tasks when it is recorded ([DLV-22](../README.md#rule-dlv-22)). Slices are claimed and recorded separately; one reviewed pull request may carry several. The repository adoption task records the repository-wide facts and closes after all of its slices.
+Each slice classifies the tasks of one repository and lane against the frozen baseline and opens exactly those tasks when it is recorded ([DLV-22](../README.md#rule-dlv-22)). Slices are claimed and recorded separately (claim `claims/adopt-NN-<lane>`, record `ledger/tasks/adopt-NN-<lane>.md`); one reviewed pull request may carry several. The repository adoption task records the repository-wide facts and closes after all of its slices.
 
 | Slice | Repository | Lane | Tasks it opens | Accepted baseline in scope | Repository record |
 |---|---|---|---|---|---|

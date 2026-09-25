@@ -28,7 +28,8 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/exe-01` and ledger record `ledger/tasks/exe-01.md` in the Plan repository; task branch `task/exe-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L · early risk proof |
 | Obligations | [WP-16.00](../../work-packages/16-unified-execution-engine.md#rule-wp-16.00) — full<br>[WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) Tool-result acceptance paragraph (between §5 and §6): two distinct toolRequestIds in one attempt both persist and each replay returns its own original receipt; a changed result under the same (toolRequestId,attemptId,commandId) refuses with command.reused_identifier; lost acknowledgement never allocates a fresh command or drops the second result. Bound to the wire registry, [TK-05](../../../architecture/contracts/01-public-api-operations.md#rule-tk-05) and task.tool_result -- the same key [WP-26.03](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.03) uses. — package-level obligation contribution |
 | Provides | execution-chain-store; productjob-engine-pkg |
@@ -51,7 +52,8 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/exe-02` and ledger record `ledger/tasks/exe-02.md` in the Plan repository; task branch `task/exe-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-16.01](../../work-packages/16-unified-execution-engine.md#rule-wp-16.01) — full |
 | Provides | execution-reason-facets |
@@ -72,7 +74,8 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/exe-03` and ledger record `ledger/tasks/exe-03.md` in the Plan repository; task branch `task/exe-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-16.02](../../work-packages/16-unified-execution-engine.md#rule-wp-16.02) — full |
 | Provides | execution-failure-classification |
@@ -94,7 +97,8 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/exe-04` and ledger record `ledger/tasks/exe-04.md` in the Plan repository; task branch `task/exe-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-16.03](../../work-packages/16-unified-execution-engine.md#rule-wp-16.03) — full |
 | Provides | execution-child-task-tree |
@@ -116,7 +120,8 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/exe-05` and ledger record `ledger/tasks/exe-05.md` in the Plan repository; task branch `task/exe-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-16.04](../../work-packages/16-unified-execution-engine.md#rule-wp-16.04) — full<br>[WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) Tool-result acceptance paragraph (between §5 and §6): two distinct toolRequestIds in one attempt both persist and each replay returns its own original receipt; a changed result under the same (toolRequestId,attemptId,commandId) refuses with command.reused_identifier; lost acknowledgement never allocates a fresh command or drops the second result. Bound to the wire registry, [TK-05](../../../architecture/contracts/01-public-api-operations.md#rule-tk-05) and task.tool_result -- the same key [WP-26.03](../../work-packages/26-remote-action-and-tool-bridge.md#rule-wp-26.03) uses. — package-level obligation contribution |
 | Provides | execution-checkpoint-compensation |
@@ -139,7 +144,8 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/exe-06` and ledger record `ledger/tasks/exe-06.md` in the Plan repository; task branch `task/exe-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-16.05](../../work-packages/16-unified-execution-engine.md#rule-wp-16.05) — full |
 | Provides | execution-approval-budget |
@@ -162,7 +168,8 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/exe-07` and ledger record `ledger/tasks/exe-07.md` in the Plan repository; task branch `task/exe-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-16.06](../../work-packages/16-unified-execution-engine.md#rule-wp-16.06) — full |
 | Provides | execution-progress-outcome-trace |
@@ -184,7 +191,8 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/exe-08` and ledger record `ledger/tasks/exe-08.md` in the Plan repository; task branch `task/exe-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-16.07](../../work-packages/16-unified-execution-engine.md#rule-wp-16.07) — full |
 | Provides | execution-concurrency-guard |
@@ -206,7 +214,8 @@ Tasks: 9 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/exe-09` and ledger record `ledger/tasks/exe-09.md` in the Plan repository; task branch `task/exe-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Package acceptance | Records the [WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-16.90](../../work-packages/16-unified-execution-engine.md#rule-wp-16.90) — full<br>[WP-16](../../work-packages/16-unified-execution-engine.md#rule-wp-16) §6 Impacts row 'Compatibility: Task contract versioning for later cloud and mobile surfaces' — package-level obligation contribution |

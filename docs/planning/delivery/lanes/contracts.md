@@ -44,7 +44,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-01` and ledger record `ledger/tasks/con-01.md` in the Plan repository; task branch `task/con-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | governance / S |
 | Obligations | [P2-018](../../../decisions/phase-2-specification-decisions.md#rule-p2-018) — contention reduction that lets Contracts closures be authored concurrently |
 | Provides | sharded-constraint-files; contracts-merge-protocol |
@@ -67,7 +68,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-02` and ledger record `ledger/tasks/con-02.md` in the Plan repository; task branch `task/con-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.03) — capability/action/context/version/health descriptor records only, plus EncodedBodyRef (the immutable oversized-body reference form); excludes the Sync mutation allowlist and cross-owner/wrong-revision/opaque-object/forbidden-path negative vectors, which are CON.03 |
 | Provides | capability-action-context-descriptors; encoded-body-ref |
@@ -90,7 +92,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-03` and ledger record `ledger/tasks/con-03.md` in the Plan repository; task branch `task/con-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.03) — the Sync mutation allowlist and oversized-body admission negative-vector half; ResourceRef/ResourceVersionRef/BlobRef schema itself is already done (CON.91/[WP-03.01](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.01)) |
 | Provides | sync-mutation-allowlist; owner-body-admission-negatives |
@@ -113,7 +116,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-04` and ledger record `ledger/tasks/con-04.md` in the Plan repository; task branch `task/con-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / L |
 | Obligations | [WP-03.04](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.04) — ContentSandboxService only, from annex 09 §§2-6 (OpenSession/RenewSession/GrantSlot/AckBuffer/ProbeMedia/OpenMediaReader/ReadMediaFrame/SeekMedia/CopyVideoFrame/CopyAudioFrame/CloseFrame/CloseReader/OpenImage/GetImageInfo/ReadImageTile/CloseImage/OpenPdf/GetPdfPage/ExtractPdfText/RenderPdfTile/ClosePdf/ReadOtio/WriteOtio/OtioReadChunk/CancelSession/CloseSession = 24 methods)<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) §7 evidence: Local gRPC closure — complete.LocalRpc.Platform/.Sandbox typed parser/connector/hint/bootstrap methods before consumers — package-level obligation contribution |
 | Provides | content-sandbox-schema |
@@ -136,7 +140,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-05` and ledger record `ledger/tasks/con-05.md` in the Plan repository; task branch `task/con-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.04](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.04) — ExtensionHostService (remaining Handshake/Invoke/Stop; RenewLease already done), ILocalBootstrap (Challenge/Confirm/Renew), IConnectorBroker (ListDefinitions/ListConnections/BeginConnection/CompleteConnection/GetConnection/RevokeConnection); reserve removed Hub/SSO/transfer names (IHubRegistry/IHubRouting/DeviceSsoBrokerService) without registering them<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) §7 evidence: Local gRPC closure — complete.LocalRpc.Platform/.Sandbox typed parser/connector/hint/bootstrap methods before consumers — package-level obligation contribution |
 | Provides | extension-connector-bootstrap-schema |
@@ -159,7 +164,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-06` and ledger record `ledger/tasks/con-06.md` in the Plan repository; task branch `task/con-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / L |
 | Obligations | [WP-03.04](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.04) — the 'Product interfaces use generated records and static in-process adapters' half — full method surface for the four product-port packages plus ICapabilityProvider/IContextProvider/IArtifactHandler/IResourceAccess/IProductLifecycle/IDeepLinkTarget<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure (source KnowledgePolicy/Patch/View, typed one-use overrides, Notes run/atom/table-cell positions, complete initial owner/profile records) — [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior: source KnowledgePolicy/Patch/View and typed one-use overrides (source.getPolicy/setPolicy/clearPolicy, source.createConsent/revokeConsent) fall inside IChatOperations/context-provider scope; stable Notes run/atom/table-cell positions (NotesTextPosition already exists in content.proto from WP03.01 — this task only needs to verify no gap remains for table-cell addressing); package-level obligation contribution |
 | Provides | product-in-process-ports |
@@ -182,7 +188,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-07` and ledger record `ledger/tasks/con-07.md` in the Plan repository; task branch `task/con-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / L |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — IdentityService (29 ops)/WorkspaceService (4)/DeviceService (6) from registry04 §5, plus contracts07 §1 native PKCE token endpoint and the four /session/v1 browser routes as declared JSON exceptions |
 | Provides | identity-session-device-ops; native-browser-auth-exceptions |
@@ -205,7 +212,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-08` and ledger record `ledger/tasks/con-08.md` in the Plan repository; task branch `task/con-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — EntitlementService (6 ops) + CommerceService (~14 ops) from registry04 §5, all declared 'frozen' compatibility class per catalogue00 [CC-04](../../../architecture/04-desktop-application-architecture.md#rule-cc-04) |
 | Provides | entitlement-commerce-ops |
@@ -228,7 +236,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-09` and ledger record `ledger/tasks/con-09.md` in the Plan repository; task branch `task/con-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / L |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — SyncService (~10 ops incl. listScopes/pullChanges/pushChange/pushBatch/getAggregate/listConflicts/resolveConflict/requestFullResync/getBootstrapPage), ResourceService transfer ops (beginUpload/completeUpload/getDownloadTicket/getMetadata/release/getUploadStatus/renewUploadTicket), TransferService (realm-transfer.v1: requestExport/previewImport/commitImport/get/list/cancel) from registry04 §5 and contracts07 §5 |
 | Provides | sync-resource-transfer-ops; realm-transfer-v1 |
@@ -251,7 +260,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-10` and ledger record `ledger/tasks/con-10.md` in the Plan repository; task branch `task/con-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / L |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — TaskService(~9)/ApprovalService(2)/BridgeService(3)/public ChatOperationsService(~25)/AgentService(3)/AutomationService(9)/search.query from registry04 §5, plus internal/ai-http/v1 schema.json (ai-internal npm/CloudInternal package) for the C#<->AI-Worker internal HTTP ports in contracts05 §3<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) [P2-010](../../../decisions/phase-2-specification-decisions.md#rule-p2-010) required behavior and closure (source KnowledgePolicy/Patch/View, typed one-use overrides, Notes run/atom/table-cell positions, complete initial owner/profile records) — package-level obligation contribution |
 | Provides | task-chat-agent-automation-ops; ai-internal-package |
@@ -274,7 +284,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-11` and ledger record `ledger/tasks/con-11.md` in the Plan repository; task branch `task/con-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — the annex10 13 new operations (ApplicationService.List/Heartbeat/Disconnect, HistoryService.BeginImport/FinalizeImport/GetImport/CancelImport, ExecutionService.StartTransientTurn/ReadOutput/WatchOutput/AcknowledgeOutput/PurgeTransient, EventService.Watch) plus EventService.Poll's 17 hint payloads ([CA-12](../../../architecture/02-contracts-and-protocols.md#rule-ca-12)) and StreamFrame/OutputChunk/StreamPosition/StreamReset server-streaming framing<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) Current application and stream contract completeness (annex10+manifest11, explicitly required before 03 completion) — 'Current application and stream contract completeness' package-level obligation — explicitly required before 03 completion, not a.90-deferred item |
 | Provides | application-history-execution-events-ops |
@@ -297,7 +308,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-12` and ledger record `ledger/tasks/con-12.md` in the Plan repository; task branch `task/con-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — extension/policy schemas named in [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) §4's projects table ('Selected CF/auth/provider HTTP exceptions') and contracts08 in full:.arcpkg manifest.v1, workflow.v1 DAG, panel.v1 declarative UI, PolicyBundle body.v1, internal ConfigurationDocument (20 sections) |
 | Provides | extension-policy-schemas |
@@ -320,7 +332,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-13` and ledger record `ledger/tasks/con-13.md` in the Plan repository; task branch `task/con-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / S |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — the public CatalogService (search/getPackage/listVersions/registerPublisher/verifyPublisher/submitVersion/getSubmission, 7 ops) and PublisherView/CatalogPackageView/CatalogVersionView/CatalogSubmissionView/CatalogReviewDecision records from registry04 §4/§5 |
 | Provides | package-catalog-ops |
@@ -343,7 +356,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-14` and ledger record `ledger/tasks/con-14.md` in the Plan repository; task branch `task/con-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / L |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — OperatorService's ~29 methods with all eight authorization fields and the [OC-03](../../../architecture/contracts/00-operation-catalogue.md#rule-oc-03) role matrix<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) 'Operator contract closure' package-level obligation — schema and negative vectors only; [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) owns real identity/dispatch, [WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) financial owners, [WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) config/policy owners, [WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) the console join — 'Operator contract closure' package-level obligation — schema and negative vectors only; [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) owns real identity/dispatch, [WP-42](../../work-packages/42-commerce-entitlement-and-credits.md#rule-wp-42) financial owners, [WP-44](../../work-packages/44-dynamic-policy-and-configuration.md#rule-wp-44) config/policy owners, [WP-45](../../work-packages/45-operations-support-and-trust-safety.md#rule-wp-45) the console join; package-level obligation contribution |
 | Provides | operator-service-ops |
@@ -366,7 +380,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-15` and ledger record `ledger/tasks/con-15.md` in the Plan repository; task branch `task/con-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.90](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.90) — 'Private CF binding/event definitions' input — the remaining contracts05 ports not already covered by CON.10 (ai-internal): /internal/objects/v1/* (authorize/part-receipt/verification/job-grant/job-authorize), /internal/ai/v1/dispatch/control/delete (Worker-side), inference-job family (embedding/rerank), and CfDeletionTarget/CfDeletionReceipt/SessionBinding/BackupManifest records |
 | Provides | cf-internal-bindings |
@@ -389,7 +404,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-16` and ledger record `ledger/tasks/con-16.md` in the Plan repository; task branch `task/con-16` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.07](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.07) — full — publish catalog-index.v1, catalog-revocations.v1, android-update.v1 and realm.v1 schemas, canonical signing vectors and separate fixture trust roots; production keys are explicitly [WP-53](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53) output, not a [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) input |
 | Provides | signed-catalog-update-realm-formats |
@@ -413,7 +429,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-17` and ledger record `ledger/tasks/con-17.md` in the Plan repository; task branch `task/con-17` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M · early risk proof |
 | Obligations | [WP-03.06](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.06) — full — wire bigint/decimal-coefficient-scale/oneof-presence/unknown-field/additive-response-evolution profile; canonical semantic hash distinct from wire byte hash; independent versioning of descriptors from applications; supported-window enforcement (previous-client/current-server and current-client/minimum-server matrices); deletion/tag-reuse/type-change failure tests |
 | Provides | compat-window-semantic-hash |
@@ -436,7 +453,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-18` and ledger record `ledger/tasks/con-18.md` in the Plan repository; task branch `task/con-18` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / S |
 | Obligations | [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) §7 evidence: operation-by-actor reachability matrix ([AZ-04](../../../architecture/08-security-architecture.md#rule-az-04)) for public/local/operator/CF/exception bindings — §7 evidence requirement: 'Generate an operation-by-actor reachability matrix for every public/local/operator/CF/exception binding under catalogue 00 [AZ-04](../../../architecture/08-security-architecture.md#rule-az-04), with all seven effective authorization fields and source profile. Fail unclassified/ambiguous fields...'; package-level obligation contribution |
 | Provides | operation-scope-manifest-tooling |
@@ -459,7 +477,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-19` and ledger record `ledger/tasks/con-19.md` in the Plan repository; task branch `task/con-19` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Package acceptance | Records the [WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-03.90](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.90) — all work except the parts mapped to CON.15<br>[WP-03](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03) §8 completion gate (6 items) + [P2-009](../../../decisions/phase-2-specification-decisions.md#rule-p2-009)/[VG-04](../../../assurance/open-gates-register.md#rule-vg-04)/[F-026](../../../assurance/open-gates-register.md#rule-f-026) scoped gate contributions — §8 completion gate items 1-6 and the [P2-009](../../../decisions/phase-2-specification-decisions.md#rule-p2-009)/[VG-04](../../../assurance/open-gates-register.md#rule-vg-04)/[F-026](../../../assurance/open-gates-register.md#rule-f-026) gate contributions; package-level obligation contribution |
@@ -483,7 +502,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-20` and ledger record `ledger/tasks/con-20.md` in the Plan repository; task branch `task/con-20` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — notes.* operations (17), their records, eight authorization fields and vectors |
 | Provides | Notes public operation registry |
@@ -506,7 +526,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-21` and ledger record `ledger/tasks/con-21.md` in the Plan repository; task branch `task/con-21` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — simulation.* operations (12), their records, authorization fields and vectors |
 | Provides | Simulation operation registry |
@@ -529,7 +550,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-22` and ledger record `ledger/tasks/con-22.md` in the Plan repository; task branch `task/con-22` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.05](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.05) — support.*, notification.*, data.*, preference.*, policy.getBundle and export.* operations (15), records and vectors |
 | Provides | Account support, notification, data, preference, policy-bundle and export-job operations |
@@ -552,7 +574,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-90` and ledger record `ledger/tasks/con-90.md` in the Plan repository; task branch `task/con-90` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M |
 | Obligations | [WP-03.00](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.00) — full |
 | Provides | contracts-project-split |
@@ -574,7 +597,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-91` and ledger record `ledger/tasks/con-91.md` in the Plan repository; task branch `task/con-91` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / L |
 | Obligations | [WP-03.01](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.01) — full |
 | Provides | foundation-types; resource-ref-types; aggregate-body-closure |
@@ -596,7 +620,8 @@ Tasks: 25 · Owning repositories: Contracts · Integration owner(s): Contracts i
 
 | Field | Value |
 |---|---|
-| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner |
+| Owning repository | Contracts (`C:\MyFile\Projects\ArcForges\Contracts`); integration owner: Contracts integration owner, the holder of `roles/integration-contracts` |
+| Claim, branch and ledger | `claims/con-92` and ledger record `ledger/tasks/con-92.md` in the Plan repository; task branch `task/con-92` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | contract / M · early risk proof |
 | Obligations | [WP-03.02](../../work-packages/03-contract-foundation-and-licence-split.md#rule-wp-03.02) — full |
 | Provides | serialization-posture; decode-limit-constants; aot-probe-harness |

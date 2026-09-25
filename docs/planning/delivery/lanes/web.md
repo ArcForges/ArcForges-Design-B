@@ -50,7 +50,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-01` and ledger record `ledger/tasks/web-01.md` in the Plan repository; task branch `task/web-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-47.00](../../work-packages/47-static-public-site.md#rule-wp-47.00) — full |
 | Provides | web-static-generator |
@@ -73,7 +74,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-02` and ledger record `ledger/tasks/web-02.md` in the Plan repository; task branch `task/web-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-47.01](../../work-packages/47-static-public-site.md#rule-wp-47.01) — full |
 | Provides | web-content-pricing-inputs |
@@ -95,7 +97,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-03` and ledger record `ledger/tasks/web-03.md` in the Plan repository; task branch `task/web-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-47.02](../../work-packages/47-static-public-site.md#rule-wp-47.02) — full |
 | Provides | web-site-performance |
@@ -117,7 +120,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-04` and ledger record `ledger/tasks/web-04.md` in the Plan repository; task branch `task/web-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-47.03](../../work-packages/47-static-public-site.md#rule-wp-47.03) — full |
 | Provides | web-site-i18n |
@@ -138,7 +142,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-05` and ledger record `ledger/tasks/web-05.md` in the Plan repository; task branch `task/web-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-47.04](../../work-packages/47-static-public-site.md#rule-wp-47.04) — full |
 | Provides | web-docs-downloads-legal |
@@ -160,7 +165,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-06` and ledger record `ledger/tasks/web-06.md` in the Plan repository; task branch `task/web-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / S |
 | Obligations | [WP-47.05](../../work-packages/47-static-public-site.md#rule-wp-47.05) — full |
 | Provides | web-site-a11y-analytics |
@@ -181,7 +187,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-07` and ledger record `ledger/tasks/web-07.md` in the Plan repository; task branch `task/web-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | release / S |
 | Obligations | [WP-47.06](../../work-packages/47-static-public-site.md#rule-wp-47.06) — full |
 | Provides | web-site-deployment |
@@ -203,7 +210,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-08` and ledger record `ledger/tasks/web-08.md` in the Plan repository; task branch `task/web-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-47.07](../../work-packages/47-static-public-site.md#rule-wp-47.07) — full |
 | Provides | web-design-system |
@@ -226,7 +234,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-09` and ledger record `ledger/tasks/web-09.md` in the Plan repository; task branch `task/web-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / S |
 | Package acceptance | Records the [WP-47](../../work-packages/47-static-public-site.md#rule-wp-47) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-47.90](../../work-packages/47-static-public-site.md#rule-wp-47.90) — full<br>[WP-47](../../work-packages/47-static-public-site.md#rule-wp-47) Browser matrix acceptance paragraph (browser-support.v1 for the static site output) — package-level obligation contribution |
@@ -249,7 +258,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-10` and ledger record `ledger/tasks/web-10.md` in the Plan repository; task branch `task/web-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / XL |
 | Obligations | [WP-48.00](../../work-packages/48-account-portal.md#rule-wp-48.00) — full |
 | Provides | web-app-shell |
@@ -271,7 +281,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-11` and ledger record `ledger/tasks/web-11.md` in the Plan repository; task branch `task/web-11` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-48.01](../../work-packages/48-account-portal.md#rule-wp-48.01) — full |
 | Provides | web-browser-session |
@@ -292,7 +303,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-12` and ledger record `ledger/tasks/web-12.md` in the Plan repository; task branch `task/web-12` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-48.02](../../work-packages/48-account-portal.md#rule-wp-48.02) — full |
 | Provides | web-account-security-ui |
@@ -313,7 +325,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-13` and ledger record `ledger/tasks/web-13.md` in the Plan repository; task branch `task/web-13` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-48.03](../../work-packages/48-account-portal.md#rule-wp-48.03) — full |
 | Provides | web-workspace-storage-ui |
@@ -334,7 +347,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-14` and ledger record `ledger/tasks/web-14.md` in the Plan repository; task branch `task/web-14` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-48.04](../../work-packages/48-account-portal.md#rule-wp-48.04) — all work except the parts mapped to WEB.29 |
 | Provides | web-commerce-ui |
@@ -355,7 +369,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-15` and ledger record `ledger/tasks/web-15.md` in the Plan repository; task branch `task/web-15` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-48.05](../../work-packages/48-account-portal.md#rule-wp-48.05) — full |
 | Provides | web-data-export-deletion-ui |
@@ -376,7 +391,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-16` and ledger record `ledger/tasks/web-16.md` in the Plan repository; task branch `task/web-16` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-48.06](../../work-packages/48-account-portal.md#rule-wp-48.06) — full |
 | Provides | web-account-origin-security |
@@ -398,7 +414,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-17` and ledger record `ledger/tasks/web-17.md` in the Plan repository; task branch `task/web-17` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-48.07](../../work-packages/48-account-portal.md#rule-wp-48.07) — full |
 | Provides | web-account-resilience |
@@ -419,7 +436,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-18` and ledger record `ledger/tasks/web-18.md` in the Plan repository; task branch `task/web-18` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-48](../../work-packages/48-account-portal.md#rule-wp-48) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-48.90](../../work-packages/48-account-portal.md#rule-wp-48.90) — full; final-review closure: 08-security-architecture account/provider closure, scoped-token display-once, cancellation restricted route<br>[WP-48](../../work-packages/48-account-portal.md#rule-wp-48) Required implementation and closure from the final review: 08-security-architecture account/provider closure, scoped-token display-once, cancellation restricted route — package-level obligation contribution<br>[WP-48](../../work-packages/48-account-portal.md#rule-wp-48) Browser matrix acceptance paragraph (browser-support.v1 for the account output) — package-level obligation contribution |
@@ -441,7 +459,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-19` and ledger record `ledger/tasks/web-19.md` in the Plan repository; task branch `task/web-19` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-49.00](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.00) — full |
 | Provides | web-chat-shell |
@@ -463,7 +482,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-20` and ledger record `ledger/tasks/web-20.md` in the Plan repository; task branch `task/web-20` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-49.01](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.01) — all work except the parts mapped to WEB.27 |
 | Provides | web-chat-streaming-ui |
@@ -485,7 +505,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-21` and ledger record `ledger/tasks/web-21.md` in the Plan repository; task branch `task/web-21` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / L |
 | Obligations | [WP-49.02](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.02) — all work except the parts mapped to WEB.27, WEB.28 |
 | Provides | web-chat-tasks-ui |
@@ -506,7 +527,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-22` and ledger record `ledger/tasks/web-22.md` in the Plan repository; task branch `task/web-22` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-49.03](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.03) — full |
 | Provides | web-artifact-sandbox |
@@ -528,7 +550,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-23` and ledger record `ledger/tasks/web-23.md` in the Plan repository; task branch `task/web-23` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-49.04](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.04) — all work except the parts mapped to WEB.28 |
 | Provides | web-remote-control-ui |
@@ -549,7 +572,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-24` and ledger record `ledger/tasks/web-24.md` in the Plan repository; task branch `task/web-24` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / M |
 | Obligations | [WP-49.05](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.05) — full |
 | Provides | web-chat-resilience |
@@ -570,7 +594,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-25` and ledger record `ledger/tasks/web-25.md` in the Plan repository; task branch `task/web-25` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | feature / S |
 | Obligations | [WP-49.06](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.06) — full |
 | Provides | web-chat-performance |
@@ -592,7 +617,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-26` and ledger record `ledger/tasks/web-26.md` in the Plan repository; task branch `task/web-26` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Package acceptance | Records the [WP-49](../../work-packages/49-arcchat-web-companion.md#rule-wp-49) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-49.90](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.90) — full<br>[WP-49](../../work-packages/49-arcchat-web-companion.md#rule-wp-49) Browser matrix acceptance paragraph (browser-support.v1 for the chat output) — package-level obligation contribution |
@@ -614,7 +640,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-27` and ledger record `ledger/tasks/web-27.md` in the Plan repository; task branch `task/web-27` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-49.01](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.01) — real-integration closure<br>[WP-49.02](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.02) — real-integration closure |
 | Start prerequisites | **artifact** [WEB.20](#task-web-20) — real, delivered outcome of WEB.20 (Conversation and generated output streams). *Why:* this integration exercises the real conversation and generated output streams instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [WEB.21](#task-web-21) — real, delivered outcome of WEB.21 (Tasks, approval and steering). *Why:* this integration exercises the real tasks, approval and steering instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.00](harness.md#task-har-00) — real, delivered outcome of HAR.00 (Turn loop, tool batching and bounds (RunWorkflow core)). *Why:* this integration exercises the real turn loop, tool batching and bounds (RunWorkflow core) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [HAR.03](harness.md#task-har-03) — real generated streaming and durable output. *Why:* the browser end-to-end scenario reads real Harness output |
@@ -634,7 +661,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-28` and ledger record `ledger/tasks/web-28.md` in the Plan repository; task branch `task/web-28` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-49.02](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.02) — device-dispatch closure<br>[WP-49.04](../../work-packages/49-arcchat-web-companion.md#rule-wp-49.04) — real-integration closure |
 | Start prerequisites | **artifact** [WEB.21](#task-web-21) — real, delivered outcome of WEB.21 (Tasks, approval and steering). *Why:* this integration exercises the real tasks, approval and steering instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [WEB.23](#task-web-23) — real, delivered outcome of WEB.23 (One-application remote control). *Why:* this integration exercises the real one-application remote control instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [DEV.02](device-bridge.md#task-dev-02) — the real durable target queue. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.03](device-bridge.md#task-dev-03) — real owner reauthorization on the desktop. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.06](device-bridge.md#task-dev-06) — real remote approval and steering. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.07](device-bridge.md#task-dev-07) — real offline expiry and unknown-effect recovery. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier<br>**artifact** [DEV.12](device-bridge.md#task-dev-12) — the cross-repository (toolRequestId, attemptId, commandId) agreement. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier |
@@ -654,7 +682,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/web-29` and ledger record `ledger/tasks/web-29.md` in the Plan repository; task branch `task/web-29` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-48.04](../../work-packages/48-account-portal.md#rule-wp-48.04) — real-provider-evidence closure |
 | Start prerequisites | **artifact** [WEB.14](#task-web-14) — real, delivered outcome of WEB.14 (Subscription, capacity, credits and hosted checkout). *Why:* this integration exercises the real subscription, capacity, credits and hosted checkout instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [COM.14](commerce.md#task-com-14) — real, delivered outcome of COM.14 (Technical commerce closure and live-gate staging). *Why:* this integration exercises the real technical commerce closure and live-gate staging instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [POL.08](policy.md#task-pol-08) — real, delivered outcome of POL.08 (Publication, staleness and last-known-good (server side)). *Why:* this integration exercises the real publication, staleness and last-known-good (server side) instead of a substitute, so it cannot start before that outcome exists |
@@ -674,7 +703,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner; also touches Cloud |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web`; also touches Cloud |
+| Claim, branch and ledger | `claims/web-30` and ledger record `ledger/tasks/web-30.md` in the Plan repository; task branch `task/web-30` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-23.05](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23.05) — Web real-consumer integration |
 | Start prerequisites | **artifact** [CLOUD.19](cloud.md#task-cloud-19) — real, delivered outcome of CLOUD.19 (Browser cookie-session adapter and full account-surface closure). *Why:* this integration exercises the real browser cookie-session adapter and full account-surface closure instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.26](cloud.md#task-cloud-26) — real, delivered outcome of CLOUD.26 (Generated C#/TypeScript/Kotlin clients against Identity/Workspace/Device). *Why:* this integration exercises the real generated C#/TypeScript/Kotlin clients against Identity/Workspace/Device instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [CLOUD.29](cloud.md#task-cloud-29) — real, delivered outcome of CLOUD.29 (Stream connection and authentication (EventService.Watch/ExecutionService.WatchOutput shells)). *Why:* this integration exercises the real stream connection and authentication (EventService.Watch/ExecutionService.WatchOutput shells) instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [WEB.07](#task-web-07) — real, delivered outcome of WEB.07 (Independence and atomic deployment). *Why:* this integration exercises the real independence and atomic deployment instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [WEB.14](#task-web-14) — real, delivered outcome of WEB.14 (Subscription, capacity, credits and hosted checkout). *Why:* this integration exercises the real subscription, capacity, credits and hosted checkout instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [WEB.19](#task-web-19) — real, delivered outcome of WEB.19 (Chat shell: route composition and design-system integration). *Why:* this integration exercises the real chat shell: route composition and design-system integration instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [PRF.08](runtime-proofs.md#task-prf-08) — React production build and generated SDK proof using MSW fixtures. *Why:* the real-client integration replaces the fixture-backed proof path |
@@ -694,7 +724,8 @@ Tasks: 31 · Owning repositories: Web · Integration owner(s): Web integration o
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner; also touches Cloud |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web`; also touches Cloud |
+| Claim, branch and ledger | `claims/web-31` and ledger record `ledger/tasks/web-31.md` in the Plan repository; task branch `task/web-31` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | integration / M |
 | Obligations | [WP-23](../../work-packages/23-public-api-and-generated-clients.md#rule-wp-23) Browser matrix acceptance appendix, full cross-area join — Browser matrix acceptance appendix, full cross-area join |
 | Start prerequisites | **artifact** [OPS.05](operations.md#task-ops-05) — real, delivered outcome of OPS.05 (Operator console and support access). *Why:* this integration exercises the real operator console and support access instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [WEB.07](#task-web-07) — real, delivered outcome of WEB.07 (Independence and atomic deployment). *Why:* this integration exercises the real independence and atomic deployment instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [WEB.14](#task-web-14) — real, delivered outcome of WEB.14 (Subscription, capacity, credits and hosted checkout). *Why:* this integration exercises the real subscription, capacity, credits and hosted checkout instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [WEB.19](#task-web-19) — real, delivered outcome of WEB.19 (Chat shell: route composition and design-system integration). *Why:* this integration exercises the real chat shell: route composition and design-system integration instead of a substitute, so it cannot start before that outcome exists<br>**artifact** [WEB.30](#task-web-30) — the real React Web client against the deployed browser session. *Why:* the consumer builds on these delivered producers; the package acceptance receipt is a roll-up, never a start barrier |

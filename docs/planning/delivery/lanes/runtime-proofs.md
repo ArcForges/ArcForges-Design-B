@@ -29,7 +29,8 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner |
+| Owning repository | ArcNotes (`C:\MyFile\Projects\ArcForges\ArcNotes`); integration owner: ArcNotes integration owner, the holder of `roles/integration-arcnotes` |
+| Claim, branch and ledger | `claims/prf-01` and ledger record `ledger/tasks/prf-01.md` in the Plan repository; task branch `task/prf-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | proof / M · early risk proof |
 | Obligations | [WP-06.00](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.00) — ArcNotes host only<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | arcnotes-desktop-aot-host |
@@ -38,7 +39,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Completion prerequisites | none |
 | Unblocks | [NAT.04](native.md#task-nat-04), [NAT.29](native.md#task-nat-29), [PLT.26](platform.md#task-plt-26), [PLT.34](platform.md#task-plt-34), [UPD.08](updater.md#task-upd-08) |
 | Write scope | `ArcNotes:src/ArcForges.ArcNotes/**`<br>`ArcNotes:ArcNotes.slnx` |
-| Shared resources | [RES-arcnotes-build-config](../shared-resources.md#res-arcnotes-build-config) (append), [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-product-solutions](../shared-resources.md#res-product-solutions) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-arcnotes-build-config](../shared-resources.md#res-arcnotes-build-config) (append), [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-product-solutions](../shared-resources.md#res-product-solutions) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Windows/Linux local Native AOT publish with zero trim/AOT/single-file diagnostics ([BR-04](../../../architecture/14-build-packaging-and-release.md#rule-br-04)); real per-RID launch and ABI smoke vectors; no macOS CI ([P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017)), local-opt-in macOS only |
 | Completion evidence | Per-RID AOT publish log with zero-diagnostic assertion; smoke-vector pass log; continuous main-branch CI run reference |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: src/ArcForges.ArcNotes/ArcForges.ArcNotes.csproj + src/ArcForges.ArcNotes.Core already exist; docs/assurance/wp02-02-aot-sweep-evidence.md records a one-off research Windows x64 AOT publish+execute of this host reaching deployed Cloud rev 8942437a5e42c01ae7595b64a220efd60f33b4f0, but explicitly not the WP06 continuous/full-contract-set proof. Exact contents of ArcForges.ArcNotes.csproj not read line-by-line (budget); recommend the integration owner or a follow-up pass confirm embedded-assistant composition state before scheduling. |
@@ -52,7 +53,8 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner |
+| Owning repository | ArcScope (`C:\MyFile\Projects\ArcForges\ArcScope`); integration owner: ArcScope integration owner, the holder of `roles/integration-arcscope` |
+| Claim, branch and ledger | `claims/prf-02` and ledger record `ledger/tasks/prf-02.md` in the Plan repository; task branch `task/prf-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | proof / M · early risk proof |
 | Obligations | [WP-06.00](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.00) — ArcScope host only<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | arcscope-desktop-aot-host |
@@ -61,7 +63,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Completion prerequisites | none |
 | Unblocks | [NAT.29](native.md#task-nat-29) |
 | Write scope | `ArcScope:src/ArcForges.ArcScope/**`<br>`ArcScope:ArcScope.slnx` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-product-solutions](../shared-resources.md#res-product-solutions) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-product-solutions](../shared-resources.md#res-product-solutions) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Windows/Linux local Native AOT publish with zero trim/AOT/single-file diagnostics; real per-RID launch and ABI smoke vectors; no macOS CI |
 | Completion evidence | Per-RID AOT publish log with zero-diagnostic assertion; smoke-vector pass log; continuous main-branch CI run reference |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: src/ArcForges.ArcScope/ArcForges.ArcScope.csproj + Core already exist; same wp02-02 one-off research caveat as PRF.01 applies. |
@@ -75,7 +77,8 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 
 | Field | Value |
 |---|---|
-| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner |
+| Owning repository | ArcSlate (`C:\MyFile\Projects\ArcForges\ArcSlate`); integration owner: ArcSlate integration owner, the holder of `roles/integration-arcslate` |
+| Claim, branch and ledger | `claims/prf-03` and ledger record `ledger/tasks/prf-03.md` in the Plan repository; task branch `task/prf-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | proof / M · early risk proof |
 | Obligations | [WP-06.00](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.00) — ArcSlate host only<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | arcslate-desktop-aot-host |
@@ -84,7 +87,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Completion prerequisites | none |
 | Unblocks | [NAT.29](native.md#task-nat-29) |
 | Write scope | `ArcSlate:src/ArcForges.ArcSlate/**`<br>`ArcSlate:ArcSlate.slnx` |
-| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-product-solutions](../shared-resources.md#res-product-solutions) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-desktopplatform-native-build](../shared-resources.md#res-desktopplatform-native-build) (append), [RES-product-solutions](../shared-resources.md#res-product-solutions) (append), [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Windows/Linux local Native AOT publish with zero trim/AOT/single-file diagnostics; real per-RID launch and ABI smoke vectors; no macOS CI |
 | Completion evidence | Per-RID AOT publish log with zero-diagnostic assertion; smoke-vector pass log; continuous main-branch CI run reference |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: src/ArcForges.ArcSlate/ArcForges.ArcSlate.csproj + Core already exist; same wp02-02 one-off research caveat as PRF.01 applies. |
@@ -98,7 +101,8 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/prf-04` and ledger record `ledger/tasks/prf-04.md` in the Plan repository; task branch `task/prf-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | proof / L · early risk proof |
 | Obligations | [WP-06.01](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.01) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | local-rpc-aot-proof |
@@ -107,7 +111,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Completion prerequisites | none |
 | Unblocks | [APP.03](app-composition.md#task-app-03), [NAT.01](native.md#task-nat-01), [NAT.29](native.md#task-nat-29), [PLT.09](platform.md#task-plt-09) |
 | Write scope | `DesktopPlatform:tests/LocalRpcAotTests/**`<br>`DesktopPlatform:eng/verification/**` |
-| Shared resources | [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Actual Windows/Linux/macOS(local opt-in) process-to-process runs; no in-memory or TCP substitute (explicit design prohibition); malformed input, unauthorized peer, bounded resource tests |
 | Completion evidence | Cross-process AOT RPC integration results satisfying [VG-04](../../../assurance/open-gates-register.md#rule-vg-04) |
 | Baseline (unreviewed unless accepted) | not-started Observed none, unreviewed: tests/LocalRpcAotTests not found under a shallow listing; |
@@ -121,7 +125,8 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/prf-05` and ledger record `ledger/tasks/prf-05.md` in the Plan repository; task branch `task/prf-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | proof / M · early risk proof |
 | Obligations | [WP-06.02](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.02) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | desktop-grpc-web-aot-proof |
@@ -143,7 +148,8 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/prf-06` and ledger record `ledger/tasks/prf-06.md` in the Plan repository; task branch `task/prf-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | proof / M |
 | Obligations | [WP-06.03](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.03) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | desktop-realtime-aot-proof |
@@ -165,7 +171,8 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 
 | Field | Value |
 |---|---|
-| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner |
+| Owning repository | Cloud (`C:\MyFile\Projects\ArcForges\Cloud`); integration owner: Cloud integration owner, the holder of `roles/integration-cloud` |
+| Claim, branch and ledger | `claims/prf-07` and ledger record `ledger/tasks/prf-07.md` in the Plan repository; task branch `task/prf-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | proof / XL · early risk proof |
 | Obligations | [WP-06.04](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.04) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | cloud-aot-foundation |
@@ -175,7 +182,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Unblocks | [CLOUD.25](cloud.md#task-cloud-25), [NAT.29](native.md#task-nat-29), [PRF.05](#task-prf-05), [PRF.06](#task-prf-06), [PRF.08](#task-prf-08), [PRF.10](#task-prf-10) |
 | Permitted substitutes | [SUB-signed-format-fixture-keys](../substitutes.md#sub-signed-format-fixture-keys) |
 | Write scope | `Cloud:src/Cloud/ArcForges.Cloud.Host/**`<br>`Cloud:eng/verification/**` |
-| Shared resources | [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Native AOT compilation required; real-adapter runtime verification is scoped local opt-in per [V-03](../../../assurance/phase-1-official-verification.md#rule-v-03)/[P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017); no EF/dynamic ORM/ASP.NET Session/CookieAuthenticationHandler; chiseled Ubuntu image, non-root, read-only root |
 | Completion evidence | Cloud image build, pipeline order and integration results; [VG-06](../../../assurance/open-gates-register.md#rule-vg-06) supporting evidence |
 | Baseline (unreviewed unless accepted) | not-started Observed scaffold, unreviewed: src/Cloud/ArcForges.Cloud.Host present per WP02.02 receipt (published Linux x64 Native AOT, real health+greeting endpoint reachable); full D1/DO/Queue/R2/passkey/CSRF closure not yet built. [VG-06](../../../assurance/open-gates-register.md#rule-vg-06) register state is 'TRIGGERED — execution evidence pending', consistent with this being open work. |
@@ -189,7 +196,8 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 
 | Field | Value |
 |---|---|
-| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner |
+| Owning repository | Web (`C:\MyFile\Projects\ArcForges\Web`); integration owner: Web integration owner, the holder of `roles/integration-web` |
+| Claim, branch and ledger | `claims/prf-08` and ledger record `ledger/tasks/prf-08.md` in the Plan repository; task branch `task/prf-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | proof / L |
 | Obligations | [WP-06.05](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.05) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | web-production-aot-proof |
@@ -212,7 +220,8 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/prf-09` and ledger record `ledger/tasks/prf-09.md` in the Plan repository; task branch `task/prf-09` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | proof / S |
 | Obligations | [WP-06.06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.06) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | third-party-control-admission-process |
@@ -234,7 +243,8 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 
 | Field | Value |
 |---|---|
-| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner |
+| Owning repository | Mobile (`C:\MyFile\Projects\ArcForges\Mobile`); integration owner: Mobile integration owner, the holder of `roles/integration-mobile` |
+| Claim, branch and ledger | `claims/prf-10` and ledger record `ledger/tasks/prf-10.md` in the Plan repository; task branch `task/prf-10` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | proof / L · early risk proof |
 | Obligations | [WP-06.07](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06.07) — full<br>[WP-06](../../work-packages/06-aot-jit-and-wasm-publish-proof.md#rule-wp-06) SS8 completion gate item 9 / [BR-06](../../../architecture/14-build-packaging-and-release.md#rule-br-06): every proof runs continuously on main-branch builds, not once — package-level obligation contribution |
 | Provides | android-grpc-web-cf-proof |
@@ -243,7 +253,7 @@ Tasks: 10 · Owning repositories: ArcNotes, ArcScope, ArcSlate, Cloud, DesktopPl
 | Completion prerequisites | none |
 | Unblocks | [AND.01](android.md#task-and-01), [CLOUD.26](cloud.md#task-cloud-26), [NAT.29](native.md#task-nat-29) |
 | Write scope | `Mobile:app/**`<br>`Mobile:gradle/**` |
-| Shared resources | [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (append) |
+| Shared resources | [RES-workstation-build-slot](../shared-resources.md#res-workstation-build-slot) (exclusive) |
 | Validation | Actual device/service/native-adapter tests; scope/permission, wrong/stale target, loss/retry, expiry cases; CI builds the release artifact, device checks are local opt-in under [P2-017](../../../decisions/phase-2-specification-decisions.md#rule-p2-017) |
 | Completion evidence | Pre-artifact Apache closure and Android/device/native/CF proof |
 | Baseline (unreviewed unless accepted) | not-started Observed partial, unreviewed: open-gates-register.md records [F-023](../../../assurance/open-gates-register.md#rule-f-023) CLOSED 2026-09-19 for candidate android-0.1.0-ci.14.1 (Mobile PR4/PR5), with real main CI and public upgrade verification passed -- meaning substantial Android release-build and dependency-closure work already landed. [VG-07](../../../assurance/open-gates-register.md#rule-vg-07) itself remains OPEN (full native-module + real transport inspection against that candidate not yet recorded as closed). |

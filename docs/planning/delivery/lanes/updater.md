@@ -27,7 +27,8 @@ Tasks: 8 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/upd-01` and ledger record `ledger/tasks/upd-01.md` in the Plan repository; task branch `task/upd-01` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-53.00](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53.00) — full |
 | Provides | signed-feed |
@@ -50,7 +51,8 @@ Tasks: 8 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/upd-02` and ledger record `ledger/tasks/upd-02.md` in the Plan repository; task branch `task/upd-02` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-53.01](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53.01) — full |
 | Provides | download-staging |
@@ -71,7 +73,8 @@ Tasks: 8 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/upd-03` and ledger record `ledger/tasks/upd-03.md` in the Plan repository; task branch `task/upd-03` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-53.02](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53.02) — full |
 | Provides | safe-apply |
@@ -93,7 +96,8 @@ Tasks: 8 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/upd-04` and ledger record `ledger/tasks/upd-04.md` in the Plan repository; task branch `task/upd-04` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / L |
 | Obligations | [WP-53.03](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53.03) — full<br>[WP-53](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53) Versioned installation update journal persisted outside install/data files; the updater never writes product data or implements schema migration (SS6 impacts, [BR-05](../../../architecture/14-build-packaging-and-release.md#rule-br-05)) — package-level obligation contribution |
 | Provides | rollback-migration-interlock |
@@ -114,7 +118,8 @@ Tasks: 8 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/upd-05` and ledger record `ledger/tasks/upd-05.md` in the Plan repository; task branch `task/upd-05` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-53.04](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53.04) — full |
 | Provides | channels-rollout |
@@ -136,7 +141,8 @@ Tasks: 8 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/upd-06` and ledger record `ledger/tasks/upd-06.md` in the Plan repository; task branch `task/upd-06` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / S |
 | Obligations | [WP-53.05](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53.05) — full |
 | Provides | update-diagnostics |
@@ -158,7 +164,8 @@ Tasks: 8 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/upd-07` and ledger record `ledger/tasks/upd-07.md` in the Plan repository; task branch `task/upd-07` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | producer / M |
 | Obligations | [WP-53.07](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53.07) — full |
 | Provides | production-catalog-trust |
@@ -179,7 +186,8 @@ Tasks: 8 · Owning repositories: DesktopPlatform · Integration owner(s): Deskto
 
 | Field | Value |
 |---|---|
-| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner |
+| Owning repository | DesktopPlatform (`C:\MyFile\Projects\ArcForges\DesktopPlatform`); integration owner: DesktopPlatform integration owner, the holder of `roles/integration-desktopplatform` |
+| Claim, branch and ledger | `claims/upd-08` and ledger record `ledger/tasks/upd-08.md` in the Plan repository; task branch `task/upd-08` ([DLV-26](../README.md#rule-dlv-26)) |
 | Kind / size | acceptance / M |
 | Package acceptance | Records the [WP-53](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53) acceptance receipt after every task mapped to the package; tasks outside the package never start from it ([DLV-35](../README.md#rule-dlv-35)) |
 | Obligations | [WP-53.90](../../work-packages/53-desktop-distribution-and-update.md#rule-wp-53.90) — full |

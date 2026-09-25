@@ -351,7 +351,7 @@
    ],
    "writes": [
     "Plan:ledger/adoption/DesktopPlatform.md",
-    "Plan:ledger/tasks/ADOPT.02.md"
+    "Plan:ledger/tasks/adopt-02.md"
    ],
    "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
    "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
@@ -387,7 +387,7 @@
    ],
    "writes": [
     "Plan:ledger/adoption/Contracts.md",
-    "Plan:ledger/tasks/ADOPT.03.md"
+    "Plan:ledger/tasks/adopt-03.md"
    ],
    "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
    "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
@@ -423,7 +423,7 @@
    ],
    "writes": [
     "Plan:ledger/adoption/ArcNotes.md",
-    "Plan:ledger/tasks/ADOPT.04.md"
+    "Plan:ledger/tasks/adopt-04.md"
    ],
    "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
    "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
@@ -459,7 +459,7 @@
    ],
    "writes": [
     "Plan:ledger/adoption/ArcScope.md",
-    "Plan:ledger/tasks/ADOPT.05.md"
+    "Plan:ledger/tasks/adopt-05.md"
    ],
    "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
    "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
@@ -495,7 +495,7 @@
    ],
    "writes": [
     "Plan:ledger/adoption/ArcSlate.md",
-    "Plan:ledger/tasks/ADOPT.06.md"
+    "Plan:ledger/tasks/adopt-06.md"
    ],
    "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
    "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
@@ -531,7 +531,7 @@
    ],
    "writes": [
     "Plan:ledger/adoption/Cloud.md",
-    "Plan:ledger/tasks/ADOPT.07.md"
+    "Plan:ledger/tasks/adopt-07.md"
    ],
    "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
    "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
@@ -567,7 +567,7 @@
    ],
    "writes": [
     "Plan:ledger/adoption/AI.md",
-    "Plan:ledger/tasks/ADOPT.08.md"
+    "Plan:ledger/tasks/adopt-08.md"
    ],
    "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
    "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
@@ -603,7 +603,7 @@
    ],
    "writes": [
     "Plan:ledger/adoption/Web.md",
-    "Plan:ledger/tasks/ADOPT.09.md"
+    "Plan:ledger/tasks/adopt-09.md"
    ],
    "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
    "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
@@ -639,7 +639,7 @@
    ],
    "writes": [
     "Plan:ledger/adoption/Mobile.md",
-    "Plan:ledger/tasks/ADOPT.10.md"
+    "Plan:ledger/tasks/adopt-10.md"
    ],
    "validation": "Review of merged source, retained CI results and receipts only; no new builds, downloads or runtime checks (P2-017).",
    "evidence": "Repository adoption record with the repository-wide facts, links to every slice record, the combined classification table and any conflicts raised under D-001.",
@@ -3534,7 +3534,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Windows/Linux local Native AOT publish with zero trim/AOT/single-file diagnostics (BR-04); real per-RID launch and ABI smoke vectors; no macOS CI (P2-017), local-opt-in macOS only",
@@ -3597,7 +3597,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Windows/Linux local Native AOT publish with zero trim/AOT/single-file diagnostics; real per-RID launch and ABI smoke vectors; no macOS CI",
@@ -3660,7 +3660,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Windows/Linux local Native AOT publish with zero trim/AOT/single-file diagnostics; real per-RID launch and ABI smoke vectors; no macOS CI",
@@ -3709,7 +3709,7 @@
    "shared": [
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Actual Windows/Linux/macOS(local opt-in) process-to-process runs; no in-memory or TCP substitute (explicit design prohibition); malformed input, unauthorized peer, bounded resource tests",
@@ -3852,7 +3852,7 @@
    "shared": [
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Native AOT compilation required; real-adapter runtime verification is scoped local opt-in per V-03/P2-017; no EF/dynamic ORM/ASP.NET Session/CookieAuthenticationHandler; chiseled Ubuntu image, non-root, read-only root",
@@ -3999,7 +3999,7 @@
    "shared": [
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Actual device/service/native-adapter tests; scope/permission, wrong/stale target, loss/retry, expiry cases; CI builds the release artifact, device checks are local opt-in under P2-017",
@@ -6909,7 +6909,7 @@
    "shared": [
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Frame-display run; audio/video sync measurement; sanitiser run (ASan/UBSan); sacrificial-process crash test; forced-software-path run",
@@ -7017,7 +7017,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Compile C17/C++20 headers and C# layouts on the admitted RIDs; offset/size assertions; wrong-size/version/null/closed-handle negative tests",
@@ -7076,7 +7076,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Known two-frame seek, malformed input, B-frame/drain, tiled copy, exact audio sample bounds, repeated cancel/close against the actual FFmpeg dependency build; sanitiser build for parser paths (SB-03/SB-04)",
@@ -7134,7 +7134,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Independent fresh decode of FFV1/PCM/WAV and MP4 MPEG4-AAC; resample length, finish-twice, cancel/abort, disk-full corruption rejection",
@@ -7192,7 +7192,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Physical output/input, underflow, overflow, device loss, exclusive-use refusal, no-device video clock, offline render -- physical audio hardware is ordinary (most dev machines have one), not a scarce PG-08 lab resource",
@@ -7248,7 +7248,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Independent RGB/alpha vectors, alpha 0, unknown space, tampered bundle, preview/render agreement",
@@ -7310,7 +7310,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Bit depth/metadata round trip, edge tiles, decompression bomb, failed codec, incomplete-output refusal",
@@ -7366,7 +7366,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Mixed/fractional rate round trip, unsupported schema, malicious path, parser death, reported loss before commit -- PG-15 evidence class",
@@ -7428,7 +7428,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Enumeration, explicit interface claim, control/bulk/interrupt transfers, partial writes, cancellation callback, hot unplug, driver absence, permission denial on Tier 1 -- against the PG-08 hardware inventory for the physical-device cases",
@@ -7501,7 +7501,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Packaged PDF page/text/tile fixtures, malformed/native-crash/hang and parent-death cleanup on every admitted RID; rerun of actual image/media/OTIO parser containment (not just PDF)",
@@ -7564,7 +7564,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "CPU display/readback, ownership and fence lifetime, device loss and forced software path; each advertised accelerator exercised with its actual driver where locally available",
@@ -7636,7 +7636,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Clean-cache C17 and C# AOT consumers per RID; missing/transitive/wrong-RID library, hash collision, absent export, revoked artifact, source-unavailable negatives",
@@ -7696,7 +7696,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Clean-cache C17/C# AOT consumers per RID; same negative matrix as NAT.20",
@@ -7756,7 +7756,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Clean-cache C17/C# AOT consumers per RID; same negative matrix as NAT.20",
@@ -7816,7 +7816,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Clean-cache C17/C# AOT consumers per RID; same negative matrix as NAT.20",
@@ -7872,7 +7872,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Clean-cache C17/C# AOT consumers per RID; same negative matrix as NAT.20",
@@ -7936,7 +7936,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Clean-cache C17/C# AOT consumers per RID; PG-22 hostile-parser containment re-run at package level (not just source level)",
@@ -7992,7 +7992,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Clean-cache C17/C# AOT consumers per RID; forced-software-path verified on every RID even where an accelerator is also present",
@@ -15836,7 +15836,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "ABI conformance and version-mismatch rejection tests, ownership/handle-lifetime tests, sanitiser runs, sacrificial-process crash tests, domain-purity test -- all local, once, per P2-017 (no hosted native CI).",
@@ -15892,7 +15892,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Long-run buffer accounting, pool-exhaustion behaviour, forced-software-path equivalence, decode-capability disclosure -- local, once, on the existing environment.",
@@ -16036,7 +16036,7 @@
    "shared": [
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Reference-vector comparison at 1e-5 per-channel tolerance before quantisation; identity-operation exactness check.",
@@ -16099,7 +16099,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Two-mixed-tracks/dissolve/track-gap/resampler-priming/NTSC-frame-one-boundary vectors, each asserting exactly one mixed output sample at index k; mixing-against-reference-output test; sync-under-load test with video.",
@@ -16347,7 +16347,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Round-trip colour tests against reference values, override-non-destructiveness assertion, display-transform-never-alters-export test, domain-purity test on the colour model.",
@@ -16506,7 +16506,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Preset validation negative tests; encode conformance tests per preset against golden fixtures with declared tolerance; metadata-correctness check on output files.",
@@ -16593,7 +16593,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Cancellation and failure tests asserting no complete-looking partial file; long-render soak; sleep-and-resume test; disk-full test -- local, once, on the existing environment.",
@@ -16775,7 +16775,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Golden comparison across the corpus; a deliberate-change negative test asserting the gate fires -- local, once.",
@@ -17185,7 +17185,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Finite/nonfinite/large/fractional-value vectors, standard-30000/1001-vs-decimal-29.97 vector, metadata-stripped-external-file vector -- against real fixtures and the pinned official library, local, once.",
@@ -17252,7 +17252,7 @@
     },
     {
      "resource": "RES-workstation-build-slot",
-     "mode": "append"
+     "mode": "exclusive"
     }
    ],
    "validation": "Mixed/fractional-rate round trip, gaps/stack ordering, repeated-media-retains-placement, missing-references-become-relinkable-Offline-Media, supported-dissolves/markers, unsupported-feature-reports, export-cancellation-leaves-project-untouched -- against real fixtures and the pinned official library, local, once.",
@@ -29869,7 +29869,7 @@
    "kind": "file",
    "ownerRepo": "AI",
    "owner": "AI integration owner",
-   "protocol": "The Workflow entry is owned by the turn-loop task; other Harness tasks add steps through their own modules; the route-pin table changes only with a policy snapshot; the AI deployment environment is exclusive during live runs."
+   "protocol": "The Workflow entry is owned by the turn-loop task; other Harness tasks add steps through their own modules; the route-pin table changes only with a policy snapshot. Any task that runs against the AI deployment environment holds the lease `leases/res-ai-workflow-and-routes` for that live run only."
   },
   {
    "id": "RES-android-signing-and-store",
@@ -29989,7 +29989,7 @@
    "kind": "environment",
    "ownerRepo": "Cloud",
    "owner": "Cloud integration owner",
-   "protocol": "Bindings are added by the owning module task in its own section; the deployed test environment is exclusive during live integration runs and is scheduled by the integration owner; production deployment belongs to release tasks."
+   "protocol": "Bindings are added by the owning module task in its own section, and the Cloud integration owner resolves ordering conflicts at merge. Any task that runs against the deployed test environment holds the lease `leases/res-cloud-deployment` for that live run only, whatever mode it declares for its binding edits; production deployment belongs to release tasks."
   },
   {
    "id": "RES-cloud-host-composition",
@@ -30109,7 +30109,7 @@
    "kind": "file",
    "ownerRepo": "Mobile",
    "owner": "Mobile integration owner",
-   "protocol": "The module skeleton task registers all modules once; later tasks edit only their module; catalog entries are appended and locks regenerated after rebase; dependency additions carry admission receipts."
+   "protocol": "The module skeleton task registers all modules once and holds the lease `leases/res-mobile-build-config` while it restructures the build; later tasks edit only their module; catalog entries are appended and locks regenerated after rebase; dependency additions carry admission receipts."
   },
   {
    "id": "RES-notes-scalar-vectors",
@@ -30181,7 +30181,7 @@
    "kind": "build-slot",
    "ownerRepo": "workstation",
    "owner": "each workstation operator",
-   "protocol": "One CPU-heavy local build or test at a time per workstation, coordinated by a lock file in the user profile; coding and review continue meanwhile; CI capacity is not limited by this rule."
+   "protocol": "Exclusive per workstation for the duration of each CPU-heavy local build or test, through the workstation lock rather than a Plan lease: run the command as `python tools/delivery.py build-slot run --worker <name> --task <task> -- <command>` with the Plan repository tool, which holds the lock directory `.arcforges/build-slot` in the user profile with an owner record and heartbeat and recovers a lock whose holder stopped. Coding and review continue while a build waits; CI capacity is not limited by this rule."
   }
  ],
  "packageObligations": [
