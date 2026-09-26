@@ -4471,7 +4471,7 @@
      "mode": "append"
     }
    ],
-   "validation": "Offline/local tests against actual OS streams on the build machine (Named Pipe on Windows, UDS on Linux - not hosted-runtime CI, but ordinary process-local sockets the repo's own CI already exercises for native ABI tests): malformed frames, wrong-user denial, assertion of no local TCP listener.",
+      "validation": "CI uses targeted deterministic offline framing and authentication fixtures. Actual Named Pipe/Unix domain socket behavior, malformed-frame handling, wrong-user denial and the absence of a local TCP listener are checked locally once when the existing environment supports the affected behavior and the change requires it; fixture evidence never substitutes for actual OS-stream evidence. Do not execute real IPC integration in CI or provision an environment solely for validation.",
    "evidence": "Actual OS streams, malformed frames, wrong-user denial and no local TCP listener.",
    "baseline": {
     "state": "not-started",
