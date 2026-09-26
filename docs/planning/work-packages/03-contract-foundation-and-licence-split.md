@@ -86,7 +86,7 @@ The complete initial Resource/owner/query/measurement/simulator, public operatio
 
 ## 5. Required implementation work
 
-**Validation policy for every substep.** [P2-017](../../assurance/ci-and-local-validation-policy.md) governs the execution of all gates below. Retain necessary Windows/Linux compilation, packaging, static checks, targeted offline schema/unit tests and non-duplicated security. Consumer restoration/compilation does not authorize installed-package execution in CI, public-byte polling or another post-merge test cycle. Product/runtime scenarios remain with their named owners and supported local environments; absent coverage is recorded, never inferred from schema or publication success.
+**Validation policy for every substep.** [P2-017](../../decisions/phase-2-specification-decisions.md#rule-p2-017) governs the execution of all gates below. Retain necessary Windows/Linux compilation, packaging, static checks, targeted offline schema/unit tests and non-duplicated security. Consumer restoration/compilation does not authorize installed-package execution in CI, public-byte polling or another post-merge test cycle. Product/runtime scenarios remain with their named owners and supported local environments; absent coverage is recorded, never inferred from schema or publication success.
 
 <a id="rule-wp-03.00"></a>
 
